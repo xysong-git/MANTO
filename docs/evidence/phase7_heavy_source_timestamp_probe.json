@@ -1,0 +1,92 @@
+[
+  {
+    "scale": "small_scale",
+    "device": "d_1",
+    "files": [
+      {
+        "path": "/opt/program-code/iot-benchmark/iotdb-2.0/target/iot-benchmark-iotdb-2.0/iot-benchmark-iotdb-2.0/data/small_scale/d_1/BigBatch_0.csv",
+        "data_rows": 1000,
+        "header_rows": 10
+      },
+      {
+        "path": "/opt/program-code/iot-benchmark/iotdb-2.0/target/iot-benchmark-iotdb-2.0/iot-benchmark-iotdb-2.0/data/small_scale/d_1/BigBatch_1.csv",
+        "data_rows": 1000,
+        "header_rows": 10
+      },
+      {
+        "path": "/opt/program-code/iot-benchmark/iotdb-2.0/target/iot-benchmark-iotdb-2.0/iot-benchmark-iotdb-2.0/data/small_scale/d_1/BigBatch_2.csv",
+        "data_rows": 1000,
+        "header_rows": 10
+      }
+    ],
+    "rows": 3000,
+    "unique_timestamps": 3000,
+    "window_count": 1931,
+    "step_histogram": {
+      "5000": 2999
+    },
+    "checked_sensor": "s_355",
+    "source_window_nonnull_count": 1931,
+    "database_reference_count": 390
+  },
+  {
+    "scale": "medium_scale",
+    "device": "d_6",
+    "files": [
+      {
+        "path": "/opt/program-code/iot-benchmark/iotdb-2.0/target/iot-benchmark-iotdb-2.0/iot-benchmark-iotdb-2.0/data/medium_scale/d_6/BigBatch_0.csv",
+        "data_rows": 1000,
+        "header_rows": 10
+      },
+      {
+        "path": "/opt/program-code/iot-benchmark/iotdb-2.0/target/iot-benchmark-iotdb-2.0/iot-benchmark-iotdb-2.0/data/medium_scale/d_6/BigBatch_1.csv",
+        "data_rows": 1000,
+        "header_rows": 10
+      },
+      {
+        "path": "/opt/program-code/iot-benchmark/iotdb-2.0/target/iot-benchmark-iotdb-2.0/iot-benchmark-iotdb-2.0/data/medium_scale/d_6/BigBatch_2.csv",
+        "data_rows": 1000,
+        "header_rows": 10
+      }
+    ],
+    "rows": 3000,
+    "unique_timestamps": 3000,
+    "window_count": 1931,
+    "step_histogram": {
+      "5000": 2999
+    },
+    "checked_sensor": "s_355",
+    "source_window_nonnull_count": 1931,
+    "database_reference_count": 390
+  },
+  {
+    "scale": "large_scale",
+    "device": "d_5",
+    "files": [
+      {
+        "path": "/opt/program-code/iot-benchmark/iotdb-2.0/target/iot-benchmark-iotdb-2.0/iot-benchmark-iotdb-2.0/data/large_scale/d_5/BigBatch_0.csv",
+        "data_rows": 1000,
+        "header_rows": 10
+      },
+      {
+        "path": "/opt/program-code/iot-benchmark/iotdb-2.0/target/iot-benchmark-iotdb-2.0/iot-benchmark-iotdb-2.0/data/large_scale/d_5/BigBatch_1.csv",
+        "data_rows": 1000,
+        "header_rows": 10
+      },
+      {
+        "path": "/opt/program-code/iot-benchmark/iotdb-2.0/target/iot-benchmark-iotdb-2.0/iot-benchmark-iotdb-2.0/data/large_scale/d_5/BigBatch_2.csv",
+        "data_rows": 1000,
+        "header_rows": 10
+      }
+    ],
+    "rows": 3000,
+    "unique_timestamps": 3000,
+    "window_count": 1931,
+    "step_histogram": {
+      "5000": 2999
+    },
+    "checked_sensor": "s_355",
+    "source_window_nonnull_count": 1931,
+    "database_reference_count": 390
+  }
+]

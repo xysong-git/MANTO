@@ -1,0 +1,48 @@
+{
+  "data/phase7_staged_exclusive_20261103/study": {
+    "protocol": "delayed-batch-v4",
+    "journal_sha256": "d9990a201e0b1cc7eaeeb3453ac5dfb6c7002edb27297687ee80277af0f6a297",
+    "events": {
+      "protocol": 1,
+      "instance_occupancy": 16,
+      "round_start": 6,
+      "pilot": 4,
+      "round_complete": 5,
+      "reference": 2,
+      "initial_model": 1,
+      "batch_assignment": 4,
+      "batch_selected": 4,
+      "request": 20,
+      "batch_closed": 4,
+      "feedback_enqueued": 4,
+      "feedback_applied": 4,
+      "aborted": 1
+    },
+    "recorded_request_quality": {
+      "VALID": 20
+    },
+    "queue_status": {
+      "APPLIED": 4
+    },
+    "replayed_model_updates": 4,
+    "model_reproduced": true,
+    "queue_rejection_reasons": {},
+    "feedback_cost": {
+      "enqueue_total_ms": 220.992999,
+      "update_total_ms": 433.930622,
+      "enqueue_mean_ms": 55.24824975,
+      "update_mean_ms": 108.4826555
+    },
+    "fingerprint": "f5307b894e5fe901af7b45d05b24ae7af02ac810de3b0a58f6041d1a8f97328f",
+    "sqlite_integrity": {
+      "executions.sqlite": "ok",
+      "feedback.sqlite": "ok"
+    },
+    "resource_rejections": [],
+    "heldout_batches": 0,
+    "study_complete": false,
+    "benefit_verdict": "UNKNOWN",
+    "stage_accepted": false,
+    "online_ready": false
+  }
+}

@@ -1,0 +1,13 @@
+                                  ┌───────────────────┐                                  
+                                  │FullOuterTimeJoin-3│                                  
+                                  │Order: ASC         │                                  
+                                  └───────────────────┘                                  
+                      ┌─────────────────────┴──────────────────────┐                     
+                      │                                            │                     
+┌──────────────────────────────────────────┐ ┌──────────────────────────────────────────┐
+│AlignedSeriesScan-4                       │ │AlignedSeriesScan-5                       │
+│Series: root.db800.g_0.d_0[s_1666, s_1766]│ │Series: root.db800.g_0.d_1[s_1666, s_1766]│
+│QueryAllSensors: false                    │ │QueryAllSensors: false                    │
+│ScanOrder: ASC                            │ │ScanOrder: ASC                            │
+│Partition: 146                            │ │Partition: 146                            │
+└──────────────────────────────────────────┘ └──────────────────────────────────────────┘

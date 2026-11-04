@@ -1,0 +1,11 @@
+{
+  "root_cause": "RealMetaDataSchema maps device name to one String file path; later files replace earlier files",
+  "benchmark_core_jar_sha256": "1c77a9de4cb08cf6aac46bf4a35aea68bc634d314b36e83d9cc3b0fa522c7b49",
+  "source_inventory_sha256": "9884a55e9305e4ce2128a07b3d32aa3b302f113926d29c61d6b6225ad427f75f",
+  "source_files": 4800,
+  "source_timestamp_rows": 4800000,
+  "data_epoch": "heavy-complete-20261102-v2",
+  "planned_missing_points": 6400000000,
+  "target_total_points": 9600000000,
+  "database_writes_started": false
+}

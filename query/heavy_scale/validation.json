@@ -1,0 +1,423 @@
+{
+  "files": [
+    {
+      "path": "small_scale/q01_range_scan.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "small_scale/q02_value_filter_scan.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "small_scale/q03_count_aggregation.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "small_scale/q04_sum_aggregation.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "small_scale/q05_group_by_time.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "small_scale/q06_group_by_time_value_filter.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "small_scale/q07_range_descending.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "small_scale/q08_group_by_time_descending.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "medium_scale/q01_range_scan.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "medium_scale/q02_value_filter_scan.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "medium_scale/q03_count_aggregation.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "medium_scale/q04_sum_aggregation.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "medium_scale/q05_group_by_time.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "medium_scale/q06_group_by_time_value_filter.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "medium_scale/q07_range_descending.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "medium_scale/q08_group_by_time_descending.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "large_scale/q01_range_scan.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "large_scale/q02_value_filter_scan.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "large_scale/q03_count_aggregation.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "large_scale/q04_sum_aggregation.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "large_scale/q05_group_by_time.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "large_scale/q06_group_by_time_value_filter.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "large_scale/q07_range_descending.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    },
+    {
+      "path": "large_scale/q08_group_by_time_descending.sql",
+      "unique_statements": 1000,
+      "integrity": "PASS"
+    }
+  ],
+  "total_unique_queries": 24000,
+  "offline_integrity": "PASS",
+  "server_explain": {
+    "server_version": "2.0.6",
+    "client_version": "2.0.6",
+    "model": "tree",
+    "queries": [
+      {
+        "file": "large_scale/q01_range_scan.sql",
+        "line": 1,
+        "sql_sha256": "2d609d0d17b1bf738b1b2fb7d7cc1e68cc075400f507ef21edfde635d5fad865",
+        "status": "SUCCESS",
+        "rows_returned": 29,
+        "client_wall_ms": 71.116,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "large_scale/q02_value_filter_scan.sql",
+        "line": 1,
+        "sql_sha256": "992348d3344eb861fb83d224d0aa18fe769ec84b982775f3d22f5a8de12a28c3",
+        "status": "SUCCESS",
+        "rows_returned": 36,
+        "client_wall_ms": 78.27,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "large_scale/q03_count_aggregation.sql",
+        "line": 1,
+        "sql_sha256": "edaa0a23b8977d1debc1f8c85b62d3ff611a52190c2864e3850850c1a28d9161",
+        "status": "SUCCESS",
+        "rows_returned": 42,
+        "client_wall_ms": 143.058,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "large_scale/q04_sum_aggregation.sql",
+        "line": 1,
+        "sql_sha256": "b1a0d7404e9a321ac20ea5908adf26b955843f81aa3f88ff7cb83343c08b0307",
+        "status": "SUCCESS",
+        "rows_returned": 42,
+        "client_wall_ms": 96.099,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "large_scale/q05_group_by_time.sql",
+        "line": 1,
+        "sql_sha256": "6733c10cd588170acccdd219ec61e054879754c9fc5266167ec3b8c52996fe6c",
+        "status": "SUCCESS",
+        "rows_returned": 34,
+        "client_wall_ms": 81.568,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "large_scale/q06_group_by_time_value_filter.sql",
+        "line": 1,
+        "sql_sha256": "ca6b26b598a6f4a5f4005f3430bf3e7b22c4b168b5fbd8689e9c7375c83545f2",
+        "status": "SUCCESS",
+        "rows_returned": 841,
+        "client_wall_ms": 305.258,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "large_scale/q07_range_descending.sql",
+        "line": 1,
+        "sql_sha256": "5efd4b5382be9bfb93b588bc2c5e5fe250e4dc5bb62d47a1d93b5b1076f8c961",
+        "status": "SUCCESS",
+        "rows_returned": 29,
+        "client_wall_ms": 38.842,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "large_scale/q08_group_by_time_descending.sql",
+        "line": 1,
+        "sql_sha256": "225a2e11f06a4d081cad1ace6231e2df0bea5bcab5f7f7134291d97c13691b20",
+        "status": "SUCCESS",
+        "rows_returned": 34,
+        "client_wall_ms": 68.028,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "medium_scale/q01_range_scan.sql",
+        "line": 1,
+        "sql_sha256": "67fae66bd70d17e47a3c4266489722dd1b9d83e6f9651bf2394ee10a61ee6d1f",
+        "status": "SUCCESS",
+        "rows_returned": 29,
+        "client_wall_ms": 21.878,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "medium_scale/q02_value_filter_scan.sql",
+        "line": 1,
+        "sql_sha256": "1b71960ff01c423d3ae7879f011961197b7f4fbef11cf8ebe4d408f20e4deb94",
+        "status": "SUCCESS",
+        "rows_returned": 52,
+        "client_wall_ms": 47.237,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "medium_scale/q03_count_aggregation.sql",
+        "line": 1,
+        "sql_sha256": "d31505d24e462d45ec7c157c0015f6fb389784957e8a7dd56c9d4aff49b14a93",
+        "status": "SUCCESS",
+        "rows_returned": 42,
+        "client_wall_ms": 88.954,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "medium_scale/q04_sum_aggregation.sql",
+        "line": 1,
+        "sql_sha256": "84d4a72d22c5c645f828752180f89a80ed41677738b4fa8444359eef62fa4e6e",
+        "status": "SUCCESS",
+        "rows_returned": 42,
+        "client_wall_ms": 50.909,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "medium_scale/q05_group_by_time.sql",
+        "line": 1,
+        "sql_sha256": "2eb701a392244397f86298356b99b8bd25e165df9ef44ad86f3dd47d040330a9",
+        "status": "SUCCESS",
+        "rows_returned": 34,
+        "client_wall_ms": 20.515,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "medium_scale/q06_group_by_time_value_filter.sql",
+        "line": 1,
+        "sql_sha256": "fd0720ac667b45b8ed0e543153bff48a23f24854dd901f14fa7f1539c939e902",
+        "status": "SUCCESS",
+        "rows_returned": 441,
+        "client_wall_ms": 105.528,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "medium_scale/q07_range_descending.sql",
+        "line": 1,
+        "sql_sha256": "2619ee4fc918f57837bf6bbece69e102e1879e2106fa0ec9591402ed26846747",
+        "status": "SUCCESS",
+        "rows_returned": 29,
+        "client_wall_ms": 23.55,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "medium_scale/q08_group_by_time_descending.sql",
+        "line": 1,
+        "sql_sha256": "6039bf86ed379926ca996c6af0088fbe82fe38c2eb77a2fab6a22be7d8e0ef31",
+        "status": "SUCCESS",
+        "rows_returned": 34,
+        "client_wall_ms": 42.318,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "small_scale/q01_range_scan.sql",
+        "line": 1,
+        "sql_sha256": "fac2065202fd75b2ff03554c272b25d987e9ca1bfbddbf45c323fc19fb31360f",
+        "status": "SUCCESS",
+        "rows_returned": 29,
+        "client_wall_ms": 8.466,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "small_scale/q02_value_filter_scan.sql",
+        "line": 1,
+        "sql_sha256": "114b65372fb41de92ace25dd1a568b90e501395c7ad79d1934ef3328d49b03dc",
+        "status": "SUCCESS",
+        "rows_returned": 37,
+        "client_wall_ms": 12.238,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "small_scale/q03_count_aggregation.sql",
+        "line": 1,
+        "sql_sha256": "03ca2ffa335fe1317f473447c3d8f7a2a9bb2cd62013c1a7608b665f1dcabeb2",
+        "status": "SUCCESS",
+        "rows_returned": 37,
+        "client_wall_ms": 20.309,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "small_scale/q04_sum_aggregation.sql",
+        "line": 1,
+        "sql_sha256": "e1b0e112a5493db266fa4ebaa683496923ca5eb72b3b5a45a7ef2c86bc2b7305",
+        "status": "SUCCESS",
+        "rows_returned": 42,
+        "client_wall_ms": 15.479,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "small_scale/q05_group_by_time.sql",
+        "line": 1,
+        "sql_sha256": "99318720b0068378d95aca1e7f2b55b79854e6ade95187f29224ad00dc761940",
+        "status": "SUCCESS",
+        "rows_returned": 34,
+        "client_wall_ms": 12.548,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "small_scale/q06_group_by_time_value_filter.sql",
+        "line": 1,
+        "sql_sha256": "2ae184d8a7f15e9369fa2fb866f50496e548fdac75fc1fe5c33a0225fe63862f",
+        "status": "SUCCESS",
+        "rows_returned": 121,
+        "client_wall_ms": 26.044,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "small_scale/q07_range_descending.sql",
+        "line": 1,
+        "sql_sha256": "912612f02f93d266b741df75ac4682201b938de7aaca85fbc3742416e70a895f",
+        "status": "SUCCESS",
+        "rows_returned": 29,
+        "client_wall_ms": 12.427,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      },
+      {
+        "file": "small_scale/q08_group_by_time_descending.sql",
+        "line": 1,
+        "sql_sha256": "3415f23561c781a503c82c6749209644568831f3123b7dc8596383b42986bf3d",
+        "status": "SUCCESS",
+        "rows_returned": 34,
+        "client_wall_ms": 13.296,
+        "error_type": null,
+        "error_message": null,
+        "operation": "EXPLAIN_ONLY",
+        "target_query_executed": false
+      }
+    ],
+    "all_passed": true,
+    "scope": "first statement per file only; no EXPLAIN ANALYZE or full heavy-query execution"
+  }
+}

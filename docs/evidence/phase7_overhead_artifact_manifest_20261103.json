@@ -1,0 +1,30 @@
+{
+  "runtime_sources_match_experiment": true,
+  "sqlite_integrity_check": "ok",
+  "full_tests": "859 passed in 36.93s; IOTDB_INTEGRATION=1; 13 real integrations",
+  "evidence_probes": "8 passed in 35.84s",
+  "compileall_exit_code": 0,
+  "phase_acceptance": "NOT ACCEPTED",
+  "hashes": {
+    "src/tsdb_optimizer/request_memo.py": "326ddae7812de449fd51cb8cd3ec1b6d166bb0d8a3af97eed93f5d290dbe19c2",
+    "src/tsdb_optimizer/sql_guard.py": "d3bd1e1f142b29334f3bf8aca39326514184c7061dfbc3bbf19bd97994707976",
+    "src/tsdb_optimizer/parsing/sql_parser.py": "d1087ff923e084255b4648c79ba1971d153130e8ba72a778565cd7a6b9b6be1d",
+    "src/tsdb_optimizer/orchestration/orchestrator.py": "741f45f4912263dd60885e9ea6fbedf4471e3d7f7a35928d8a8017dc3f6eacc0",
+    "src/tsdb_optimizer/learning/repository.py": "879e004717c61192bf1581ae098ee68ab7a5c2c5c5d93213b5037aec765d3cf0",
+    "src/tsdb_optimizer/agents/performance_monitor.py": "eca817a8b597103c9eaa5f24be8bbe8b64a148bb04209acce89ac60ff8705381",
+    "src/tsdb_optimizer/monitoring/system.py": "1a3b0a0500bf7146b09fedfc9545e176de258537b35ae6402c8ca795298e2af2",
+    "src/tsdb_optimizer/bandit/model.py": "32b057148fc731595dc91c2ac87c4c4501622e2a6799fa7bb8507be7979efcd1",
+    "src/tsdb_optimizer/storage/sqlite.py": "1a04e84985c922103bbd5dc4c93081c4e1f07a99ac670ebb4bbdb1b54e09dcdc",
+    "scripts/phase7_controlled_e2e.py": "e7c46a7cc5508de2eda2195803fdf6e56b89411277458fbaf0d21e505cc631bd",
+    "scripts/phase7_analyze_controlled_e2e.py": "a9219f98c7721047ab3c9b31ccb71219401ddd19ba6807dca3a37867a1925421",
+    "docs/evidence/phase7_overhead_audit_probes.py": "66ee56b6a8af98d6e24db0d9632576e2cb3b8be1eca3f7ef9ea3ac94ab1e4a5b",
+    "docs/evidence/phase7_overhead_e2e_20261103.json": "c4950eec6f6f8f6fd5a9f503097614ca476c406716d5901593d9a2af0fc446ca",
+    "docs/evidence/phase7_learning_cost_20261103.json": "527cfb2ba6e545412b81a02564d01b510240cd758afd87fc99997aa329f8a93a",
+    "docs/evidence/phase7_overhead_aborted_20261103.json": "9716c234e03d72a028a2bd429198a4a9bcbdcc6bf219a7d442307852433bcaa8",
+    "data/phase7_e2e_wal55_20261103/study.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+    "data/phase7_e2e_wal55_20261103/journal.jsonl": "88778b1e7eb17f8f287f4acbc3032338d6ebd251e838c7ab867f2428bcc0cc88",
+    "data/phase7_e2e_wal55_20261103/study.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/phase7_e2e_wal55_20261103/study.sqlite": "6fb71c7fc6142ff3b8be2c665a5f1ed49ef95cd6ba8100a1c2d951174f4ea630",
+    "data/phase7_e2e_wal55_20261103/implementation.json": "21198e4bae7fdb3ab4596b047ad225be8ca4f0c56a9d9f244eeda34b6eb22434"
+  }
+}

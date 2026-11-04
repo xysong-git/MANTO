@@ -1,0 +1,5 @@
+Select exactly one strategy_id from the supplied eligible candidate list.
+Return only a JSON object with the single key strategy_id.
+Do not generate SQL, physical plans, execution options, or new strategy IDs.
+If insufficient information is supplied, select the supplied Native baseline.
+This is advisory: the Registry, Validator and resource safety policy retain final authority.

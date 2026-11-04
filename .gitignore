@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+
+# Local config and secrets
+.env
+.env.*
+!.env.example
+
+# Runtime data and logs
+data/
+logs/
+*.sqlite
+*.db
+
+# Generated benchmark artifacts
+benchmarks/results/
+
+# Project-local certified 2.0.6 environment
+.venv-iotdb206/

@@ -1,0 +1,215 @@
+[
+  {
+    "path": "data/phase7_reward_small_20261103/journal.jsonl",
+    "sha256": "cffd2c0c5639fc015c362489528bb22395f6d97e6cd136ec188f1e6fb42e0817",
+    "terminal": {
+      "kind": "aborted",
+      "body": {
+        "error_type": "ValueError",
+        "cpu_control": [],
+        "cpu_error": null
+      }
+    },
+    "completed_train_count": 441,
+    "completed_test_count": 0
+  },
+  {
+    "path": "data/phase7_reward_small_fresh_20261103/journal.jsonl",
+    "sha256": "63fabca43908815ccd27eb2ffd24c8dc24cda2eabc494caad0ca20488aff8ba5",
+    "terminal": {
+      "kind": "aborted",
+      "body": {
+        "error_type": "RuntimeError",
+        "cpu_control": [
+          {
+            "elapsed_s": 0.36449739208910614,
+            "cpu_percent": 51.3,
+            "memory_percent": 64.5,
+            "worker_duty": 0.65
+          },
+          {
+            "elapsed_s": 0.6151765430113301,
+            "cpu_percent": 51.1,
+            "memory_percent": 64.5,
+            "worker_duty": 0.6697333333333334
+          },
+          {
+            "elapsed_s": 0.86578474403359,
+            "cpu_percent": 52.4,
+            "memory_percent": 64.5,
+            "worker_duty": 0.6905333333333334
+          },
+          {
+            "elapsed_s": 1.1164185010129586,
+            "cpu_percent": 53.8,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7044000000000001
+          },
+          {
+            "elapsed_s": 1.3669222180033103,
+            "cpu_percent": 61.4,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7108000000000001
+          },
+          {
+            "elapsed_s": 1.6176973721012473,
+            "cpu_percent": 52.6,
+            "memory_percent": 64.5,
+            "worker_duty": 0.6766666666666667
+          },
+          {
+            "elapsed_s": 1.8683925450313836,
+            "cpu_percent": 52.4,
+            "memory_percent": 64.5,
+            "worker_duty": 0.6894666666666668
+          },
+          {
+            "elapsed_s": 2.119023806997575,
+            "cpu_percent": 53.6,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7033333333333335
+          },
+          {
+            "elapsed_s": 2.3694087660405785,
+            "cpu_percent": 54.8,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7108000000000001
+          },
+          {
+            "elapsed_s": 2.620044600102119,
+            "cpu_percent": 54.3,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7118666666666668
+          },
+          {
+            "elapsed_s": 2.8704816520912573,
+            "cpu_percent": 54.7,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7156000000000001
+          },
+          {
+            "elapsed_s": 3.1209311550483108,
+            "cpu_percent": 54.7,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7172000000000001
+          },
+          {
+            "elapsed_s": 3.371390633052215,
+            "cpu_percent": 55.4,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7188
+          },
+          {
+            "elapsed_s": 3.621931363013573,
+            "cpu_percent": 55.0,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7166666666666667
+          },
+          {
+            "elapsed_s": 3.872399371000938,
+            "cpu_percent": 55.5,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7166666666666667
+          },
+          {
+            "elapsed_s": 4.122814513044432,
+            "cpu_percent": 54.7,
+            "memory_percent": 64.5,
+            "worker_duty": 0.714
+          },
+          {
+            "elapsed_s": 4.373264504014514,
+            "cpu_percent": 55.2,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7155999999999999
+          },
+          {
+            "elapsed_s": 4.623701217002235,
+            "cpu_percent": 54.8,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7145333333333332
+          },
+          {
+            "elapsed_s": 4.874215431045741,
+            "cpu_percent": 54.5,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7155999999999999
+          },
+          {
+            "elapsed_s": 5.1248414180008695,
+            "cpu_percent": 55.2,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7182666666666666
+          },
+          {
+            "elapsed_s": 5.375285578076728,
+            "cpu_percent": 55.5,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7172
+          },
+          {
+            "elapsed_s": 5.62569378700573,
+            "cpu_percent": 54.6,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7145333333333332
+          },
+          {
+            "elapsed_s": 5.87611225200817,
+            "cpu_percent": 54.6,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7166666666666666
+          },
+          {
+            "elapsed_s": 6.126601077034138,
+            "cpu_percent": 55.8,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7187999999999999
+          },
+          {
+            "elapsed_s": 6.377123033045791,
+            "cpu_percent": 79.9,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7145333333333332
+          }
+        ],
+        "cpu_error": null
+      }
+    },
+    "completed_train_count": 0,
+    "completed_test_count": 0
+  },
+  {
+    "path": "data/phase7_reward_large_ambient_20261103/journal.jsonl",
+    "sha256": "e5c2fe0cfb89a3b4ec4dbfae4398bd999670684129f2335b839299291643991b",
+    "terminal": {
+      "kind": "aborted",
+      "body": {
+        "error_type": "ValueError",
+        "cpu_control": [],
+        "cpu_error": null
+      }
+    },
+    "completed_train_count": 240,
+    "completed_test_count": 205,
+    "rejected_request": {
+      "assignment": {
+        "phase": "test",
+        "load": "LOW",
+        "cache": "READY",
+        "block": 34,
+        "position": 1,
+        "policy": "ADAPTIVE"
+      },
+      "e2e_ms": 688.397356,
+      "reason": "unqualified completed request",
+      "quality_reasons": [
+        "FALLBACK_CONDITIONED_SAMPLE",
+        "LOAD_CONTEXT_UNAVAILABLE_OR_MISMATCHED"
+      ],
+      "execution_warnings": [
+        "SELECTED_CANDIDATE_PREFLIGHT_FAILED: RESOURCE_STATE_UNUSABLE_AT_DISPATCH: client_host invalid, stale or source-mismatched",
+        "NATIVE_FALLBACK_USED: candidate validation failed before any database request was dispatched: RESOURCE_STATE_UNUSABLE_AT_DISPATCH: client_host invalid, stale or source-mismatched"
+      ]
+    }
+  }
+]

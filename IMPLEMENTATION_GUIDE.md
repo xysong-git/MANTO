@@ -1336,13 +1336,42 @@ LLM 是可选增强：
 请只定位并修复当前问题，不要重写无关模块。
 
 现象/报错：
-[粘贴完整 traceback、命令和关键日志]
+[Process ForkProcess-1:
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/MANTO/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/anaconda3/envs/MANTO/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/program-code/MANTO/src/tsdb_optimizer/experiments/supervisor.py", line 27, in _child
+    target(args, _signal=send)
+  File "/opt/program-code/MANTO/benchmarks/run_benchmark.py", line 39, in run_live
+    execute(config, args.output, environment, signal=progress)
+  File "/opt/program-code/MANTO/src/tsdb_optimizer/benchmark/runner.py", line 266, in execute
+    future.result()
+  File "/opt/anaconda3/envs/MANTO/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/MANTO/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/anaconda3/envs/MANTO/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/program-code/MANTO/src/tsdb_optimizer/benchmark/runner.py", line 239, in worker
+    stress.check()
+  File "/opt/program-code/MANTO/src/tsdb_optimizer/experiments/cpu_load.py", line 87, in check
+    if self.error: raise RuntimeError(self.error)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CO_TENANT_SAFETY_STOP]
 
 复现步骤：
-[给出最小复现命令、SQL、配置]
+[PYTHONPATH=src python benchmarks/run_benchmark.py \
+  --config benchmarks/workloads/small_count_multiload_c2.json \
+  --output "benchmarks/results/phase8_multiload_c2_$(date +%Y%m%d_%H%M%S_%N)" \
+  --immutable-epoch-confirmed --exclusive-window-confirmed \
+  --cpu-cotenant-authorized]
 
 相关环境：
-[Python、IoTDB server/client 版本、树/表模型、操作系统]
+[MANTO：Python 3.12.13、IoTDB server/client 版本2.0.6、树模型、操作系统 ubuntu 24.04]
 
 要求：
 1. 先解释最可能的根因，并指出哪些判断已由代码/日志证实，哪些仍是假设。

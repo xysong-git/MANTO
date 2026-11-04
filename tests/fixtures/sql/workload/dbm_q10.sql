@@ -1,0 +1,1 @@
+SELECT s_1666, s_1766 FROM root.dbm.g_0.d_0, root.dbm.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 AND root.dbm.g_0.d_0.s_1666 > -5 AND root.dbm.g_0.d_0.s_1766 > -5 AND root.dbm.g_0.d_1.s_1666 > -5 AND root.dbm.g_0.d_1.s_1766 > -5 ORDER BY time DESC;

@@ -1,0 +1,5 @@
+{
+  "query": "SELECT s_130 FROM root.test.g_0.d_0.s_130 WHERE time >= 1640966400000 LIMIT 5",
+  "observed": "EXPLAIN returned 0 plan lines; execution returned only a Time column and 0 rows.",
+  "source_probe": "probe_19_result.json:cases.series_path_in_from"
+}

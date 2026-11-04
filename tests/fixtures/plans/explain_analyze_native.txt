@@ -1,0 +1,27 @@
+Analyze Cost: 0.481 ms                                                                                   
+Fetch Partition Cost: 0.126 ms                                                                           
+Fetch Schema Cost: 0.038 ms                                                                              
+Logical Plan Cost: 0.351 ms                                                                              
+Logical Optimization Cost: 0.156 ms                                                                      
+Distribution Plan Cost: 4.096 ms                                                                         
+Dispatch Cost: 13.950 ms                                                                                 
+Fragment Instances Count: 1                                                                              
+                                                                                                         
+FRAGMENT-INSTANCE[Id: <FRAGMENT_INSTANCE_ID>][IP: <DB_HOST>:<DB_PORT>][DataRegion: 100][State: FINISHED]
+  Total Wall Time: 12 ms                                                                                 
+  Cost of initDataQuerySource: 0.733 ms                                                                  
+  Seq File(unclosed): 0, Seq File(closed): 1                                                             
+  UnSeq File(unclosed): 0, UnSeq File(closed): 0                                                         
+  ready queued time: 0.015 ms, blocked queued time: 0.000 ms                                             
+    [PlanNodeId 5]: IdentitySinkNode(IdentitySinkOperator)                                               
+        CPU Time: 10.965 ms                                                                              
+        output: 11 rows                                                                                  
+        HasNext() Called Count: 2                                                                        
+        Next() Called Count: 1                                                                           
+        Estimated Memory Size: : 131072                                                                  
+      [PlanNodeId 1]: AlignedSeriesScanNode(AlignedSeriesScanOperator)                                   
+          CPU Time: 10.934 ms                                                                            
+          output: 11 rows                                                                                
+          HasNext() Called Count: 2                                                                      
+          Next() Called Count: 1                                                                         
+          Estimated Memory Size: : 131072                                                                

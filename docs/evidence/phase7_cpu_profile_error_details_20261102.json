@@ -1,0 +1,37 @@
+{
+  "source": "persisted ExecutionResult errors; no new query execution",
+  "errors": [
+    {
+      "database": "data/phase7_cpu_profile_20261102/worker-0.sqlite",
+      "sha256": "d6abf56ba20ad0590e5235d08d4b31a59a3f6b4daaeae007ad382400117a7b04",
+      "execution_id": "2f0b950535eb421399e1887db83804e9",
+      "error_message": "301: Query is aborted since it requests more memory than can be allocated, bytesToReserve: 2148040B, maxBytesCanReserve: 1383523B",
+      "request_completed": false,
+      "retry_safe": false
+    },
+    {
+      "database": "data/phase7_cpu_profile_20261102/worker-1.sqlite",
+      "sha256": "2e6dbae3cda8a0ca822690890ef732a516a7c8794cc88ace91d2ec430e1727da",
+      "execution_id": "3285c18b73c14c36990be9353ebece1a",
+      "error_message": "301: Query is aborted since it requests more memory than can be allocated, bytesToReserve: 2407528B, maxBytesCanReserve: 1383523B",
+      "request_completed": false,
+      "retry_safe": false
+    },
+    {
+      "database": "data/phase7_cpu_profile_20261102/worker-2.sqlite",
+      "sha256": "adf1b5c7f731cc28434b37eb6a1184f254dbed7f22fc39fb2204e08cb61f215e",
+      "execution_id": "15d3eb2629ba4185826e7db4b819cd8f",
+      "error_message": "301: Query is aborted since it requests more memory than can be allocated, bytesToReserve: 2544480B, maxBytesCanReserve: 1383523B",
+      "request_completed": false,
+      "retry_safe": false
+    },
+    {
+      "database": "data/phase7_cpu_profile_20261102/worker-3.sqlite",
+      "sha256": "26e14a17f93198963b5eb4d4ec1becaabe3072e8b6bff7b48354e1c837e43f1c",
+      "execution_id": "2546b94fd21748c09a435b14bd06f64f",
+      "error_message": "301: Query is aborted since it requests more memory than can be allocated, bytesToReserve: 3178784B, maxBytesCanReserve: 1383523B",
+      "request_completed": false,
+      "retry_safe": false
+    }
+  ]
+}

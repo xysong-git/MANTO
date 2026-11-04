@@ -1,0 +1,1 @@
+SELECT count(s_1666), count(s_1716) FROM root.dbl.g_0.d_0, root.dbl.g_0.d_1 WHERE root.dbl.g_0.d_0.s_1666 > -5 AND root.dbl.g_0.d_0.s_1716 > -5 AND root.dbl.g_0.d_1.s_1666 > -5 AND root.dbl.g_0.d_1.s_1716 > -5;

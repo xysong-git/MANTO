@@ -1,0 +1,49 @@
+{
+  "audited_at": "2026-11-03T07:21:04.137416+00:00",
+  "scope": "Read-only evidence audit; no tests or database queries dispatched",
+  "journal_sha256": "bb37e4d947cd4416a6710be6c5a803fae2065c9f66e8d9fbbb6d35bcb43f8416",
+  "events": {
+    "protocol": 1,
+    "instance_occupancy": 1985,
+    "round_start": 184,
+    "pilot": 4,
+    "round_complete": 184,
+    "reference": 2,
+    "initial_model": 1,
+    "batch_assignment": 900,
+    "batch_selected": 900,
+    "request": 4500,
+    "batch_closed": 900,
+    "feedback_enqueued": 360,
+    "feedback_applied": 360,
+    "training_gate": 1,
+    "frozen_model": 1,
+    "complete": 1
+  },
+  "quality": {
+    "VALID": 4500
+  },
+  "correctness": {
+    "MATCHED": 4500
+  },
+  "occupancy_checks_passed": 1985,
+  "sqlite_integrity": {
+    "executions.sqlite": "ok",
+    "feedback.sqlite": "ok"
+  },
+  "queue": {
+    "APPLIED": 359,
+    "REJECTED": 1
+  },
+  "head_revision": 359,
+  "frozen_at": "2026-11-03T07:06:11.965678+00:00",
+  "persisted_fingerprint_matches_report": true,
+  "source_files": 87,
+  "changed_before_document_update": [],
+  "user_run_tests": {
+    "focused": "45 passed in 4.23s",
+    "full": "929 passed in 39.59s"
+  },
+  "stage_accepted": false,
+  "reason": "Adaptive benefit over fixed S1 not demonstrated; independent-session replication also not established."
+}

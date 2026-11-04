@@ -1,0 +1,161 @@
+{
+  "source": "benchmarks/results/phase8_fairness_20261104_120412_469528511",
+  "events": {
+    "protocol": 1,
+    "round_start": 542,
+    "instance_occupancy": 1082,
+    "doctor": 2,
+    "reference_execution": 2,
+    "reference": 2,
+    "round_complete": 542,
+    "lane_setup": 540,
+    "request": 5940,
+    "lane_close": 540,
+    "load_control": 540,
+    "training_update": 960,
+    "frozen_model": 1,
+    "complete": 1
+  },
+  "costs": [
+    {
+      "cache": "APPLICATION_EMPTY",
+      "group": "A1",
+      "n": 240,
+      "e2e_ms": 71.91022079583334,
+      "decision_ms": 23.577078066666665,
+      "adapter_ms": 5.822958333333333,
+      "executor_other_ms": 1.9402541666666666,
+      "remaining_ms": 40.569930229166665
+    },
+    {
+      "cache": "APPLICATION_EMPTY",
+      "group": "A2",
+      "n": 240,
+      "e2e_ms": 55.3484556375,
+      "decision_ms": 4.6122154625,
+      "adapter_ms": 6.069829166666667,
+      "executor_other_ms": 2.150158333333333,
+      "remaining_ms": 42.516252675
+    },
+    {
+      "cache": "APPLICATION_EMPTY",
+      "group": "E0",
+      "n": 240,
+      "e2e_ms": 64.4822552625,
+      "decision_ms": 5.2392475916666665,
+      "adapter_ms": 22.668408333333332,
+      "executor_other_ms": 0.6914583333333334,
+      "remaining_ms": 35.88314100416667
+    },
+    {
+      "cache": "APPLICATION_EMPTY",
+      "group": "E1",
+      "n": 240,
+      "e2e_ms": 45.0121891,
+      "decision_ms": 4.4416095166666665,
+      "adapter_ms": 6.4302,
+      "executor_other_ms": 2.6458083333333335,
+      "remaining_ms": 31.49457125
+    },
+    {
+      "cache": "APPLICATION_EMPTY",
+      "group": "E2",
+      "n": 240,
+      "e2e_ms": 43.972048408333336,
+      "decision_ms": 4.3518404375,
+      "adapter_ms": 6.1917875,
+      "executor_other_ms": 2.4631083333333335,
+      "remaining_ms": 30.9653121375
+    },
+    {
+      "cache": "APPLICATION_EMPTY",
+      "group": "E3",
+      "n": 240,
+      "e2e_ms": 52.78704537916666,
+      "decision_ms": 4.107300879166667,
+      "adapter_ms": 5.8453375,
+      "executor_other_ms": 2.1145875,
+      "remaining_ms": 40.7198195
+    },
+    {
+      "cache": "APPLICATION_EMPTY",
+      "group": "E4",
+      "n": 240,
+      "e2e_ms": 72.15768105416667,
+      "decision_ms": 23.922058170833335,
+      "adapter_ms": 5.7615125,
+      "executor_other_ms": 1.9655833333333335,
+      "remaining_ms": 40.50852705
+    },
+    {
+      "cache": "APPLICATION_WARM",
+      "group": "A1",
+      "n": 240,
+      "e2e_ms": 66.9428251375,
+      "decision_ms": 23.4745793875,
+      "adapter_ms": 0.5010083333333334,
+      "executor_other_ms": 2.165958333333333,
+      "remaining_ms": 40.801279083333334
+    },
+    {
+      "cache": "APPLICATION_WARM",
+      "group": "A2",
+      "n": 240,
+      "e2e_ms": 47.80086974583333,
+      "decision_ms": 4.159011033333333,
+      "adapter_ms": 0.5751083333333333,
+      "executor_other_ms": 2.3307375,
+      "remaining_ms": 40.736012879166665
+    },
+    {
+      "cache": "APPLICATION_WARM",
+      "group": "E0",
+      "n": 240,
+      "e2e_ms": 65.13036526666667,
+      "decision_ms": 5.189913016666667,
+      "adapter_ms": 22.497541666666667,
+      "executor_other_ms": 0.6858583333333333,
+      "remaining_ms": 36.75705225
+    },
+    {
+      "cache": "APPLICATION_WARM",
+      "group": "E1",
+      "n": 240,
+      "e2e_ms": 36.50058097083333,
+      "decision_ms": 3.9538229125,
+      "adapter_ms": 0.5445625,
+      "executor_other_ms": 2.7055333333333333,
+      "remaining_ms": 29.296662225
+    },
+    {
+      "cache": "APPLICATION_WARM",
+      "group": "E2",
+      "n": 240,
+      "e2e_ms": 38.44087735833333,
+      "decision_ms": 4.097558158333333,
+      "adapter_ms": 0.555675,
+      "executor_other_ms": 3.1226666666666665,
+      "remaining_ms": 30.664977533333335
+    },
+    {
+      "cache": "APPLICATION_WARM",
+      "group": "E3",
+      "n": 240,
+      "e2e_ms": 49.77607850416667,
+      "decision_ms": 4.6731629875,
+      "adapter_ms": 0.5611,
+      "executor_other_ms": 2.5469583333333334,
+      "remaining_ms": 41.99485718333333
+    },
+    {
+      "cache": "APPLICATION_WARM",
+      "group": "E4",
+      "n": 240,
+      "e2e_ms": 66.89180128333334,
+      "decision_ms": 23.252542304166667,
+      "adapter_ms": 0.4966083333333333,
+      "executor_other_ms": 2.1436,
+      "remaining_ms": 40.999050645833336
+    }
+  ]
+}

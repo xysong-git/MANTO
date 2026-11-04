@@ -1,0 +1,215 @@
+{
+  "protocol": "cpu-activity-v2",
+  "purpose": "NATIVE_SCREENING_NOT_LEARNING",
+  "schedule_complete": true,
+  "execution_sql_binding_verified": true,
+  "all_executions_successful": true,
+  "journal_sha256": "c3184d0c62b4e6fe66e99aa9dbf8463caec3fee0115a2e4fb92381123511cd8a",
+  "journal": "data/phase7_cpu_guard_fix_profile_20261102/journal.jsonl",
+  "epoch": "heavy-complete-20261102-v2",
+  "rounds": [
+    {
+      "index": 0,
+      "scale": "small_scale",
+      "type": "q03_count_aggregation",
+      "workers": 1,
+      "repeat": 0,
+      "sql_sha256": "69289cd978f4c21b0548a24c7f678bd1d5d9620d82f92943a8a9863e6f7875bc",
+      "elapsed_s": 0.4700791040668264,
+      "results": [
+        {
+          "execution_id": "c058e225fa344fca8e8484bc86561304",
+          "sql_sha256": "69289cd978f4c21b0548a24c7f678bd1d5d9620d82f92943a8a9863e6f7875bc",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 1,
+          "metrics": {
+            "execute_call_ms": 22.63,
+            "result_fetch_ms": 3.465,
+            "client_wall_ms": 26.988
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:33:29.470039+00:00",
+          "finished_at": "2026-11-02T12:33:29.501250+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 2.9,
+      "cpu_max_percent": 5.8,
+      "cpu_mean_percent": 4.35,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    },
+    {
+      "index": 1,
+      "scale": "small_scale",
+      "type": "q03_count_aggregation",
+      "workers": 2,
+      "repeat": 0,
+      "sql_sha256": "69289cd978f4c21b0548a24c7f678bd1d5d9620d82f92943a8a9863e6f7875bc",
+      "elapsed_s": 0.6436577310087159,
+      "results": [
+        {
+          "execution_id": "423cf36b9a464de1aa9606dbe512b9f9",
+          "sql_sha256": "69289cd978f4c21b0548a24c7f678bd1d5d9620d82f92943a8a9863e6f7875bc",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 1,
+          "metrics": {
+            "execute_call_ms": 25.544,
+            "result_fetch_ms": 5.528,
+            "client_wall_ms": 32.73
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:33:30.154477+00:00",
+          "finished_at": "2026-11-02T12:33:30.193390+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "ad399966273b4005bd2c82f263a42102",
+          "sql_sha256": "69289cd978f4c21b0548a24c7f678bd1d5d9620d82f92943a8a9863e6f7875bc",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 1,
+          "metrics": {
+            "execute_call_ms": 16.364,
+            "result_fetch_ms": 5.423,
+            "client_wall_ms": 23.38
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:33:30.155147+00:00",
+          "finished_at": "2026-11-02T12:33:30.185046+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 4.4,
+      "cpu_max_percent": 5.5,
+      "cpu_mean_percent": 4.95,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    },
+    {
+      "index": 2,
+      "scale": "small_scale",
+      "type": "q03_count_aggregation",
+      "workers": 4,
+      "repeat": 0,
+      "sql_sha256": "69289cd978f4c21b0548a24c7f678bd1d5d9620d82f92943a8a9863e6f7875bc",
+      "elapsed_s": 1.0135448839282617,
+      "results": [
+        {
+          "execution_id": "e4057eaba87144bf89ec26c46bccc17d",
+          "sql_sha256": "69289cd978f4c21b0548a24c7f678bd1d5d9620d82f92943a8a9863e6f7875bc",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 1,
+          "metrics": {
+            "execute_call_ms": 27.766,
+            "result_fetch_ms": 5.617,
+            "client_wall_ms": 39.599
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:33:31.198095+00:00",
+          "finished_at": "2026-11-02T12:33:31.243219+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "f600f690ba4a4fc99ab209d72affb855",
+          "sql_sha256": "69289cd978f4c21b0548a24c7f678bd1d5d9620d82f92943a8a9863e6f7875bc",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 1,
+          "metrics": {
+            "execute_call_ms": 21.309,
+            "result_fetch_ms": 6.015,
+            "client_wall_ms": 42.826
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:33:31.183781+00:00",
+          "finished_at": "2026-11-02T12:33:31.245472+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "6a0ee64527f349fc9bc596fbf552e751",
+          "sql_sha256": "69289cd978f4c21b0548a24c7f678bd1d5d9620d82f92943a8a9863e6f7875bc",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 1,
+          "metrics": {
+            "execute_call_ms": 17.523,
+            "result_fetch_ms": 6.051,
+            "client_wall_ms": 30.762
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:33:31.104739+00:00",
+          "finished_at": "2026-11-02T12:33:31.229299+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "06e0679930014cd28842eb635586411a",
+          "sql_sha256": "69289cd978f4c21b0548a24c7f678bd1d5d9620d82f92943a8a9863e6f7875bc",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 1,
+          "metrics": {
+            "execute_call_ms": 38.653,
+            "result_fetch_ms": 5.859,
+            "client_wall_ms": 47.8
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:33:31.147803+00:00",
+          "finished_at": "2026-11-02T12:33:31.247480+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 4.6,
+      "cpu_max_percent": 5.5,
+      "cpu_mean_percent": 5.05,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    }
+  ],
+  "online_ready": false,
+  "limitations": [
+    "whole-host metrics include unrelated processes",
+    "memory pressure and disk saturation UNKNOWN",
+    "short queries can finish between samples",
+    "no strategy benefit or learning claim",
+    "screening is not learning readiness evidence",
+    "shared host CPU includes other processes; old results may lack per-execution SQL hashes"
+  ]
+}

@@ -1,0 +1,29 @@
+# Versioned, external Agent-2 resource-pressure policy.
+#
+# A non-baseline strategy may be selected only when every usable snapshot is at
+# or below its source-specific thresholds.  A strictly greater value vetoes
+# every non-Native strategy and forces S0_NATIVE, the safe fallback.
+#
+# Thresholds are conservative operator policy, not measured IoTDB limits.
+# Client-host, DB-host and DB-metrics thresholds are separate to prevent one
+# machine's psutil data from being interpreted as another source's load.
+# Missing, invalid, stale or source-mismatched snapshots are not evaluated and
+# are never treated as zero load.
+schema_version: 1
+policy_version: "2026-11-02.1"
+enabled: true
+
+client_host:
+  cpu_percent: 90.0
+  memory_percent: 90.0
+  disk_usage_percent: 90.0
+
+db_host:
+  cpu_percent: 90.0
+  memory_percent: 90.0
+  disk_usage_percent: 90.0
+
+db_metrics:
+  cpu_percent: 90.0
+  memory_percent: 90.0
+  disk_usage_percent: 90.0

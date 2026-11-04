@@ -1,0 +1,5 @@
+{
+  "query": "SELECT s_0 FROM root.test.d_0 LIMIT 5",
+  "observed": "EXPLAIN returned 0 plan lines; execution returned only a Time column and 0 rows.",
+  "source_probe": "probe_19_result.json:cases.wrong_device_path"
+}

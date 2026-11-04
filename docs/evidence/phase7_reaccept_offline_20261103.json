@@ -1,0 +1,12 @@
+{
+  "offline_replay_matches_original_report": true,
+  "different_report_keys": [],
+  "journal_sha256": "5699e93c12d34dbd61be1209175b5a7a4cacea8078bd981440f5bafa1f125256",
+  "model_reproduced": true,
+  "l1_reproduced": true,
+  "training_batches": 360,
+  "heldout_batches": 720,
+  "stage_accepted": false,
+  "sqlite_source_sha256": "529942f3eaf3e736e9fcdb2114d63d695653e2c5f4f9486a0ab6c7c3a4923705",
+  "iotdb_called": false
+}

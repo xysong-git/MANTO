@@ -1,0 +1,163 @@
+{
+  "evidence_type": "REPLAY_EXISTING_REAL_RECORDS_NO_NEW_DATABASE_EXECUTION",
+  "evaluation": {
+    "test_rows": [
+      {
+        "execution_id": "0e2d46ea02244827b37989238753c084",
+        "observed_arm": "S0_NATIVE@0.1.0",
+        "predicted_reward": -0.006208332187588576,
+        "observed_reward": -0.006363708586468122,
+        "chosen_offline_arm": "S0_NATIVE@0.1.0",
+        "chosen_reward": -0.006363708586468122
+      },
+      {
+        "execution_id": "e417c855780f4c808ab4c56bb0372683",
+        "observed_arm": "S1_REPEAT_CACHE@1.0.0",
+        "predicted_reward": -0.006784960364473877,
+        "observed_reward": -0.006867365573931408,
+        "chosen_offline_arm": "S0_NATIVE@0.1.0",
+        "chosen_reward": null
+      },
+      {
+        "execution_id": "1bbe52effc6b4bdb80398914a02e2f84",
+        "observed_arm": "S1_REPEAT_CACHE@1.0.0",
+        "predicted_reward": -0.006782569072790876,
+        "observed_reward": -0.006448165822093899,
+        "chosen_offline_arm": "S0_NATIVE@0.1.0",
+        "chosen_reward": null
+      },
+      {
+        "execution_id": "e8ec34868639448eb37e950dc1fc1243",
+        "observed_arm": "S0_NATIVE@0.1.0",
+        "predicted_reward": -0.006173617167670632,
+        "observed_reward": -0.005910498539710786,
+        "chosen_offline_arm": "S0_NATIVE@0.1.0",
+        "chosen_reward": -0.005910498539710786
+      },
+      {
+        "execution_id": "7194131e9d6c41f8aa31ee4dd7373423",
+        "observed_arm": "S1_REPEAT_CACHE@1.0.0",
+        "predicted_reward": -0.006782569072790876,
+        "observed_reward": -0.005381493752409974,
+        "chosen_offline_arm": "S0_NATIVE@0.1.0",
+        "chosen_reward": null
+      },
+      {
+        "execution_id": "c5ce929985d44ecdb6322468f6e4dd42",
+        "observed_arm": "S1_REPEAT_CACHE@1.0.0",
+        "predicted_reward": -0.006784257043390641,
+        "observed_reward": -0.006209679967646277,
+        "chosen_offline_arm": "S0_NATIVE@0.1.0",
+        "chosen_reward": null
+      },
+      {
+        "execution_id": "aaa81aff48454a73850976b107a38491",
+        "observed_arm": "S0_NATIVE@0.1.0",
+        "predicted_reward": -0.006177414122974157,
+        "observed_reward": -0.0050144068218051716,
+        "chosen_offline_arm": "S0_NATIVE@0.1.0",
+        "chosen_reward": -0.0050144068218051716
+      },
+      {
+        "execution_id": "5fc8fb1838584a1797958baee3c74322",
+        "observed_arm": "S0_NATIVE@0.1.0",
+        "predicted_reward": -0.006177685334067266,
+        "observed_reward": -0.004142408367205495,
+        "chosen_offline_arm": "S0_NATIVE@0.1.0",
+        "chosen_reward": -0.004142408367205495
+      }
+    ],
+    "input_records": 24,
+    "unique_execution_count": 24,
+    "accepted_records": 8,
+    "rejected_records": 16,
+    "rejections": [
+      {
+        "execution_id": "5e8223badc1f4f73943ca967045b309e",
+        "reason": "PARTITION_MISMATCH"
+      },
+      {
+        "execution_id": "adcfdd4e19184e6382ada00053c0b750",
+        "reason": "PARTITION_MISMATCH"
+      },
+      {
+        "execution_id": "971f25790f1f4fc5becb356917d6025f",
+        "reason": "PARTITION_MISMATCH"
+      },
+      {
+        "execution_id": "f6b3706ba37d4a86a6b3f83133b72215",
+        "reason": "PARTITION_MISMATCH"
+      },
+      {
+        "execution_id": "4e336023fbc64cec946ceb661c3a323e",
+        "reason": "ValueError",
+        "reason_code": "SAMPLE_NOT_VALID",
+        "detail": "SAMPLE_NOT_VALID"
+      },
+      {
+        "execution_id": "cce1059f821446abb9267c9d262a37b6",
+        "reason": "ValueError",
+        "reason_code": "SAMPLE_NOT_VALID",
+        "detail": "SAMPLE_NOT_VALID"
+      },
+      {
+        "execution_id": "5665b3ceed4449ea842faf42a2be5a3e",
+        "reason": "PARTITION_MISMATCH"
+      },
+      {
+        "execution_id": "d6516052239045a3b730c4e9f1777ff6",
+        "reason": "ValueError",
+        "reason_code": "SAMPLE_NOT_VALID",
+        "detail": "SAMPLE_NOT_VALID"
+      },
+      {
+        "execution_id": "d5ce463777ca4e1dafd30ef8eb69b5dc",
+        "reason": "PARTITION_MISMATCH"
+      },
+      {
+        "execution_id": "454a0b416a714ef293be5d51141fde2f",
+        "reason": "ValueError",
+        "reason_code": "SAMPLE_NOT_VALID",
+        "detail": "SAMPLE_NOT_VALID"
+      },
+      {
+        "execution_id": "05fd0c7faa6345cf960c0a193c297b01",
+        "reason": "ValueError",
+        "reason_code": "SAMPLE_NOT_VALID",
+        "detail": "SAMPLE_NOT_VALID"
+      },
+      {
+        "execution_id": "7d6c7a7269324096ae94b531455f54ee",
+        "reason": "PARTITION_MISMATCH"
+      },
+      {
+        "execution_id": "fc9a1b0a69d24e5798aaeafa6f80ff71",
+        "reason": "ValueError",
+        "reason_code": "SAMPLE_NOT_VALID",
+        "detail": "SAMPLE_NOT_VALID"
+      },
+      {
+        "execution_id": "dc8b48e177104c41b2ac1226474d7317",
+        "reason": "PARTITION_MISMATCH"
+      },
+      {
+        "execution_id": "5c33bef318534ea18337f062e4d03bc9",
+        "reason": "ValueError",
+        "reason_code": "SAMPLE_NOT_VALID",
+        "detail": "SAMPLE_NOT_VALID"
+      },
+      {
+        "execution_id": "2c1e250a2004407abadc648514d05c27",
+        "reason": "ValueError",
+        "reason_code": "SAMPLE_NOT_VALID",
+        "detail": "SAMPLE_NOT_VALID"
+      }
+    ],
+    "factual_reward_mse": 1.0000098217615624e-06,
+    "policy_value": null,
+    "policy_value_reason": "UNKNOWN_NO_VERIFIED_PROPENSITIES; unmatched rewards remain null",
+    "frozen_model_unchanged": true,
+    "online_ready": false
+  },
+  "matches_prior_accepted_rows_and_mse": true
+}

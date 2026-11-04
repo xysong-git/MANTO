@@ -1,0 +1,200 @@
+{
+  "evidence_type": "REAL_IOTDB_READONLY",
+  "server_version": "2.0.6",
+  "database_model": "tree",
+  "probe_scope": "doctor completed before SDK counter attached",
+  "sdk_query_calls_in_workflow": 1,
+  "sql_hashes": [
+    "118e0066a38ef8a1e78b5162214638f03b3ec2426eee1ec2b1b9c47ec7f2d997"
+  ],
+  "trace": {
+    "schema_version": 1,
+    "query_id": "4f016b4a51954474aa6ae9742471839c",
+    "sql_sha256": "118e0066a38ef8a1e78b5162214638f03b3ec2426eee1ec2b1b9c47ec7f2d997",
+    "requested_mode": "baseline",
+    "effective_mode": "baseline",
+    "events": [
+      {
+        "index": 0,
+        "state": "RECEIVED",
+        "at": "2026-11-02T06:47:07.011810Z",
+        "elapsed_ms": 0.029,
+        "query_id": "4f016b4a51954474aa6ae9742471839c",
+        "decision_id": null,
+        "execution_ids": [],
+        "details": {}
+      },
+      {
+        "index": 1,
+        "state": "PARSED",
+        "at": "2026-11-02T06:47:07.017743Z",
+        "elapsed_ms": 5.947,
+        "query_id": "4f016b4a51954474aa6ae9742471839c",
+        "decision_id": null,
+        "execution_ids": [],
+        "details": {
+          "parse_status": "SUCCESS"
+        }
+      },
+      {
+        "index": 2,
+        "state": "SNAPSHOT",
+        "at": "2026-11-02T06:47:07.019048Z",
+        "elapsed_ms": 7.266,
+        "query_id": "4f016b4a51954474aa6ae9742471839c",
+        "decision_id": null,
+        "execution_ids": [],
+        "details": {
+          "client_snapshot_id": "4365ae2f7d79420c880b2042f95716ee",
+          "db_snapshot_id": "bfdfb962c802435d8bf58aa523ed04cc",
+          "client_source": "client_host",
+          "db_source": "unknown"
+        }
+      },
+      {
+        "index": 3,
+        "state": "RETRIEVED",
+        "at": "2026-11-02T06:47:07.020189Z",
+        "elapsed_ms": 8.395,
+        "query_id": "4f016b4a51954474aa6ae9742471839c",
+        "decision_id": null,
+        "execution_ids": [],
+        "details": {
+          "model_version": null,
+          "advice_strategy": null,
+          "context_key": "7b126f14b4f1650991086fc780ad690357f6d751d2c94fd0879f07bee28f5d70",
+          "expected_result_rows": null
+        }
+      },
+      {
+        "index": 4,
+        "state": "DECIDED",
+        "at": "2026-11-02T06:47:07.030319Z",
+        "elapsed_ms": 18.533,
+        "query_id": "4f016b4a51954474aa6ae9742471839c",
+        "decision_id": "5708c026dd9d486e994222477d063170",
+        "execution_ids": [],
+        "details": {
+          "strategy_id": "S0_NATIVE",
+          "strategy_version": "0.1.0",
+          "model_version": null,
+          "effective_mode": "baseline",
+          "degradation_reasons": [],
+          "decision_warnings": [
+            "COST_UNKNOWN: NO_HISTORICAL_STATISTICS"
+          ]
+        }
+      },
+      {
+        "index": 5,
+        "state": "VALIDATED",
+        "at": "2026-11-02T06:47:07.031636Z",
+        "elapsed_ms": 19.855,
+        "query_id": "4f016b4a51954474aa6ae9742471839c",
+        "decision_id": "5708c026dd9d486e994222477d063170",
+        "execution_ids": [],
+        "details": {
+          "passed": true,
+          "executor_revalidates": true
+        }
+      },
+      {
+        "index": 6,
+        "state": "EXECUTED",
+        "at": "2026-11-02T06:47:07.046342Z",
+        "elapsed_ms": 34.556,
+        "query_id": "4f016b4a51954474aa6ae9742471839c",
+        "decision_id": "5708c026dd9d486e994222477d063170",
+        "execution_ids": [
+          "bf1bdda7b666409fbfcea285d52b6822"
+        ],
+        "details": {
+          "final_status": "SUCCESS",
+          "database_dispatches": 1,
+          "fallback_used": false,
+          "fallback_trigger": "NONE",
+          "attempts": [
+            {
+              "execution_id": "bf1bdda7b666409fbfcea285d52b6822",
+              "strategy_id": "S0_NATIVE",
+              "is_fallback": false,
+              "timed_out": false,
+              "request_dispatched": true,
+              "request_completed": true,
+              "served_from_cache": false
+            }
+          ]
+        }
+      },
+      {
+        "index": 7,
+        "state": "MONITORED",
+        "at": "2026-11-02T06:47:07.047514Z",
+        "elapsed_ms": 35.732,
+        "query_id": "4f016b4a51954474aa6ae9742471839c",
+        "decision_id": "5708c026dd9d486e994222477d063170",
+        "execution_ids": [
+          "bf1bdda7b666409fbfcea285d52b6822"
+        ],
+        "details": {
+          "record_ids": [
+            "bf1bdda7b666409fbfcea285d52b6822"
+          ],
+          "runtime_result_checks": [
+            "NOT_CHECKED"
+          ]
+        }
+      },
+      {
+        "index": 8,
+        "state": "LEARNED",
+        "at": "2026-11-02T06:47:07.055465Z",
+        "elapsed_ms": 43.673,
+        "query_id": "4f016b4a51954474aa6ae9742471839c",
+        "decision_id": "5708c026dd9d486e994222477d063170",
+        "execution_ids": [
+          "bf1bdda7b666409fbfcea285d52b6822"
+        ],
+        "details": {
+          "feedback": [
+            {
+              "execution_id": "bf1bdda7b666409fbfcea285d52b6822",
+              "sample_status": "LOW_CONFIDENCE",
+              "model_updated": false,
+              "model_version": null,
+              "quality_reasons": [
+                "UNKNOWN_DATASET_EPOCH",
+                "UNKNOWN_CACHE_CONDITION"
+              ],
+              "warning_codes": []
+            }
+          ]
+        }
+      },
+      {
+        "index": 9,
+        "state": "SUCCEEDED",
+        "at": "2026-11-02T06:47:07.055531Z",
+        "elapsed_ms": 43.752,
+        "query_id": "4f016b4a51954474aa6ae9742471839c",
+        "decision_id": "5708c026dd9d486e994222477d063170",
+        "execution_ids": [
+          "bf1bdda7b666409fbfcea285d52b6822"
+        ],
+        "details": {}
+      }
+    ],
+    "warnings": [],
+    "database_dispatches": 1
+  },
+  "execution": {
+    "query_id": "4f016b4a51954474aa6ae9742471839c",
+    "decision_id": "5708c026dd9d486e994222477d063170",
+    "execution_id": "bf1bdda7b666409fbfcea285d52b6822",
+    "success": true,
+    "client_wall_ms": 3.584,
+    "rows_returned": 1,
+    "runtime_result_check": "NOT_CHECKED"
+  },
+  "note": "No SQL text, result values, credentials, host addresses or snapshot metric values exported. Unknown epoch/cache condition intentionally prevents reward/model update."
+}

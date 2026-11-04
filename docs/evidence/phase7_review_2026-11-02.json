@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "project": "MANTO",
+  "scope": "PHASE7_OFFLINE_REVIEW_AND_MINIMAL_EVALUATION_FIXES",
+  "overall_acceptance": "NOT_ACCEPTED_REAL_ENABLEMENT_CONDITIONS_UNMET",
+  "offline_fixes_verified": true,
+  "online_ready": false,
+  "advanced_to_phase8": false,
+  "new_real_benchmark_collected": false,
+  "initial_evidence": {
+    "original_stage7_tests": {
+      "passed": 22,
+      "elapsed_seconds": 1.98
+    },
+    "original_full_suite": {
+      "passed": 741,
+      "elapsed_seconds": 29.66,
+      "integration_enabled": true
+    },
+    "independent_probes_before_fix": {
+      "failed": 3,
+      "elapsed_seconds": 1.31,
+      "failures": [
+        "duplicate heldout ID accepted",
+        "audit raised StrategyRegistryError after quarantine",
+        "frozen evaluation raised StrategyRegistryError after quarantine"
+      ]
+    }
+  },
+  "final_evidence": {
+    "stage7_tests_and_probes": {
+      "passed": 34,
+      "elapsed_seconds": 2.37,
+      "unique_new_unit_tests": 9,
+      "independent_probes": 3,
+      "overlap_note": "Independent probes overlap unit regression coverage; do not sum as unique coverage."
+    },
+    "full_suite": {
+      "passed": 750,
+      "elapsed_seconds": 35.83,
+      "integration_enabled": true,
+      "real_integration_cases": 13,
+      "skipped": 0
+    },
+    "phase5_6_7_independent_probes": {
+      "passed": 11,
+      "elapsed_seconds": 2.53
+    },
+    "ast_syntax": {
+      "files": 106,
+      "exit_code": 0
+    },
+    "independent_numerical_replay": {
+      "training_server_count_per_arm": 4,
+      "heldout_server_rows": 8,
+      "method": "independent accumulation and Gaussian elimination compared with production Cholesky",
+      "factual_reward_mse": 1.0000098217615624e-06,
+      "policy_value": null
+    },
+    "test_fixture_correction": "Expanded quality rejection test initially used model_dump without round_trip; fixed fixture serialization and retained all tests."
+  },
+  "closed_findings": {
+    "F7-1": {
+      "description": "Heldout duplicate execution IDs inflated sample weighting",
+      "status": "CLOSED",
+      "fix": "Reject all heldout duplicates; audit deduplicates exact facts and rejects conflicting evidence."
+    },
+    "F7-2": {
+      "description": "Quarantined arm interrupted audit/frozen evaluation",
+      "status": "CLOSED",
+      "fix": "Record expected admission/registry rejections per execution, retain valid other facts, propagate unexpected errors."
+    }
+  },
+  "remaining_blockers": [
+    "INSUFFICIENT_PER_ARM_SAMPLES",
+    "INSUFFICIENT_LOAD_COVERAGE",
+    "NO_VERIFIED_PROPENSITY_LOG",
+    "INDEPENDENT_POLICY_BENEFIT_NOT_ESTABLISHED",
+    "REAL_LLM_PROVIDER_UNAVAILABLE",
+    "DB_HOST_METRICS_UNKNOWN"
+  ],
+  "source_sha256": {
+    "src/tsdb_optimizer/bandit/context.py": "976f9c5ee8739fb3c8dc74389cb08a4d74d2ef32bbc3e0204f2067e4833e9dd7",
+    "src/tsdb_optimizer/bandit/model.py": "5f4a0fbd8646b66785ac0121431af868ceb3e28c290bab776ed03febd2c5945c",
+    "src/tsdb_optimizer/bandit/evaluation.py": "5d4ab58f5cbfef5966b86668ad860bbc38b1361f85f1be3f51ff77e38b2d8e1f",
+    "src/tsdb_optimizer/bandit/store.py": "0e861315c171695c3fbfdc01d51a038ce5e20d39d78d08b09db8bb4db0f8c865",
+    "src/tsdb_optimizer/bandit/settings.py": "58b3f05a1bd5af71454cb50c046e0dd48b3dfd3588e20091fbfbb13d597f9854",
+    "src/tsdb_optimizer/decision/llm_advisor.py": "b2a4a407b73c1b4ec1678eee981defd9de70556a2d6c9cebd367448603a677cb",
+    "configs/bandit.yaml": "dd7ff68a8d9189576c9f46744f8e8b1a7b5cf2c6065f5fef7543432c9ca88d16",
+    "tests/unit/test_linucb.py": "8678ff0f314d0e8f8634e1505a89a2f0e5b50e2bf2ffe6439efc572247930e03",
+    "tests/unit/test_llm_advisor.py": "ba10650305506dcf04361c0197bb1a3b1d3e535c17a73aca430c6a16c090f813",
+    "tests/unit/test_phase7_review_regressions.py": "bb0accf7a7a8e252be9cd61868f819bb9f4d7ba02e15e8b9358751a6352ef929",
+    "docs/evidence/phase7_review_probes.py": "5c8eaf161973c1e53ee31811c87da3c04a2504afa8eee053c702dd9c539c0bb5",
+    "docs/evidence/phase5_learning_fixes_2026-11-02.json": "d2fa4e9e93fc5ae8137d95bc4dd0411f01d0457f0e1a811655f25d18befb2c4d",
+    "docs/evidence/phase7_offline_2026-11-02.json": "5f9b61b77d66d255cd0021640afe89c93527ffb4c9750a4c7661a7927307f288"
+  }
+}

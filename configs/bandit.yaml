@@ -1,0 +1,12 @@
+# Phase-7 offline experiment only. Not loaded by CLI/Orchestrator.
+schema_version: 1
+encoder_version: linucb-context-v1
+reward_version: negative-log1p-ms-v1
+alpha: 0.1
+regularization: 1.0
+min_samples: 30
+seed: 20261102
+online_enabled: false
+llm_enabled: false
+# Readiness additionally requires >=2 comparable arms, >=2 independently measured
+# load contexts, recorded randomized propensities, disjoint future holdout, review.

@@ -1,0 +1,3940 @@
+{
+  "journal_sha256": "bb37e4d947cd4416a6710be6c5a803fae2065c9f66e8d9fbbb6d35bcb43f8416",
+  "batches": 900,
+  "requests": 4500,
+  "frozen_fingerprint": "b1742257dc25a303172c2d57c268b3a078b67a35c5c7eeb567324db1cefe490a",
+  "cells": {
+    "TRAIN/LOW/2/S1_REPEAT_CACHE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 20.82346351111111,
+        "median": 20.491663,
+        "p95_nearest_lower": 27.983033,
+        "max": 43.026735
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.10226666666666667,
+        "median": 0.101,
+        "p95_nearest_lower": 0.14500000000000002,
+        "max": 0.148
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 23.655133333333335,
+        "median": 22.378,
+        "p95_nearest_lower": 28.465,
+        "max": 58.938
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 0.5000888888888888,
+        "median": 0.5199999999999996,
+        "p95_nearest_lower": 0.6720000000000024,
+        "max": 0.706999999999999
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 1.4092444444444443,
+        "median": 1.2799999999999994,
+        "p95_nearest_lower": 1.982000000000001,
+        "max": 2.426
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 8.918022222222222,
+        "median": 8.907999999999998,
+        "p95_nearest_lower": 11.151000000000002,
+        "max": 11.552999999999999
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 0.484022222222222,
+        "median": 0.48900000000000077,
+        "p95_nearest_lower": 0.6510000000000016,
+        "max": 0.7170000000000023
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 49.36875555555555,
+        "median": 46.588,
+        "p95_nearest_lower": 58.227000000000004,
+        "max": 88.485
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 1.3873777777777776,
+        "median": 1.3449999999999989,
+        "p95_nearest_lower": 1.8099999999999952,
+        "max": 1.9590000000000032
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 15.065577777777778,
+        "median": 13.685000000000002,
+        "p95_nearest_lower": 21.356,
+        "max": 44.722
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.24586666666666668,
+        "median": 0.24600000000000222,
+        "p95_nearest_lower": 0.3259999999999863,
+        "max": 0.36699999999999733
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 10.135784466666667,
+        "median": 10.146227000000003,
+        "p95_nearest_lower": 11.835208000000002,
+        "max": 13.067316000000005
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 40.12628888888889,
+        "median": 38.678,
+        "p95_nearest_lower": 48.664,
+        "max": 78.179
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 132.09560353333333,
+        "median": 132.514896,
+        "p95_nearest_lower": 163.75239,
+        "max": 173.211322
+      }
+    },
+    "TRAIN/LOW/8/S0_NATIVE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 20.858451866666666,
+        "median": 20.556153,
+        "p95_nearest_lower": 27.919543,
+        "max": 41.49748
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.48415555555555556,
+        "median": 0.486,
+        "p95_nearest_lower": 0.636,
+        "max": 0.858
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 113.02106666666667,
+        "median": 115.72399999999999,
+        "p95_nearest_lower": 151.704,
+        "max": 170.31100000000004
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 2.270533333333333,
+        "median": 2.3189999999999973,
+        "p95_nearest_lower": 2.7939999999999987,
+        "max": 2.907
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 6.824244444444445,
+        "median": 6.959999999999999,
+        "p95_nearest_lower": 8.674,
+        "max": 8.770999999999999
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 41.373511111111114,
+        "median": 42.67999999999999,
+        "p95_nearest_lower": 48.115,
+        "max": 51.358000000000004
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 2.277511111111111,
+        "median": 2.369000000000005,
+        "p95_nearest_lower": 2.9020000000000046,
+        "max": 3.3270000000000124
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 195.50295555555556,
+        "median": 191.133,
+        "p95_nearest_lower": 236.181,
+        "max": 260.373
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 6.468577777777777,
+        "median": 6.504000000000012,
+        "p95_nearest_lower": 8.050000000000004,
+        "max": 8.914999999999985
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 69.035,
+        "median": 68.516,
+        "p95_nearest_lower": 91.711,
+        "max": 130.003
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 1.1862222222222216,
+        "median": 1.1950000000000003,
+        "p95_nearest_lower": 1.4749999999999872,
+        "max": 1.607999999999997
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 44.5733258,
+        "median": 44.88397300000001,
+        "p95_nearest_lower": 52.12599899999999,
+        "max": 55.49283200000002
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 163.60842222222223,
+        "median": 162.763,
+        "p95_nearest_lower": 205.239,
+        "max": 224.676
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 503.87555544444444,
+        "median": 504.782804,
+        "p95_nearest_lower": 591.487394,
+        "max": 632.064909
+      }
+    },
+    "TRAIN/LOW/2/S0_NATIVE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 21.00493768888889,
+        "median": 21.227969,
+        "p95_nearest_lower": 27.537044,
+        "max": 28.36922
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.10393333333333334,
+        "median": 0.10400000000000001,
+        "p95_nearest_lower": 0.135,
+        "max": 0.155
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 24.102977777777777,
+        "median": 24.677,
+        "p95_nearest_lower": 29.287,
+        "max": 41.425000000000004
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 0.5007333333333331,
+        "median": 0.522000000000002,
+        "p95_nearest_lower": 0.6720000000000006,
+        "max": 0.7530000000000001
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 1.4468888888888891,
+        "median": 1.4049999999999976,
+        "p95_nearest_lower": 1.9320000000000004,
+        "max": 2.1720000000000006
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 9.090666666666666,
+        "median": 9.063,
+        "p95_nearest_lower": 11.024,
+        "max": 12.289000000000001
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 0.4960444444444444,
+        "median": 0.5120000000000022,
+        "p95_nearest_lower": 0.6999999999999993,
+        "max": 0.7780000000000022
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 47.065955555555554,
+        "median": 44.589,
+        "p95_nearest_lower": 56.095,
+        "max": 92.969
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 1.4229999999999994,
+        "median": 1.4639999999999986,
+        "p95_nearest_lower": 1.7659999999999982,
+        "max": 1.8379999999999939
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 15.478111111111112,
+        "median": 15.137999999999998,
+        "p95_nearest_lower": 18.882000000000005,
+        "max": 46.647000000000006
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.2556666666666672,
+        "median": 0.2569999999999979,
+        "p95_nearest_lower": 0.32500000000000284,
+        "max": 0.3340000000000032
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 10.299165622222223,
+        "median": 10.333647,
+        "p95_nearest_lower": 12.438601000000006,
+        "max": 14.043017000000006
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 39.55524444444445,
+        "median": 36.828,
+        "p95_nearest_lower": 49.099000000000004,
+        "max": 84.189
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 131.2680810888889,
+        "median": 134.311236,
+        "p95_nearest_lower": 154.69515900000002,
+        "max": 191.585152
+      }
+    },
+    "TRAIN/LOW/8/S1_REPEAT_CACHE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 22.591137444444445,
+        "median": 22.429084,
+        "p95_nearest_lower": 28.118413,
+        "max": 68.420491
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.44035555555555556,
+        "median": 0.463,
+        "p95_nearest_lower": 0.543,
+        "max": 0.5800000000000001
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 108.16002222222222,
+        "median": 108.883,
+        "p95_nearest_lower": 145.48,
+        "max": 153.57099999999997
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 2.171088888888889,
+        "median": 2.2529999999999983,
+        "p95_nearest_lower": 2.726000000000001,
+        "max": 2.896000000000001
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 6.215444444444444,
+        "median": 6.697999999999997,
+        "p95_nearest_lower": 7.619999999999999,
+        "max": 8.194999999999995
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 38.37286666666667,
+        "median": 41.13799999999999,
+        "p95_nearest_lower": 43.971000000000004,
+        "max": 45.698
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 2.1199777777777773,
+        "median": 2.1679999999999993,
+        "p95_nearest_lower": 2.586999999999996,
+        "max": 2.9190000000000076
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 86.98893333333334,
+        "median": 83.173,
+        "p95_nearest_lower": 105.39599999999999,
+        "max": 134.52
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 5.302733333333333,
+        "median": 5.387999999999995,
+        "p95_nearest_lower": 6.248999999999999,
+        "max": 7.439
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 62.98406666666666,
+        "median": 61.58,
+        "p95_nearest_lower": 93.94700000000002,
+        "max": 102.681
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.9891111111111128,
+        "median": 1.0559999999999974,
+        "p95_nearest_lower": 1.1480000000000032,
+        "max": 1.2590000000000003
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 41.09970451111111,
+        "median": 41.83508000000001,
+        "p95_nearest_lower": 45.782149,
+        "max": 48.025484
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 45.129977777777775,
+        "median": 42.16199999999999,
+        "p95_nearest_lower": 65.46600000000001,
+        "max": 92.15599999999999
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 377.4354419555556,
+        "median": 396.770558,
+        "p95_nearest_lower": 438.516434,
+        "max": 479.03654700000004
+      }
+    },
+    "TRAIN/MEDIUM/2/S1_REPEAT_CACHE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 21.05630877777778,
+        "median": 20.300809,
+        "p95_nearest_lower": 27.549109,
+        "max": 61.05221
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.09097777777777778,
+        "median": 0.088,
+        "p95_nearest_lower": 0.10400000000000001,
+        "max": 0.125
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 23.710644444444444,
+        "median": 22.699,
+        "p95_nearest_lower": 29.046,
+        "max": 58.759
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 0.4570222222222221,
+        "median": 0.44599999999999973,
+        "p95_nearest_lower": 0.6190000000000015,
+        "max": 0.6940000000000008
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 1.3698000000000001,
+        "median": 1.3309999999999995,
+        "p95_nearest_lower": 1.6999999999999993,
+        "max": 1.9989999999999988
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 8.733022222222223,
+        "median": 8.815999999999997,
+        "p95_nearest_lower": 11.01,
+        "max": 13.921
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 0.40599999999999997,
+        "median": 0.391,
+        "p95_nearest_lower": 0.522000000000002,
+        "max": 0.5899999999999999
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 39.93955555555556,
+        "median": 39.532,
+        "p95_nearest_lower": 49.402,
+        "max": 69.818
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 1.2409111111111122,
+        "median": 1.245000000000001,
+        "p95_nearest_lower": 1.5300000000000011,
+        "max": 1.6709999999999994
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 13.709977777777777,
+        "median": 12.793999999999997,
+        "p95_nearest_lower": 15.799000000000007,
+        "max": 46.75599999999999
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.2125333333333338,
+        "median": 0.21299999999999386,
+        "p95_nearest_lower": 0.25200000000000955,
+        "max": 0.2609999999999957
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 9.524650222222222,
+        "median": 9.238779999999998,
+        "p95_nearest_lower": 11.350847000000002,
+        "max": 12.266237000000011
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 31.178066666666666,
+        "median": 30.027,
+        "p95_nearest_lower": 40.78,
+        "max": 60.541
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 120.45140344444444,
+        "median": 116.83251000000001,
+        "p95_nearest_lower": 156.14842700000003,
+        "max": 171.01421299999998
+      }
+    },
+    "TRAIN/MEDIUM/8/S1_REPEAT_CACHE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 20.3971574,
+        "median": 18.366033,
+        "p95_nearest_lower": 28.420564,
+        "max": 60.376759
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.36222222222222217,
+        "median": 0.3519999999999999,
+        "p95_nearest_lower": 0.39699999999999996,
+        "max": 0.5579999999999999
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 96.91288888888889,
+        "median": 93.159,
+        "p95_nearest_lower": 120.434,
+        "max": 134.642
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 1.8396888888888887,
+        "median": 1.8320000000000007,
+        "p95_nearest_lower": 2.116999999999999,
+        "max": 2.9040000000000017
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 5.298466666666666,
+        "median": 5.151000000000002,
+        "p95_nearest_lower": 6.619000000000003,
+        "max": 6.739999999999998
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 34.69257777777778,
+        "median": 33.866,
+        "p95_nearest_lower": 40.206999999999994,
+        "max": 41.602000000000004
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 1.6730222222222224,
+        "median": 1.6960000000000033,
+        "p95_nearest_lower": 1.8960000000000008,
+        "max": 2.0599999999999987
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 71.88313333333333,
+        "median": 70.363,
+        "p95_nearest_lower": 84.88000000000001,
+        "max": 114.654
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 4.630977777777778,
+        "median": 4.641000000000005,
+        "p95_nearest_lower": 5.468999999999994,
+        "max": 5.848999999999993
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 54.26708888888889,
+        "median": 49.809000000000005,
+        "p95_nearest_lower": 75.954,
+        "max": 105.715
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.822955555555555,
+        "median": 0.8059999999999974,
+        "p95_nearest_lower": 0.9279999999999937,
+        "max": 0.9920000000000009
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 37.60688493333333,
+        "median": 37.049153000000004,
+        "p95_nearest_lower": 43.098057999999995,
+        "max": 53.44624199999999
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 33.79008888888889,
+        "median": 33.571,
+        "p95_nearest_lower": 43.17000000000001,
+        "max": 69.77199999999999
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 330.3870645555556,
+        "median": 320.14995200000004,
+        "p95_nearest_lower": 377.520275,
+        "max": 424.48873699999996
+      }
+    },
+    "TRAIN/MEDIUM/2/S0_NATIVE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 20.9504884,
+        "median": 21.068255,
+        "p95_nearest_lower": 29.293113,
+        "max": 31.263874
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.09004444444444444,
+        "median": 0.089,
+        "p95_nearest_lower": 0.107,
+        "max": 0.11499999999999999
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 24.872066666666665,
+        "median": 23.740000000000002,
+        "p95_nearest_lower": 30.962,
+        "max": 54.537000000000006
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 0.437111111111111,
+        "median": 0.42900000000000027,
+        "p95_nearest_lower": 0.5820000000000007,
+        "max": 0.6559999999999988
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 1.324177777777778,
+        "median": 1.3239999999999963,
+        "p95_nearest_lower": 1.6859999999999982,
+        "max": 1.855999999999998
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 8.927088888888889,
+        "median": 8.946000000000002,
+        "p95_nearest_lower": 10.824000000000002,
+        "max": 11.216
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 0.41773333333333323,
+        "median": 0.39699999999999847,
+        "p95_nearest_lower": 0.5119999999999987,
+        "max": 0.7319999999999993
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 39.88086666666667,
+        "median": 38.998999999999995,
+        "p95_nearest_lower": 58.315,
+        "max": 76.514
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 1.3176888888888891,
+        "median": 1.3449999999999989,
+        "p95_nearest_lower": 1.6300000000000026,
+        "max": 1.716000000000001
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 13.423666666666668,
+        "median": 13.616,
+        "p95_nearest_lower": 15.835,
+        "max": 17.026000000000003
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.21188888888888802,
+        "median": 0.2079999999999984,
+        "p95_nearest_lower": 0.24899999999999523,
+        "max": 0.28000000000000824
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 9.8910304,
+        "median": 9.530978000000005,
+        "p95_nearest_lower": 12.62145199999999,
+        "max": 14.018912
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 32.912844444444445,
+        "median": 32.326,
+        "p95_nearest_lower": 50.983000000000004,
+        "max": 68.938
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 121.74385213333333,
+        "median": 121.897309,
+        "p95_nearest_lower": 141.881754,
+        "max": 169.725012
+      }
+    },
+    "TRAIN/MEDIUM/8/S0_NATIVE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 20.538199444444444,
+        "median": 19.727108,
+        "p95_nearest_lower": 27.63454,
+        "max": 30.282775
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.3806,
+        "median": 0.38199999999999995,
+        "p95_nearest_lower": 0.427,
+        "max": 0.46099999999999997
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 106.4626,
+        "median": 104.528,
+        "p95_nearest_lower": 131.60399999999998,
+        "max": 139.267
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 1.8522222222222227,
+        "median": 1.8249999999999993,
+        "p95_nearest_lower": 2.024000000000001,
+        "max": 2.0749999999999993
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 5.650822222222222,
+        "median": 5.6999999999999975,
+        "p95_nearest_lower": 6.1679999999999975,
+        "max": 6.687999999999999
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 36.92591111111111,
+        "median": 37.545,
+        "p95_nearest_lower": 40.174,
+        "max": 41.479
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 1.7144222222222223,
+        "median": 1.7040000000000006,
+        "p95_nearest_lower": 1.8749999999999982,
+        "max": 2.1629999999999967
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 157.1193111111111,
+        "median": 157.73100000000002,
+        "p95_nearest_lower": 184.26200000000003,
+        "max": 207.90800000000002
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 5.291066666666667,
+        "median": 5.318000000000005,
+        "p95_nearest_lower": 5.714999999999989,
+        "max": 5.853999999999999
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 56.894511111111115,
+        "median": 55.43600000000002,
+        "p95_nearest_lower": 61.96200000000001,
+        "max": 98.11099999999999
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.9045777777777756,
+        "median": 0.8969999999999843,
+        "p95_nearest_lower": 1.0110000000000028,
+        "max": 1.1840000000000046
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 39.526857355555556,
+        "median": 38.86541399999999,
+        "p95_nearest_lower": 44.56064599999999,
+        "max": 47.83791799999999
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 128.7082888888889,
+        "median": 129.73000000000002,
+        "p95_nearest_lower": 156.025,
+        "max": 180.21599999999998
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 433.26110124444443,
+        "median": 430.34628499999997,
+        "p95_nearest_lower": 481.806134,
+        "max": 498.640387
+      }
+    },
+    "HOLDOUT/LOW/8/ADAPTIVE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 37.13566411111111,
+        "median": 33.268421,
+        "p95_nearest_lower": 47.52906,
+        "max": 175.78178
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.5367333333333333,
+        "median": 0.529,
+        "p95_nearest_lower": 0.6669999999999999,
+        "max": 0.7669999999999999
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 141.33924444444443,
+        "median": 125.16799999999999,
+        "p95_nearest_lower": 212.707,
+        "max": 403.668
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 2.5221333333333336,
+        "median": 2.5260000000000034,
+        "p95_nearest_lower": 3.0029999999999983,
+        "max": 3.2090000000000014
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 7.7581999999999995,
+        "median": 7.691999999999995,
+        "p95_nearest_lower": 9.266,
+        "max": 9.687999999999992
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 51.369622222222226,
+        "median": 47.135,
+        "p95_nearest_lower": 86.82400000000001,
+        "max": 112.017
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 2.5172888888888894,
+        "median": 2.54399999999999,
+        "p95_nearest_lower": 2.9399999999999977,
+        "max": 3.0070000000000014
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 107.46024444444444,
+        "median": 96.68700000000001,
+        "p95_nearest_lower": 154.36700000000002,
+        "max": 170.153
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 6.466822222222223,
+        "median": 6.4090000000000025,
+        "p95_nearest_lower": 7.6030000000000015,
+        "max": 7.865999999999989
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 81.07671111111111,
+        "median": 72.949,
+        "p95_nearest_lower": 114.41199999999999,
+        "max": 175.94599999999997
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 1.2366444444444435,
+        "median": 1.2449999999999974,
+        "p95_nearest_lower": 1.467000000000013,
+        "max": 1.5840000000000032
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 68.21910071111111,
+        "median": 56.671959999999984,
+        "p95_nearest_lower": 107.85287000000002,
+        "max": 165.371372
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 47.74891111111111,
+        "median": 42.74199999999999,
+        "p95_nearest_lower": 77.88799999999998,
+        "max": 102.689
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 507.63840926666666,
+        "median": 480.832159,
+        "p95_nearest_lower": 652.4034720000001,
+        "max": 1010.172173
+      }
+    },
+    "HOLDOUT/LOW/2/S0_NATIVE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 31.836339244444446,
+        "median": 29.46511,
+        "p95_nearest_lower": 57.269605,
+        "max": 73.307869
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.12524444444444444,
+        "median": 0.124,
+        "p95_nearest_lower": 0.155,
+        "max": 0.209
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 31.491711111111112,
+        "median": 28.498,
+        "p95_nearest_lower": 48.98,
+        "max": 89.65
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 0.5769333333333327,
+        "median": 0.5589999999999975,
+        "p95_nearest_lower": 0.7089999999999979,
+        "max": 0.8069999999999986
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 1.8097333333333336,
+        "median": 1.8820000000000014,
+        "p95_nearest_lower": 2.225999999999999,
+        "max": 2.372
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 10.714355555555555,
+        "median": 10.852,
+        "p95_nearest_lower": 12.447999999999997,
+        "max": 13.338999999999999
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 0.6059555555555557,
+        "median": 0.5959999999999965,
+        "p95_nearest_lower": 0.791999999999998,
+        "max": 0.9719999999999978
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 52.763222222222225,
+        "median": 48.91199999999999,
+        "p95_nearest_lower": 84.007,
+        "max": 89.59100000000001
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 1.702711111111112,
+        "median": 1.7490000000000023,
+        "p95_nearest_lower": 2.0830000000000126,
+        "max": 2.314
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 18.3176,
+        "median": 17.592999999999996,
+        "p95_nearest_lower": 23.626999999999995,
+        "max": 41.245000000000005
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.30686666666666707,
+        "median": 0.30700000000000216,
+        "p95_nearest_lower": 0.38000000000000966,
+        "max": 0.4230000000000018
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 14.901737466666665,
+        "median": 12.076583,
+        "p95_nearest_lower": 22.685865,
+        "max": 69.650165
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 42.57886666666666,
+        "median": 39.438,
+        "p95_nearest_lower": 50.434,
+        "max": 80.593
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 165.15241004444445,
+        "median": 159.165681,
+        "p95_nearest_lower": 220.722458,
+        "max": 258.65308899999997
+      }
+    },
+    "HOLDOUT/LOW/8/S1_REPEAT_CACHE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 30.323626866666668,
+        "median": 29.218662,
+        "p95_nearest_lower": 33.70536,
+        "max": 66.99613
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.5428,
+        "median": 0.527,
+        "p95_nearest_lower": 0.664,
+        "max": 0.7829999999999999
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 128.72964444444443,
+        "median": 117.324,
+        "p95_nearest_lower": 175.345,
+        "max": 208.598
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 2.549533333333334,
+        "median": 2.5570000000000004,
+        "p95_nearest_lower": 2.9399999999999995,
+        "max": 3.126000000000003
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 7.841266666666666,
+        "median": 7.818999999999999,
+        "p95_nearest_lower": 9.155999999999993,
+        "max": 10.133999999999999
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 51.40177777777778,
+        "median": 45.517,
+        "p95_nearest_lower": 83.87200000000001,
+        "max": 106.662
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 2.5426222222222217,
+        "median": 2.558,
+        "p95_nearest_lower": 2.8740000000000023,
+        "max": 3.206999999999997
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 111.90417777777778,
+        "median": 100.73299999999999,
+        "p95_nearest_lower": 157.321,
+        "max": 240.13599999999997
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 6.527200000000001,
+        "median": 6.526,
+        "p95_nearest_lower": 7.34,
+        "max": 7.704000000000001
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 76.63382222222222,
+        "median": 70.251,
+        "p95_nearest_lower": 108.916,
+        "max": 131.417
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 1.2118000000000004,
+        "median": 1.20000000000001,
+        "p95_nearest_lower": 1.391999999999996,
+        "max": 1.4809999999999945
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 57.9216694,
+        "median": 50.313629,
+        "p95_nearest_lower": 88.515062,
+        "max": 121.368605
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 50.120022222222225,
+        "median": 43.175000000000004,
+        "p95_nearest_lower": 85.61399999999999,
+        "max": 92.10900000000001
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 478.1299407111111,
+        "median": 466.195039,
+        "p95_nearest_lower": 577.5030730000001,
+        "max": 683.799267
+      }
+    },
+    "HOLDOUT/LOW/2/ADAPTIVE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 34.217463244444446,
+        "median": 32.479337,
+        "p95_nearest_lower": 36.351117,
+        "max": 79.911931
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.12295555555555555,
+        "median": 0.123,
+        "p95_nearest_lower": 0.158,
+        "max": 0.177
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 29.779844444444446,
+        "median": 27.857,
+        "p95_nearest_lower": 45.677,
+        "max": 70.382
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 0.5799333333333332,
+        "median": 0.5690000000000008,
+        "p95_nearest_lower": 0.7040000000000006,
+        "max": 0.782
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 1.7455555555555553,
+        "median": 1.8260000000000005,
+        "p95_nearest_lower": 2.0570000000000004,
+        "max": 2.259999999999998
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 12.128,
+        "median": 10.987000000000002,
+        "p95_nearest_lower": 12.900000000000002,
+        "max": 57.199000000000005
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 0.5659333333333331,
+        "median": 0.5729999999999968,
+        "p95_nearest_lower": 0.6750000000000007,
+        "max": 0.7319999999999922
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 52.09522222222222,
+        "median": 48.048,
+        "p95_nearest_lower": 63.187999999999995,
+        "max": 104.847
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 1.6828222222222216,
+        "median": 1.6729999999999947,
+        "p95_nearest_lower": 2.137999999999991,
+        "max": 2.271000000000001
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 19.52111111111111,
+        "median": 17.485000000000007,
+        "p95_nearest_lower": 22.144999999999996,
+        "max": 77.33099999999999
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.3134222222222217,
+        "median": 0.31400000000000006,
+        "p95_nearest_lower": 0.41100000000000136,
+        "max": 0.42199999999999704
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 16.4454608,
+        "median": 12.077132999999996,
+        "p95_nearest_lower": 35.691629,
+        "max": 78.622513
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 41.7584,
+        "median": 39.107,
+        "p95_nearest_lower": 52.865,
+        "max": 73.241
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 169.19772404444444,
+        "median": 165.069774,
+        "p95_nearest_lower": 219.52542,
+        "max": 220.42967900000002
+      }
+    },
+    "HOLDOUT/LOW/2/S1_REPEAT_CACHE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 30.286460333333334,
+        "median": 29.345516,
+        "p95_nearest_lower": 32.217948,
+        "max": 81.292888
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.1244,
+        "median": 0.125,
+        "p95_nearest_lower": 0.14200000000000002,
+        "max": 0.20500000000000002
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 31.041533333333334,
+        "median": 28.043,
+        "p95_nearest_lower": 52.50200000000001,
+        "max": 84.436
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 0.6176888888888887,
+        "median": 0.6199999999999974,
+        "p95_nearest_lower": 0.7219999999999995,
+        "max": 0.7899999999999991
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 1.7969555555555556,
+        "median": 1.7640000000000011,
+        "p95_nearest_lower": 2.1720000000000006,
+        "max": 2.651
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 12.337755555555555,
+        "median": 11.075999999999999,
+        "p95_nearest_lower": 13.319999999999999,
+        "max": 53.082
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 0.606355555555556,
+        "median": 0.6089999999999982,
+        "p95_nearest_lower": 0.7699999999999996,
+        "max": 0.8850000000000087
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 54.37482222222222,
+        "median": 50.649,
+        "p95_nearest_lower": 67.814,
+        "max": 103.136
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 1.724511111111111,
+        "median": 1.7280000000000015,
+        "p95_nearest_lower": 2.166000000000004,
+        "max": 2.2420000000000044
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 19.24588888888889,
+        "median": 17.866000000000007,
+        "p95_nearest_lower": 22.449000000000005,
+        "max": 59.846999999999994
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.30931111111111087,
+        "median": 0.3160000000000025,
+        "p95_nearest_lower": 0.3739999999999952,
+        "max": 0.41900000000000404
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 17.648674955555556,
+        "median": 12.281061000000001,
+        "p95_nearest_lower": 44.954953,
+        "max": 67.865586
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 42.76622222222222,
+        "median": 39.635,
+        "p95_nearest_lower": 51.153999999999996,
+        "max": 91.9
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 170.1143575111111,
+        "median": 168.013481,
+        "p95_nearest_lower": 219.13543700000002,
+        "max": 268.002687
+      }
+    },
+    "HOLDOUT/LOW/8/S0_NATIVE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 30.041509066666666,
+        "median": 29.143545,
+        "p95_nearest_lower": 33.892396,
+        "max": 76.143339
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.5771555555555555,
+        "median": 0.585,
+        "p95_nearest_lower": 0.7139999999999999,
+        "max": 0.735
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 139.93262222222222,
+        "median": 138.329,
+        "p95_nearest_lower": 173.771,
+        "max": 195.774
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 3.0380222222222235,
+        "median": 2.853000000000007,
+        "p95_nearest_lower": 3.2159999999999958,
+        "max": 13.171000000000008
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 8.547377777777776,
+        "median": 8.754999999999995,
+        "p95_nearest_lower": 10.247999999999994,
+        "max": 10.611
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 50.77353333333333,
+        "median": 50.596,
+        "p95_nearest_lower": 60.863,
+        "max": 61.922
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 2.7557111111111117,
+        "median": 2.750000000000014,
+        "p95_nearest_lower": 3.137000000000004,
+        "max": 3.3629999999999995
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 217.17444444444445,
+        "median": 206.031,
+        "p95_nearest_lower": 255.039,
+        "max": 342.33200000000005
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 7.709488888888887,
+        "median": 7.8370000000000175,
+        "p95_nearest_lower": 8.696999999999989,
+        "max": 8.944000000000003
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 90.74935555555555,
+        "median": 83.65,
+        "p95_nearest_lower": 124.055,
+        "max": 168.36499999999998
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 1.397711111111111,
+        "median": 1.4169999999999945,
+        "p95_nearest_lower": 1.5509999999999948,
+        "max": 1.6980000000000146
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 71.35394968888889,
+        "median": 55.06824400000001,
+        "p95_nearest_lower": 123.305886,
+        "max": 383.5902920000001
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 171.801,
+        "median": 166.578,
+        "p95_nearest_lower": 211.86300000000003,
+        "max": 223.792
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 624.0508809777778,
+        "median": 616.491938,
+        "p95_nearest_lower": 729.166442,
+        "max": 951.211999
+      }
+    },
+    "HOLDOUT/MEDIUM/2/ADAPTIVE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 30.84490148888889,
+        "median": 31.30422,
+        "p95_nearest_lower": 37.393574,
+        "max": 55.69871
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.09455555555555556,
+        "median": 0.092,
+        "p95_nearest_lower": 0.11399999999999999,
+        "max": 0.123
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 28.824755555555555,
+        "median": 25.9,
+        "p95_nearest_lower": 55.294,
+        "max": 87.794
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 0.4624666666666667,
+        "median": 0.47199999999999775,
+        "p95_nearest_lower": 0.548,
+        "max": 0.6950000000000021
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 1.4540888888888892,
+        "median": 1.5039999999999996,
+        "p95_nearest_lower": 1.8000000000000007,
+        "max": 1.8419999999999987
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 10.033977777777778,
+        "median": 9.92,
+        "p95_nearest_lower": 12.156,
+        "max": 24.917
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 0.4408666666666668,
+        "median": 0.4220000000000006,
+        "p95_nearest_lower": 0.5770000000000017,
+        "max": 0.7819999999999965
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 43.30115555555555,
+        "median": 40.792,
+        "p95_nearest_lower": 49.573,
+        "max": 82.647
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 1.394133333333333,
+        "median": 1.3960000000000008,
+        "p95_nearest_lower": 1.6299999999999955,
+        "max": 1.9399999999999977
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 16.161844444444444,
+        "median": 14.173000000000009,
+        "p95_nearest_lower": 17.208,
+        "max": 53.69199999999999
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.2273777777777787,
+        "median": 0.2289999999999921,
+        "p95_nearest_lower": 0.259999999999998,
+        "max": 0.30699999999999505
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 12.199808977777776,
+        "median": 9.880380999999993,
+        "p95_nearest_lower": 17.168554999999998,
+        "max": 50.396702
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 31.088355555555555,
+        "median": 31.46,
+        "p95_nearest_lower": 35.323,
+        "max": 39.968
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 145.4399326888889,
+        "median": 141.979301,
+        "p95_nearest_lower": 182.449876,
+        "max": 204.76462
+      }
+    },
+    "HOLDOUT/MEDIUM/8/ADAPTIVE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 28.51993848888889,
+        "median": 26.317224,
+        "p95_nearest_lower": 34.27426,
+        "max": 50.234986
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.3794444444444444,
+        "median": 0.36999999999999994,
+        "p95_nearest_lower": 0.43999999999999995,
+        "max": 0.48
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 119.58597777777779,
+        "median": 113.53299999999999,
+        "p95_nearest_lower": 151.692,
+        "max": 242.22299999999996
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 1.9373333333333336,
+        "median": 1.924999999999999,
+        "p95_nearest_lower": 2.2589999999999986,
+        "max": 2.3959999999999972
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 5.719911111111111,
+        "median": 5.742000000000004,
+        "p95_nearest_lower": 6.51,
+        "max": 7.041000000000002
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 39.10331111111111,
+        "median": 38.604000000000006,
+        "p95_nearest_lower": 43.662,
+        "max": 64.37700000000001
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 1.7354444444444441,
+        "median": 1.7350000000000119,
+        "p95_nearest_lower": 1.9420000000000073,
+        "max": 2.2120000000000015
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 87.82604444444445,
+        "median": 80.19399999999999,
+        "p95_nearest_lower": 121.591,
+        "max": 161.796
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 5.08431111111111,
+        "median": 5.149000000000001,
+        "p95_nearest_lower": 5.616,
+        "max": 6.418000000000003
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 60.97846666666667,
+        "median": 57.197,
+        "p95_nearest_lower": 86.80600000000001,
+        "max": 104.816
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.8861333333333337,
+        "median": 0.8880000000000123,
+        "p95_nearest_lower": 0.9940000000000104,
+        "max": 1.0020000000000024
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 56.73532873333333,
+        "median": 46.465412,
+        "p95_nearest_lower": 88.509906,
+        "max": 149.916951
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 36.784933333333335,
+        "median": 33.440000000000005,
+        "p95_nearest_lower": 61.07099999999999,
+        "max": 77.963
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 408.491645,
+        "median": 415.96837400000004,
+        "p95_nearest_lower": 518.074066,
+        "max": 558.1582490000001
+      }
+    },
+    "HOLDOUT/MEDIUM/2/S1_REPEAT_CACHE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 29.9629216,
+        "median": 26.47774,
+        "p95_nearest_lower": 51.056483,
+        "max": 94.67474
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.09231111111111111,
+        "median": 0.09,
+        "p95_nearest_lower": 0.109,
+        "max": 0.11699999999999999
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 27.6502,
+        "median": 23.776000000000003,
+        "p95_nearest_lower": 53.485,
+        "max": 80.955
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 0.4677555555555555,
+        "median": 0.47199999999999775,
+        "p95_nearest_lower": 0.5649999999999995,
+        "max": 0.609
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 1.354866666666667,
+        "median": 1.362,
+        "p95_nearest_lower": 1.7120000000000015,
+        "max": 1.9460000000000015
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 9.24691111111111,
+        "median": 9.149999999999999,
+        "p95_nearest_lower": 11.440000000000001,
+        "max": 15.382999999999996
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 0.42508888888888907,
+        "median": 0.39200000000000124,
+        "p95_nearest_lower": 0.607999999999997,
+        "max": 0.7220000000000013
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 41.413133333333334,
+        "median": 39.21,
+        "p95_nearest_lower": 48.526,
+        "max": 74.831
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 1.359066666666667,
+        "median": 1.365000000000002,
+        "p95_nearest_lower": 1.5820000000000007,
+        "max": 1.767000000000003
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 16.92351111111111,
+        "median": 13.866000000000007,
+        "p95_nearest_lower": 27.434000000000005,
+        "max": 73.1
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.2180000000000007,
+        "median": 0.21099999999999852,
+        "p95_nearest_lower": 0.26400000000001,
+        "max": 0.3680000000000021
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 14.743166111111112,
+        "median": 10.157418999999997,
+        "p95_nearest_lower": 27.05051800000001,
+        "max": 88.73578300000001
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 32.047266666666665,
+        "median": 30.161,
+        "p95_nearest_lower": 39.232,
+        "max": 63.674
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 143.85693215555557,
+        "median": 138.540011,
+        "p95_nearest_lower": 185.839213,
+        "max": 207.605527
+      }
+    },
+    "HOLDOUT/MEDIUM/2/S0_NATIVE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 30.09977342222222,
+        "median": 26.618846,
+        "p95_nearest_lower": 57.731214,
+        "max": 84.522665
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.09024444444444445,
+        "median": 0.089,
+        "p95_nearest_lower": 0.11,
+        "max": 0.138
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 26.559555555555555,
+        "median": 23.777,
+        "p95_nearest_lower": 43.488,
+        "max": 64.465
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 0.46184444444444434,
+        "median": 0.484,
+        "p95_nearest_lower": 0.5890000000000004,
+        "max": 0.6470000000000002
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 1.4098222222222225,
+        "median": 1.4009999999999998,
+        "p95_nearest_lower": 1.8119999999999994,
+        "max": 2.0410000000000004
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 9.648533333333333,
+        "median": 9.439000000000002,
+        "p95_nearest_lower": 11.088999999999999,
+        "max": 29.024
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 0.40888888888888864,
+        "median": 0.40600000000000236,
+        "p95_nearest_lower": 0.5099999999999998,
+        "max": 0.5619999999999976
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 39.97464444444444,
+        "median": 38.138,
+        "p95_nearest_lower": 57.584,
+        "max": 72.43900000000001
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 1.3387111111111116,
+        "median": 1.348000000000006,
+        "p95_nearest_lower": 1.6799999999999997,
+        "max": 1.9050000000000011
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 14.830599999999999,
+        "median": 13.409999999999997,
+        "p95_nearest_lower": 19.59700000000001,
+        "max": 48.843
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.21604444444444496,
+        "median": 0.2150000000000034,
+        "p95_nearest_lower": 0.2629999999999981,
+        "max": 0.2909999999999968
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 16.59720431111111,
+        "median": 9.850575999999997,
+        "p95_nearest_lower": 51.003225,
+        "max": 78.678297
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 31.399933333333333,
+        "median": 29.973,
+        "p95_nearest_lower": 36.696,
+        "max": 59.536
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 141.6358666222222,
+        "median": 133.851576,
+        "p95_nearest_lower": 175.130649,
+        "max": 279.16875999999996
+      }
+    },
+    "HOLDOUT/MEDIUM/8/S0_NATIVE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 32.93326802222222,
+        "median": 29.424485,
+        "p95_nearest_lower": 52.962088,
+        "max": 93.945775
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.37986666666666663,
+        "median": 0.372,
+        "p95_nearest_lower": 0.429,
+        "max": 0.5469999999999999
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 117.51237777777777,
+        "median": 109.02199999999999,
+        "p95_nearest_lower": 173.41199999999998,
+        "max": 211.53299999999996
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 1.9207333333333327,
+        "median": 1.9249999999999936,
+        "p95_nearest_lower": 2.1060000000000034,
+        "max": 2.5829999999999913
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 5.831111111111111,
+        "median": 5.788999999999998,
+        "p95_nearest_lower": 6.494,
+        "max": 7.710000000000004
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 40.88057777777777,
+        "median": 38.205,
+        "p95_nearest_lower": 55.28999999999999,
+        "max": 83.805
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 1.740933333333334,
+        "median": 1.7059999999999924,
+        "p95_nearest_lower": 1.9470000000000027,
+        "max": 2.3030000000000097
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 162.15713333333332,
+        "median": 151.733,
+        "p95_nearest_lower": 196.24599999999998,
+        "max": 230.114
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 5.551533333333333,
+        "median": 5.390999999999991,
+        "p95_nearest_lower": 6.374000000000009,
+        "max": 8.484999999999992
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 66.65646666666666,
+        "median": 58.046000000000014,
+        "p95_nearest_lower": 95.63199999999999,
+        "max": 141.45
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.9318666666666678,
+        "median": 0.9140000000000015,
+        "p95_nearest_lower": 1.0520000000000138,
+        "max": 1.2749999999999986
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 56.16725913333333,
+        "median": 43.22259900000001,
+        "p95_nearest_lower": 88.89168099999999,
+        "max": 163.962787
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 121.96388888888889,
+        "median": 120.589,
+        "p95_nearest_lower": 144.554,
+        "max": 159.156
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 492.66312715555557,
+        "median": 504.84389699999997,
+        "p95_nearest_lower": 590.60095,
+        "max": 733.096452
+      }
+    },
+    "HOLDOUT/MEDIUM/8/S1_REPEAT_CACHE": {
+      "selection_ms": {
+        "count": 45,
+        "mean": 32.27404897777778,
+        "median": 28.792362,
+        "p95_nearest_lower": 63.532545,
+        "max": 86.795272
+      },
+      "RECEIVED_ms": {
+        "count": 45,
+        "mean": 0.37428888888888884,
+        "median": 0.36700000000000005,
+        "p95_nearest_lower": 0.436,
+        "max": 0.44799999999999995
+      },
+      "PARSED_ms": {
+        "count": 45,
+        "mean": 110.081,
+        "median": 106.24799999999999,
+        "p95_nearest_lower": 146.272,
+        "max": 149.952
+      },
+      "SNAPSHOT_ms": {
+        "count": 45,
+        "mean": 1.8700666666666674,
+        "median": 1.899000000000001,
+        "p95_nearest_lower": 2.089000000000004,
+        "max": 2.289999999999999
+      },
+      "RETRIEVED_ms": {
+        "count": 45,
+        "mean": 5.812844444444444,
+        "median": 5.850000000000001,
+        "p95_nearest_lower": 6.610999999999999,
+        "max": 7.030999999999997
+      },
+      "DECIDED_ms": {
+        "count": 45,
+        "mean": 43.33491111111111,
+        "median": 38.618,
+        "p95_nearest_lower": 77.81599999999999,
+        "max": 85.84099999999998
+      },
+      "VALIDATED_ms": {
+        "count": 45,
+        "mean": 1.7738000000000003,
+        "median": 1.740000000000002,
+        "p95_nearest_lower": 2.1049999999999933,
+        "max": 2.193000000000005
+      },
+      "EXECUTED_ms": {
+        "count": 45,
+        "mean": 86.26244444444444,
+        "median": 80.02900000000001,
+        "p95_nearest_lower": 107.28100000000003,
+        "max": 142.829
+      },
+      "MONITORED_ms": {
+        "count": 45,
+        "mean": 5.11597777777778,
+        "median": 5.13999999999999,
+        "p95_nearest_lower": 5.617000000000004,
+        "max": 6.159000000000006
+      },
+      "LEARNED_ms": {
+        "count": 45,
+        "mean": 63.01302222222222,
+        "median": 57.008,
+        "p95_nearest_lower": 82.95700000000002,
+        "max": 123.26399999999998
+      },
+      "SUCCEEDED_ms": {
+        "count": 45,
+        "mean": 0.8816222222222221,
+        "median": 0.8830000000000027,
+        "p95_nearest_lower": 1.0059999999999967,
+        "max": 1.0790000000000042
+      },
+      "outside_trace_ms": {
+        "count": 45,
+        "mean": 53.79213466666667,
+        "median": 44.01334700000001,
+        "p95_nearest_lower": 82.93940599999999,
+        "max": 119.84052699999998
+      },
+      "adapter_ms": {
+        "count": 45,
+        "mean": 36.992266666666666,
+        "median": 33.86999999999999,
+        "p95_nearest_lower": 65.375,
+        "max": 69.207
+      },
+      "service_ms": {
+        "count": 45,
+        "mean": 404.58616142222223,
+        "median": 403.420403,
+        "p95_nearest_lower": 491.322192,
+        "max": 527.148424
+      }
+    }
+  },
+  "adaptive_minus_fixed_s1_mean_ms": {
+    "LOW/2": {
+      "selection_ms": 3.9310029111111113,
+      "RECEIVED_ms": -0.0014444444444444426,
+      "PARSED_ms": -1.2616888888888873,
+      "SNAPSHOT_ms": -0.03775555555555554,
+      "RETRIEVED_ms": -0.051400000000000334,
+      "DECIDED_ms": -0.2097555555555548,
+      "VALIDATED_ms": -0.040422222222222914,
+      "EXECUTED_ms": -2.279600000000002,
+      "MONITORED_ms": -0.04168888888888955,
+      "LEARNED_ms": 0.27522222222222226,
+      "SUCCEEDED_ms": 0.004111111111110843,
+      "outside_trace_ms": -1.2032141555555569,
+      "adapter_ms": -1.0078222222222166,
+      "service_ms": -0.9166334666666671
+    },
+    "LOW/8": {
+      "selection_ms": 6.8120372444444435,
+      "RECEIVED_ms": -0.006066666666666665,
+      "PARSED_ms": 12.6096,
+      "SNAPSHOT_ms": -0.027400000000000535,
+      "RETRIEVED_ms": -0.0830666666666664,
+      "DECIDED_ms": -0.03215555555555483,
+      "VALIDATED_ms": -0.02533333333333232,
+      "EXECUTED_ms": -4.443933333333334,
+      "MONITORED_ms": -0.0603777777777772,
+      "LEARNED_ms": 4.442888888888888,
+      "SUCCEEDED_ms": 0.024844444444443115,
+      "outside_trace_ms": 10.297431311111112,
+      "adapter_ms": -2.3711111111111123,
+      "service_ms": 29.508468555555567
+    },
+    "MEDIUM/2": {
+      "selection_ms": 0.881979888888889,
+      "RECEIVED_ms": 0.0022444444444444517,
+      "PARSED_ms": 1.1745555555555534,
+      "SNAPSHOT_ms": -0.0052888888888887875,
+      "RETRIEVED_ms": 0.0992222222222221,
+      "DECIDED_ms": 0.7870666666666679,
+      "VALIDATED_ms": 0.015777777777777724,
+      "EXECUTED_ms": 1.8880222222222187,
+      "MONITORED_ms": 0.03506666666666591,
+      "LEARNED_ms": -0.7616666666666667,
+      "SUCCEEDED_ms": 0.009377777777778012,
+      "outside_trace_ms": -2.543357133333336,
+      "adapter_ms": -0.9589111111111102,
+      "service_ms": 1.583000533333319
+    },
+    "MEDIUM/8": {
+      "selection_ms": -3.754110488888891,
+      "RECEIVED_ms": 0.00515555555555558,
+      "PARSED_ms": 9.504977777777782,
+      "SNAPSHOT_ms": 0.06726666666666614,
+      "RETRIEVED_ms": -0.09293333333333287,
+      "DECIDED_ms": -4.2316,
+      "VALIDATED_ms": -0.03835555555555614,
+      "EXECUTED_ms": 1.563600000000008,
+      "MONITORED_ms": -0.03166666666666984,
+      "LEARNED_ms": -2.0345555555555492,
+      "SUCCEEDED_ms": 0.0045111111111115765,
+      "outside_trace_ms": 2.9431940666666634,
+      "adapter_ms": -0.20733333333333093,
+      "service_ms": 3.9054835777777726
+    }
+  },
+  "frozen_mean_reward_predictions": {
+    "LOW/8": {
+      "S0_NATIVE@0.1.0": -0.49555154366405907,
+      "S1_REPEAT_CACHE@1.0.0": -0.371493768613961
+    },
+    "LOW/2": {
+      "S0_NATIVE@0.1.0": -0.12945380091868666,
+      "S1_REPEAT_CACHE@1.0.0": -0.13000161029170687
+    },
+    "MEDIUM/2": {
+      "S0_NATIVE@0.1.0": -0.12151038740036384,
+      "S1_REPEAT_CACHE@1.0.0": -0.1204060133765928
+    },
+    "MEDIUM/8": {
+      "S0_NATIVE@0.1.0": -0.43466974875744613,
+      "S1_REPEAT_CACHE@1.0.0": -0.3312955254908843
+    }
+  },
+  "largest_requests": {
+    "TRAIN/LOW/2/S1_REPEAT_CACHE": [
+      {
+        "block": 29,
+        "index": 1,
+        "elapsed_ms": 95.929985,
+        "components": {
+          "RECEIVED_ms": 0.063,
+          "PARSED_ms": 12.569999999999999,
+          "SNAPSHOT_ms": 0.386000000000001,
+          "RETRIEVED_ms": 0.6829999999999998,
+          "DECIDED_ms": 5.9449999999999985,
+          "VALIDATED_ms": 0.3230000000000004,
+          "EXECUTED_ms": 62.7,
+          "MONITORED_ms": 0.7169999999999987,
+          "LEARNED_ms": 6.968999999999994,
+          "SUCCEEDED_ms": 0.11299999999999955,
+          "outside_trace_ms": 5.460985000000008
+        }
+      },
+      {
+        "block": 6,
+        "index": 1,
+        "elapsed_ms": 90.704184,
+        "components": {
+          "RECEIVED_ms": 0.074,
+          "PARSED_ms": 46.154,
+          "SNAPSHOT_ms": 0.3019999999999996,
+          "RETRIEVED_ms": 1.1139999999999972,
+          "DECIDED_ms": 5.472000000000001,
+          "VALIDATED_ms": 0.30700000000000216,
+          "EXECUTED_ms": 22.926999999999992,
+          "MONITORED_ms": 0.6400000000000006,
+          "LEARNED_ms": 7.590000000000003,
+          "SUCCEEDED_ms": 0.125,
+          "outside_trace_ms": 5.999184
+        }
+      },
+      {
+        "block": 12,
+        "index": 1,
+        "elapsed_ms": 87.826028,
+        "components": {
+          "RECEIVED_ms": 0.057,
+          "PARSED_ms": 13.673,
+          "SNAPSHOT_ms": 0.2599999999999998,
+          "RETRIEVED_ms": 0.8669999999999991,
+          "DECIDED_ms": 4.896000000000001,
+          "VALIDATED_ms": 0.23900000000000077,
+          "EXECUTED_ms": 23.907999999999998,
+          "MONITORED_ms": 0.8719999999999999,
+          "LEARNED_ms": 37.504,
+          "SUCCEEDED_ms": 0.13100000000000023,
+          "outside_trace_ms": 5.419027999999997
+        }
+      },
+      {
+        "block": 34,
+        "index": 1,
+        "elapsed_ms": 86.14949,
+        "components": {
+          "RECEIVED_ms": 0.046,
+          "PARSED_ms": 10.394,
+          "SNAPSHOT_ms": 0.19100000000000072,
+          "RETRIEVED_ms": 0.6029999999999998,
+          "DECIDED_ms": 3.8249999999999993,
+          "VALIDATED_ms": 0.37900000000000134,
+          "EXECUTED_ms": 56.968,
+          "MONITORED_ms": 0.6479999999999961,
+          "LEARNED_ms": 8.024000000000001,
+          "SUCCEEDED_ms": 0.13700000000000045,
+          "outside_trace_ms": 4.934489999999997
+        }
+      },
+      {
+        "block": 21,
+        "index": 1,
+        "elapsed_ms": 73.468644,
+        "components": {
+          "RECEIVED_ms": 0.061,
+          "PARSED_ms": 15.562,
+          "SNAPSHOT_ms": 0.28300000000000125,
+          "RETRIEVED_ms": 0.8929999999999989,
+          "DECIDED_ms": 5.68,
+          "VALIDATED_ms": 0.397000000000002,
+          "EXECUTED_ms": 31.596999999999998,
+          "MONITORED_ms": 1.0930000000000035,
+          "LEARNED_ms": 10.579999999999998,
+          "SUCCEEDED_ms": 0.1769999999999925,
+          "outside_trace_ms": 7.145644000000004
+        }
+      }
+    ],
+    "TRAIN/LOW/8/S0_NATIVE": [
+      {
+        "block": 27,
+        "index": 6,
+        "elapsed_ms": 125.407035,
+        "components": {
+          "RECEIVED_ms": 0.084,
+          "PARSED_ms": 18.216,
+          "SNAPSHOT_ms": 0.4239999999999995,
+          "RETRIEVED_ms": 1.1379999999999981,
+          "DECIDED_ms": 6.836000000000002,
+          "VALIDATED_ms": 0.3719999999999999,
+          "EXECUTED_ms": 32.42,
+          "MONITORED_ms": 1.0629999999999953,
+          "LEARNED_ms": 58.42,
+          "SUCCEEDED_ms": 0.1460000000000008,
+          "outside_trace_ms": 6.288034999999994
+        }
+      },
+      {
+        "block": 26,
+        "index": 3,
+        "elapsed_ms": 113.895394,
+        "components": {
+          "RECEIVED_ms": 0.077,
+          "PARSED_ms": 19.351999999999997,
+          "SNAPSHOT_ms": 0.36100000000000065,
+          "RETRIEVED_ms": 1.5020000000000024,
+          "DECIDED_ms": 6.631999999999998,
+          "VALIDATED_ms": 0.33300000000000196,
+          "EXECUTED_ms": 68.859,
+          "MONITORED_ms": 0.9180000000000064,
+          "LEARNED_ms": 9.259999999999991,
+          "SUCCEEDED_ms": 0.16400000000000148,
+          "outside_trace_ms": 6.437393999999998
+        }
+      },
+      {
+        "block": 22,
+        "index": 0,
+        "elapsed_ms": 109.31458,
+        "components": {
+          "RECEIVED_ms": 0.062,
+          "PARSED_ms": 13.162,
+          "SNAPSHOT_ms": 0.2579999999999991,
+          "RETRIEVED_ms": 0.8470000000000013,
+          "DECIDED_ms": 5.245000000000001,
+          "VALIDATED_ms": 0.35199999999999676,
+          "EXECUTED_ms": 28.248,
+          "MONITORED_ms": 0.8320000000000007,
+          "LEARNED_ms": 54.306,
+          "SUCCEEDED_ms": 0.24600000000000932,
+          "outside_trace_ms": 5.75658
+        }
+      },
+      {
+        "block": 42,
+        "index": 5,
+        "elapsed_ms": 107.145145,
+        "components": {
+          "RECEIVED_ms": 0.072,
+          "PARSED_ms": 62.146,
+          "SNAPSHOT_ms": 0.30699999999999505,
+          "RETRIEVED_ms": 0.8719999999999999,
+          "DECIDED_ms": 5.101999999999997,
+          "VALIDATED_ms": 0.2530000000000001,
+          "EXECUTED_ms": 22.01700000000001,
+          "MONITORED_ms": 0.7590000000000003,
+          "LEARNED_ms": 9.616,
+          "SUCCEEDED_ms": 0.16599999999999682,
+          "outside_trace_ms": 5.835144999999997
+        }
+      },
+      {
+        "block": 39,
+        "index": 3,
+        "elapsed_ms": 105.581955,
+        "components": {
+          "RECEIVED_ms": 0.087,
+          "PARSED_ms": 59.422999999999995,
+          "SNAPSHOT_ms": 0.29700000000000415,
+          "RETRIEVED_ms": 0.9029999999999987,
+          "DECIDED_ms": 5.442,
+          "VALIDATED_ms": 0.3340000000000032,
+          "EXECUTED_ms": 22.33399999999999,
+          "MONITORED_ms": 0.9230000000000018,
+          "LEARNED_ms": 8.90100000000001,
+          "SUCCEEDED_ms": 0.16100000000000136,
+          "outside_trace_ms": 6.776954999999987
+        }
+      }
+    ],
+    "TRAIN/LOW/2/S0_NATIVE": [
+      {
+        "block": 35,
+        "index": 0,
+        "elapsed_ms": 98.558668,
+        "components": {
+          "RECEIVED_ms": 0.06,
+          "PARSED_ms": 13.588,
+          "SNAPSHOT_ms": 0.40700000000000003,
+          "RETRIEVED_ms": 0.8420000000000005,
+          "DECIDED_ms": 4.973999999999998,
+          "VALIDATED_ms": 0.46199999999999974,
+          "EXECUTED_ms": 64.458,
+          "MONITORED_ms": 0.7049999999999983,
+          "LEARNED_ms": 7.52300000000001,
+          "SUCCEEDED_ms": 0.12099999999999511,
+          "outside_trace_ms": 5.418667999999997
+        }
+      },
+      {
+        "block": 30,
+        "index": 1,
+        "elapsed_ms": 85.99392,
+        "components": {
+          "RECEIVED_ms": 0.04,
+          "PARSED_ms": 10.087000000000002,
+          "SNAPSHOT_ms": 0.1819999999999986,
+          "RETRIEVED_ms": 0.5340000000000007,
+          "DECIDED_ms": 3.7319999999999993,
+          "VALIDATED_ms": 0.16800000000000104,
+          "EXECUTED_ms": 25.266999999999996,
+          "MONITORED_ms": 0.5700000000000003,
+          "LEARNED_ms": 40.855000000000004,
+          "SUCCEEDED_ms": 0.10800000000000409,
+          "outside_trace_ms": 4.450919999999996
+        }
+      },
+      {
+        "block": 19,
+        "index": 1,
+        "elapsed_ms": 70.795821,
+        "components": {
+          "RECEIVED_ms": 0.068,
+          "PARSED_ms": 16.782,
+          "SNAPSHOT_ms": 0.31899999999999906,
+          "RETRIEVED_ms": 0.9400000000000013,
+          "DECIDED_ms": 5.899999999999999,
+          "VALIDATED_ms": 0.26599999999999824,
+          "EXECUTED_ms": 27.672000000000004,
+          "MONITORED_ms": 0.9480000000000004,
+          "LEARNED_ms": 9.248999999999995,
+          "SUCCEEDED_ms": 0.1290000000000049,
+          "outside_trace_ms": 8.522821
+        }
+      },
+      {
+        "block": 26,
+        "index": 1,
+        "elapsed_ms": 69.993663,
+        "components": {
+          "RECEIVED_ms": 0.063,
+          "PARSED_ms": 15.133999999999999,
+          "SNAPSHOT_ms": 0.3200000000000003,
+          "RETRIEVED_ms": 1.1310000000000002,
+          "DECIDED_ms": 6.469999999999999,
+          "VALIDATED_ms": 0.3130000000000024,
+          "EXECUTED_ms": 26.598000000000003,
+          "MONITORED_ms": 1.053999999999995,
+          "LEARNED_ms": 12.463999999999999,
+          "SUCCEEDED_ms": 0.15200000000000102,
+          "outside_trace_ms": 6.294663
+        }
+      },
+      {
+        "block": 0,
+        "index": 0,
+        "elapsed_ms": 68.736523,
+        "components": {
+          "RECEIVED_ms": 0.059,
+          "PARSED_ms": 12.874,
+          "SNAPSHOT_ms": 0.26399999999999935,
+          "RETRIEVED_ms": 0.8490000000000002,
+          "DECIDED_ms": 5.045000000000002,
+          "VALIDATED_ms": 0.2989999999999995,
+          "EXECUTED_ms": 34.658,
+          "MONITORED_ms": 0.8569999999999993,
+          "LEARNED_ms": 8.241,
+          "SUCCEEDED_ms": 0.1559999999999988,
+          "outside_trace_ms": 5.434523000000006
+        }
+      }
+    ],
+    "TRAIN/LOW/8/S1_REPEAT_CACHE": [
+      {
+        "block": 23,
+        "index": 0,
+        "elapsed_ms": 104.885359,
+        "components": {
+          "RECEIVED_ms": 0.06,
+          "PARSED_ms": 54.922,
+          "SNAPSHOT_ms": 0.3190000000000026,
+          "RETRIEVED_ms": 0.8829999999999956,
+          "DECIDED_ms": 5.403000000000006,
+          "VALIDATED_ms": 0.23499999999999943,
+          "EXECUTED_ms": 28.444999999999993,
+          "MONITORED_ms": 0.828000000000003,
+          "LEARNED_ms": 8.084000000000003,
+          "SUCCEEDED_ms": 0.125,
+          "outside_trace_ms": 5.581358999999992
+        }
+      },
+      {
+        "block": 19,
+        "index": 1,
+        "elapsed_ms": 101.85663,
+        "components": {
+          "RECEIVED_ms": 0.054,
+          "PARSED_ms": 13.213,
+          "SNAPSHOT_ms": 0.2889999999999997,
+          "RETRIEVED_ms": 0.9650000000000016,
+          "DECIDED_ms": 5.739000000000001,
+          "VALIDATED_ms": 0.31999999999999673,
+          "EXECUTED_ms": 33.413000000000004,
+          "MONITORED_ms": 0.6950000000000003,
+          "LEARNED_ms": 41.57899999999999,
+          "SUCCEEDED_ms": 0.13500000000000512,
+          "outside_trace_ms": 5.4546299999999945
+        }
+      },
+      {
+        "block": 26,
+        "index": 0,
+        "elapsed_ms": 97.155904,
+        "components": {
+          "RECEIVED_ms": 0.081,
+          "PARSED_ms": 49.809999999999995,
+          "SNAPSHOT_ms": 0.3100000000000023,
+          "RETRIEVED_ms": 0.8459999999999965,
+          "DECIDED_ms": 4.955000000000005,
+          "VALIDATED_ms": 0.23899999999999721,
+          "EXECUTED_ms": 26.229,
+          "MONITORED_ms": 0.855000000000004,
+          "LEARNED_ms": 7.8999999999999915,
+          "SUCCEEDED_ms": 0.14400000000000546,
+          "outside_trace_ms": 5.786904000000007
+        }
+      },
+      {
+        "block": 39,
+        "index": 1,
+        "elapsed_ms": 93.831871,
+        "components": {
+          "RECEIVED_ms": 0.054,
+          "PARSED_ms": 13.188,
+          "SNAPSHOT_ms": 0.26399999999999935,
+          "RETRIEVED_ms": 1.0589999999999993,
+          "DECIDED_ms": 6.725,
+          "VALIDATED_ms": 0.31200000000000117,
+          "EXECUTED_ms": 58.596999999999994,
+          "MONITORED_ms": 0.652000000000001,
+          "LEARNED_ms": 7.703000000000003,
+          "SUCCEEDED_ms": 0.1280000000000001,
+          "outside_trace_ms": 5.1498710000000045
+        }
+      },
+      {
+        "block": 3,
+        "index": 0,
+        "elapsed_ms": 92.419077,
+        "components": {
+          "RECEIVED_ms": 0.06,
+          "PARSED_ms": 13.285,
+          "SNAPSHOT_ms": 0.254999999999999,
+          "RETRIEVED_ms": 0.7569999999999997,
+          "DECIDED_ms": 4.913,
+          "VALIDATED_ms": 0.3290000000000006,
+          "EXECUTED_ms": 21.130999999999997,
+          "MONITORED_ms": 0.8500000000000014,
+          "LEARNED_ms": 44.647000000000006,
+          "SUCCEEDED_ms": 0.19499999999999318,
+          "outside_trace_ms": 5.997077000000004
+        }
+      }
+    ],
+    "TRAIN/MEDIUM/2/S1_REPEAT_CACHE": [
+      {
+        "block": 20,
+        "index": 1,
+        "elapsed_ms": 88.450361,
+        "components": {
+          "RECEIVED_ms": 0.046,
+          "PARSED_ms": 46.299,
+          "SNAPSHOT_ms": 0.2809999999999988,
+          "RETRIEVED_ms": 0.9520000000000053,
+          "DECIDED_ms": 5.4510000000000005,
+          "VALIDATED_ms": 0.21399999999999864,
+          "EXECUTED_ms": 21.865999999999993,
+          "MONITORED_ms": 0.7780000000000058,
+          "LEARNED_ms": 7.707999999999998,
+          "SUCCEEDED_ms": 0.12999999999999545,
+          "outside_trace_ms": 4.725361000000007
+        }
+      },
+      {
+        "block": 42,
+        "index": 0,
+        "elapsed_ms": 83.272072,
+        "components": {
+          "RECEIVED_ms": 0.05,
+          "PARSED_ms": 12.837,
+          "SNAPSHOT_ms": 0.18299999999999983,
+          "RETRIEVED_ms": 0.581999999999999,
+          "DECIDED_ms": 3.635,
+          "VALIDATED_ms": 0.26200000000000045,
+          "EXECUTED_ms": 21.188000000000002,
+          "MONITORED_ms": 0.8260000000000005,
+          "LEARNED_ms": 38.88199999999999,
+          "SUCCEEDED_ms": 0.13000000000000966,
+          "outside_trace_ms": 4.6970719999999915
+        }
+      },
+      {
+        "block": 18,
+        "index": 0,
+        "elapsed_ms": 80.25414,
+        "components": {
+          "RECEIVED_ms": 0.05,
+          "PARSED_ms": 12.632,
+          "SNAPSHOT_ms": 0.2679999999999989,
+          "RETRIEVED_ms": 0.7690000000000001,
+          "DECIDED_ms": 5.4620000000000015,
+          "VALIDATED_ms": 0.2099999999999973,
+          "EXECUTED_ms": 48.861,
+          "MONITORED_ms": 0.7180000000000035,
+          "LEARNED_ms": 6.429000000000002,
+          "SUCCEEDED_ms": 0.11499999999999488,
+          "outside_trace_ms": 4.740140000000011
+        }
+      },
+      {
+        "block": 36,
+        "index": 1,
+        "elapsed_ms": 64.614992,
+        "components": {
+          "RECEIVED_ms": 0.073,
+          "PARSED_ms": 17.485,
+          "SNAPSHOT_ms": 0.33399999999999963,
+          "RETRIEVED_ms": 0.9299999999999997,
+          "DECIDED_ms": 5.3870000000000005,
+          "VALIDATED_ms": 0.2029999999999994,
+          "EXECUTED_ms": 25.456000000000003,
+          "MONITORED_ms": 0.5300000000000011,
+          "LEARNED_ms": 7.900999999999996,
+          "SUCCEEDED_ms": 0.1109999999999971,
+          "outside_trace_ms": 6.204992000000004
+        }
+      },
+      {
+        "block": 33,
+        "index": 1,
+        "elapsed_ms": 63.793477,
+        "components": {
+          "RECEIVED_ms": 0.046,
+          "PARSED_ms": 14.911000000000001,
+          "SNAPSHOT_ms": 0.2519999999999989,
+          "RETRIEVED_ms": 0.7680000000000007,
+          "DECIDED_ms": 4.0070000000000014,
+          "VALIDATED_ms": 0.2079999999999984,
+          "EXECUTED_ms": 31.005000000000003,
+          "MONITORED_ms": 0.6379999999999981,
+          "LEARNED_ms": 7.3160000000000025,
+          "SUCCEEDED_ms": 0.10299999999999443,
+          "outside_trace_ms": 4.539477000000005
+        }
+      }
+    ],
+    "TRAIN/MEDIUM/8/S1_REPEAT_CACHE": [
+      {
+        "block": 29,
+        "index": 3,
+        "elapsed_ms": 88.774436,
+        "components": {
+          "RECEIVED_ms": 0.052,
+          "PARSED_ms": 12.419,
+          "SNAPSHOT_ms": 0.2919999999999998,
+          "RETRIEVED_ms": 0.8800000000000008,
+          "DECIDED_ms": 5.279999999999998,
+          "VALIDATED_ms": 0.20700000000000074,
+          "EXECUTED_ms": 5.3530000000000015,
+          "MONITORED_ms": 0.690999999999999,
+          "LEARNED_ms": 54.849,
+          "SUCCEEDED_ms": 0.13100000000000023,
+          "outside_trace_ms": 8.620435999999998
+        }
+      },
+      {
+        "block": 40,
+        "index": 4,
+        "elapsed_ms": 81.953926,
+        "components": {
+          "RECEIVED_ms": 0.05,
+          "PARSED_ms": 18.253,
+          "SNAPSHOT_ms": 0.254999999999999,
+          "RETRIEVED_ms": 0.9329999999999998,
+          "DECIDED_ms": 5.501000000000001,
+          "VALIDATED_ms": 0.22199999999999775,
+          "EXECUTED_ms": 43.382000000000005,
+          "MONITORED_ms": 0.7169999999999987,
+          "LEARNED_ms": 6.688999999999993,
+          "SUCCEEDED_ms": 0.12400000000000944,
+          "outside_trace_ms": 5.827925999999991
+        }
+      },
+      {
+        "block": 24,
+        "index": 1,
+        "elapsed_ms": 81.134012,
+        "components": {
+          "RECEIVED_ms": 0.06,
+          "PARSED_ms": 12.962,
+          "SNAPSHOT_ms": 0.25099999999999945,
+          "RETRIEVED_ms": 0.8130000000000006,
+          "DECIDED_ms": 5.598999999999998,
+          "VALIDATED_ms": 0.22600000000000264,
+          "EXECUTED_ms": 24.452999999999996,
+          "MONITORED_ms": 0.4540000000000006,
+          "LEARNED_ms": 31.576000000000008,
+          "SUCCEEDED_ms": 0.09799999999999898,
+          "outside_trace_ms": 4.642011999999994
+        }
+      },
+      {
+        "block": 16,
+        "index": 1,
+        "elapsed_ms": 80.122702,
+        "components": {
+          "RECEIVED_ms": 0.042,
+          "PARSED_ms": 10.001,
+          "SNAPSHOT_ms": 0.18599999999999994,
+          "RETRIEVED_ms": 0.5280000000000005,
+          "DECIDED_ms": 3.6050000000000004,
+          "VALIDATED_ms": 0.1869999999999994,
+          "EXECUTED_ms": 21.741999999999997,
+          "MONITORED_ms": 0.5200000000000031,
+          "LEARNED_ms": 38.799,
+          "SUCCEEDED_ms": 0.10599999999999454,
+          "outside_trace_ms": 4.40670200000001
+        }
+      },
+      {
+        "block": 39,
+        "index": 6,
+        "elapsed_ms": 77.511845,
+        "components": {
+          "RECEIVED_ms": 0.037,
+          "PARSED_ms": 13.034999999999998,
+          "SNAPSHOT_ms": 0.23800000000000132,
+          "RETRIEVED_ms": 0.879999999999999,
+          "DECIDED_ms": 5.7120000000000015,
+          "VALIDATED_ms": 0.16499999999999915,
+          "EXECUTED_ms": 6.942,
+          "MONITORED_ms": 0.7149999999999999,
+          "LEARNED_ms": 45.259,
+          "SUCCEEDED_ms": 0.10099999999999909,
+          "outside_trace_ms": 4.427844999999991
+        }
+      }
+    ],
+    "TRAIN/MEDIUM/2/S0_NATIVE": [
+      {
+        "block": 43,
+        "index": 1,
+        "elapsed_ms": 96.76751,
+        "components": {
+          "RECEIVED_ms": 0.045,
+          "PARSED_ms": 14.397,
+          "SNAPSHOT_ms": 0.16300000000000026,
+          "RETRIEVED_ms": 0.7270000000000003,
+          "DECIDED_ms": 5.114000000000001,
+          "VALIDATED_ms": 0.2240000000000002,
+          "EXECUTED_ms": 60.15899999999999,
+          "MONITORED_ms": 0.8060000000000116,
+          "LEARNED_ms": 7.525999999999996,
+          "SUCCEEDED_ms": 0.11400000000000432,
+          "outside_trace_ms": 7.492509999999996
+        }
+      },
+      {
+        "block": 5,
+        "index": 1,
+        "elapsed_ms": 80.044151,
+        "components": {
+          "RECEIVED_ms": 0.043,
+          "PARSED_ms": 45.24,
+          "SNAPSHOT_ms": 0.21300000000000097,
+          "RETRIEVED_ms": 0.7149999999999963,
+          "DECIDED_ms": 5.355000000000004,
+          "VALIDATED_ms": 0.17799999999999727,
+          "EXECUTED_ms": 16.879000000000005,
+          "MONITORED_ms": 0.7259999999999991,
+          "LEARNED_ms": 6.146999999999991,
+          "SUCCEEDED_ms": 0.11400000000000432,
+          "outside_trace_ms": 4.434151
+        }
+      },
+      {
+        "block": 22,
+        "index": 1,
+        "elapsed_ms": 77.600289,
+        "components": {
+          "RECEIVED_ms": 0.061,
+          "PARSED_ms": 16.779,
+          "SNAPSHOT_ms": 0.3260000000000005,
+          "RETRIEVED_ms": 1.065999999999999,
+          "DECIDED_ms": 5.547000000000001,
+          "VALIDATED_ms": 0.21499999999999986,
+          "EXECUTED_ms": 39.884,
+          "MONITORED_ms": 0.7950000000000017,
+          "LEARNED_ms": 7.715999999999994,
+          "SUCCEEDED_ms": 0.13800000000000523,
+          "outside_trace_ms": 5.073289000000003
+        }
+      },
+      {
+        "block": 4,
+        "index": 1,
+        "elapsed_ms": 73.641131,
+        "components": {
+          "RECEIVED_ms": 0.037,
+          "PARSED_ms": 9.220999999999998,
+          "SNAPSHOT_ms": 0.16900000000000048,
+          "RETRIEVED_ms": 0.5250000000000004,
+          "DECIDED_ms": 3.4350000000000005,
+          "VALIDATED_ms": 0.1609999999999996,
+          "EXECUTED_ms": 49.513999999999996,
+          "MONITORED_ms": 0.5100000000000051,
+          "LEARNED_ms": 5.319999999999993,
+          "SUCCEEDED_ms": 0.08800000000000807,
+          "outside_trace_ms": 4.6611309999999975
+        }
+      },
+      {
+        "block": 9,
+        "index": 0,
+        "elapsed_ms": 72.790389,
+        "components": {
+          "RECEIVED_ms": 0.037,
+          "PARSED_ms": 8.524,
+          "SNAPSHOT_ms": 0.15799999999999947,
+          "RETRIEVED_ms": 0.4660000000000011,
+          "DECIDED_ms": 3.362,
+          "VALIDATED_ms": 0.17799999999999905,
+          "EXECUTED_ms": 50.156,
+          "MONITORED_ms": 0.6640000000000015,
+          "LEARNED_ms": 5.231999999999999,
+          "SUCCEEDED_ms": 0.0799999999999983,
+          "outside_trace_ms": 3.9333890000000054
+        }
+      }
+    ],
+    "TRAIN/MEDIUM/8/S0_NATIVE": [
+      {
+        "block": 29,
+        "index": 7,
+        "elapsed_ms": 98.21283,
+        "components": {
+          "RECEIVED_ms": 0.051,
+          "PARSED_ms": 14.088,
+          "SNAPSHOT_ms": 0.24200000000000088,
+          "RETRIEVED_ms": 1.0429999999999993,
+          "DECIDED_ms": 4.927,
+          "VALIDATED_ms": 0.19900000000000162,
+          "EXECUTED_ms": 25.764999999999997,
+          "MONITORED_ms": 0.5900000000000034,
+          "LEARNED_ms": 46.187,
+          "SUCCEEDED_ms": 0.15399999999999636,
+          "outside_trace_ms": 4.966830000000002
+        }
+      },
+      {
+        "block": 23,
+        "index": 5,
+        "elapsed_ms": 95.884077,
+        "components": {
+          "RECEIVED_ms": 0.085,
+          "PARSED_ms": 17.407999999999998,
+          "SNAPSHOT_ms": 0.3260000000000005,
+          "RETRIEVED_ms": 0.9550000000000018,
+          "DECIDED_ms": 7.491,
+          "VALIDATED_ms": 0.24599999999999866,
+          "EXECUTED_ms": 55.455,
+          "MONITORED_ms": 0.7220000000000084,
+          "LEARNED_ms": 7.715999999999994,
+          "SUCCEEDED_ms": 0.1290000000000049,
+          "outside_trace_ms": 5.351077000000004
+        }
+      },
+      {
+        "block": 15,
+        "index": 5,
+        "elapsed_ms": 93.479991,
+        "components": {
+          "RECEIVED_ms": 0.039,
+          "PARSED_ms": 51.927,
+          "SNAPSHOT_ms": 0.31099999999999994,
+          "RETRIEVED_ms": 0.9889999999999972,
+          "DECIDED_ms": 7.710000000000001,
+          "VALIDATED_ms": 0.1559999999999988,
+          "EXECUTED_ms": 20.305,
+          "MONITORED_ms": 0.5010000000000048,
+          "LEARNED_ms": 6.804999999999993,
+          "SUCCEEDED_ms": 0.1280000000000001,
+          "outside_trace_ms": 4.608991000000003
+        }
+      },
+      {
+        "block": 43,
+        "index": 5,
+        "elapsed_ms": 91.241347,
+        "components": {
+          "RECEIVED_ms": 0.048,
+          "PARSED_ms": 14.997,
+          "SNAPSHOT_ms": 0.19100000000000072,
+          "RETRIEVED_ms": 0.5469999999999988,
+          "DECIDED_ms": 3.477000000000002,
+          "VALIDATED_ms": 0.23199999999999932,
+          "EXECUTED_ms": 55.688,
+          "MONITORED_ms": 0.7609999999999957,
+          "LEARNED_ms": 7.745999999999995,
+          "SUCCEEDED_ms": 0.08100000000000307,
+          "outside_trace_ms": 7.473347000000004
+        }
+      },
+      {
+        "block": 27,
+        "index": 1,
+        "elapsed_ms": 88.22137,
+        "components": {
+          "RECEIVED_ms": 0.042,
+          "PARSED_ms": 51.975,
+          "SNAPSHOT_ms": 0.2919999999999945,
+          "RETRIEVED_ms": 0.7140000000000057,
+          "DECIDED_ms": 3.8499999999999943,
+          "VALIDATED_ms": 0.1980000000000004,
+          "EXECUTED_ms": 19.001000000000005,
+          "MONITORED_ms": 0.6069999999999993,
+          "LEARNED_ms": 6.685000000000002,
+          "SUCCEEDED_ms": 0.09999999999999432,
+          "outside_trace_ms": 4.7573699999999945
+        }
+      }
+    ],
+    "HOLDOUT/LOW/8/ADAPTIVE": [
+      {
+        "block": 14,
+        "index": 0,
+        "elapsed_ms": 324.605915,
+        "components": {
+          "RECEIVED_ms": 0.114,
+          "PARSED_ms": 216.803,
+          "SNAPSHOT_ms": 0.4509999999999934,
+          "RETRIEVED_ms": 1.2090000000000032,
+          "DECIDED_ms": 7.481999999999999,
+          "VALIDATED_ms": 0.38800000000000523,
+          "EXECUTED_ms": 30.000999999999976,
+          "MONITORED_ms": 1.1070000000000277,
+          "LEARNED_ms": 10.843000000000018,
+          "SUCCEEDED_ms": 0.20699999999999363,
+          "outside_trace_ms": 56.000914999999964
+        }
+      },
+      {
+        "block": 24,
+        "index": 0,
+        "elapsed_ms": 122.727257,
+        "components": {
+          "RECEIVED_ms": 0.061,
+          "PARSED_ms": 13.271,
+          "SNAPSHOT_ms": 0.2679999999999989,
+          "RETRIEVED_ms": 0.8360000000000003,
+          "DECIDED_ms": 62.452999999999996,
+          "VALIDATED_ms": 0.23799999999999955,
+          "EXECUTED_ms": 26.738,
+          "MONITORED_ms": 1.1340000000000003,
+          "LEARNED_ms": 11.225000000000009,
+          "SUCCEEDED_ms": 0.2259999999999991,
+          "outside_trace_ms": 6.277256999999992
+        }
+      },
+      {
+        "block": 21,
+        "index": 7,
+        "elapsed_ms": 121.918471,
+        "components": {
+          "RECEIVED_ms": 0.089,
+          "PARSED_ms": 18.974,
+          "SNAPSHOT_ms": 0.42600000000000193,
+          "RETRIEVED_ms": 1.6039999999999992,
+          "DECIDED_ms": 7.655999999999999,
+          "VALIDATED_ms": 0.3500000000000014,
+          "EXECUTED_ms": 8.081,
+          "MONITORED_ms": 0.9799999999999969,
+          "LEARNED_ms": 10.201,
+          "SUCCEEDED_ms": 0.19700000000000273,
+          "outside_trace_ms": 73.36047099999999
+        }
+      },
+      {
+        "block": 23,
+        "index": 2,
+        "elapsed_ms": 121.666803,
+        "components": {
+          "RECEIVED_ms": 0.053,
+          "PARSED_ms": 14.879,
+          "SNAPSHOT_ms": 0.4079999999999995,
+          "RETRIEVED_ms": 0.7319999999999993,
+          "DECIDED_ms": 5.091000000000001,
+          "VALIDATED_ms": 0.40700000000000003,
+          "EXECUTED_ms": 84.78899999999999,
+          "MONITORED_ms": 0.722999999999999,
+          "LEARNED_ms": 8.436000000000007,
+          "SUCCEEDED_ms": 0.17199999999999704,
+          "outside_trace_ms": 5.976803000000004
+        }
+      },
+      {
+        "block": 17,
+        "index": 1,
+        "elapsed_ms": 120.389412,
+        "components": {
+          "RECEIVED_ms": 0.085,
+          "PARSED_ms": 67.96900000000001,
+          "SNAPSHOT_ms": 0.3100000000000023,
+          "RETRIEVED_ms": 0.9769999999999897,
+          "DECIDED_ms": 5.813000000000002,
+          "VALIDATED_ms": 0.3119999999999976,
+          "EXECUTED_ms": 27.25,
+          "MONITORED_ms": 0.936000000000007,
+          "LEARNED_ms": 9.945999999999998,
+          "SUCCEEDED_ms": 0.17100000000000648,
+          "outside_trace_ms": 6.6204119999999875
+        }
+      }
+    ],
+    "HOLDOUT/LOW/2/S0_NATIVE": [
+      {
+        "block": 25,
+        "index": 1,
+        "elapsed_ms": 136.597499,
+        "components": {
+          "RECEIVED_ms": 0.067,
+          "PARSED_ms": 14.754999999999999,
+          "SNAPSHOT_ms": 0.31900000000000084,
+          "RETRIEVED_ms": 0.9949999999999992,
+          "DECIDED_ms": 5.6690000000000005,
+          "VALIDATED_ms": 0.2749999999999986,
+          "EXECUTED_ms": 63.59,
+          "MONITORED_ms": 0.8780000000000001,
+          "LEARNED_ms": 8.525999999999996,
+          "SUCCEEDED_ms": 0.125,
+          "outside_trace_ms": 41.398499
+        }
+      },
+      {
+        "block": 16,
+        "index": 1,
+        "elapsed_ms": 129.54873,
+        "components": {
+          "RECEIVED_ms": 0.089,
+          "PARSED_ms": 76.34700000000001,
+          "SNAPSHOT_ms": 0.39799999999999613,
+          "RETRIEVED_ms": 1.0769999999999982,
+          "DECIDED_ms": 6.241,
+          "VALIDATED_ms": 0.46699999999999875,
+          "EXECUTED_ms": 25.760999999999996,
+          "MONITORED_ms": 1.0960000000000036,
+          "LEARNED_ms": 10.968999999999994,
+          "SUCCEEDED_ms": 0.20600000000000307,
+          "outside_trace_ms": 6.89773000000001
+        }
+      },
+      {
+        "block": 22,
+        "index": 0,
+        "elapsed_ms": 114.697035,
+        "components": {
+          "RECEIVED_ms": 0.057,
+          "PARSED_ms": 12.924,
+          "SNAPSHOT_ms": 0.354000000000001,
+          "RETRIEVED_ms": 1.0749999999999993,
+          "DECIDED_ms": 5.901,
+          "VALIDATED_ms": 0.3520000000000003,
+          "EXECUTED_ms": 22.709999999999997,
+          "MONITORED_ms": 0.7210000000000036,
+          "LEARNED_ms": 8.580999999999996,
+          "SUCCEEDED_ms": 0.125,
+          "outside_trace_ms": 61.897035
+        }
+      },
+      {
+        "block": 26,
+        "index": 0,
+        "elapsed_ms": 103.210399,
+        "components": {
+          "RECEIVED_ms": 0.065,
+          "PARSED_ms": 13.882,
+          "SNAPSHOT_ms": 0.26900000000000013,
+          "RETRIEVED_ms": 0.8290000000000006,
+          "DECIDED_ms": 5.159000000000001,
+          "VALIDATED_ms": 0.25099999999999767,
+          "EXECUTED_ms": 68.584,
+          "MONITORED_ms": 0.7319999999999993,
+          "LEARNED_ms": 7.313999999999993,
+          "SUCCEEDED_ms": 0.1290000000000049,
+          "outside_trace_ms": 5.996398999999997
+        }
+      },
+      {
+        "block": 12,
+        "index": 0,
+        "elapsed_ms": 101.865911,
+        "components": {
+          "RECEIVED_ms": 0.06,
+          "PARSED_ms": 50.631,
+          "SNAPSHOT_ms": 0.4069999999999965,
+          "RETRIEVED_ms": 0.8500000000000014,
+          "DECIDED_ms": 5.113999999999997,
+          "VALIDATED_ms": 0.3330000000000055,
+          "EXECUTED_ms": 24.707,
+          "MONITORED_ms": 1.1539999999999964,
+          "LEARNED_ms": 11.956000000000003,
+          "SUCCEEDED_ms": 0.2079999999999984,
+          "outside_trace_ms": 6.445910999999995
+        }
+      }
+    ],
+    "HOLDOUT/LOW/8/S1_REPEAT_CACHE": [
+      {
+        "block": 28,
+        "index": 1,
+        "elapsed_ms": 151.271679,
+        "components": {
+          "RECEIVED_ms": 0.054,
+          "PARSED_ms": 14.788,
+          "SNAPSHOT_ms": 0.2729999999999997,
+          "RETRIEVED_ms": 1.121999999999998,
+          "DECIDED_ms": 5.548000000000002,
+          "VALIDATED_ms": 0.2940000000000005,
+          "EXECUTED_ms": 110.768,
+          "MONITORED_ms": 1.174999999999983,
+          "LEARNED_ms": 10.920000000000016,
+          "SUCCEEDED_ms": 0.12899999999999068,
+          "outside_trace_ms": 6.200679000000008
+        }
+      },
+      {
+        "block": 19,
+        "index": 0,
+        "elapsed_ms": 122.079252,
+        "components": {
+          "RECEIVED_ms": 0.094,
+          "PARSED_ms": 13.702,
+          "SNAPSHOT_ms": 0.33500000000000085,
+          "RETRIEVED_ms": 0.8650000000000002,
+          "DECIDED_ms": 61.639,
+          "VALIDATED_ms": 0.3269999999999982,
+          "EXECUTED_ms": 25.572000000000003,
+          "MONITORED_ms": 1.1289999999999907,
+          "LEARNED_ms": 10.75500000000001,
+          "SUCCEEDED_ms": 0.20199999999999818,
+          "outside_trace_ms": 7.459251999999992
+        }
+      },
+      {
+        "block": 27,
+        "index": 2,
+        "elapsed_ms": 119.564808,
+        "components": {
+          "RECEIVED_ms": 0.069,
+          "PARSED_ms": 84.698,
+          "SNAPSHOT_ms": 0.4070000000000107,
+          "RETRIEVED_ms": 1.063999999999993,
+          "DECIDED_ms": 6.320000000000007,
+          "VALIDATED_ms": 0.3719999999999999,
+          "EXECUTED_ms": 8.508999999999986,
+          "MONITORED_ms": 1.0460000000000065,
+          "LEARNED_ms": 10.405000000000001,
+          "SUCCEEDED_ms": 0.22499999999999432,
+          "outside_trace_ms": 6.449808000000004
+        }
+      },
+      {
+        "block": 20,
+        "index": 0,
+        "elapsed_ms": 116.145203,
+        "components": {
+          "RECEIVED_ms": 0.055,
+          "PARSED_ms": 12.85,
+          "SNAPSHOT_ms": 0.2510000000000012,
+          "RETRIEVED_ms": 0.7259999999999991,
+          "DECIDED_ms": 4.970000000000001,
+          "VALIDATED_ms": 0.3410000000000011,
+          "EXECUTED_ms": 25.041,
+          "MONITORED_ms": 0.7929999999999993,
+          "LEARNED_ms": 8.155999999999999,
+          "SUCCEEDED_ms": 0.12199999999999989,
+          "outside_trace_ms": 62.840202999999995
+        }
+      },
+      {
+        "block": 11,
+        "index": 1,
+        "elapsed_ms": 112.632572,
+        "components": {
+          "RECEIVED_ms": 0.09,
+          "PARSED_ms": 17.218,
+          "SNAPSHOT_ms": 0.33699999999999974,
+          "RETRIEVED_ms": 0.9329999999999998,
+          "DECIDED_ms": 5.714000000000002,
+          "VALIDATED_ms": 0.2859999999999978,
+          "EXECUTED_ms": 29.910999999999998,
+          "MONITORED_ms": 1.0390000000000015,
+          "LEARNED_ms": 10.143000000000008,
+          "SUCCEEDED_ms": 0.17399999999999238,
+          "outside_trace_ms": 46.787572
+        }
+      }
+    ],
+    "HOLDOUT/LOW/2/ADAPTIVE": [
+      {
+        "block": 22,
+        "index": 1,
+        "elapsed_ms": 127.995318,
+        "components": {
+          "RECEIVED_ms": 0.061,
+          "PARSED_ms": 14.262,
+          "SNAPSHOT_ms": 0.27699999999999925,
+          "RETRIEVED_ms": 1.1440000000000001,
+          "DECIDED_ms": 5.992000000000001,
+          "VALIDATED_ms": 0.30900000000000105,
+          "EXECUTED_ms": 24.369,
+          "MONITORED_ms": 0.8999999999999986,
+          "LEARNED_ms": 9.088999999999999,
+          "SUCCEEDED_ms": 0.16400000000000148,
+          "outside_trace_ms": 71.42831799999999
+        }
+      },
+      {
+        "block": 27,
+        "index": 1,
+        "elapsed_ms": 127.43924,
+        "components": {
+          "RECEIVED_ms": 0.052,
+          "PARSED_ms": 13.425,
+          "SNAPSHOT_ms": 0.3550000000000004,
+          "RETRIEVED_ms": 1.129999999999999,
+          "DECIDED_ms": 5.6129999999999995,
+          "VALIDATED_ms": 0.3230000000000004,
+          "EXECUTED_ms": 23.307,
+          "MONITORED_ms": 0.8520000000000039,
+          "LEARNED_ms": 9.408999999999999,
+          "SUCCEEDED_ms": 0.16400000000000148,
+          "outside_trace_ms": 72.80923999999999
+        }
+      },
+      {
+        "block": 17,
+        "index": 1,
+        "elapsed_ms": 123.262178,
+        "components": {
+          "RECEIVED_ms": 0.065,
+          "PARSED_ms": 14.847000000000001,
+          "SNAPSHOT_ms": 0.3009999999999984,
+          "RETRIEVED_ms": 0.9640000000000004,
+          "DECIDED_ms": 5.559000000000001,
+          "VALIDATED_ms": 0.3260000000000005,
+          "EXECUTED_ms": 24.702,
+          "MONITORED_ms": 0.6890000000000001,
+          "LEARNED_ms": 69.29599999999999,
+          "SUCCEEDED_ms": 0.19700000000000273,
+          "outside_trace_ms": 6.316178000000008
+        }
+      },
+      {
+        "block": 15,
+        "index": 0,
+        "elapsed_ms": 115.634912,
+        "components": {
+          "RECEIVED_ms": 0.064,
+          "PARSED_ms": 13.551,
+          "SNAPSHOT_ms": 0.3439999999999994,
+          "RETRIEVED_ms": 0.854000000000001,
+          "DECIDED_ms": 5.165000000000001,
+          "VALIDATED_ms": 0.2879999999999967,
+          "EXECUTED_ms": 79.189,
+          "MONITORED_ms": 0.8919999999999959,
+          "LEARNED_ms": 8.849000000000004,
+          "SUCCEEDED_ms": 0.18200000000000216,
+          "outside_trace_ms": 6.256912
+        }
+      },
+      {
+        "block": 24,
+        "index": 1,
+        "elapsed_ms": 115.401475,
+        "components": {
+          "RECEIVED_ms": 0.071,
+          "PARSED_ms": 56.672000000000004,
+          "SNAPSHOT_ms": 0.39099999999999824,
+          "RETRIEVED_ms": 1.3179999999999978,
+          "DECIDED_ms": 7.978000000000009,
+          "VALIDATED_ms": 0.3810000000000002,
+          "EXECUTED_ms": 30.309999999999988,
+          "MONITORED_ms": 1.1180000000000092,
+          "LEARNED_ms": 10.513999999999996,
+          "SUCCEEDED_ms": 0.22700000000000387,
+          "outside_trace_ms": 6.421475000000001
+        }
+      }
+    ],
+    "HOLDOUT/LOW/2/S1_REPEAT_CACHE": [
+      {
+        "block": 9,
+        "index": 1,
+        "elapsed_ms": 130.840017,
+        "components": {
+          "RECEIVED_ms": 0.085,
+          "PARSED_ms": 22.712999999999997,
+          "SNAPSHOT_ms": 0.4150000000000027,
+          "RETRIEVED_ms": 1.439,
+          "DECIDED_ms": 7.6910000000000025,
+          "VALIDATED_ms": 0.4339999999999975,
+          "EXECUTED_ms": 79.562,
+          "MONITORED_ms": 0.953000000000003,
+          "LEARNED_ms": 9.832999999999998,
+          "SUCCEEDED_ms": 0.1869999999999976,
+          "outside_trace_ms": 7.528016999999991
+        }
+      },
+      {
+        "block": 22,
+        "index": 0,
+        "elapsed_ms": 118.432804,
+        "components": {
+          "RECEIVED_ms": 0.065,
+          "PARSED_ms": 65.941,
+          "SNAPSHOT_ms": 0.3930000000000007,
+          "RETRIEVED_ms": 1.0559999999999974,
+          "DECIDED_ms": 5.686000000000007,
+          "VALIDATED_ms": 0.3509999999999991,
+          "EXECUTED_ms": 27.567999999999998,
+          "MONITORED_ms": 1.1200000000000045,
+          "LEARNED_ms": 10.406999999999996,
+          "SUCCEEDED_ms": 0.12399999999999523,
+          "outside_trace_ms": 5.721804000000006
+        }
+      },
+      {
+        "block": 15,
+        "index": 1,
+        "elapsed_ms": 117.181594,
+        "components": {
+          "RECEIVED_ms": 0.064,
+          "PARSED_ms": 17.572,
+          "SNAPSHOT_ms": 0.4660000000000011,
+          "RETRIEVED_ms": 1.7119999999999997,
+          "DECIDED_ms": 6.4140000000000015,
+          "VALIDATED_ms": 0.352999999999998,
+          "EXECUTED_ms": 24.105999999999998,
+          "MONITORED_ms": 0.8569999999999993,
+          "LEARNED_ms": 9.674000000000007,
+          "SUCCEEDED_ms": 0.1559999999999988,
+          "outside_trace_ms": 55.807594
+        }
+      },
+      {
+        "block": 44,
+        "index": 1,
+        "elapsed_ms": 110.45067,
+        "components": {
+          "RECEIVED_ms": 0.057,
+          "PARSED_ms": 13.469999999999999,
+          "SNAPSHOT_ms": 0.3080000000000016,
+          "RETRIEVED_ms": 0.9159999999999986,
+          "DECIDED_ms": 8.059,
+          "VALIDATED_ms": 0.28100000000000236,
+          "EXECUTED_ms": 72.852,
+          "MONITORED_ms": 0.7680000000000007,
+          "LEARNED_ms": 7.795000000000002,
+          "SUCCEEDED_ms": 0.1670000000000016,
+          "outside_trace_ms": 5.7776700000000005
+        }
+      },
+      {
+        "block": 9,
+        "index": 0,
+        "elapsed_ms": 109.108569,
+        "components": {
+          "RECEIVED_ms": 0.052,
+          "PARSED_ms": 11.312000000000001,
+          "SNAPSHOT_ms": 0.2370000000000001,
+          "RETRIEVED_ms": 0.8309999999999995,
+          "DECIDED_ms": 4.636000000000001,
+          "VALIDATED_ms": 0.22799999999999798,
+          "EXECUTED_ms": 23.573999999999998,
+          "MONITORED_ms": 0.632000000000005,
+          "LEARNED_ms": 7.1299999999999955,
+          "SUCCEEDED_ms": 0.1390000000000029,
+          "outside_trace_ms": 60.337569
+        }
+      }
+    ],
+    "HOLDOUT/LOW/8/S0_NATIVE": [
+      {
+        "block": 3,
+        "index": 1,
+        "elapsed_ms": 393.130483,
+        "components": {
+          "RECEIVED_ms": 0.082,
+          "PARSED_ms": 14.471,
+          "SNAPSHOT_ms": 0.29999999999999893,
+          "RETRIEVED_ms": 1.0150000000000006,
+          "DECIDED_ms": 5.865,
+          "VALIDATED_ms": 0.35999999999999943,
+          "EXECUTED_ms": 23.568,
+          "MONITORED_ms": 0.8230000000000004,
+          "LEARNED_ms": 7.967999999999996,
+          "SUCCEEDED_ms": 0.12600000000000477,
+          "outside_trace_ms": 338.55248300000005
+        }
+      },
+      {
+        "block": 17,
+        "index": 6,
+        "elapsed_ms": 144.368308,
+        "components": {
+          "RECEIVED_ms": 0.087,
+          "PARSED_ms": 40.861,
+          "SNAPSHOT_ms": 0.41899999999999693,
+          "RETRIEVED_ms": 1.4510000000000005,
+          "DECIDED_ms": 8.109000000000002,
+          "VALIDATED_ms": 0.37299999999999756,
+          "EXECUTED_ms": 29.25200000000001,
+          "MONITORED_ms": 1.0559999999999974,
+          "LEARNED_ms": 55.821,
+          "SUCCEEDED_ms": 0.12999999999999545,
+          "outside_trace_ms": 6.809308000000016
+        }
+      },
+      {
+        "block": 24,
+        "index": 5,
+        "elapsed_ms": 133.974569,
+        "components": {
+          "RECEIVED_ms": 0.09,
+          "PARSED_ms": 20.408,
+          "SNAPSHOT_ms": 0.4540000000000006,
+          "RETRIEVED_ms": 1.654,
+          "DECIDED_ms": 7.7159999999999975,
+          "VALIDATED_ms": 0.3979999999999997,
+          "EXECUTED_ms": 27.194000000000003,
+          "MONITORED_ms": 1.0889999999999986,
+          "LEARNED_ms": 10.664000000000001,
+          "SUCCEEDED_ms": 0.23399999999999466,
+          "outside_trace_ms": 64.073569
+        }
+      },
+      {
+        "block": 26,
+        "index": 7,
+        "elapsed_ms": 133.304431,
+        "components": {
+          "RECEIVED_ms": 0.08,
+          "PARSED_ms": 75.346,
+          "SNAPSHOT_ms": 0.527000000000001,
+          "RETRIEVED_ms": 1.4269999999999925,
+          "DECIDED_ms": 7.866,
+          "VALIDATED_ms": 0.39800000000001035,
+          "EXECUTED_ms": 28.70299999999999,
+          "MONITORED_ms": 1.2940000000000111,
+          "LEARNED_ms": 10.99499999999999,
+          "SUCCEEDED_ms": 0.19400000000000261,
+          "outside_trace_ms": 6.474430999999996
+        }
+      },
+      {
+        "block": 26,
+        "index": 3,
+        "elapsed_ms": 129.88982,
+        "components": {
+          "RECEIVED_ms": 0.089,
+          "PARSED_ms": 16.611,
+          "SNAPSHOT_ms": 0.43100000000000094,
+          "RETRIEVED_ms": 1.3909999999999982,
+          "DECIDED_ms": 9.279,
+          "VALIDATED_ms": 0.38300000000000267,
+          "EXECUTED_ms": 30.813999999999997,
+          "MONITORED_ms": 0.9050000000000011,
+          "LEARNED_ms": 11.184999999999995,
+          "SUCCEEDED_ms": 0.21700000000001296,
+          "outside_trace_ms": 58.58481999999998
+        }
+      }
+    ],
+    "HOLDOUT/MEDIUM/2/ADAPTIVE": [
+      {
+        "block": 6,
+        "index": 1,
+        "elapsed_ms": 113.501557,
+        "components": {
+          "RECEIVED_ms": 0.051,
+          "PARSED_ms": 73.702,
+          "SNAPSHOT_ms": 0.3089999999999975,
+          "RETRIEVED_ms": 0.936000000000007,
+          "DECIDED_ms": 3.7579999999999956,
+          "VALIDATED_ms": 0.2259999999999991,
+          "EXECUTED_ms": 20.733999999999995,
+          "MONITORED_ms": 1.0800000000000125,
+          "LEARNED_ms": 7.849999999999994,
+          "SUCCEEDED_ms": 0.11199999999999477,
+          "outside_trace_ms": 4.74355700000001
+        }
+      },
+      {
+        "block": 12,
+        "index": 1,
+        "elapsed_ms": 106.88811,
+        "components": {
+          "RECEIVED_ms": 0.045,
+          "PARSED_ms": 64.091,
+          "SNAPSHOT_ms": 0.25,
+          "RETRIEVED_ms": 0.7990000000000066,
+          "DECIDED_ms": 4.420999999999992,
+          "VALIDATED_ms": 0.15000000000000568,
+          "EXECUTED_ms": 22.807999999999993,
+          "MONITORED_ms": 0.5990000000000038,
+          "LEARNED_ms": 7.873000000000005,
+          "SUCCEEDED_ms": 0.1769999999999925,
+          "outside_trace_ms": 5.675110000000004
+        }
+      },
+      {
+        "block": 31,
+        "index": 1,
+        "elapsed_ms": 101.114027,
+        "components": {
+          "RECEIVED_ms": 0.056,
+          "PARSED_ms": 56.797000000000004,
+          "SNAPSHOT_ms": 0.2809999999999988,
+          "RETRIEVED_ms": 0.8789999999999978,
+          "DECIDED_ms": 5.634,
+          "VALIDATED_ms": 0.2839999999999989,
+          "EXECUTED_ms": 23.028000000000006,
+          "MONITORED_ms": 0.7539999999999907,
+          "LEARNED_ms": 7.352000000000004,
+          "SUCCEEDED_ms": 0.10800000000000409,
+          "outside_trace_ms": 5.941026999999991
+        }
+      },
+      {
+        "block": 40,
+        "index": 1,
+        "elapsed_ms": 93.811849,
+        "components": {
+          "RECEIVED_ms": 0.046,
+          "PARSED_ms": 19.331,
+          "SNAPSHOT_ms": 0.24099999999999966,
+          "RETRIEVED_ms": 0.7850000000000001,
+          "DECIDED_ms": 5.751000000000001,
+          "VALIDATED_ms": 0.2190000000000012,
+          "EXECUTED_ms": 19.571,
+          "MONITORED_ms": 0.5839999999999961,
+          "LEARNED_ms": 42.12,
+          "SUCCEEDED_ms": 0.132000000000005,
+          "outside_trace_ms": 5.031848999999994
+        }
+      },
+      {
+        "block": 32,
+        "index": 1,
+        "elapsed_ms": 93.148527,
+        "components": {
+          "RECEIVED_ms": 0.045,
+          "PARSED_ms": 15.261,
+          "SNAPSHOT_ms": 0.25,
+          "RETRIEVED_ms": 0.9700000000000006,
+          "DECIDED_ms": 3.974,
+          "VALIDATED_ms": 0.21000000000000085,
+          "EXECUTED_ms": 20.819000000000003,
+          "MONITORED_ms": 0.6989999999999981,
+          "LEARNED_ms": 45.98799999999999,
+          "SUCCEEDED_ms": 0.11599999999999966,
+          "outside_trace_ms": 4.816527000000008
+        }
+      }
+    ],
+    "HOLDOUT/MEDIUM/8/ADAPTIVE": [
+      {
+        "block": 16,
+        "index": 4,
+        "elapsed_ms": 130.783638,
+        "components": {
+          "RECEIVED_ms": 0.046,
+          "PARSED_ms": 37.163000000000004,
+          "SNAPSHOT_ms": 0.20199999999999818,
+          "RETRIEVED_ms": 0.5609999999999999,
+          "DECIDED_ms": 3.603999999999999,
+          "VALIDATED_ms": 0.17199999999999704,
+          "EXECUTED_ms": 6.567,
+          "MONITORED_ms": 0.46999999999999886,
+          "LEARNED_ms": 5.179000000000002,
+          "SUCCEEDED_ms": 0.08299999999999841,
+          "outside_trace_ms": 76.736638
+        }
+      },
+      {
+        "block": 11,
+        "index": 0,
+        "elapsed_ms": 110.366078,
+        "components": {
+          "RECEIVED_ms": 0.056,
+          "PARSED_ms": 13.238000000000001,
+          "SNAPSHOT_ms": 0.2679999999999989,
+          "RETRIEVED_ms": 0.9580000000000002,
+          "DECIDED_ms": 5.777000000000001,
+          "VALIDATED_ms": 0.24299999999999855,
+          "EXECUTED_ms": 24.412,
+          "MONITORED_ms": 0.5650000000000048,
+          "LEARNED_ms": 7.399999999999999,
+          "SUCCEEDED_ms": 0.11499999999999488,
+          "outside_trace_ms": 57.334078000000005
+        }
+      },
+      {
+        "block": 30,
+        "index": 1,
+        "elapsed_ms": 106.494806,
+        "components": {
+          "RECEIVED_ms": 0.05,
+          "PARSED_ms": 14.254999999999999,
+          "SNAPSHOT_ms": 0.25900000000000034,
+          "RETRIEVED_ms": 0.6129999999999995,
+          "DECIDED_ms": 3.5440000000000005,
+          "VALIDATED_ms": 0.2740000000000009,
+          "EXECUTED_ms": 22.176999999999996,
+          "MONITORED_ms": 0.8440000000000012,
+          "LEARNED_ms": 8.425000000000004,
+          "SUCCEEDED_ms": 0.08899999999999864,
+          "outside_trace_ms": 55.964805999999996
+        }
+      },
+      {
+        "block": 10,
+        "index": 1,
+        "elapsed_ms": 105.554084,
+        "components": {
+          "RECEIVED_ms": 0.049,
+          "PARSED_ms": 34.480000000000004,
+          "SNAPSHOT_ms": 0.2709999999999937,
+          "RETRIEVED_ms": 0.7890000000000015,
+          "DECIDED_ms": 5.359999999999999,
+          "VALIDATED_ms": 0.2079999999999984,
+          "EXECUTED_ms": 51.099000000000004,
+          "MONITORED_ms": 0.7150000000000034,
+          "LEARNED_ms": 7.444999999999993,
+          "SUCCEEDED_ms": 0.12000000000000455,
+          "outside_trace_ms": 5.018084000000002
+        }
+      },
+      {
+        "block": 14,
+        "index": 0,
+        "elapsed_ms": 104.685252,
+        "components": {
+          "RECEIVED_ms": 0.053,
+          "PARSED_ms": 65.997,
+          "SNAPSHOT_ms": 0.28700000000000614,
+          "RETRIEVED_ms": 0.8010000000000019,
+          "DECIDED_ms": 4.713999999999999,
+          "VALIDATED_ms": 0.2539999999999907,
+          "EXECUTED_ms": 18.816000000000003,
+          "MONITORED_ms": 0.6020000000000039,
+          "LEARNED_ms": 7.965000000000003,
+          "SUCCEEDED_ms": 0.117999999999995,
+          "outside_trace_ms": 5.078252000000006
+        }
+      }
+    ],
+    "HOLDOUT/MEDIUM/2/S1_REPEAT_CACHE": [
+      {
+        "block": 9,
+        "index": 1,
+        "elapsed_ms": 137.353446,
+        "components": {
+          "RECEIVED_ms": 0.045,
+          "PARSED_ms": 44.036,
+          "SNAPSHOT_ms": 0.269999999999996,
+          "RETRIEVED_ms": 0.9029999999999987,
+          "DECIDED_ms": 5.631,
+          "VALIDATED_ms": 0.2710000000000008,
+          "EXECUTED_ms": 22.774000000000008,
+          "MONITORED_ms": 0.7549999999999955,
+          "LEARNED_ms": 6.369,
+          "SUCCEEDED_ms": 0.09399999999999409,
+          "outside_trace_ms": 56.205445999999995
+        }
+      },
+      {
+        "block": 25,
+        "index": 1,
+        "elapsed_ms": 131.082028,
+        "components": {
+          "RECEIVED_ms": 0.042,
+          "PARSED_ms": 10.003,
+          "SNAPSHOT_ms": 0.3409999999999993,
+          "RETRIEVED_ms": 0.7800000000000011,
+          "DECIDED_ms": 5.637999999999998,
+          "VALIDATED_ms": 0.22500000000000142,
+          "EXECUTED_ms": 20.148,
+          "MONITORED_ms": 0.921999999999997,
+          "LEARNED_ms": 8.780000000000001,
+          "SUCCEEDED_ms": 0.125,
+          "outside_trace_ms": 84.07802800000002
+        }
+      },
+      {
+        "block": 15,
+        "index": 0,
+        "elapsed_ms": 109.320435,
+        "components": {
+          "RECEIVED_ms": 0.054,
+          "PARSED_ms": 68.133,
+          "SNAPSHOT_ms": 0.24800000000000466,
+          "RETRIEVED_ms": 0.7729999999999961,
+          "DECIDED_ms": 3.7409999999999997,
+          "VALIDATED_ms": 0.2120000000000033,
+          "EXECUTED_ms": 19.611999999999995,
+          "MONITORED_ms": 0.7210000000000036,
+          "LEARNED_ms": 7.882999999999996,
+          "SUCCEEDED_ms": 0.12100000000000932,
+          "outside_trace_ms": 7.822434999999999
+        }
+      },
+      {
+        "block": 21,
+        "index": 0,
+        "elapsed_ms": 96.698222,
+        "components": {
+          "RECEIVED_ms": 0.04,
+          "PARSED_ms": 9.440000000000001,
+          "SNAPSHOT_ms": 0.17999999999999972,
+          "RETRIEVED_ms": 0.5329999999999995,
+          "DECIDED_ms": 3.5490000000000013,
+          "VALIDATED_ms": 0.15799999999999947,
+          "EXECUTED_ms": 16.662,
+          "MONITORED_ms": 0.5499999999999972,
+          "LEARNED_ms": 60.789,
+          "SUCCEEDED_ms": 0.10999999999999943,
+          "outside_trace_ms": 4.6872220000000056
+        }
+      },
+      {
+        "block": 44,
+        "index": 0,
+        "elapsed_ms": 94.095608,
+        "components": {
+          "RECEIVED_ms": 0.051,
+          "PARSED_ms": 46.355,
+          "SNAPSHOT_ms": 0.3160000000000025,
+          "RETRIEVED_ms": 0.9080000000000013,
+          "DECIDED_ms": 6.07,
+          "VALIDATED_ms": 0.21399999999999864,
+          "EXECUTED_ms": 25.834000000000003,
+          "MONITORED_ms": 0.6939999999999884,
+          "LEARNED_ms": 8.343000000000004,
+          "SUCCEEDED_ms": 0.1150000000000091,
+          "outside_trace_ms": 5.195607999999993
+        }
+      }
+    ],
+    "HOLDOUT/MEDIUM/2/S0_NATIVE": [
+      {
+        "block": 8,
+        "index": 0,
+        "elapsed_ms": 116.133046,
+        "components": {
+          "RECEIVED_ms": 0.054,
+          "PARSED_ms": 12.757,
+          "SNAPSHOT_ms": 0.3160000000000007,
+          "RETRIEVED_ms": 1.0039999999999996,
+          "DECIDED_ms": 5.495999999999999,
+          "VALIDATED_ms": 0.20599999999999952,
+          "EXECUTED_ms": 16.118000000000002,
+          "MONITORED_ms": 0.7520000000000024,
+          "LEARNED_ms": 8.152999999999999,
+          "SUCCEEDED_ms": 0.1109999999999971,
+          "outside_trace_ms": 71.166046
+        }
+      },
+      {
+        "block": 12,
+        "index": 1,
+        "elapsed_ms": 103.134609,
+        "components": {
+          "RECEIVED_ms": 0.042,
+          "PARSED_ms": 10.417,
+          "SNAPSHOT_ms": 0.1899999999999995,
+          "RETRIEVED_ms": 0.5550000000000015,
+          "DECIDED_ms": 4.301,
+          "VALIDATED_ms": 0.1659999999999986,
+          "EXECUTED_ms": 18.258000000000003,
+          "MONITORED_ms": 0.8689999999999998,
+          "LEARNED_ms": 8.135999999999996,
+          "SUCCEEDED_ms": 0.10600000000000165,
+          "outside_trace_ms": 60.094609
+        }
+      },
+      {
+        "block": 21,
+        "index": 1,
+        "elapsed_ms": 98.600814,
+        "components": {
+          "RECEIVED_ms": 0.045,
+          "PARSED_ms": 12.465,
+          "SNAPSHOT_ms": 0.24600000000000044,
+          "RETRIEVED_ms": 0.7729999999999997,
+          "DECIDED_ms": 5.6419999999999995,
+          "VALIDATED_ms": 0.20899999999999963,
+          "EXECUTED_ms": 19.754,
+          "MONITORED_ms": 0.5510000000000019,
+          "LEARNED_ms": 6.603999999999999,
+          "SUCCEEDED_ms": 0.10900000000000176,
+          "outside_trace_ms": 52.202814
+        }
+      },
+      {
+        "block": 13,
+        "index": 1,
+        "elapsed_ms": 92.284041,
+        "components": {
+          "RECEIVED_ms": 0.041,
+          "PARSED_ms": 51.252,
+          "SNAPSHOT_ms": 0.17799999999999727,
+          "RETRIEVED_ms": 0.5930000000000035,
+          "DECIDED_ms": 3.7340000000000018,
+          "VALIDATED_ms": 0.1629999999999967,
+          "EXECUTED_ms": 19.098,
+          "MONITORED_ms": 0.9639999999999986,
+          "LEARNED_ms": 11.38300000000001,
+          "SUCCEEDED_ms": 0.12199999999999989,
+          "outside_trace_ms": 4.756040999999996
+        }
+      },
+      {
+        "block": 8,
+        "index": 1,
+        "elapsed_ms": 88.961251,
+        "components": {
+          "RECEIVED_ms": 0.084,
+          "PARSED_ms": 14.687000000000001,
+          "SNAPSHOT_ms": 0.2839999999999989,
+          "RETRIEVED_ms": 0.8079999999999998,
+          "DECIDED_ms": 5.295999999999999,
+          "VALIDATED_ms": 0.22900000000000276,
+          "EXECUTED_ms": 51.0,
+          "MONITORED_ms": 0.777000000000001,
+          "LEARNED_ms": 8.164999999999992,
+          "SUCCEEDED_ms": 0.11899999999999977,
+          "outside_trace_ms": 7.512251000000006
+        }
+      }
+    ],
+    "HOLDOUT/MEDIUM/8/S0_NATIVE": [
+      {
+        "block": 22,
+        "index": 5,
+        "elapsed_ms": 134.759477,
+        "components": {
+          "RECEIVED_ms": 0.046,
+          "PARSED_ms": 53.682,
+          "SNAPSHOT_ms": 0.3159999999999954,
+          "RETRIEVED_ms": 0.943000000000005,
+          "DECIDED_ms": 4.838000000000001,
+          "VALIDATED_ms": 0.15399999999999636,
+          "EXECUTED_ms": 18.573999999999998,
+          "MONITORED_ms": 0.7609999999999957,
+          "LEARNED_ms": 8.411000000000001,
+          "SUCCEEDED_ms": 0.11299999999999955,
+          "outside_trace_ms": 46.92147700000001
+        }
+      },
+      {
+        "block": 25,
+        "index": 6,
+        "elapsed_ms": 126.811769,
+        "components": {
+          "RECEIVED_ms": 0.056,
+          "PARSED_ms": 16.207,
+          "SNAPSHOT_ms": 0.2879999999999967,
+          "RETRIEVED_ms": 0.8350000000000009,
+          "DECIDED_ms": 6.2280000000000015,
+          "VALIDATED_ms": 0.21099999999999852,
+          "EXECUTED_ms": 25.34,
+          "MONITORED_ms": 0.6529999999999987,
+          "LEARNED_ms": 6.749000000000002,
+          "SUCCEEDED_ms": 0.14500000000000313,
+          "outside_trace_ms": 70.099769
+        }
+      },
+      {
+        "block": 25,
+        "index": 3,
+        "elapsed_ms": 111.170783,
+        "components": {
+          "RECEIVED_ms": 0.056,
+          "PARSED_ms": 13.305000000000001,
+          "SNAPSHOT_ms": 0.34199999999999875,
+          "RETRIEVED_ms": 0.9130000000000003,
+          "DECIDED_ms": 6.138999999999999,
+          "VALIDATED_ms": 0.33000000000000185,
+          "EXECUTED_ms": 26.147999999999996,
+          "MONITORED_ms": 0.9960000000000022,
+          "LEARNED_ms": 9.672000000000004,
+          "SUCCEEDED_ms": 0.15799999999999415,
+          "outside_trace_ms": 53.111783
+        }
+      },
+      {
+        "block": 14,
+        "index": 4,
+        "elapsed_ms": 110.972407,
+        "components": {
+          "RECEIVED_ms": 0.061,
+          "PARSED_ms": 15.933,
+          "SNAPSHOT_ms": 0.4499999999999993,
+          "RETRIEVED_ms": 1.118000000000002,
+          "DECIDED_ms": 6.341999999999999,
+          "VALIDATED_ms": 0.28999999999999915,
+          "EXECUTED_ms": 72.352,
+          "MONITORED_ms": 0.6729999999999876,
+          "LEARNED_ms": 8.388000000000005,
+          "SUCCEEDED_ms": 0.11400000000000432,
+          "outside_trace_ms": 5.251407
+        }
+      },
+      {
+        "block": 27,
+        "index": 7,
+        "elapsed_ms": 108.833751,
+        "components": {
+          "RECEIVED_ms": 0.046,
+          "PARSED_ms": 69.127,
+          "SNAPSHOT_ms": 0.2779999999999916,
+          "RETRIEVED_ms": 0.8930000000000007,
+          "DECIDED_ms": 5.958000000000013,
+          "VALIDATED_ms": 0.2849999999999966,
+          "EXECUTED_ms": 19.146,
+          "MONITORED_ms": 0.7099999999999937,
+          "LEARNED_ms": 7.430999999999997,
+          "SUCCEEDED_ms": 0.11200000000000898,
+          "outside_trace_ms": 4.847751000000002
+        }
+      }
+    ],
+    "HOLDOUT/MEDIUM/8/S1_REPEAT_CACHE": [
+      {
+        "block": 21,
+        "index": 1,
+        "elapsed_ms": 123.110486,
+        "components": {
+          "RECEIVED_ms": 0.048,
+          "PARSED_ms": 12.979,
+          "SNAPSHOT_ms": 0.24300000000000033,
+          "RETRIEVED_ms": 1.1080000000000005,
+          "DECIDED_ms": 5.509,
+          "VALIDATED_ms": 0.2539999999999978,
+          "EXECUTED_ms": 85.911,
+          "MONITORED_ms": 0.7590000000000003,
+          "LEARNED_ms": 8.107,
+          "SUCCEEDED_ms": 0.10099999999999909,
+          "outside_trace_ms": 8.091485999999989
+        }
+      },
+      {
+        "block": 21,
+        "index": 4,
+        "elapsed_ms": 111.479727,
+        "components": {
+          "RECEIVED_ms": 0.036,
+          "PARSED_ms": 14.336,
+          "SNAPSHOT_ms": 0.23900000000000077,
+          "RETRIEVED_ms": 0.8469999999999995,
+          "DECIDED_ms": 4.578000000000001,
+          "VALIDATED_ms": 0.16199999999999903,
+          "EXECUTED_ms": 5.946999999999999,
+          "MONITORED_ms": 0.6460000000000008,
+          "LEARNED_ms": 8.157,
+          "SUCCEEDED_ms": 0.11200000000000188,
+          "outside_trace_ms": 76.419727
+        }
+      },
+      {
+        "block": 10,
+        "index": 5,
+        "elapsed_ms": 103.570247,
+        "components": {
+          "RECEIVED_ms": 0.038,
+          "PARSED_ms": 14.692,
+          "SNAPSHOT_ms": 0.266,
+          "RETRIEVED_ms": 0.8070000000000004,
+          "DECIDED_ms": 4.382999999999999,
+          "VALIDATED_ms": 0.1720000000000006,
+          "EXECUTED_ms": 6.097999999999999,
+          "MONITORED_ms": 0.6760000000000019,
+          "LEARNED_ms": 69.291,
+          "SUCCEEDED_ms": 0.14799999999999613,
+          "outside_trace_ms": 6.999246999999997
+        }
+      },
+      {
+        "block": 19,
+        "index": 7,
+        "elapsed_ms": 87.940846,
+        "components": {
+          "RECEIVED_ms": 0.047,
+          "PARSED_ms": 63.005,
+          "SNAPSHOT_ms": 0.26200000000000045,
+          "RETRIEVED_ms": 0.7739999999999938,
+          "DECIDED_ms": 4.8230000000000075,
+          "VALIDATED_ms": 0.16499999999999204,
+          "EXECUTED_ms": 6.112000000000009,
+          "MONITORED_ms": 0.6550000000000011,
+          "LEARNED_ms": 7.381999999999991,
+          "SUCCEEDED_ms": 0.1150000000000091,
+          "outside_trace_ms": 4.60084599999999
+        }
+      },
+      {
+        "block": 15,
+        "index": 0,
+        "elapsed_ms": 87.1528,
+        "components": {
+          "RECEIVED_ms": 0.053,
+          "PARSED_ms": 13.127999999999998,
+          "SNAPSHOT_ms": 0.25900000000000034,
+          "RETRIEVED_ms": 0.9260000000000002,
+          "DECIDED_ms": 6.27,
+          "VALIDATED_ms": 0.30900000000000105,
+          "EXECUTED_ms": 52.220000000000006,
+          "MONITORED_ms": 0.7489999999999952,
+          "LEARNED_ms": 8.117999999999995,
+          "SUCCEEDED_ms": 0.11700000000000443,
+          "outside_trace_ms": 5.003799999999998
+        }
+      }
+    ]
+  },
+  "limitations": [
+    "Diagnostic only; does not replace independent acceptance replay.",
+    "Adapter time overlaps EXECUTED; do not add it twice.",
+    "Old outside_trace includes admission/open/trace persistence/close; causes UNKNOWN.",
+    "No samples removed, no model updates, no post-hoc acceptance threshold changes."
+  ]
+}

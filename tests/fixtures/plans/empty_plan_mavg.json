@@ -1,0 +1,5 @@
+{
+  "query": "SELECT MAVG(s_130, 7d) FROM root.test.g_0.d_0",
+  "observed": "EXPLAIN returned 0 plan lines; execution returned only a Time column and 0 rows. Unknown function is silently empty.",
+  "source_probe": "probe_20_result.json:cases.mavg_simple"
+}

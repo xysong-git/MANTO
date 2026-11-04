@@ -1,0 +1,54 @@
+{
+  "automatic_resampling_or_retry_added": false,
+  "compileall_exit_code": 0,
+  "confirmed_trigger": {
+    "client_host_cpu_percent": 97.009,
+    "cpu_stop_percent": 80,
+    "db_host_cpu_percent": 100.0,
+    "disk_usage_percent": 22.0,
+    "memory_percent": 67.4
+  },
+  "cpu_spike_process_cause": "UNKNOWN",
+  "date": "2026-11-03",
+  "iotdb_called_by_assistant": false,
+  "offline_replay": {
+    "analysis_qualified": false,
+    "completed_allocations": 9,
+    "execution_complete": false,
+    "holdout_requests": 0,
+    "journal_unchanged": true,
+    "matched_requests": 99,
+    "recorded_requests": 99,
+    "report_identical": true,
+    "training_applied": 72
+  },
+  "original_journal_sha256": "f4c0955afdbd84c0966bdd8be9413fae41fd8f9a746825f3bf3ce660b56b307f",
+  "original_run": "benchmarks/results/phase8_small_count_v1",
+  "python_observed": "3.12.13",
+  "rejection_event_index": 250,
+  "runtime_changes_from_failed_run": [
+    "src/tsdb_optimizer/benchmark/runner.py",
+    "src/tsdb_optimizer/benchmark/runtime.py"
+  ],
+  "safety_thresholds_changed": false,
+  "snapshot_fixture": "tests/fixtures/monitoring/phase8_resource_rejection_20261103.json",
+  "snapshot_fixture_sha256": "8458cd37bf04568b5c8ba761825a51552447c5d3408211034cdc63db7402f2f5",
+  "tests": [
+    {
+      "before_fix": true,
+      "command": "conda run -n MANTO python -m pytest -q tests/unit/test_phase8_admission.py::test_real_rejection_reports_both_sources_values_and_limits",
+      "failed": 1,
+      "seconds": 0.45
+    },
+    {
+      "command": "conda run -n MANTO python -m pytest -q tests/unit/test_phase8_admission.py tests/unit/test_cpu_counter_isolation.py",
+      "passed": 16,
+      "seconds": 0.56
+    },
+    {
+      "command": "conda run -n MANTO python -m pytest -q tests/unit/test_phase8_admission.py tests/unit/test_phase8_benchmark.py tests/unit/test_cpu_counter_isolation.py tests/unit/test_resource_policy.py tests/unit/test_system_monitor.py tests/unit/test_experiment_supervisor.py",
+      "passed": 71,
+      "seconds": 78.81
+    }
+  ]
+}

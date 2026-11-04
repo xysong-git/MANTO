@@ -1,0 +1,7 @@
+┌────────────────────────────────┐
+│AlignedSeriesAggregationScan-3  │
+│Series: root.test.g_0.d_0[s_130]│
+│Aggregator-0: COUNT, SINGLE     │
+│ScanOrder: ASC                  │
+│Partition: 100                  │
+└────────────────────────────────┘

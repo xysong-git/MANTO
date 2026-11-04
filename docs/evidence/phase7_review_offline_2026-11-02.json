@@ -1,0 +1,1973 @@
+{
+  "schema_version": 1,
+  "readiness": {
+    "online_ready": false,
+    "configured_min_samples": 30,
+    "unique_execution_count": 24,
+    "duplicates_excluded": 0,
+    "sample_status_counts": {
+      "VALID": 12,
+      "LOW_CONFIDENCE": 12
+    },
+    "partitions": [
+      {
+        "partition": "94ce3bd033024a51ada621620d314036a074ab04dcece6962e1abd3f1e6ca790",
+        "arms": [
+          "S0_NATIVE@0.1.0",
+          "S1_REPEAT_CACHE@1.0.0"
+        ],
+        "valid_counts": {
+          "S0_NATIVE@0.1.0": 4,
+          "S1_REPEAT_CACHE@1.0.0": 4
+        },
+        "rejected_records": 8,
+        "rejections": [
+          {
+            "execution_id": "842fc275c29d4fa3979bee6b894bef9f",
+            "reason": "ValueError",
+            "detail": "experience not qualified for this offline partition"
+          },
+          {
+            "execution_id": "4bff8e3f002c4ac0bb6d2a833a3b1ecd",
+            "reason": "ValueError",
+            "detail": "experience not qualified for this offline partition"
+          },
+          {
+            "execution_id": "91ca292987864ea7a1a598f0dbb3deda",
+            "reason": "ValueError",
+            "detail": "experience not qualified for this offline partition"
+          },
+          {
+            "execution_id": "5502cecbb1314ec28f8125c05e6b0b28",
+            "reason": "ValueError",
+            "detail": "experience not qualified for this offline partition"
+          },
+          {
+            "execution_id": "f1b76aaf4c1544e685b97e70d4048fe1",
+            "reason": "ValueError",
+            "detail": "experience not qualified for this offline partition"
+          },
+          {
+            "execution_id": "a7eb63bef7b34d06ba9dd41b6708d77e",
+            "reason": "ValueError",
+            "detail": "experience not qualified for this offline partition"
+          },
+          {
+            "execution_id": "2e8ceb4f39634e4bb82f044c24119e4c",
+            "reason": "ValueError",
+            "detail": "experience not qualified for this offline partition"
+          },
+          {
+            "execution_id": "d78ea223c99a48e3b3f4ec8c3566b485",
+            "reason": "ValueError",
+            "detail": "experience not qualified for this offline partition"
+          }
+        ],
+        "loads": [
+          "LOW"
+        ],
+        "blockers": [
+          "INSUFFICIENT_PER_ARM_SAMPLES",
+          "INSUFFICIENT_LOAD_COVERAGE",
+          "NO_VERIFIED_PROPENSITY_LOG",
+          "INDEPENDENT_POLICY_BENEFIT_NOT_ESTABLISHED"
+        ]
+      },
+      {
+        "partition": "eef83d23a36ffa25da3c9b911c63034fb6f08b074a1d15af6113cce8dd1c7e43",
+        "arms": [
+          "S1_REPEAT_CACHE@1.0.0"
+        ],
+        "valid_counts": {},
+        "rejected_records": 8,
+        "rejections": [
+          {
+            "execution_id": "d5e816c9630642538323336d6bce6bee",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "4be3843cc17949e58f8fb1f167c4606d",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "beac014377814621b478b109ce7cb795",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "2c68210465e54e1d845a24d9c3e96b61",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "fd3c131a7a8d4459a13583d8808d85a8",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "b6493221a7614268b57bbc2ec192bc2e",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "7bc25b91796449f98c1ddd7835faeb68",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "631ad78251af4cea9b2be00ce25e73ca",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          }
+        ],
+        "loads": [],
+        "blockers": [
+          "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE",
+          "INSUFFICIENT_PER_ARM_SAMPLES",
+          "INSUFFICIENT_LOAD_COVERAGE",
+          "NO_VERIFIED_PROPENSITY_LOG",
+          "INDEPENDENT_POLICY_BENEFIT_NOT_ESTABLISHED"
+        ]
+      }
+    ],
+    "deployment": "OFFLINE_ONLY",
+    "propensities": "UNKNOWN_NOT_PRESENT_IN_EXPERIENCE_SCHEMA",
+    "configured_sqlite_exists": false,
+    "strategy_versions": {
+      "S0_NATIVE": "0.1.0",
+      "S1_REPEAT_CACHE": "1.0.0"
+    }
+  },
+  "config": {
+    "alpha": 0.1,
+    "regularization": 1.0,
+    "min_samples": 30,
+    "encoder_version": "linucb-context-v1",
+    "reward_version": "negative-log1p-ms-v1",
+    "schema_version": 1,
+    "seed": 20261102,
+    "online_enabled": false,
+    "llm_enabled": false
+  },
+  "dimensions": [
+    "bias",
+    "device_count",
+    "series_count",
+    "filter_count",
+    "time_range_ms",
+    "client_cpu_percent",
+    "client_memory_percent",
+    "db_cpu_percent",
+    "db_memory_percent",
+    "device_count_missing",
+    "series_count_missing",
+    "filter_count_missing",
+    "time_range_ms_missing",
+    "client_cpu_percent_missing",
+    "client_memory_percent_missing",
+    "db_cpu_percent_missing",
+    "db_memory_percent_missing"
+  ],
+  "simulation": {
+    "evidence_type": "SYNTHETIC_ONLY",
+    "seed": 20261102,
+    "observations": [
+      {
+        "execution_id": "simulation-0",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-1",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-2",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-3",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-4",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-5",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-6",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-7",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-8",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-9",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-10",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-11",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-12",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-13",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-14",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-15",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-16",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-17",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-18",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-19",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-20",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-21",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-22",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-23",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-24",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-25",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-26",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-27",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-28",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-29",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-30",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-31",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-32",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-33",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-34",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-35",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-36",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-37",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-38",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-39",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-40",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-41",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-42",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-43",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-44",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-45",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-46",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-47",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-48",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-49",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-50",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-51",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-52",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-53",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-54",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-55",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-56",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-57",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-58",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-59",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-60",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-61",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-62",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-63",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-64",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-65",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-66",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-67",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-68",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-69",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-70",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-71",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-72",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-73",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-74",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-75",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-76",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-77",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-78",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-79",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-80",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-81",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-82",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-83",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-84",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-85",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-86",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-87",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-88",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-89",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-90",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-91",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-92",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-93",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-94",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-95",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-96",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-97",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-98",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-99",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-100",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-101",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-102",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-103",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-104",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-105",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-106",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-107",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-108",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-109",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-110",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-111",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-112",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-113",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-114",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-115",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-116",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-117",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-118",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-119",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-120",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-121",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-122",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-123",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-124",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-125",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-126",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-127",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-128",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-129",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-130",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-131",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-132",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-133",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-134",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-135",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-136",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-137",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-138",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-139",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-140",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-141",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-142",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-143",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-144",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-145",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-146",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-147",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-148",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-149",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-150",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-151",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-152",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-153",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-154",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-155",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-156",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-157",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-158",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-159",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-160",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-161",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-162",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-163",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-164",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-165",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-166",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-167",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-168",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-169",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-170",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-171",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-172",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-173",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-174",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-175",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-176",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-177",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-178",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-179",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-180",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-181",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-182",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-183",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-184",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-185",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-186",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-187",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-188",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-189",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-190",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-191",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-192",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-193",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-194",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-195",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-196",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-197",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-198",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-199",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-200",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-201",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-202",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-203",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-204",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-205",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-206",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-207",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-208",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-209",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-210",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-211",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-212",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-213",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-214",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-215",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-216",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-217",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-218",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-219",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-220",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-221",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-222",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-223",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-224",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-225",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-226",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-227",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-228",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-229",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-230",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-231",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-232",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-233",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-234",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-235",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-236",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-237",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.9,
+        "observed_latency_ms": 1000.0
+      },
+      {
+        "execution_id": "simulation-238",
+        "arm": "SIM_BASE@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1.0
+      },
+      {
+        "execution_id": "simulation-239",
+        "arm": "SIM_ALT@1",
+        "client_cpu_fraction": 0.1,
+        "observed_latency_ms": 1000.0
+      }
+    ],
+    "heldout_context_choices": {
+      "0.1": "SIM_BASE@1",
+      "0.9": "SIM_ALT@1"
+    },
+    "online_ready": false,
+    "model_version": "2dd5d59b74384c54b352197f2b267baf"
+  },
+  "llm_comparison": {
+    "evidence_type": "LOCAL_INTERFACE_TEST_NOT_REAL_LLM",
+    "scenarios": {
+      "off": {
+        "median_adapter_ms": 0.0002175220288336277,
+        "schema_valid_advice_count": 0,
+        "rule_fallback_count": 10,
+        "rule_agreement_on_advice": null,
+        "results": [
+          {
+            "advice": null,
+            "elapsed_ms": 0.0012959353625774384,
+            "reason": "DISABLED"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.0008059432730078697,
+            "reason": "DISABLED"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.00033492688089609146,
+            "reason": "DISABLED"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.0002130400389432907,
+            "reason": "DISABLED"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.00023492611944675446,
+            "reason": "DISABLED"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.00021897722035646439,
+            "reason": "DISABLED"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.0002080341801047325,
+            "reason": "DISABLED"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.00019907020032405853,
+            "reason": "DISABLED"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.000200001522898674,
+            "reason": "DISABLED"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.00021606683731079102,
+            "reason": "DISABLED"
+          }
+        ],
+        "median_added_ms_vs_off": 0.0
+      },
+      "on_unconfigured": {
+        "median_adapter_ms": 0.0002069864422082901,
+        "schema_valid_advice_count": 0,
+        "rule_fallback_count": 10,
+        "rule_agreement_on_advice": null,
+        "results": [
+          {
+            "advice": null,
+            "elapsed_ms": 0.0005639158189296722,
+            "reason": "UNAVAILABLE"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.0004270114004611969,
+            "reason": "UNAVAILABLE"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.00024889595806598663,
+            "reason": "UNAVAILABLE"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.00018300488591194153,
+            "reason": "UNAVAILABLE"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.0002100132405757904,
+            "reason": "UNAVAILABLE"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.000200001522898674,
+            "reason": "UNAVAILABLE"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.0002039596438407898,
+            "reason": "UNAVAILABLE"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.00023597385734319687,
+            "reason": "UNAVAILABLE"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.0002009328454732895,
+            "reason": "UNAVAILABLE"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.0002019805833697319,
+            "reason": "UNAVAILABLE"
+          }
+        ],
+        "median_added_ms_vs_off": -1.05355866253376e-05
+      },
+      "on_scripted": {
+        "median_adapter_ms": 0.056126504205167294,
+        "schema_valid_advice_count": 10,
+        "rule_fallback_count": 0,
+        "rule_agreement_on_advice": 1.0,
+        "results": [
+          {
+            "advice": {
+              "strategy_id": "S0_NATIVE",
+              "model_version": "llm:TEST_ONLY",
+              "sample_count": 0,
+              "reason": "Schema-validated optional suggestion; not learned execution evidence"
+            },
+            "elapsed_ms": 0.1643790164962411,
+            "reason": "ADVICE"
+          },
+          {
+            "advice": {
+              "strategy_id": "S0_NATIVE",
+              "model_version": "llm:TEST_ONLY",
+              "sample_count": 0,
+              "reason": "Schema-validated optional suggestion; not learned execution evidence"
+            },
+            "elapsed_ms": 0.0792649807408452,
+            "reason": "ADVICE"
+          },
+          {
+            "advice": {
+              "strategy_id": "S0_NATIVE",
+              "model_version": "llm:TEST_ONLY",
+              "sample_count": 0,
+              "reason": "Schema-validated optional suggestion; not learned execution evidence"
+            },
+            "elapsed_ms": 0.0752320047467947,
+            "reason": "ADVICE"
+          },
+          {
+            "advice": {
+              "strategy_id": "S0_NATIVE",
+              "model_version": "llm:TEST_ONLY",
+              "sample_count": 0,
+              "reason": "Schema-validated optional suggestion; not learned execution evidence"
+            },
+            "elapsed_ms": 0.060407910495996475,
+            "reason": "ADVICE"
+          },
+          {
+            "advice": {
+              "strategy_id": "S0_NATIVE",
+              "model_version": "llm:TEST_ONLY",
+              "sample_count": 0,
+              "reason": "Schema-validated optional suggestion; not learned execution evidence"
+            },
+            "elapsed_ms": 0.056792981922626495,
+            "reason": "ADVICE"
+          },
+          {
+            "advice": {
+              "strategy_id": "S0_NATIVE",
+              "model_version": "llm:TEST_ONLY",
+              "sample_count": 0,
+              "reason": "Schema-validated optional suggestion; not learned execution evidence"
+            },
+            "elapsed_ms": 0.05546002648770809,
+            "reason": "ADVICE"
+          },
+          {
+            "advice": {
+              "strategy_id": "S0_NATIVE",
+              "model_version": "llm:TEST_ONLY",
+              "sample_count": 0,
+              "reason": "Schema-validated optional suggestion; not learned execution evidence"
+            },
+            "elapsed_ms": 0.05331798456609249,
+            "reason": "ADVICE"
+          },
+          {
+            "advice": {
+              "strategy_id": "S0_NATIVE",
+              "model_version": "llm:TEST_ONLY",
+              "sample_count": 0,
+              "reason": "Schema-validated optional suggestion; not learned execution evidence"
+            },
+            "elapsed_ms": 0.05209003575146198,
+            "reason": "ADVICE"
+          },
+          {
+            "advice": {
+              "strategy_id": "S0_NATIVE",
+              "model_version": "llm:TEST_ONLY",
+              "sample_count": 0,
+              "reason": "Schema-validated optional suggestion; not learned execution evidence"
+            },
+            "elapsed_ms": 0.05019106902182102,
+            "reason": "ADVICE"
+          },
+          {
+            "advice": {
+              "strategy_id": "S0_NATIVE",
+              "model_version": "llm:TEST_ONLY",
+              "sample_count": 0,
+              "reason": "Schema-validated optional suggestion; not learned execution evidence"
+            },
+            "elapsed_ms": 0.05023705307394266,
+            "reason": "ADVICE"
+          }
+        ],
+        "median_added_ms_vs_off": 0.055908982176333666
+      },
+      "on_invalid": {
+        "median_adapter_ms": 0.04828599048778415,
+        "schema_valid_advice_count": 0,
+        "rule_fallback_count": 10,
+        "rule_agreement_on_advice": null,
+        "results": [
+          {
+            "advice": null,
+            "elapsed_ms": 0.054765958338975906,
+            "reason": "FALLBACK:ValidationError"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.05298503674566746,
+            "reason": "FALLBACK:ValidationError"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.04929595161229372,
+            "reason": "FALLBACK:ValidationError"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.0487590441480279,
+            "reason": "FALLBACK:ValidationError"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.0478129368275404,
+            "reason": "FALLBACK:ValidationError"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.04764506593346596,
+            "reason": "FALLBACK:ValidationError"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.046260072849690914,
+            "reason": "FALLBACK:ValidationError"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.046964967623353004,
+            "reason": "FALLBACK:ValidationError"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.05884596612304449,
+            "reason": "FALLBACK:ValidationError"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 0.0476279528811574,
+            "reason": "FALLBACK:ValidationError"
+          }
+        ],
+        "median_added_ms_vs_off": 0.04806846845895052
+      },
+      "on_timeout": {
+        "median_adapter_ms": 5.2187470137141645,
+        "schema_valid_advice_count": 0,
+        "rule_fallback_count": 10,
+        "rule_agreement_on_advice": null,
+        "results": [
+          {
+            "advice": null,
+            "elapsed_ms": 5.179553059861064,
+            "reason": "TIMEOUT"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 5.178574007004499,
+            "reason": "TIMEOUT"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 5.17287093680352,
+            "reason": "TIMEOUT"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 5.18546998500824,
+            "reason": "TIMEOUT"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 5.210592993535101,
+            "reason": "TIMEOUT"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 5.226901033893228,
+            "reason": "TIMEOUT"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 5.290714907459915,
+            "reason": "TIMEOUT"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 5.267752916552126,
+            "reason": "TIMEOUT"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 5.253660026937723,
+            "reason": "TIMEOUT"
+          },
+          {
+            "advice": null,
+            "elapsed_ms": 5.301874014548957,
+            "reason": "TIMEOUT"
+          }
+        ],
+        "median_added_ms_vs_off": 5.218529491685331
+      }
+    },
+    "real_llm_quality": "BLOCKED_NO_PROVIDER",
+    "real_llm_latency_ms": null,
+    "database_execution_count": 0,
+    "production_speedup": null
+  },
+  "independent_benchmark": null,
+  "online_enabled": false
+}

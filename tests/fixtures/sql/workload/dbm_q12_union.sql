@@ -1,0 +1,1 @@
+SELECT s_1666 FROM root.dbm.g_0.* WHERE time >= 1640966441905 AND time <= 1640972441704;

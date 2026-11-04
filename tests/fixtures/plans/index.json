@@ -1,0 +1,89 @@
+{
+  "fixture_version": "1",
+  "generated_at": "2026-11-01",
+  "server_version": "2.0.6",
+  "client_version": "2.0.6 (reverified); 2.0.10 also used for some probes",
+  "note": "Plan text is ASCII art. Normalize volatile IDs and whitespace before hashing; do not hash raw text.",
+  "fixtures": {
+    "native_scan": {
+      "file": "native_scan.txt",
+      "query": "EXPLAIN SELECT s_130 FROM root.test.g_0.d_0 WHERE time >= 1640966400000 AND time < 1640966460000",
+      "source_probe": "probe_07_result.json:probes[0]",
+      "line_count": 7
+    },
+    "aggregation_count": {
+      "file": "aggregation_count.txt",
+      "query": "EXPLAIN SELECT COUNT(s_130) FROM root.test.g_0.d_0 WHERE time >= 1640966400000 AND time < 1640966460000",
+      "source_probe": "probe_07_result.json:probes[5]",
+      "line_count": 7
+    },
+    "last_query": {
+      "file": "last_query.txt",
+      "query": "EXPLAIN SELECT LAST s_130 FROM root.test.g_0.d_0",
+      "source_probe": "probe_07_result.json:probes[6]",
+      "line_count": 11
+    },
+    "native_desc_limit_1": {
+      "file": "native_desc_limit_1.txt",
+      "query": "EXPLAIN SELECT s_130 FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 1",
+      "source_probe": "probe_07_result.json:probes[7]",
+      "line_count": 8
+    },
+    "full_outer_time_join_2devices": {
+      "file": "full_outer_time_join_2devices.txt",
+      "query": "EXPLAIN SELECT s_1666, s_1766 FROM root.db800.g_0.d_0, root.db800.g_0.d_1 WHERE time = 1640966450000;",
+      "source_probe": "probe_09_result.json:db800_q1.explain",
+      "line_count": 13
+    },
+    "device_view_2devices": {
+      "file": "device_view_2devices.txt",
+      "query": "EXPLAIN SELECT s_1666, s_1766 FROM root.db800.g_0.d_0, root.db800.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 ALIGN BY DEVICE",
+      "source_probe": "probe_14_result.json:cases[0].by_device_explain",
+      "line_count": 13
+    },
+    "agg_max_time_last_value": {
+      "file": "agg_max_time_last_value.txt",
+      "query": "EXPLAIN SELECT MAX_TIME(s_130), LAST_VALUE(s_130) FROM root.test.g_0.d_0",
+      "source_probe": "probe_13_result.json:cases[1].explain",
+      "line_count": 8
+    },
+    "limit_10": {
+      "file": "limit_10.txt",
+      "query": "SELECT s_130 FROM root.test.g_0.d_0 WHERE time >= 1640966405000 AND time < 1640966465000 LIMIT 10",
+      "source_probe": "probe_17_result.json:cases.limit_10.explain",
+      "line_count": 8
+    },
+    "desc_limit_10": {
+      "file": "desc_limit_10.txt",
+      "query": "SELECT s_130 FROM root.test.g_0.d_0 WHERE time >= 1640966405000 AND time < 1640966465000 ORDER BY time DESC LIMIT 10",
+      "source_probe": "probe_17_result.json:cases.desc_limit_10.explain",
+      "line_count": 8
+    },
+    "explain_analyze_native": {
+      "file": "explain_analyze_native.txt",
+      "query": "EXPLAIN ANALYZE SELECT s_130 FROM root.test.g_0.d_0 WHERE time >= 1640966400000 AND time < 1640966460000",
+      "source_probe": "probe_07_result.json:probes[1]",
+      "line_count": 27,
+      "volatile": true,
+      "warning": "EXPLAIN ANALYZE executes the query. Costs, wall time, fragment ID, and address are volatile."
+    },
+    "empty_plan_series_path": {
+      "file": "empty_plan_series_path.json",
+      "query": "SELECT s_130 FROM root.test.g_0.d_0.s_130 WHERE time >= 1640966400000 LIMIT 5",
+      "observed": "EXPLAIN returned 0 plan lines; execution returned only a Time column and 0 rows.",
+      "source_probe": "probe_19_result.json:cases.series_path_in_from"
+    },
+    "empty_plan_wrong_device_path": {
+      "file": "empty_plan_wrong_device_path.json",
+      "query": "SELECT s_0 FROM root.test.d_0 LIMIT 5",
+      "observed": "EXPLAIN returned 0 plan lines; execution returned only a Time column and 0 rows.",
+      "source_probe": "probe_19_result.json:cases.wrong_device_path"
+    },
+    "empty_plan_mavg": {
+      "file": "empty_plan_mavg.json",
+      "query": "SELECT MAVG(s_130, 7d) FROM root.test.g_0.d_0",
+      "observed": "EXPLAIN returned 0 plan lines; execution returned only a Time column and 0 rows. Unknown function is silently empty.",
+      "source_probe": "probe_20_result.json:cases.mavg_simple"
+    }
+  }
+}

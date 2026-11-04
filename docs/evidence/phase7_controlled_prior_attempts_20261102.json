@@ -1,0 +1,118 @@
+[
+  {
+    "path": "data/phase7_e2e_cpu_pilot_20261102/journal.jsonl",
+    "sha256": "33e708ccb0b529c9246a656b895da86e973e44322fc8cf7a7f01f8c2d2b327a0",
+    "terminal": {
+      "kind": "complete",
+      "body": {
+        "qualification": "PILOT_ONLY",
+        "stable_loads": false,
+        "online_ready": false
+      }
+    },
+    "trials": 0,
+    "sample_status_counts": {},
+    "excluded_from_final_model": true
+  },
+  {
+    "path": "data/phase7_e2e_cpu_pilot_fixed_20261102/journal.jsonl",
+    "sha256": "44f23bc76cdbc058f36cebe83b2540f84bfa5266dcc2ea1120ab39dfd797e8d2",
+    "terminal": {
+      "kind": "complete",
+      "body": {
+        "qualification": "PILOT_ONLY",
+        "stable_loads": true,
+        "online_ready": false
+      }
+    },
+    "trials": 0,
+    "sample_status_counts": {},
+    "excluded_from_final_model": true
+  },
+  {
+    "path": "data/phase7_e2e_admission_smoke_20261102/journal.jsonl",
+    "sha256": "77864014c65379dda1647e186ca141d65579fad8686c913fe636deb209a737cc",
+    "terminal": {
+      "kind": "complete",
+      "body": {
+        "qualification": "INSUFFICIENT_TRAINING",
+        "online_ready": false
+      }
+    },
+    "trials": 80,
+    "sample_status_counts": {
+      "VALID": 80
+    },
+    "excluded_from_final_model": true,
+    "last_trial": {
+      "phase": "train",
+      "assigned_policy": "S0_NATIVE",
+      "actual_strategy": "S0_NATIVE",
+      "sample_status": "VALID",
+      "quality_reasons": [],
+      "model_updated": [
+        true
+      ],
+      "decision_reason": "adaptive: selected S0_NATIVE from caller-provided advice (model_version=EXPERIMENT_ONLY:randomized); no Phase-5 learner was invoked"
+    }
+  },
+  {
+    "path": "data/phase7_e2e_qualification_20261102/journal.jsonl",
+    "sha256": "4649e1a3c26eab08e6319fed62f48e374270775f52aadbf01ecff9881dce0933",
+    "terminal": {
+      "kind": "aborted",
+      "body": {
+        "error_type": "RuntimeError",
+        "cpu_control": [],
+        "cpu_error": null
+      }
+    },
+    "trials": 175,
+    "sample_status_counts": {
+      "VALID": 174,
+      "LOW_CONFIDENCE": 1
+    },
+    "excluded_from_final_model": true,
+    "last_trial": {
+      "phase": "train",
+      "assigned_policy": "S0_NATIVE",
+      "actual_strategy": "S0_NATIVE",
+      "sample_status": "LOW_CONFIDENCE",
+      "quality_reasons": [
+        "RESOURCE_CONSTRAINT_EXCEEDED: policy_version=2026-11-02.1; db_host.cpu_percent=91.700>90.000"
+      ],
+      "model_updated": [
+        false
+      ],
+      "decision_reason": "adaptive: selected S0_NATIVE because resource policy 2026-11-02.1 was exceeded (db_host.cpu_percent=91.700>90.000); caller advice cannot bypass the conservative resource gate"
+    }
+  },
+  {
+    "path": "data/phase7_e2e_v3_qualification_20261102/journal.jsonl",
+    "sha256": "2e6f7c53fbc7d8d533956dc1d73957afdd392ad52428b6761dcb280f79199745",
+    "terminal": {
+      "kind": "aborted",
+      "body": {
+        "error_type": "RuntimeError",
+        "cpu_control": [],
+        "cpu_error": null
+      }
+    },
+    "trials": 467,
+    "sample_status_counts": {
+      "VALID": 467
+    },
+    "excluded_from_final_model": true,
+    "last_trial": {
+      "phase": "test",
+      "assigned_policy": "S1_REPEAT_CACHE",
+      "actual_strategy": "S0_NATIVE",
+      "sample_status": "VALID",
+      "quality_reasons": [],
+      "model_updated": [
+        false
+      ],
+      "decision_reason": "adaptive: REPEAT_CACHE_REQUIRES_REPEAT: adaptive advice selected S1_REPEAT_CACHE at occurrence 1 < 2; repeat-cache strategies are eligible only from occurrence 2 onward; safely selected S0_NATIVE baseline"
+    }
+  }
+]

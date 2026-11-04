@@ -1,0 +1,1129 @@
+{
+  "fixture_version": "last-cert-summary-v1",
+  "generated_at": "2026-11-01",
+  "server_version": "2.0.6",
+  "server_build": "c6ecbde",
+  "client_version": "2.0.6",
+  "dialect": "tree",
+  "scope": "read-only certification of CAND_LAST_SINGLE_SERIES; no DDL/DML; no IoTDB source changes",
+  "password_in_output": false,
+  "connect_ok": true,
+  "close_ok": true,
+  "sweep_connect_ok": true,
+  "sweep_close_ok": true,
+  "dataset": {
+    "float": {
+      "path": "root.test.g_0.d_0.s_130",
+      "data_type": "FLOAT",
+      "encoding": "GORILLA",
+      "compression": "LZ4",
+      "point_count": 10000,
+      "min_time": 1640966405000,
+      "max_time": 1641016400000
+    },
+    "double": {
+      "path": "root.test.g_0.d_0.s_133",
+      "data_type": "DOUBLE",
+      "encoding": "GORILLA",
+      "compression": "LZ4",
+      "point_count": 10000,
+      "min_time": 1640966405000,
+      "max_time": 1641016400000
+    },
+    "int64": {
+      "path": "root.test.g_0.d_0.s_70",
+      "data_type": "INT64",
+      "encoding": "TS_2DIFF",
+      "compression": "LZ4",
+      "point_count": 10000,
+      "min_time": 1640966405000,
+      "max_time": 1641016400000
+    },
+    "int32": {
+      "path": "root.db800.g_0.d_0.s_1666",
+      "data_type": "INT32",
+      "encoding": "TS_2DIFF",
+      "compression": "LZ4",
+      "point_count": 3000,
+      "min_time": 1640966405000,
+      "max_time": 1640981400000
+    },
+    "text": {
+      "path": "root.dbl.g_0.d_0.s_9807",
+      "data_type": "TEXT",
+      "encoding": "DICTIONARY",
+      "compression": "LZ4",
+      "point_count": 3000,
+      "min_time": 1640966405000,
+      "max_time": 1640981400000
+    },
+    "boolean": {
+      "path": "root.dbl.g_0.d_0.s_1079",
+      "data_type": "BOOLEAN",
+      "encoding": "RLE",
+      "compression": "LZ4",
+      "point_count": 3000,
+      "min_time": 1640966405000,
+      "max_time": 1640981400000
+    }
+  },
+  "method": {
+    "native_sql": "SELECT <single_series> FROM <single_device> [WHERE time-only] ORDER BY time DESC LIMIT 1",
+    "last_sql": "SELECT LAST <single_series> FROM <single_device> [WHERE time-only]",
+    "normalization": "LAST 4 columns -> Native 2 columns; Timeseries and DataType validated",
+    "float_tolerance": "rel_tol=1e-6, abs_tol=1e-6",
+    "double_tolerance": "rel_tol=1e-12, abs_tol=1e-12",
+    "empty_rule": "empty passes only when both LAST and Native are empty",
+    "timing": {
+      "warmup_per_case_per_session": 5,
+      "paired_blocks_per_type": 30,
+      "sessions": 2,
+      "order": "alternating and randomized",
+      "bootstrap_resamples": 10000,
+      "cache": "warm shared cache; same host; static data; single process"
+    },
+    "fallback": "contract-level injection with a pre-recorded Native baseline; not a production Executor"
+  },
+  "semantic": {
+    "float": {
+      "data_type": "FLOAT",
+      "full_path": "root.test.g_0.d_0.s_130",
+      "no_filter": {
+        "last_sql": "SELECT LAST s_130 FROM root.test.g_0.d_0",
+        "native_sql": "SELECT s_130 FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 1",
+        "pass": true,
+        "normalized": {
+          "last": [
+            1641016400000,
+            34579.86
+          ],
+          "native": [
+            1641016400000,
+            34579.859375
+          ]
+        }
+      },
+      "before_max": {
+        "last_sql": "SELECT LAST s_130 FROM root.test.g_0.d_0 WHERE time < 1641016400000",
+        "native_sql": "SELECT s_130 FROM root.test.g_0.d_0 WHERE time < 1641016400000 ORDER BY time DESC LIMIT 1",
+        "pass": true,
+        "normalized": {
+          "last": [
+            1641016395000,
+            34579.29
+          ],
+          "native": [
+            1641016395000,
+            34579.2890625
+          ]
+        }
+      }
+    },
+    "double": {
+      "data_type": "DOUBLE",
+      "full_path": "root.test.g_0.d_0.s_133",
+      "no_filter": {
+        "last_sql": "SELECT LAST s_133 FROM root.test.g_0.d_0",
+        "native_sql": "SELECT s_133 FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 1",
+        "pass": true,
+        "normalized": {
+          "last": [
+            1641016400000,
+            4.81
+          ],
+          "native": [
+            1641016400000,
+            4.81
+          ]
+        }
+      },
+      "before_max": {
+        "last_sql": "SELECT LAST s_133 FROM root.test.g_0.d_0 WHERE time < 1641016400000",
+        "native_sql": "SELECT s_133 FROM root.test.g_0.d_0 WHERE time < 1641016400000 ORDER BY time DESC LIMIT 1",
+        "pass": true,
+        "normalized": {
+          "last": [
+            1641016395000,
+            4.83
+          ],
+          "native": [
+            1641016395000,
+            4.83
+          ]
+        }
+      }
+    },
+    "int64": {
+      "data_type": "INT64",
+      "full_path": "root.test.g_0.d_0.s_70",
+      "no_filter": {
+        "last_sql": "SELECT LAST s_70 FROM root.test.g_0.d_0",
+        "native_sql": "SELECT s_70 FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 1",
+        "pass": true,
+        "normalized": {
+          "last": [
+            1641016400000,
+            4
+          ],
+          "native": [
+            1641016400000,
+            4
+          ]
+        }
+      },
+      "before_max": {
+        "last_sql": "SELECT LAST s_70 FROM root.test.g_0.d_0 WHERE time < 1641016400000",
+        "native_sql": "SELECT s_70 FROM root.test.g_0.d_0 WHERE time < 1641016400000 ORDER BY time DESC LIMIT 1",
+        "pass": true,
+        "normalized": {
+          "last": [
+            1641016395000,
+            4
+          ],
+          "native": [
+            1641016395000,
+            4
+          ]
+        }
+      }
+    },
+    "int32": {
+      "data_type": "INT32",
+      "full_path": "root.db800.g_0.d_0.s_1666",
+      "no_filter": {
+        "last_sql": "SELECT LAST s_1666 FROM root.db800.g_0.d_0",
+        "native_sql": "SELECT s_1666 FROM root.db800.g_0.d_0 ORDER BY time DESC LIMIT 1",
+        "pass": true,
+        "normalized": {
+          "last": [
+            1640981400000,
+            -12
+          ],
+          "native": [
+            1640981400000,
+            -12
+          ]
+        }
+      },
+      "before_max": {
+        "last_sql": "SELECT LAST s_1666 FROM root.db800.g_0.d_0 WHERE time < 1640981400000",
+        "native_sql": "SELECT s_1666 FROM root.db800.g_0.d_0 WHERE time < 1640981400000 ORDER BY time DESC LIMIT 1",
+        "pass": true,
+        "normalized": {
+          "last": [
+            1640981395000,
+            -15
+          ],
+          "native": [
+            1640981395000,
+            -15
+          ]
+        }
+      }
+    },
+    "text": {
+      "data_type": "TEXT",
+      "full_path": "root.dbl.g_0.d_0.s_9807",
+      "no_filter": {
+        "last_sql": "SELECT LAST s_9807 FROM root.dbl.g_0.d_0",
+        "native_sql": "SELECT s_9807 FROM root.dbl.g_0.d_0 ORDER BY time DESC LIMIT 1",
+        "pass": true,
+        "normalized": {
+          "last": [
+            1640981400000,
+            "Ry"
+          ],
+          "native": [
+            1640981400000,
+            "Ry"
+          ]
+        }
+      },
+      "before_max": {
+        "last_sql": "SELECT LAST s_9807 FROM root.dbl.g_0.d_0 WHERE time < 1640981400000",
+        "native_sql": "SELECT s_9807 FROM root.dbl.g_0.d_0 WHERE time < 1640981400000 ORDER BY time DESC LIMIT 1",
+        "pass": true,
+        "normalized": {
+          "last": [
+            1640981395000,
+            "74"
+          ],
+          "native": [
+            1640981395000,
+            "74"
+          ]
+        }
+      }
+    },
+    "boolean": {
+      "data_type": "BOOLEAN",
+      "full_path": "root.dbl.g_0.d_0.s_1079",
+      "no_filter": {
+        "last_sql": "SELECT LAST s_1079 FROM root.dbl.g_0.d_0",
+        "native_sql": "SELECT s_1079 FROM root.dbl.g_0.d_0 ORDER BY time DESC LIMIT 1",
+        "pass": true,
+        "normalized": {
+          "last": [
+            1640981400000,
+            false
+          ],
+          "native": [
+            1640981400000,
+            false
+          ]
+        }
+      },
+      "before_max": {
+        "last_sql": "SELECT LAST s_1079 FROM root.dbl.g_0.d_0 WHERE time < 1640981400000",
+        "native_sql": "SELECT s_1079 FROM root.dbl.g_0.d_0 WHERE time < 1640981400000 ORDER BY time DESC LIMIT 1",
+        "pass": true,
+        "normalized": {
+          "last": [
+            1640981395000,
+            false
+          ],
+          "native": [
+            1640981395000,
+            false
+          ]
+        }
+      }
+    }
+  },
+  "sweep": {
+    "description": "200 time filters per type; WHERE time <= t; both queries executed read-only",
+    "cases": {
+      "float": {
+        "data_type": "FLOAT",
+        "full_path": "root.test.g_0.d_0.s_130",
+        "min_time": 1640966405000,
+        "max_time": 1641016400000,
+        "sample_count": 200,
+        "pass_count": 200,
+        "fail_count": 0,
+        "empty_pair_count": 1,
+        "failure_examples": []
+      },
+      "double": {
+        "data_type": "DOUBLE",
+        "full_path": "root.test.g_0.d_0.s_133",
+        "min_time": 1640966405000,
+        "max_time": 1641016400000,
+        "sample_count": 200,
+        "pass_count": 200,
+        "fail_count": 0,
+        "empty_pair_count": 1,
+        "failure_examples": []
+      },
+      "int64": {
+        "data_type": "INT64",
+        "full_path": "root.test.g_0.d_0.s_70",
+        "min_time": 1640966405000,
+        "max_time": 1641016400000,
+        "sample_count": 200,
+        "pass_count": 200,
+        "fail_count": 0,
+        "empty_pair_count": 1,
+        "failure_examples": []
+      },
+      "int32": {
+        "data_type": "INT32",
+        "full_path": "root.db800.g_0.d_0.s_1666",
+        "min_time": 1640966405000,
+        "max_time": 1640981400000,
+        "sample_count": 200,
+        "pass_count": 200,
+        "fail_count": 0,
+        "empty_pair_count": 1,
+        "failure_examples": []
+      },
+      "text": {
+        "data_type": "TEXT",
+        "full_path": "root.dbl.g_0.d_0.s_9807",
+        "min_time": 1640966405000,
+        "max_time": 1640981400000,
+        "sample_count": 200,
+        "pass_count": 200,
+        "fail_count": 0,
+        "empty_pair_count": 1,
+        "failure_examples": []
+      },
+      "boolean": {
+        "data_type": "BOOLEAN",
+        "full_path": "root.dbl.g_0.d_0.s_1079",
+        "min_time": 1640966405000,
+        "max_time": 1640981400000,
+        "sample_count": 200,
+        "pass_count": 200,
+        "fail_count": 0,
+        "empty_pair_count": 1,
+        "failure_examples": []
+      }
+    }
+  },
+  "boundary": {
+    "eq_min": {
+      "where": "WHERE time = 1640966405000",
+      "last_sql": "SELECT LAST s_130 FROM root.test.g_0.d_0 WHERE time = 1640966405000",
+      "native_sql": "SELECT s_130 FROM root.test.g_0.d_0 WHERE time = 1640966405000 ORDER BY time DESC LIMIT 1",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1640966405000,
+          34523.63
+        ],
+        "native": [
+          1640966405000,
+          34523.62890625
+        ]
+      },
+      "last_rows": [
+        [
+          1640966405000,
+          "root.test.g_0.d_0.s_130",
+          "34523.63",
+          "FLOAT"
+        ]
+      ],
+      "native_rows": [
+        [
+          1640966405000,
+          34523.62890625
+        ]
+      ],
+      "last_error": null,
+      "native_error": null
+    },
+    "le_min": {
+      "where": "WHERE time <= 1640966405000",
+      "last_sql": "SELECT LAST s_130 FROM root.test.g_0.d_0 WHERE time <= 1640966405000",
+      "native_sql": "SELECT s_130 FROM root.test.g_0.d_0 WHERE time <= 1640966405000 ORDER BY time DESC LIMIT 1",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1640966405000,
+          34523.63
+        ],
+        "native": [
+          1640966405000,
+          34523.62890625
+        ]
+      },
+      "last_rows": [
+        [
+          1640966405000,
+          "root.test.g_0.d_0.s_130",
+          "34523.63",
+          "FLOAT"
+        ]
+      ],
+      "native_rows": [
+        [
+          1640966405000,
+          34523.62890625
+        ]
+      ],
+      "last_error": null,
+      "native_error": null
+    },
+    "lt_min": {
+      "where": "WHERE time < 1640966405000",
+      "last_sql": "SELECT LAST s_130 FROM root.test.g_0.d_0 WHERE time < 1640966405000",
+      "native_sql": "SELECT s_130 FROM root.test.g_0.d_0 WHERE time < 1640966405000 ORDER BY time DESC LIMIT 1",
+      "pass": true,
+      "reason": "both empty",
+      "normalized": null,
+      "last_rows": [],
+      "native_rows": [],
+      "last_error": null,
+      "native_error": null
+    },
+    "gt_max": {
+      "where": "WHERE time > 1641016400000",
+      "last_sql": "SELECT LAST s_130 FROM root.test.g_0.d_0 WHERE time > 1641016400000",
+      "native_sql": "SELECT s_130 FROM root.test.g_0.d_0 WHERE time > 1641016400000 ORDER BY time DESC LIMIT 1",
+      "pass": true,
+      "reason": "both empty",
+      "normalized": null,
+      "last_rows": [],
+      "native_rows": [],
+      "last_error": null,
+      "native_error": null
+    },
+    "eq_non_timestamp": {
+      "where": "WHERE time = 1640966405001",
+      "last_sql": "SELECT LAST s_130 FROM root.test.g_0.d_0 WHERE time = 1640966405001",
+      "native_sql": "SELECT s_130 FROM root.test.g_0.d_0 WHERE time = 1640966405001 ORDER BY time DESC LIMIT 1",
+      "pass": true,
+      "reason": "both empty",
+      "normalized": null,
+      "last_rows": [],
+      "native_rows": [],
+      "last_error": null,
+      "native_error": null
+    },
+    "range_one_point": {
+      "where": "WHERE time >= 1640966405000 AND time <= 1640966405000",
+      "last_sql": "SELECT LAST s_130 FROM root.test.g_0.d_0 WHERE time >= 1640966405000 AND time <= 1640966405000",
+      "native_sql": "SELECT s_130 FROM root.test.g_0.d_0 WHERE time >= 1640966405000 AND time <= 1640966405000 ORDER BY time DESC LIMIT 1",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1640966405000,
+          34523.63
+        ],
+        "native": [
+          1640966405000,
+          34523.62890625
+        ]
+      },
+      "last_rows": [
+        [
+          1640966405000,
+          "root.test.g_0.d_0.s_130",
+          "34523.63",
+          "FLOAT"
+        ]
+      ],
+      "native_rows": [
+        [
+          1640966405000,
+          34523.62890625
+        ]
+      ],
+      "last_error": null,
+      "native_error": null
+    },
+    "range_empty": {
+      "where": "WHERE time > 1641016400000 AND time < 1641016405000",
+      "last_sql": "SELECT LAST s_130 FROM root.test.g_0.d_0 WHERE time > 1641016400000 AND time < 1641016405000",
+      "native_sql": "SELECT s_130 FROM root.test.g_0.d_0 WHERE time > 1641016400000 AND time < 1641016405000 ORDER BY time DESC LIMIT 1",
+      "pass": true,
+      "reason": "both empty",
+      "normalized": null,
+      "last_rows": [],
+      "native_rows": [],
+      "last_error": null,
+      "native_error": null
+    },
+    "range_mid": {
+      "where": "WHERE time >= 1640990000000 AND time <= 1640991000000",
+      "last_sql": "SELECT LAST s_130 FROM root.test.g_0.d_0 WHERE time >= 1640990000000 AND time <= 1640991000000",
+      "native_sql": "SELECT s_130 FROM root.test.g_0.d_0 WHERE time >= 1640990000000 AND time <= 1640991000000 ORDER BY time DESC LIMIT 1",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1640991000000,
+          34534.42
+        ],
+        "native": [
+          1640991000000,
+          34534.421875
+        ]
+      },
+      "last_rows": [
+        [
+          1640991000000,
+          "root.test.g_0.d_0.s_130",
+          "34534.42",
+          "FLOAT"
+        ]
+      ],
+      "native_rows": [
+        [
+          1640991000000,
+          34534.421875
+        ]
+      ],
+      "last_error": null,
+      "native_error": null
+    }
+  },
+  "negative": {
+    "multi_series": {
+      "last_sql": "SELECT LAST s_130, s_131 FROM root.test.g_0.d_0",
+      "native_sql": "SELECT s_130, s_131 FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 1",
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130",
+        "root.test.g_0.d_0.s_131"
+      ],
+      "last_rows": [
+        [
+          1641016400000,
+          "root.test.g_0.d_0.s_130",
+          "34579.86",
+          "FLOAT"
+        ],
+        [
+          1641016400000,
+          "root.test.g_0.d_0.s_131",
+          "100.0",
+          "FLOAT"
+        ]
+      ],
+      "native_rows": [
+        [
+          1641016400000,
+          34579.859375,
+          100.0
+        ]
+      ],
+      "last_error": null,
+      "native_error": null,
+      "expected_decision": "REJECT_REWRITE"
+    },
+    "multi_device": {
+      "last_sql": "SELECT LAST s_130 FROM root.test.g_0.d_0, root.test.g_0.d_1",
+      "native_sql": "SELECT s_130 FROM root.test.g_0.d_0, root.test.g_0.d_1 ORDER BY time DESC LIMIT 1",
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130",
+        "root.test.g_0.d_1.s_130"
+      ],
+      "last_rows": [
+        [
+          1641016400000,
+          "root.test.g_0.d_0.s_130",
+          "34579.86",
+          "FLOAT"
+        ],
+        [
+          1641016400000,
+          "root.test.g_0.d_1.s_130",
+          "34579.29",
+          "FLOAT"
+        ]
+      ],
+      "native_rows": [
+        [
+          1641016400000,
+          34579.859375,
+          34579.2890625
+        ]
+      ],
+      "last_error": null,
+      "native_error": null,
+      "expected_decision": "REJECT_REWRITE"
+    },
+    "value_filter": {
+      "last_sql": "SELECT LAST s_130 FROM root.test.g_0.d_0 WHERE s_130 > 0",
+      "native_sql": "SELECT s_130 FROM root.test.g_0.d_0 WHERE s_130 > 0 ORDER BY time DESC LIMIT 1",
+      "last_columns": null,
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130"
+      ],
+      "last_rows": null,
+      "native_rows": [
+        [
+          1641016400000,
+          34579.859375
+        ]
+      ],
+      "last_error": "701: Only time filters are supported in LAST query",
+      "native_error": null,
+      "expected_decision": "REJECT_REWRITE"
+    },
+    "wrong_device_path": {
+      "last_sql": "SELECT LAST s_130 FROM root.test.d_0",
+      "native_sql": "SELECT s_130 FROM root.test.d_0 ORDER BY time DESC LIMIT 1",
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "native_columns": [
+        "Time"
+      ],
+      "last_rows": [],
+      "native_rows": [],
+      "last_error": null,
+      "native_error": null,
+      "expected_decision": "REJECT_REWRITE"
+    },
+    "limit_not_one": {
+      "last_sql": null,
+      "native_sql": "SELECT s_130 FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 2",
+      "last_columns": null,
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130"
+      ],
+      "last_rows": null,
+      "native_rows": [
+        [
+          1641016400000,
+          34579.859375
+        ],
+        [
+          1641016395000,
+          34579.2890625
+        ]
+      ],
+      "last_error": null,
+      "native_error": null,
+      "expected_decision": "REJECT_REWRITE"
+    },
+    "order_asc": {
+      "last_sql": null,
+      "native_sql": "SELECT s_130 FROM root.test.g_0.d_0 ORDER BY time ASC LIMIT 1",
+      "last_columns": null,
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130"
+      ],
+      "last_rows": null,
+      "native_rows": [
+        [
+          1640966405000,
+          34523.62890625
+        ]
+      ],
+      "last_error": null,
+      "native_error": null,
+      "expected_decision": "REJECT_REWRITE"
+    }
+  },
+  "explain": {
+    "native": {
+      "sql": "EXPLAIN SELECT s_130 FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 1",
+      "columns": [
+        "distribution plan"
+      ],
+      "rows": [
+        [
+          0,
+          "┌────────────────────────────────┐"
+        ],
+        [
+          0,
+          "│AlignedSeriesScan-1             │"
+        ],
+        [
+          0,
+          "│Series: root.test.g_0.d_0[s_130]│"
+        ],
+        [
+          0,
+          "│Limit: 1                        │"
+        ],
+        [
+          0,
+          "│QueryAllSensors: false          │"
+        ],
+        [
+          0,
+          "│ScanOrder: DESC                 │"
+        ],
+        [
+          0,
+          "│Partition: 100                  │"
+        ],
+        [
+          0,
+          "└────────────────────────────────┘"
+        ]
+      ],
+      "line_count": 8,
+      "error": null
+    },
+    "last": {
+      "sql": "EXPLAIN SELECT LAST s_130 FROM root.test.g_0.d_0",
+      "columns": [
+        "distribution plan"
+      ],
+      "rows": [
+        [
+          0,
+          "                     ┌───────────┐                     "
+        ],
+        [
+          0,
+          "                     │LastQuery-1│                     "
+        ],
+        [
+          0,
+          "                     └───────────┘                     "
+        ],
+        [
+          0,
+          "                           │                           "
+        ],
+        [
+          0,
+          "                           │                           "
+        ],
+        [
+          0,
+          "┌─────────────────────────────────────────────────────┐"
+        ],
+        [
+          0,
+          "│LastQueryScan-3                                      │"
+        ],
+        [
+          0,
+          "│Aligned: true                                        │"
+        ],
+        [
+          0,
+          "│Series: root.test.g_0.d_0[[s_130,FLOAT,GORILLA,,LZ4]]│"
+        ],
+        [
+          0,
+          "│Partition: 100                                       │"
+        ],
+        [
+          0,
+          "└─────────────────────────────────────────────────────┘"
+        ]
+      ],
+      "line_count": 11,
+      "error": null
+    }
+  },
+  "performance": {
+    "float": {
+      "sql": {
+        "native": "SELECT s_130 FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 1",
+        "last": "SELECT LAST s_130 FROM root.test.g_0.d_0"
+      },
+      "summary": {
+        "paired_n": 30,
+        "native": {
+          "n": 30,
+          "errors": 0,
+          "wall_mean_ms": 6.781,
+          "wall_median_ms": 6.726,
+          "wall_p95_ms": 7.712,
+          "wall_stdev_ms": 0.436,
+          "execute_mean_ms": 5.983,
+          "fetch_mean_ms": 0.798
+        },
+        "last": {
+          "n": 30,
+          "errors": 0,
+          "wall_mean_ms": 5.12,
+          "wall_median_ms": 5.082,
+          "wall_p95_ms": 6.112,
+          "wall_stdev_ms": 0.453,
+          "execute_mean_ms": 4.232,
+          "fetch_mean_ms": 0.888
+        },
+        "paired_diff_mean_ms": 1.661,
+        "paired_diff_median_ms": 1.644,
+        "paired_diff_ci95_mean_ms": [
+          1.516,
+          1.791
+        ],
+        "mean_relative_reduction_pct": 24.491,
+        "native_errors": 0
+      }
+    },
+    "double": {
+      "sql": {
+        "native": "SELECT s_133 FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 1",
+        "last": "SELECT LAST s_133 FROM root.test.g_0.d_0"
+      },
+      "summary": {
+        "paired_n": 30,
+        "native": {
+          "n": 30,
+          "errors": 0,
+          "wall_mean_ms": 7.266,
+          "wall_median_ms": 7.153,
+          "wall_p95_ms": 8.49,
+          "wall_stdev_ms": 0.515,
+          "execute_mean_ms": 6.47,
+          "fetch_mean_ms": 0.796
+        },
+        "last": {
+          "n": 30,
+          "errors": 0,
+          "wall_mean_ms": 5.112,
+          "wall_median_ms": 5.095,
+          "wall_p95_ms": 5.884,
+          "wall_stdev_ms": 0.441,
+          "execute_mean_ms": 4.206,
+          "fetch_mean_ms": 0.906
+        },
+        "paired_diff_mean_ms": 2.154,
+        "paired_diff_median_ms": 2.069,
+        "paired_diff_ci95_mean_ms": [
+          2.007,
+          2.321
+        ],
+        "mean_relative_reduction_pct": 29.646,
+        "native_errors": 0
+      }
+    },
+    "int64": {
+      "sql": {
+        "native": "SELECT s_70 FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 1",
+        "last": "SELECT LAST s_70 FROM root.test.g_0.d_0"
+      },
+      "summary": {
+        "paired_n": 30,
+        "native": {
+          "n": 30,
+          "errors": 0,
+          "wall_mean_ms": 6.889,
+          "wall_median_ms": 6.571,
+          "wall_p95_ms": 7.964,
+          "wall_stdev_ms": 1.565,
+          "execute_mean_ms": 5.848,
+          "fetch_mean_ms": 1.041
+        },
+        "last": {
+          "n": 30,
+          "errors": 0,
+          "wall_mean_ms": 5.139,
+          "wall_median_ms": 5.014,
+          "wall_p95_ms": 5.697,
+          "wall_stdev_ms": 0.757,
+          "execute_mean_ms": 4.171,
+          "fetch_mean_ms": 0.968
+        },
+        "paired_diff_mean_ms": 1.75,
+        "paired_diff_median_ms": 1.476,
+        "paired_diff_ci95_mean_ms": [
+          1.487,
+          2.125
+        ],
+        "mean_relative_reduction_pct": 25.401,
+        "native_errors": 0
+      }
+    },
+    "int32": {
+      "sql": {
+        "native": "SELECT s_1666 FROM root.db800.g_0.d_0 ORDER BY time DESC LIMIT 1",
+        "last": "SELECT LAST s_1666 FROM root.db800.g_0.d_0"
+      },
+      "summary": {
+        "paired_n": 30,
+        "native": {
+          "n": 30,
+          "errors": 0,
+          "wall_mean_ms": 5.686,
+          "wall_median_ms": 5.735,
+          "wall_p95_ms": 6.142,
+          "wall_stdev_ms": 0.37,
+          "execute_mean_ms": 4.892,
+          "fetch_mean_ms": 0.793
+        },
+        "last": {
+          "n": 30,
+          "errors": 0,
+          "wall_mean_ms": 5.024,
+          "wall_median_ms": 5.075,
+          "wall_p95_ms": 5.412,
+          "wall_stdev_ms": 0.305,
+          "execute_mean_ms": 4.138,
+          "fetch_mean_ms": 0.886
+        },
+        "paired_diff_mean_ms": 0.662,
+        "paired_diff_median_ms": 0.651,
+        "paired_diff_ci95_mean_ms": [
+          0.609,
+          0.718
+        ],
+        "mean_relative_reduction_pct": 11.641,
+        "native_errors": 0
+      }
+    },
+    "text": {
+      "sql": {
+        "native": "SELECT s_9807 FROM root.dbl.g_0.d_0 ORDER BY time DESC LIMIT 1",
+        "last": "SELECT LAST s_9807 FROM root.dbl.g_0.d_0"
+      },
+      "summary": {
+        "paired_n": 30,
+        "native": {
+          "n": 30,
+          "errors": 0,
+          "wall_mean_ms": 5.984,
+          "wall_median_ms": 6.066,
+          "wall_p95_ms": 6.295,
+          "wall_stdev_ms": 0.327,
+          "execute_mean_ms": 5.187,
+          "fetch_mean_ms": 0.796
+        },
+        "last": {
+          "n": 30,
+          "errors": 0,
+          "wall_mean_ms": 5.042,
+          "wall_median_ms": 5.008,
+          "wall_p95_ms": 5.891,
+          "wall_stdev_ms": 0.477,
+          "execute_mean_ms": 4.078,
+          "fetch_mean_ms": 0.964
+        },
+        "paired_diff_mean_ms": 0.942,
+        "paired_diff_median_ms": 1.024,
+        "paired_diff_ci95_mean_ms": [
+          0.772,
+          1.062
+        ],
+        "mean_relative_reduction_pct": 15.735,
+        "native_errors": 0
+      }
+    },
+    "boolean": {
+      "sql": {
+        "native": "SELECT s_1079 FROM root.dbl.g_0.d_0 ORDER BY time DESC LIMIT 1",
+        "last": "SELECT LAST s_1079 FROM root.dbl.g_0.d_0"
+      },
+      "summary": {
+        "paired_n": 30,
+        "native": {
+          "n": 30,
+          "errors": 0,
+          "wall_mean_ms": 5.836,
+          "wall_median_ms": 5.879,
+          "wall_p95_ms": 6.215,
+          "wall_stdev_ms": 0.379,
+          "execute_mean_ms": 5.023,
+          "fetch_mean_ms": 0.814
+        },
+        "last": {
+          "n": 30,
+          "errors": 0,
+          "wall_mean_ms": 5.098,
+          "wall_median_ms": 5.019,
+          "wall_p95_ms": 6.198,
+          "wall_stdev_ms": 0.471,
+          "execute_mean_ms": 4.198,
+          "fetch_mean_ms": 0.9
+        },
+        "paired_diff_mean_ms": 0.738,
+        "paired_diff_median_ms": 0.758,
+        "paired_diff_ci95_mean_ms": [
+          0.616,
+          0.847
+        ],
+        "mean_relative_reduction_pct": 12.642,
+        "native_errors": 0
+      }
+    }
+  },
+  "fallback_contract": {
+    "method": "last runner injected; Native runner real and counted; baseline pre-recorded; no production double-execution",
+    "cases": {
+      "valid": {
+        "selected": "LAST",
+        "fallback": false,
+        "fallback_error": null,
+        "native_run_count": 0,
+        "last_value": [
+          1641016400000,
+          34579.86
+        ],
+        "native_baseline_value": [
+          1641016400000,
+          34579.859375
+        ]
+      },
+      "wrong_timestamp": {
+        "selected": "NATIVE_FALLBACK",
+        "fallback": true,
+        "fallback_error": "LAST_MISMATCH",
+        "native_run_count": 1,
+        "last_value": null,
+        "native_baseline_value": null
+      },
+      "wrong_timeseries": {
+        "selected": "NATIVE_FALLBACK",
+        "fallback": true,
+        "fallback_error": "LAST_WRONG_TIMESERIES",
+        "native_run_count": 1,
+        "last_value": null,
+        "native_baseline_value": null
+      },
+      "wrong_datatype": {
+        "selected": "NATIVE_FALLBACK",
+        "fallback": true,
+        "fallback_error": "LAST_WRONG_DATATYPE",
+        "native_run_count": 1,
+        "last_value": null,
+        "native_baseline_value": null
+      },
+      "wrong_value": {
+        "selected": "NATIVE_FALLBACK",
+        "fallback": true,
+        "fallback_error": "LAST_MISMATCH",
+        "native_run_count": 1,
+        "last_value": null,
+        "native_baseline_value": null
+      },
+      "empty": {
+        "selected": "NATIVE_FALLBACK",
+        "fallback": true,
+        "fallback_error": "LAST_NOT_ONE_ROW",
+        "native_run_count": 1,
+        "last_value": null,
+        "native_baseline_value": null
+      },
+      "exception": {
+        "selected": "NATIVE_FALLBACK",
+        "fallback": true,
+        "fallback_error": "LAST_ERROR",
+        "native_run_count": 1,
+        "last_value": null,
+        "native_baseline_value": null
+      }
+    },
+    "connect_ok": true,
+    "close_ok": true
+  },
+  "limitations": [
+    "No NULL, duplicate timestamp, out-of-order write, or stored-gap dataset; existing sampled series have full expected counts.",
+    "No dedicated writable test dataset; DDL/DML not authorized in this certification.",
+    "No production Executor; fallback is a contract test with injected LAST outcomes, not integrated runtime behavior.",
+    "No representative Native workload demand: the 47-case fixture has ORDER BY time DESC but no ORDER BY time DESC LIMIT 1; its q8 cases already use SELECT last.",
+    "No multi-process or multi-day repetition; two sessions in one process only.",
+    "No cold-cache control, no background load, no DB-host CPU/IO/memory metrics.",
+    "FLOAT/DOUBLE sweep covers sampled values but not NaN/Infinity or every stored value.",
+    "No aliases, OFFSET, wildcard, no-ORDER-BY LIMIT 1, or other variant certification."
+  ],
+  "conclusion": {
+    "strategy_id": "CAND_LAST_SINGLE_SERIES",
+    "status": "NOT_VERIFIED",
+    "submarkers": [
+      "EDGE_CASES_UNTESTED",
+      "DEMAND_UNPROVEN",
+      "FALLBACK_CONTRACT_ONLY"
+    ],
+    "reason": "Read-only semantic, boundary, effect, benefit, and fallback-contract evidence passes on clean single-series data, but the edge-case dataset, production fallback integration, and workload demand proof are still missing.",
+    "verified_on_clean_data": [
+      "six data types, no filter and time-before-max",
+      "200 time filters per type",
+      "eight time-boundary/empty cases",
+      "multi-series, multi-device, value-filter, wrong-path, LIMIT 2, ORDER BY ASC negative shapes",
+      "EXPLAIN effect and paired timing with 95% bootstrap CI"
+    ]
+  },
+  "raw_evidence": {
+    "certification": "last_certify_result.json (external job temp directory; not committed)",
+    "sweep": "last_sweep_result.json (external job temp directory; not committed)",
+    "fallback": "last_fallback_contract_result.json (external job temp directory; not committed)",
+    "discovery": "last_discovery_result.json (external job temp directory; not committed)"
+  }
+}

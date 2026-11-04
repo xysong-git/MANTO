@@ -1,0 +1,18 @@
+{
+  "scope": "real immutable experience fact extraction only; not query speedup",
+  "rows": 810,
+  "group_key": "f0b5d4255a05c3e57b8cae655a7938b5f1094e39099fd0faa407fa06378fd6a0",
+  "passes_ms": [
+    218.6627209885046,
+    23.1113750487566,
+    22.70984905771911
+  ],
+  "cache": {
+    "hits": 2430,
+    "misses": 810,
+    "maxsize": 4096,
+    "currsize": 810
+  },
+  "retained_bytes": 739896,
+  "exact_l1_model_unchanged": true
+}

@@ -1,0 +1,243 @@
+{
+  "protocol": "sequence-e2e-v2",
+  "journal_sha256": "7f2c1c60778aeeaf796f8016fa10099c5452d0af734f21bc35174a4e287ac7b3",
+  "sequence_accounting_complete": true,
+  "requests": 990,
+  "sequences": 270,
+  "actual_load_counts": {
+    "LOW": 990
+  },
+  "mean_trace_stage_ms": {
+    "RECEIVED": 0.06493030303030303,
+    "PARSED": 14.001637373737374,
+    "SNAPSHOT": 0.9670828282828282,
+    "RETRIEVED": 1.2702757575757575,
+    "DECIDED": 5.440746464646464,
+    "VALIDATED": 0.2743989898989899,
+    "EXECUTED": 21.797361616161616,
+    "MONITORED": 1.3166939393939396,
+    "LEARNED": 244.16814545454545,
+    "SUCCEEDED": 0.14281313131313045
+  },
+  "results": {
+    "1": {
+      "mean_sequence_ms": {
+        "S0_NATIVE": 364.528799,
+        "S1_REPEAT_CACHE": 385.5321176333333,
+        "ADAPTIVE": 368.44636836666666
+      },
+      "contrasts": {
+        "S1_REPEAT_CACHE-S0_NATIVE": {
+          "mean_ms": 21.00331863333334,
+          "ci99_ms": [
+            -32.5229054,
+            62.40024966666667
+          ],
+          "three_batch_means_ms": [
+            -8.437399000000001,
+            -21.816901899999998,
+            93.26425680000001
+          ],
+          "faster_within_session": false
+        },
+        "ADAPTIVE-S0_NATIVE": {
+          "mean_ms": 3.9175693666666676,
+          "ci99_ms": [
+            -42.055423433333324,
+            35.97853223333334
+          ],
+          "three_batch_means_ms": [
+            -5.236312699999997,
+            -18.456985700000004,
+            35.4460065
+          ],
+          "faster_within_session": false
+        },
+        "ADAPTIVE-S1_REPEAT_CACHE": {
+          "mean_ms": -17.08574926666667,
+          "ci99_ms": [
+            -41.3201775,
+            1.124352200000001
+          ],
+          "three_batch_means_ms": [
+            3.2010863000000027,
+            3.359916199999995,
+            -57.81825030000001
+          ],
+          "faster_within_session": false
+        }
+      },
+      "requests": 90,
+      "fallback_requests": 0,
+      "sample_quality": {
+        "VALID": 90
+      },
+      "choices": {
+        "S0_NATIVE": {
+          "S0_NATIVE": 30
+        },
+        "S1_REPEAT_CACHE": {
+          "S0_NATIVE": 30
+        },
+        "ADAPTIVE": {
+          "S0_NATIVE": 30
+        }
+      },
+      "hits": {
+        "S0_NATIVE": 0,
+        "S1_REPEAT_CACHE": 0,
+        "ADAPTIVE": 0
+      }
+    },
+    "2": {
+      "mean_sequence_ms": {
+        "S0_NATIVE": 715.5844731,
+        "S1_REPEAT_CACHE": 753.66463,
+        "ADAPTIVE": 742.8062775333333
+      },
+      "contrasts": {
+        "S1_REPEAT_CACHE-S0_NATIVE": {
+          "mean_ms": 38.08015690000001,
+          "ci99_ms": [
+            -15.292730099999991,
+            84.98834166666667
+          ],
+          "three_batch_means_ms": [
+            29.84353190000001,
+            73.8236293,
+            10.573309500000027
+          ],
+          "faster_within_session": false
+        },
+        "ADAPTIVE-S0_NATIVE": {
+          "mean_ms": 27.221804433333347,
+          "ci99_ms": [
+            -49.31173986666659,
+            110.31462076666672
+          ],
+          "three_batch_means_ms": [
+            33.742940900000015,
+            45.470232899999964,
+            2.452239500000064
+          ],
+          "faster_within_session": false
+        },
+        "ADAPTIVE-S1_REPEAT_CACHE": {
+          "mean_ms": -10.858352466666663,
+          "ci99_ms": [
+            -80.66934140000002,
+            61.658068500000006
+          ],
+          "three_batch_means_ms": [
+            3.8994090000000057,
+            -28.35339640000003,
+            -8.121069999999964
+          ],
+          "faster_within_session": false
+        }
+      },
+      "requests": 180,
+      "fallback_requests": 0,
+      "sample_quality": {
+        "VALID": 180
+      },
+      "choices": {
+        "S0_NATIVE": {
+          "S0_NATIVE": 60
+        },
+        "S1_REPEAT_CACHE": {
+          "S0_NATIVE": 30,
+          "S1_REPEAT_CACHE": 30
+        },
+        "ADAPTIVE": {
+          "S0_NATIVE": 60
+        }
+      },
+      "hits": {
+        "S0_NATIVE": 0,
+        "S1_REPEAT_CACHE": 0,
+        "ADAPTIVE": 0
+      }
+    },
+    "8": {
+      "mean_sequence_ms": {
+        "S0_NATIVE": 2756.6227659,
+        "S1_REPEAT_CACHE": 1202.8189317666668,
+        "ADAPTIVE": 2939.3548332
+      },
+      "contrasts": {
+        "S1_REPEAT_CACHE-S0_NATIVE": {
+          "mean_ms": -1553.8038341333333,
+          "ci99_ms": [
+            -2011.2048061,
+            -1111.1662645333333
+          ],
+          "three_batch_means_ms": [
+            -613.6041084999999,
+            -1824.7377219,
+            -2223.069672
+          ],
+          "faster_within_session": true
+        },
+        "ADAPTIVE-S0_NATIVE": {
+          "mean_ms": 182.73206729999998,
+          "ci99_ms": [
+            -103.59570546666674,
+            478.81711633333333
+          ],
+          "three_batch_means_ms": [
+            -86.41748909999998,
+            38.028281799999924,
+            596.5854092000001
+          ],
+          "faster_within_session": false
+        },
+        "ADAPTIVE-S1_REPEAT_CACHE": {
+          "mean_ms": 1736.5359014333333,
+          "ci99_ms": [
+            1227.6089421333334,
+            2254.0638125333335
+          ],
+          "three_batch_means_ms": [
+            527.1866194,
+            1862.7660037,
+            2819.6550812
+          ],
+          "faster_within_session": false
+        }
+      },
+      "requests": 720,
+      "fallback_requests": 0,
+      "sample_quality": {
+        "VALID": 720
+      },
+      "choices": {
+        "S0_NATIVE": {
+          "S0_NATIVE": 240
+        },
+        "S1_REPEAT_CACHE": {
+          "S0_NATIVE": 30,
+          "S1_REPEAT_CACHE": 210
+        },
+        "ADAPTIVE": {
+          "S0_NATIVE": 239,
+          "S1_REPEAT_CACHE": 1
+        }
+      },
+      "hits": {
+        "S0_NATIVE": 0,
+        "S1_REPEAT_CACHE": 180,
+        "ADAPTIVE": 0
+      }
+    }
+  },
+  "stage_accepted": false,
+  "online_ready": false,
+  "limitations": [
+    "Natural host load only; cannot clear multi-load gate.",
+    "Frozen historical single-request model; no Bandit updates on holdout.",
+    "All completed request costs retained, including fallback/low confidence.",
+    "One session, pointwise 99% intervals; serial dependence and multiplicity remain.",
+    "Setup/reference/external audit serialization excluded; OS/IoTDB caches uncontrolled."
+  ]
+}

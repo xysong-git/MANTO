@@ -1,0 +1,8 @@
+┌────────────────────────────────┐
+│AlignedSeriesScan-1             │
+│Series: root.test.g_0.d_0[s_130]│
+│Limit: 10                       │
+│QueryAllSensors: false          │
+│ScanOrder: DESC                 │
+│Partition: 100                  │
+└────────────────────────────────┘

@@ -1,0 +1,23 @@
+[
+  {
+    "batch": 0,
+    "execution_id": "624005e219bf46c98d685e30ad7026b9",
+    "rows": 1000,
+    "six_type_values_match": true,
+    "sql_sha256": "4e86cc7d43d9bafe468869ee5ac606a6291ea528177f165663967a33c3ddef82"
+  },
+  {
+    "batch": 1,
+    "execution_id": "47891fe3109842d98eb1610311eb9b50",
+    "rows": 1000,
+    "six_type_values_match": true,
+    "sql_sha256": "0ba5698d9f27304b7d04ded4ec0a02a2fb5e4fe5bf055494d6bff390507219cd"
+  },
+  {
+    "batch": 2,
+    "execution_id": "aae32ca1295049019c9e938efb177944",
+    "rows": 1000,
+    "six_type_values_match": true,
+    "sql_sha256": "33e4418908740c59eb5be5c63c156408778978e02b2b45c1760285c34a12ab2e"
+  }
+]

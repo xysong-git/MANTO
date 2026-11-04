@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tsdb-optimizer"
+version = "0.1.0"
+description = "Multi-Agent TSDB Optimizer: S0 IoTDB execution, query analysis, monitoring, and limited-strategy decision/execution"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Proprietary" }
+dependencies = [
+  "apache-iotdb==2.0.6",
+  "pydantic>=2.7,<3",
+  "python-dotenv>=1.0,<2",
+  "PyYAML>=6.0,<7",
+  "sqlglot==30.18.0",
+  "psutil==7.2.2",
+]
+
+[project.optional-dependencies]
+benchmark = [
+  "matplotlib==3.11.1",
+]
+dev = [
+  "pytest>=8.0,<10",
+]
+
+[project.scripts]
+tsdb-optimizer = "tsdb_optimizer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+markers = [
+  "integration: requires a real IoTDB instance and explicit environment variables",
+]

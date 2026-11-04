@@ -1,0 +1,70 @@
+{
+  "phase": "7",
+  "stage_accepted": false,
+  "online_ready": false,
+  "scope": "finalized whole-request reward; natural LOW conditional cache applicability only",
+  "tests": {
+    "full": "882 passed in 34.27s; includes 13 real IoTDB integration tests, no skips",
+    "evidence": "23 passed in 114.45s",
+    "targeted": "41 passed in 2.66s",
+    "compileall_exit_code": 0
+  },
+  "studies": {
+    "small_ambient": {
+      "runtime_source_changes_since_capture": [
+        "scripts/phase7_controlled_e2e.py",
+        "scripts/phase7_analyze_controlled_e2e.py"
+      ],
+      "explanation": "v9 adds explicit training object release; v8 replay remains supported; no core learner/monitor changes after these studies",
+      "sqlite_integrity_check": "ok",
+      "files": {
+        "data/phase7_reward_small_ambient_20261103/study.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+        "data/phase7_reward_small_ambient_20261103/journal.jsonl": "7a6fe8a12ee2b704df92af55a3b9ff2a8667a44cb386b6e523512b31c694958d",
+        "data/phase7_reward_small_ambient_20261103/study.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "data/phase7_reward_small_ambient_20261103/study.sqlite": "8312406eea449232b922782a992f5f8eb3de2edca17790ee9a9972285341c9c7",
+        "data/phase7_reward_small_ambient_20261103/implementation.json": "082d8f215d8da22f25192bf858c4d1a176442da56a5f372d0d96339f2874221f"
+      }
+    },
+    "large_released": {
+      "runtime_source_changes_since_capture": [],
+      "explanation": "v9 adds explicit training object release; v8 replay remains supported; no core learner/monitor changes after these studies",
+      "sqlite_integrity_check": "ok",
+      "files": {
+        "data/phase7_reward_large_released_20261103/study.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+        "data/phase7_reward_large_released_20261103/journal.jsonl": "0f14277460e0e3ada881f446646b08a14c44fdbec18b7dafe8438cea7ac0bbd4",
+        "data/phase7_reward_large_released_20261103/study.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "data/phase7_reward_large_released_20261103/study.sqlite": "be83f7a8b1105cf7f2eb240f378fb4fb29bebd2b7ff8872ce192d9f374dd2cc0",
+        "data/phase7_reward_large_released_20261103/implementation.json": "c0a1a2713ad122a72da64a0e9ac73910085c8cf43072c18085c1b1f91c5f0598"
+      }
+    }
+  },
+  "hashes": {
+    "src/tsdb_optimizer/bandit/model.py": "6d6636ab6e420a7080df3e30c8d4395071fd62ae6533fcabd99dde2272ccd0a6",
+    "src/tsdb_optimizer/bandit/__init__.py": "d7cc17778d6ed1c981bf888654d47c6b6921d666612179cb4740402b986d2ce2",
+    "src/tsdb_optimizer/bandit/evaluation.py": "5d4ab58f5cbfef5966b86668ad860bbc38b1361f85f1be3f51ff77e38b2d8e1f",
+    "src/tsdb_optimizer/bandit/workload_audit.py": "9bdbf232b46efb44c0dd364013dedfd7ab15307dd5e03ff8e8ccbe7bf62a8f05",
+    "src/tsdb_optimizer/bandit/settings.py": "58b3f05a1bd5af71454cb50c046e0dd48b3dfd3588e20091fbfbb13d597f9854",
+    "src/tsdb_optimizer/bandit/store.py": "0e861315c171695c3fbfdc01d51a038ce5e20d39d78d08b09db8bb4db0f8c865",
+    "src/tsdb_optimizer/bandit/randomized_model.py": "cfd3fe71f7b629d7ad03aca14aa736b7e8617c23d3d1a2ed8644a7f46f2c3da2",
+    "src/tsdb_optimizer/bandit/exploration.py": "435a5f75e0767a19e7bb9e66c8d42f4eaa22ec01c498b072c846437ab064bab4",
+    "src/tsdb_optimizer/bandit/completed_request.py": "263b3b7d936add2e6147c2b94c63630577156e97c049a4ef3624e52f73ace909",
+    "src/tsdb_optimizer/bandit/context.py": "976f9c5ee8739fb3c8dc74389cb08a4d74d2ef32bbc3e0204f2067e4833e9dd7",
+    "src/tsdb_optimizer/agents/performance_monitor.py": "016f0bea56653015f6e7244bc6df0fc98499f9b466214ad18e002be434dee51d",
+    "src/tsdb_optimizer/experiments/controlled_policy.py": "014216a6f1dbc32738df810fcfa5046cb415d820a1f0ebc3681aa62d6d96947e",
+    "src/tsdb_optimizer/experiments/scenarios.py": "1ccf2bba0667ca907a771fd637ed4645901c23471d4874fb8b9fdc511dd4309c",
+    "scripts/phase7_analyze_controlled_e2e.py": "b91c505d6d721d42b691ec3b87357abf071a6e1f00278cf8972e778de7838a90",
+    "scripts/phase7_controlled_e2e.py": "9ccf2a2bda3e91cd1b836d7e357e7170737aecd0a57890f154ab0f4f35255b35",
+    "scripts/phase7_profile_training_retention.py": "e938be855fc6dbc14d45601939fd23d917ce7f44dc867fe13ed19974212218ef",
+    "docs/evidence/phase7_reward_small_20261103.json": "86ecf2cb01e75c2263ec04035e80dfe7a77c1f047b1981a014dc4abb8048e6a7",
+    "docs/evidence/phase7_reward_aborted_20261103.json": "e49645c35a02ce437cc610357f56118f973d4f30e6e9d64bacbef11632e70614",
+    "docs/evidence/phase7_reward_large_20261103.json": "9196e862000ffee808d5ba77475cdc0f9280598323e934166d0ef27063d2a3eb",
+    "docs/evidence/phase7_training_retention_probe_20261103.json": "393314b6e6596078a17931aa6335af5afb069b24fed284b4f22aaf4a8feefbf4",
+    "docs/evidence/phase7_reward_audit_probes.py": "46c38662f24c450ba1f294b0a660752fb60a40fed6d359d40bb32f60d8f6a7c2",
+    "tests/unit/test_completed_request_reward.py": "70ee015d695f14f94674172cc826c894277a4eb218d6d215b8f747f5be13fe30",
+    "tests/unit/test_strategy_scenarios.py": "ea9807298a687a9f7c8e2509e19f77a08a5ad9d0395db6d28d68e525ff89c1a5",
+    "tests/unit/test_background_snapshot.py": "d7dc3b31e3b5173622f36abdf0b841ce675db95b6a9db7c840cb3f0ed4e016e9",
+    "tests/unit/test_controlled_study.py": "ec85126d763f128b91a3ea09332c93d26a523f8b7ff729b135088a4e1b6a671e",
+    "tests/fixtures/completed_request_s1_historical.json": "b03d9e8b73f8e782a13bd126dda3ef4a56a41e8c656588a7d33901b1eef90af5",
+    "tests/fixtures/completed_request_historical.json": "6a79cdb113840ff2f45a44413b177ab268489b051a1fed79eca82ced526e46f6"
+  }
+}

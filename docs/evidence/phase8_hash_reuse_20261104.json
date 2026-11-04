@@ -1,0 +1,2387 @@
+{
+  "source": "benchmarks/results/phase8_hash_reuse_20261104_133508_370575972",
+  "independent_replay_equal": true,
+  "current_sources_match": true,
+  "journal_unchanged": true,
+  "journal_sha256": "114ba30bbb923e9f9d10a8b4c8ba10111df6658f000bd56f2973133688588952",
+  "source_changes_since_previous": [
+    "src/tsdb_optimizer/benchmark/policy.py"
+  ],
+  "same_config": true,
+  "same_plan": true,
+  "counts": {
+    "raw_requests": 5940,
+    "heldout_requests": 3360,
+    "completed_allocations": 540,
+    "planned_allocations": 540,
+    "training_applied": 960
+  },
+  "groups": [
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_EMPTY",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "group": "A1",
+      "requests": 240,
+      "blocks": 30,
+      "successes": 240,
+      "correctness": {
+        "MATCHED": 240
+      },
+      "observed_loads": {
+        "LOW": 240
+      },
+      "selected_strategies": {
+        "S0_NATIVE": 30,
+        "S1_REPEAT_CACHE": 210
+      },
+      "actual_strategies": {
+        "S0_NATIVE": 30,
+        "S1_REPEAT_CACHE": 210
+      },
+      "cache_hits": 180,
+      "fallbacks": 0,
+      "metrics": {
+        "end_to_end_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 65.43432425416667,
+          "sample_std": 16.96097324030437,
+          "p50": 55.425649500000006,
+          "p95": 97.79039085,
+          "p99": 109.62778327999997,
+          "mean_ci": [
+            63.79756166379166,
+            66.96587053877084
+          ]
+        },
+        "decision_overhead_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 15.7925111875,
+          "sample_std": 5.3065443212104375,
+          "p50": 14.268366,
+          "p95": 20.107925899999994,
+          "p99": 50.51655700999998,
+          "mean_ci": [
+            15.086117070583333,
+            16.665566510875003
+          ]
+        },
+        "client_wall_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 5.700641666666667,
+          "sample_std": 9.128411403399886,
+          "p50": 0.516,
+          "p95": 22.939449999999983,
+          "p99": 26.68811999999999,
+          "mean_ci": [
+            5.40486625,
+            6.021326458333334
+          ]
+        },
+        "execute_call_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 3.885091666666667,
+          "sample_std": 6.882560953617846,
+          "p50": 0.0,
+          "p95": 16.893299999999993,
+          "p99": 20.11997,
+          "mean_ci": [
+            3.6322783125,
+            4.166068583333333
+          ]
+        },
+        "result_fetch_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 1.0504833333333334,
+          "sample_std": 1.8336713178247377,
+          "p50": 0.0,
+          "p95": 4.545499999999999,
+          "p99": 4.92681,
+          "mean_ci": [
+            1.0140243125,
+            1.0873178541666668
+          ]
+        },
+        "client_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.293575,
+          "sample_std": 0.9118075722128929,
+          "p50": 4.287,
+          "p95": 5.882,
+          "p99": 6.33747,
+          "mean_ci": [
+            4.113212291666667,
+            4.4710526250000004
+          ]
+        },
+        "client_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40666666666667,
+          "sample_std": 0.024996513006467425,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42
+          ]
+        },
+        "db_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.382104166666666,
+          "sample_std": 0.8726720817842533,
+          "p50": 4.291,
+          "p95": 5.779249999999997,
+          "p99": 6.842,
+          "mean_ci": [
+            4.215784916666667,
+            4.549507375
+          ]
+        },
+        "db_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40666666666667,
+          "sample_std": 0.024996513006467425,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42
+          ]
+        }
+      },
+      "server_execution_ms": null,
+      "throughput": {
+        "successful_requests_per_second": 13.98227560137185,
+        "pooled_rate_ci": [
+          13.672532920133637,
+          14.310136177328971
+        ],
+        "including_setup_warmup_cleanup_per_second": 7.657737589706148,
+        "definition": "successful requests / sum of nonoverlapping allocation measurement envelopes; concurrent latency sums are not wall time"
+      }
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_EMPTY",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "group": "A2",
+      "requests": 240,
+      "blocks": 30,
+      "successes": 240,
+      "correctness": {
+        "MATCHED": 240
+      },
+      "observed_loads": {
+        "LOW": 240
+      },
+      "selected_strategies": {
+        "S0_NATIVE": 30,
+        "S1_REPEAT_CACHE": 210
+      },
+      "actual_strategies": {
+        "S0_NATIVE": 30,
+        "S1_REPEAT_CACHE": 210
+      },
+      "cache_hits": 180,
+      "fallbacks": 0,
+      "metrics": {
+        "end_to_end_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 56.37027451666667,
+          "sample_std": 16.786373779404876,
+          "p50": 47.851985,
+          "p95": 86.08559934999998,
+          "p99": 101.18750653999997,
+          "mean_ci": [
+            54.38520418385417,
+            58.457146734604166
+          ]
+        },
+        "decision_overhead_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.5725851041666665,
+          "sample_std": 3.0654917778814568,
+          "p50": 4.0198255,
+          "p95": 6.295298649999994,
+          "p99": 8.197100769999999,
+          "mean_ci": [
+            4.2481654360625,
+            5.195082339854166
+          ]
+        },
+        "client_wall_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 5.846691666666667,
+          "sample_std": 9.281539834280073,
+          "p50": 0.563,
+          "p95": 23.777349999999995,
+          "p99": 26.76118999999999,
+          "mean_ci": [
+            5.584248354166666,
+            6.133706458333334
+          ]
+        },
+        "execute_call_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 3.8800166666666667,
+          "sample_std": 6.831193709567092,
+          "p50": 0.0,
+          "p95": 16.826299999999982,
+          "p99": 20.331649999999996,
+          "mean_ci": [
+            3.64648625,
+            4.146205479166667
+          ]
+        },
+        "result_fetch_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 1.1637166666666667,
+          "sample_std": 2.0418456380840597,
+          "p50": 0.0,
+          "p95": 5.0985,
+          "p99": 5.593839999999999,
+          "mean_ci": [
+            1.1089700208333333,
+            1.2151731875
+          ]
+        },
+        "client_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.4542874999999995,
+          "sample_std": 1.3201394169472496,
+          "p50": 4.2010000000000005,
+          "p95": 7.484,
+          "p99": 8.463149999999992,
+          "mean_ci": [
+            4.1760103125,
+            4.81403825
+          ]
+        },
+        "client_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40333333333334,
+          "sample_std": 0.01798806360776519,
+          "p50": 67.4,
+          "p95": 67.4,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.41333333333334
+          ]
+        },
+        "db_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.661604166666667,
+          "sample_std": 1.5897163919004946,
+          "p50": 4.354,
+          "p95": 6.696999999999999,
+          "p99": 13.095569999999926,
+          "mean_ci": [
+            4.377681395833333,
+            5.165940541666667
+          ]
+        },
+        "db_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40333333333334,
+          "sample_std": 0.01798806360776519,
+          "p50": 67.4,
+          "p95": 67.4,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.41333333333334
+          ]
+        }
+      },
+      "server_execution_ms": null,
+      "throughput": {
+        "successful_requests_per_second": 15.83127449807274,
+        "pooled_rate_ci": [
+          15.254820865835034,
+          16.448862188877982
+        ],
+        "including_setup_warmup_cleanup_per_second": 8.201754601662664,
+        "definition": "successful requests / sum of nonoverlapping allocation measurement envelopes; concurrent latency sums are not wall time"
+      }
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_EMPTY",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "group": "E0",
+      "requests": 240,
+      "blocks": 30,
+      "successes": 240,
+      "correctness": {
+        "MATCHED": 240
+      },
+      "observed_loads": {
+        "LOW": 240
+      },
+      "selected_strategies": {
+        "S0_NATIVE": 240
+      },
+      "actual_strategies": {
+        "S0_NATIVE": 240
+      },
+      "cache_hits": 0,
+      "fallbacks": 0,
+      "metrics": {
+        "end_to_end_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 64.09771297916667,
+          "sample_std": 7.984737851433125,
+          "p50": 65.214668,
+          "p95": 73.4370151,
+          "p99": 95.61197734999995,
+          "mean_ci": [
+            62.11540475514584,
+            65.85855592435416
+          ]
+        },
+        "decision_overhead_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 5.254948325,
+          "sample_std": 1.0993593790806635,
+          "p50": 5.441107,
+          "p95": 7.610547849999998,
+          "p99": 8.232175929999999,
+          "mean_ci": [
+            5.042873711625,
+            5.448591041604167
+          ]
+        },
+        "client_wall_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 22.112116666666665,
+          "sample_std": 2.749740047609623,
+          "p50": 21.4375,
+          "p95": 26.9174,
+          "p99": 29.976819999999982,
+          "mean_ci": [
+            21.209012458333333,
+            23.150106229166667
+          ]
+        },
+        "execute_call_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 15.942716666666666,
+          "sample_std": 2.5042678255291455,
+          "p50": 15.192499999999999,
+          "p95": 20.49945,
+          "p99": 21.477269999999997,
+          "mean_ci": [
+            15.063106083333334,
+            16.93652983333333
+          ]
+        },
+        "result_fetch_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.85555,
+          "sample_std": 0.6362201449210385,
+          "p50": 4.9125,
+          "p95": 5.6472500000000005,
+          "p99": 5.961789999999998,
+          "mean_ci": [
+            4.7084108124999995,
+            5.008714187500001
+          ]
+        },
+        "client_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 5.0363875,
+          "sample_std": 1.0089785940199012,
+          "p50": 4.914,
+          "p95": 6.5753,
+          "p99": 7.576,
+          "mean_ci": [
+            4.862431583333334,
+            5.267283479166666
+          ]
+        },
+        "client_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40666666666667,
+          "sample_std": 0.024996513006467425,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42
+          ]
+        },
+        "db_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 5.045558333333333,
+          "sample_std": 1.0377362697817984,
+          "p50": 4.8475,
+          "p95": 6.593,
+          "p99": 9.116,
+          "mean_ci": [
+            4.8429613541666665,
+            5.3040149375
+          ]
+        },
+        "db_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40666666666667,
+          "sample_std": 0.024996513006467425,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42
+          ]
+        }
+      },
+      "server_execution_ms": null,
+      "throughput": {
+        "successful_requests_per_second": 15.055587109556873,
+        "pooled_rate_ci": [
+          14.65991763655689,
+          15.537861196805302
+        ],
+        "including_setup_warmup_cleanup_per_second": 7.925236568615374,
+        "definition": "successful requests / sum of nonoverlapping allocation measurement envelopes; concurrent latency sums are not wall time"
+      }
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_EMPTY",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "group": "E1",
+      "requests": 240,
+      "blocks": 30,
+      "successes": 240,
+      "correctness": {
+        "MATCHED": 240
+      },
+      "observed_loads": {
+        "LOW": 240
+      },
+      "selected_strategies": {
+        "S0_NATIVE": 30,
+        "S1_REPEAT_CACHE": 210
+      },
+      "actual_strategies": {
+        "S0_NATIVE": 30,
+        "S1_REPEAT_CACHE": 210
+      },
+      "cache_hits": 180,
+      "fallbacks": 0,
+      "metrics": {
+        "end_to_end_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 45.42129636666667,
+          "sample_std": 14.254066547140432,
+          "p50": 39.463822,
+          "p95": 71.68595409999998,
+          "p99": 81.95028325999996,
+          "mean_ci": [
+            43.75286840866667,
+            46.9819194253125
+          ]
+        },
+        "decision_overhead_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.5014764708333335,
+          "sample_std": 0.9103288809379358,
+          "p50": 4.1908045000000005,
+          "p95": 5.9295165,
+          "p99": 7.390416119999999,
+          "mean_ci": [
+            4.324884412625,
+            4.669673913833333
+          ]
+        },
+        "client_wall_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 5.951125,
+          "sample_std": 9.550241961545193,
+          "p50": 0.57,
+          "p95": 24.530049999999992,
+          "p99": 29.171359999999996,
+          "mean_ci": [
+            5.6059715,
+            6.372573
+          ]
+        },
+        "execute_call_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 3.9546125,
+          "sample_std": 7.062800246207925,
+          "p50": 0.0,
+          "p95": 17.925199999999997,
+          "p99": 20.286499999999993,
+          "mean_ci": [
+            3.6704235625000003,
+            4.301797354166667
+          ]
+        },
+        "result_fetch_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 1.1668333333333334,
+          "sample_std": 2.0449023928720362,
+          "p50": 0.0,
+          "p95": 5.092649999999999,
+          "p99": 5.556689999999998,
+          "mean_ci": [
+            1.1035275208333333,
+            1.2198715416666666
+          ]
+        },
+        "client_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.636345833333333,
+          "sample_std": 1.3937684659952132,
+          "p50": 4.386,
+          "p95": 6.134049999999999,
+          "p99": 11.3831999999999,
+          "mean_ci": [
+            4.34282,
+            5.090810875
+          ]
+        },
+        "client_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40333333333334,
+          "sample_std": 0.01798806360776519,
+          "p50": 67.4,
+          "p95": 67.4,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.41333333333334
+          ]
+        },
+        "db_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.765641666666666,
+          "sample_std": 1.4733705348569512,
+          "p50": 4.498,
+          "p95": 6.44,
+          "p99": 12.45174999999988,
+          "mean_ci": [
+            4.46636275,
+            5.346467645833334
+          ]
+        },
+        "db_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40333333333334,
+          "sample_std": 0.01798806360776519,
+          "p50": 67.4,
+          "p95": 67.4,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.41333333333334
+          ]
+        }
+      },
+      "server_execution_ms": null,
+      "throughput": {
+        "successful_requests_per_second": 21.086818120394838,
+        "pooled_rate_ci": [
+          20.389249021778458,
+          21.884493240243994
+        ],
+        "including_setup_warmup_cleanup_per_second": 9.346102431397616,
+        "definition": "successful requests / sum of nonoverlapping allocation measurement envelopes; concurrent latency sums are not wall time"
+      }
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_EMPTY",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "group": "E2",
+      "requests": 240,
+      "blocks": 30,
+      "successes": 240,
+      "correctness": {
+        "MATCHED": 240
+      },
+      "observed_loads": {
+        "LOW": 240
+      },
+      "selected_strategies": {
+        "S0_NATIVE": 30,
+        "S1_REPEAT_CACHE": 210
+      },
+      "actual_strategies": {
+        "S0_NATIVE": 30,
+        "S1_REPEAT_CACHE": 210
+      },
+      "cache_hits": 180,
+      "fallbacks": 0,
+      "metrics": {
+        "end_to_end_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 45.67137720416667,
+          "sample_std": 15.480223973174889,
+          "p50": 40.221321,
+          "p95": 72.70559684999999,
+          "p99": 99.33442023999984,
+          "mean_ci": [
+            43.95778700660417,
+            47.272120674750006
+          ]
+        },
+        "decision_overhead_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.44624895,
+          "sample_std": 1.0462445612312627,
+          "p50": 4.160803,
+          "p95": 6.245432299999998,
+          "p99": 7.789911089999998,
+          "mean_ci": [
+            4.229951703770833,
+            4.6452283071875
+          ]
+        },
+        "client_wall_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 6.731379166666667,
+          "sample_std": 12.133217279098877,
+          "p50": 0.6054999999999999,
+          "p95": 26.13135,
+          "p99": 60.779569999999936,
+          "mean_ci": [
+            5.931541645833334,
+            7.693287416666669
+          ]
+        },
+        "execute_call_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.1616875,
+          "sample_std": 7.794893185427754,
+          "p50": 0.0,
+          "p95": 19.22319999999999,
+          "p99": 24.471429999999916,
+          "mean_ci": [
+            3.7484175833333335,
+            4.797080125000001
+          ]
+        },
+        "result_fetch_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 1.1466083333333332,
+          "sample_std": 2.0127752309868576,
+          "p50": 0.0,
+          "p95": 5.1591,
+          "p99": 5.40325,
+          "mean_ci": [
+            1.0823943333333332,
+            1.2071926875
+          ]
+        },
+        "client_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.805491666666667,
+          "sample_std": 1.4642681093859056,
+          "p50": 4.654,
+          "p95": 6.43,
+          "p99": 12.008229999999887,
+          "mean_ci": [
+            4.512564354166667,
+            5.289819187500001
+          ]
+        },
+        "client_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40333333333334,
+          "sample_std": 0.01798806360776519,
+          "p50": 67.4,
+          "p95": 67.4,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.41333333333334
+          ]
+        },
+        "db_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 5.060391666666667,
+          "sample_std": 1.4580248506806157,
+          "p50": 4.795,
+          "p95": 6.597,
+          "p99": 12.494669999999951,
+          "mean_ci": [
+            4.716575979166667,
+            5.630714520833334
+          ]
+        },
+        "db_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40333333333334,
+          "sample_std": 0.01798806360776519,
+          "p50": 67.4,
+          "p95": 67.4,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.41333333333334
+          ]
+        }
+      },
+      "server_execution_ms": null,
+      "throughput": {
+        "successful_requests_per_second": 20.979077827920687,
+        "pooled_rate_ci": [
+          20.271864622874897,
+          21.803303607667996
+        ],
+        "including_setup_warmup_cleanup_per_second": 9.399432106160614,
+        "definition": "successful requests / sum of nonoverlapping allocation measurement envelopes; concurrent latency sums are not wall time"
+      }
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_EMPTY",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "group": "E3",
+      "requests": 240,
+      "blocks": 30,
+      "successes": 240,
+      "correctness": {
+        "MATCHED": 240
+      },
+      "observed_loads": {
+        "LOW": 240
+      },
+      "selected_strategies": {
+        "S0_NATIVE": 30,
+        "S1_REPEAT_CACHE": 210
+      },
+      "actual_strategies": {
+        "S0_NATIVE": 30,
+        "S1_REPEAT_CACHE": 210
+      },
+      "cache_hits": 180,
+      "fallbacks": 0,
+      "metrics": {
+        "end_to_end_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 56.55265402916667,
+          "sample_std": 17.286295646986417,
+          "p50": 48.0180475,
+          "p95": 88.07293535,
+          "p99": 94.95264454,
+          "mean_ci": [
+            54.597153912500005,
+            58.29969134625001
+          ]
+        },
+        "decision_overhead_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.5723917583333336,
+          "sample_std": 3.5143013858740715,
+          "p50": 3.952993,
+          "p95": 5.926582749999997,
+          "p99": 7.730531759999993,
+          "mean_ci": [
+            4.1845018493333335,
+            5.234352617333334
+          ]
+        },
+        "client_wall_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 6.045591666666667,
+          "sample_std": 9.674302759083325,
+          "p50": 0.551,
+          "p95": 24.30085,
+          "p99": 30.94087999999993,
+          "mean_ci": [
+            5.730015604166666,
+            6.469689145833334
+          ]
+        },
+        "execute_call_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.063654166666667,
+          "sample_std": 7.235090044431278,
+          "p50": 0.0,
+          "p95": 18.085199999999993,
+          "p99": 23.673939999999945,
+          "mean_ci": [
+            3.7712352291666664,
+            4.4525595625
+          ]
+        },
+        "result_fetch_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 1.1150125,
+          "sample_std": 1.9521434426710549,
+          "p50": 0.0,
+          "p95": 4.9392,
+          "p99": 5.275859999999999,
+          "mean_ci": [
+            1.0648576666666667,
+            1.1608423541666668
+          ]
+        },
+        "client_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.424033333333333,
+          "sample_std": 0.9512559980255775,
+          "p50": 4.3355,
+          "p95": 5.911,
+          "p99": 7.701,
+          "mean_ci": [
+            4.228390208333334,
+            4.6509017083333335
+          ]
+        },
+        "client_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40666666666667,
+          "sample_std": 0.024996513006467425,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42
+          ]
+        },
+        "db_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.587658333333334,
+          "sample_std": 1.0798354011858078,
+          "p50": 4.4655000000000005,
+          "p95": 6.136,
+          "p99": 7.672,
+          "mean_ci": [
+            4.332727770833333,
+            4.881295895833334
+          ]
+        },
+        "db_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40666666666667,
+          "sample_std": 0.024996513006467425,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42
+          ]
+        }
+      },
+      "server_execution_ms": null,
+      "throughput": {
+        "successful_requests_per_second": 15.836403616084402,
+        "pooled_rate_ci": [
+          15.393312525576395,
+          16.36954024934702
+        ],
+        "including_setup_warmup_cleanup_per_second": 8.15714284741498,
+        "definition": "successful requests / sum of nonoverlapping allocation measurement envelopes; concurrent latency sums are not wall time"
+      }
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_EMPTY",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "group": "E4",
+      "requests": 240,
+      "blocks": 30,
+      "successes": 240,
+      "correctness": {
+        "MATCHED": 240
+      },
+      "observed_loads": {
+        "LOW": 240
+      },
+      "selected_strategies": {
+        "S0_NATIVE": 30,
+        "S1_REPEAT_CACHE": 210
+      },
+      "actual_strategies": {
+        "S0_NATIVE": 30,
+        "S1_REPEAT_CACHE": 210
+      },
+      "cache_hits": 180,
+      "fallbacks": 0,
+      "metrics": {
+        "end_to_end_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 65.54034589166666,
+          "sample_std": 16.663997142120948,
+          "p50": 56.3117985,
+          "p95": 95.80921734999998,
+          "p99": 103.21369408,
+          "mean_ci": [
+            64.13175696039583,
+            67.16177159114584
+          ]
+        },
+        "decision_overhead_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 15.463068004166667,
+          "sample_std": 4.144102571560365,
+          "p50": 14.144529,
+          "p95": 19.594577299999997,
+          "p99": 23.115153169999985,
+          "mean_ci": [
+            15.000588914395834,
+            16.142862437125
+          ]
+        },
+        "client_wall_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 5.722466666666667,
+          "sample_std": 9.1181863456059,
+          "p50": 0.541,
+          "p95": 23.298399999999997,
+          "p99": 27.186459999999993,
+          "mean_ci": [
+            5.489771125,
+            5.989090625
+          ]
+        },
+        "execute_call_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 3.9034833333333334,
+          "sample_std": 6.919375667150327,
+          "p50": 0.0,
+          "p95": 17.01119999999999,
+          "p99": 20.843999999999994,
+          "mean_ci": [
+            3.6749403333333333,
+            4.1619510625
+          ]
+        },
+        "result_fetch_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 1.0429625,
+          "sample_std": 1.8205610297441315,
+          "p50": 0.0,
+          "p95": 4.4956499999999995,
+          "p99": 4.8777599999999985,
+          "mean_ci": [
+            1.0040456041666665,
+            1.0800701458333335
+          ]
+        },
+        "client_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.477883333333334,
+          "sample_std": 1.2535607605833066,
+          "p50": 4.3375,
+          "p95": 6.1331,
+          "p99": 8.714179999999955,
+          "mean_ci": [
+            4.253136895833333,
+            4.735677291666668
+          ]
+        },
+        "client_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40333333333334,
+          "sample_std": 0.01798806360776519,
+          "p50": 67.4,
+          "p95": 67.4,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.41333333333334
+          ]
+        },
+        "db_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.557479166666667,
+          "sample_std": 1.3712616581560975,
+          "p50": 4.249,
+          "p95": 6.704999999999999,
+          "p99": 10.935,
+          "mean_ci": [
+            4.2914570625,
+            4.905063625
+          ]
+        },
+        "db_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40333333333334,
+          "sample_std": 0.01798806360776519,
+          "p50": 67.4,
+          "p95": 67.4,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.41333333333334
+          ]
+        }
+      },
+      "server_execution_ms": null,
+      "throughput": {
+        "successful_requests_per_second": 13.806709404952109,
+        "pooled_rate_ci": [
+          13.460316742687354,
+          14.14368866623432
+        ],
+        "including_setup_warmup_cleanup_per_second": 7.591266525841547,
+        "definition": "successful requests / sum of nonoverlapping allocation measurement envelopes; concurrent latency sums are not wall time"
+      }
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_WARM",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "group": "A1",
+      "requests": 240,
+      "blocks": 30,
+      "successes": 240,
+      "correctness": {
+        "MATCHED": 240
+      },
+      "observed_loads": {
+        "LOW": 240
+      },
+      "selected_strategies": {
+        "S1_REPEAT_CACHE": 240
+      },
+      "actual_strategies": {
+        "S1_REPEAT_CACHE": 240
+      },
+      "cache_hits": 240,
+      "fallbacks": 0,
+      "metrics": {
+        "end_to_end_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 60.7763148375,
+          "sample_std": 13.4377587612306,
+          "p50": 54.370513,
+          "p95": 89.8206826,
+          "p99": 109.24377012,
+          "mean_ci": [
+            58.834694407312504,
+            62.62716594329167
+          ]
+        },
+        "decision_overhead_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 15.3225463625,
+          "sample_std": 4.628509052342569,
+          "p50": 13.9420955,
+          "p95": 21.282783899999995,
+          "p99": 33.376574009999835,
+          "mean_ci": [
+            14.801597908625,
+            15.942960390229167
+          ]
+        },
+        "client_wall_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.5417708333333333,
+          "sample_std": 0.19753709884954976,
+          "p50": 0.488,
+          "p95": 0.73215,
+          "p99": 1.5926199999999906,
+          "mean_ci": [
+            0.5123075833333334,
+            0.5813429791666667
+          ]
+        },
+        "execute_call_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "mean_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "result_fetch_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "mean_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "client_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.3235125,
+          "sample_std": 1.389854421747338,
+          "p50": 4.022,
+          "p95": 6.130049999999998,
+          "p99": 11.569,
+          "mean_ci": [
+            4.0230395,
+            4.730383854166667
+          ]
+        },
+        "client_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.41333333333334,
+          "sample_std": 0.03406450522228262,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.43
+          ]
+        },
+        "db_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.4662625,
+          "sample_std": 1.5102388994182012,
+          "p50": 4.229,
+          "p95": 6.4955,
+          "p99": 11.320599999999974,
+          "mean_ci": [
+            4.177106312499999,
+            4.818719625
+          ]
+        },
+        "db_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.41333333333334,
+          "sample_std": 0.03406450522228262,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.43
+          ]
+        }
+      },
+      "server_execution_ms": null,
+      "throughput": {
+        "successful_requests_per_second": 15.02101345901582,
+        "pooled_rate_ci": [
+          14.599530242584661,
+          15.510210199642616
+        ],
+        "including_setup_warmup_cleanup_per_second": 6.985450640333514,
+        "definition": "successful requests / sum of nonoverlapping allocation measurement envelopes; concurrent latency sums are not wall time"
+      }
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_WARM",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "group": "A2",
+      "requests": 240,
+      "blocks": 30,
+      "successes": 240,
+      "correctness": {
+        "MATCHED": 240
+      },
+      "observed_loads": {
+        "LOW": 240
+      },
+      "selected_strategies": {
+        "S1_REPEAT_CACHE": 240
+      },
+      "actual_strategies": {
+        "S1_REPEAT_CACHE": 240
+      },
+      "cache_hits": 240,
+      "fallbacks": 0,
+      "metrics": {
+        "end_to_end_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 49.71653437916667,
+          "sample_std": 10.72693010891133,
+          "p50": 45.5368195,
+          "p95": 66.54017275,
+          "p99": 93.85984013999999,
+          "mean_ci": [
+            47.872065383458335,
+            51.632683907458336
+          ]
+        },
+        "decision_overhead_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.333082720833334,
+          "sample_std": 3.000582903384435,
+          "p50": 3.833735,
+          "p95": 5.85556775,
+          "p99": 6.59501347,
+          "mean_ci": [
+            4.050190315770833,
+            4.957111678833334
+          ]
+        },
+        "client_wall_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.5525666666666667,
+          "sample_std": 0.12242782748549161,
+          "p50": 0.524,
+          "p95": 0.7357499999999997,
+          "p99": 0.8080499999999999,
+          "mean_ci": [
+            0.5358748958333334,
+            0.575171125
+          ]
+        },
+        "execute_call_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "mean_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "result_fetch_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "mean_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "client_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.242416666666666,
+          "sample_std": 1.0953013997098768,
+          "p50": 4.045,
+          "p95": 5.799249999999999,
+          "p99": 6.628,
+          "mean_ci": [
+            4.0264090625,
+            4.537601791666667
+          ]
+        },
+        "client_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40666666666667,
+          "sample_std": 0.024996513006467425,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42
+          ]
+        },
+        "db_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.4274125,
+          "sample_std": 1.2335417188843,
+          "p50": 4.1985,
+          "p95": 5.750849999999996,
+          "p99": 7.078489999999994,
+          "mean_ci": [
+            4.215135270833334,
+            4.794129854166667
+          ]
+        },
+        "db_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40666666666667,
+          "sample_std": 0.024996513006467425,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42
+          ]
+        }
+      },
+      "server_execution_ms": null,
+      "throughput": {
+        "successful_requests_per_second": 17.811674053192636,
+        "pooled_rate_ci": [
+          17.178547821438293,
+          18.490625267693854
+        ],
+        "including_setup_warmup_cleanup_per_second": 7.6266032917813,
+        "definition": "successful requests / sum of nonoverlapping allocation measurement envelopes; concurrent latency sums are not wall time"
+      }
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_WARM",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "group": "E0",
+      "requests": 240,
+      "blocks": 30,
+      "successes": 240,
+      "correctness": {
+        "MATCHED": 240
+      },
+      "observed_loads": {
+        "LOW": 240
+      },
+      "selected_strategies": {
+        "S0_NATIVE": 240
+      },
+      "actual_strategies": {
+        "S0_NATIVE": 240
+      },
+      "cache_hits": 0,
+      "fallbacks": 0,
+      "metrics": {
+        "end_to_end_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 65.55094495416667,
+          "sample_std": 9.585710477018742,
+          "p50": 66.0321265,
+          "p95": 75.69623575,
+          "p99": 102.21956778999999,
+          "mean_ci": [
+            63.514766412583334,
+            67.55477824085418
+          ]
+        },
+        "decision_overhead_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 5.2808659958333335,
+          "sample_std": 1.0492617042269057,
+          "p50": 5.4997145,
+          "p95": 7.238064049999998,
+          "p99": 8.416763559999994,
+          "mean_ci": [
+            5.049925009395833,
+            5.504991119333333
+          ]
+        },
+        "client_wall_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 22.51685416666667,
+          "sample_std": 4.929168560973851,
+          "p50": 21.578,
+          "p95": 27.056099999999997,
+          "p99": 31.32806999999998,
+          "mean_ci": [
+            21.423290604166667,
+            23.71997897916667
+          ]
+        },
+        "execute_call_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 15.876900000000001,
+          "sample_std": 2.3503244497828084,
+          "p50": 15.238,
+          "p95": 20.44555,
+          "p99": 21.71162,
+          "mean_ci": [
+            15.013256208333333,
+            16.913188583333334
+          ]
+        },
+        "result_fetch_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.883908333333333,
+          "sample_std": 0.5772635779468412,
+          "p50": 5.0535,
+          "p95": 5.54035,
+          "p99": 5.978459999999997,
+          "mean_ci": [
+            4.735948354166667,
+            5.030416937500001
+          ]
+        },
+        "client_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 5.131379166666667,
+          "sample_std": 1.0338493786038032,
+          "p50": 4.966,
+          "p95": 6.819949999999998,
+          "p99": 9.416769999999966,
+          "mean_ci": [
+            4.938422541666666,
+            5.391783479166667
+          ]
+        },
+        "client_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.41000000000001,
+          "sample_std": 0.03006269599314849,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42666666666668
+          ]
+        },
+        "db_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 5.179891666666666,
+          "sample_std": 1.167010845954148,
+          "p50": 5.027,
+          "p95": 6.558999999999992,
+          "p99": 8.68,
+          "mean_ci": [
+            4.981657562500001,
+            5.422259937500001
+          ]
+        },
+        "db_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.41000000000001,
+          "sample_std": 0.03006269599314849,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42666666666668
+          ]
+        }
+      },
+      "server_execution_ms": null,
+      "throughput": {
+        "successful_requests_per_second": 14.735020132949174,
+        "pooled_rate_ci": [
+          14.301071576732136,
+          15.205426259536859
+        ],
+        "including_setup_warmup_cleanup_per_second": 6.901453673581061,
+        "definition": "successful requests / sum of nonoverlapping allocation measurement envelopes; concurrent latency sums are not wall time"
+      }
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_WARM",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "group": "E1",
+      "requests": 240,
+      "blocks": 30,
+      "successes": 240,
+      "correctness": {
+        "MATCHED": 240
+      },
+      "observed_loads": {
+        "LOW": 240
+      },
+      "selected_strategies": {
+        "S1_REPEAT_CACHE": 240
+      },
+      "actual_strategies": {
+        "S1_REPEAT_CACHE": 240
+      },
+      "cache_hits": 240,
+      "fallbacks": 0,
+      "metrics": {
+        "end_to_end_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 37.1287019875,
+          "sample_std": 7.75834325477764,
+          "p50": 34.447941,
+          "p95": 48.911259449999996,
+          "p99": 70.79456318999998,
+          "mean_ci": [
+            35.68621422166667,
+            38.61251404820833
+          ]
+        },
+        "decision_overhead_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.178858829166667,
+          "sample_std": 0.8699296236902824,
+          "p50": 3.8023930000000004,
+          "p95": 5.80045725,
+          "p99": 7.035830629999997,
+          "mean_ci": [
+            3.9639217596666665,
+            4.404426543354167
+          ]
+        },
+        "client_wall_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.541925,
+          "sample_std": 0.08584082403570988,
+          "p50": 0.521,
+          "p95": 0.70915,
+          "p99": 0.8241799999999995,
+          "mean_ci": [
+            0.5261704375,
+            0.5564458541666666
+          ]
+        },
+        "execute_call_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "mean_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "result_fetch_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "mean_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "client_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.8301541666666665,
+          "sample_std": 2.165428351815061,
+          "p50": 4.3655,
+          "p95": 7.35,
+          "p99": 16.246269999999967,
+          "mean_ci": [
+            4.305538520833333,
+            5.629996687499999
+          ]
+        },
+        "client_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.41041666666668,
+          "sample_std": 0.03061150365804184,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42458541666666
+          ]
+        },
+        "db_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 5.154991666666667,
+          "sample_std": 1.8631521092914136,
+          "p50": 4.826,
+          "p95": 7.554,
+          "p99": 12.339,
+          "mean_ci": [
+            4.6158225,
+            5.967499916666668
+          ]
+        },
+        "db_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40666666666667,
+          "sample_std": 0.024996513006467425,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.41875
+          ]
+        }
+      },
+      "server_execution_ms": null,
+      "throughput": {
+        "successful_requests_per_second": 25.694787041605,
+        "pooled_rate_ci": [
+          24.71890921594237,
+          26.711856341789154
+        ],
+        "including_setup_warmup_cleanup_per_second": 8.816739110998544,
+        "definition": "successful requests / sum of nonoverlapping allocation measurement envelopes; concurrent latency sums are not wall time"
+      }
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_WARM",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "group": "E2",
+      "requests": 240,
+      "blocks": 30,
+      "successes": 240,
+      "correctness": {
+        "MATCHED": 240
+      },
+      "observed_loads": {
+        "LOW": 240
+      },
+      "selected_strategies": {
+        "S1_REPEAT_CACHE": 240
+      },
+      "actual_strategies": {
+        "S1_REPEAT_CACHE": 240
+      },
+      "cache_hits": 240,
+      "fallbacks": 0,
+      "metrics": {
+        "end_to_end_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 38.187561154166666,
+          "sample_std": 8.818097988928542,
+          "p50": 34.8000655,
+          "p95": 50.495501499999996,
+          "p99": 75.17230983999997,
+          "mean_ci": [
+            36.483396563625,
+            40.052245103125
+          ]
+        },
+        "decision_overhead_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.169065166666667,
+          "sample_std": 0.7773818407321124,
+          "p50": 3.797537,
+          "p95": 5.78364485,
+          "p99": 6.527038999999997,
+          "mean_ci": [
+            3.9847263749791666,
+            4.3518513393125
+          ]
+        },
+        "client_wall_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.5535375,
+          "sample_std": 0.09043844071288164,
+          "p50": 0.52,
+          "p95": 0.7512,
+          "p99": 0.7860499999999999,
+          "mean_ci": [
+            0.534612375,
+            0.572613375
+          ]
+        },
+        "execute_call_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "mean_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "result_fetch_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "mean_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "client_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.264958333333333,
+          "sample_std": 0.8457851878761435,
+          "p50": 4.242,
+          "p95": 6.030149999999998,
+          "p99": 6.841,
+          "mean_ci": [
+            4.089676375,
+            4.461716583333334
+          ]
+        },
+        "client_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.41000000000001,
+          "sample_std": 0.03006269599314849,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42666666666668
+          ]
+        },
+        "db_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.542229166666667,
+          "sample_std": 0.8620000592080121,
+          "p50": 4.613,
+          "p95": 5.875049999999999,
+          "p99": 7.053,
+          "mean_ci": [
+            4.394171166666666,
+            4.737195125
+          ]
+        },
+        "db_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.41000000000001,
+          "sample_std": 0.03006269599314849,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42666666666668
+          ]
+        }
+      },
+      "server_execution_ms": null,
+      "throughput": {
+        "successful_requests_per_second": 24.99703420604576,
+        "pooled_rate_ci": [
+          23.8547490383922,
+          26.134822459000873
+        ],
+        "including_setup_warmup_cleanup_per_second": 8.65272586577248,
+        "definition": "successful requests / sum of nonoverlapping allocation measurement envelopes; concurrent latency sums are not wall time"
+      }
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_WARM",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "group": "E3",
+      "requests": 240,
+      "blocks": 30,
+      "successes": 240,
+      "correctness": {
+        "MATCHED": 240
+      },
+      "observed_loads": {
+        "LOW": 240
+      },
+      "selected_strategies": {
+        "S1_REPEAT_CACHE": 240
+      },
+      "actual_strategies": {
+        "S1_REPEAT_CACHE": 240
+      },
+      "cache_hits": 240,
+      "fallbacks": 0,
+      "metrics": {
+        "end_to_end_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 49.0454963375,
+          "sample_std": 10.634566755612756,
+          "p50": 44.7029815,
+          "p95": 70.02872885,
+          "p99": 92.26434125999998,
+          "mean_ci": [
+            47.31073044077083,
+            50.65068543929167
+          ]
+        },
+        "decision_overhead_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.116235520833333,
+          "sample_std": 0.8304778626697917,
+          "p50": 3.7485885000000003,
+          "p95": 5.96019,
+          "p99": 6.532375419999999,
+          "mean_ci": [
+            3.9904382511458336,
+            4.249564189666667
+          ]
+        },
+        "client_wall_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.5637166666666666,
+          "sample_std": 0.17940324991730947,
+          "p50": 0.527,
+          "p95": 0.7404499999999998,
+          "p99": 1.458799999999984,
+          "mean_ci": [
+            0.5404998541666667,
+            0.5910422916666667
+          ]
+        },
+        "execute_call_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "mean_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "result_fetch_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "mean_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "client_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.3397625,
+          "sample_std": 1.5151800194943488,
+          "p50": 3.947,
+          "p95": 7.597,
+          "p99": 10.29313999999995,
+          "mean_ci": [
+            4.002263354166667,
+            4.790706520833334
+          ]
+        },
+        "client_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.41000000000001,
+          "sample_std": 0.03006269599314849,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42666666666668
+          ]
+        },
+        "db_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.555695833333333,
+          "sample_std": 1.483964497872139,
+          "p50": 4.325,
+          "p95": 7.349,
+          "p99": 11.002729999999945,
+          "mean_ci": [
+            4.256657645833333,
+            4.941417854166667
+          ]
+        },
+        "db_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40958333333334,
+          "sample_std": 0.02949777194148324,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42541666666668
+          ]
+        }
+      },
+      "server_execution_ms": null,
+      "throughput": {
+        "successful_requests_per_second": 18.232670758077987,
+        "pooled_rate_ci": [
+          17.680335971338838,
+          18.86375111449377
+        ],
+        "including_setup_warmup_cleanup_per_second": 7.637615357368075,
+        "definition": "successful requests / sum of nonoverlapping allocation measurement envelopes; concurrent latency sums are not wall time"
+      }
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_WARM",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "group": "E4",
+      "requests": 240,
+      "blocks": 30,
+      "successes": 240,
+      "correctness": {
+        "MATCHED": 240
+      },
+      "observed_loads": {
+        "LOW": 240
+      },
+      "selected_strategies": {
+        "S1_REPEAT_CACHE": 240
+      },
+      "actual_strategies": {
+        "S1_REPEAT_CACHE": 240
+      },
+      "cache_hits": 240,
+      "fallbacks": 0,
+      "metrics": {
+        "end_to_end_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 61.0871703,
+          "sample_std": 14.422455642087188,
+          "p50": 54.246314,
+          "p95": 89.588645,
+          "p99": 121.57665742999986,
+          "mean_ci": [
+            58.92256785135417,
+            63.394622388833334
+          ]
+        },
+        "decision_overhead_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 15.1839724125,
+          "sample_std": 4.1695942606402,
+          "p50": 13.924906,
+          "p95": 20.837687,
+          "p99": 23.325141929999997,
+          "mean_ci": [
+            14.707951547729166,
+            15.965770192833334
+          ]
+        },
+        "client_wall_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.5430458333333333,
+          "sample_std": 0.19812935312149058,
+          "p50": 0.4905,
+          "p95": 0.70605,
+          "p99": 1.5043399999999838,
+          "mean_ci": [
+            0.5143820625,
+            0.5823712083333333
+          ]
+        },
+        "execute_call_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "mean_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "result_fetch_ms": {
+          "n": 240,
+          "missing": 0,
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0,
+          "mean_ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "client_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.301983333333333,
+          "sample_std": 1.3636494689611578,
+          "p50": 3.887,
+          "p95": 6.631,
+          "p99": 8.898,
+          "mean_ci": [
+            3.998436479166667,
+            4.7363460208333334
+          ]
+        },
+        "client_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40666666666667,
+          "sample_std": 0.024996513006467425,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42
+          ]
+        },
+        "db_cpu_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 4.538754166666667,
+          "sample_std": 1.7781200364427883,
+          "p50": 4.048,
+          "p95": 6.912,
+          "p99": 14.069139999999987,
+          "mean_ci": [
+            4.209074187500001,
+            5.0073052916666665
+          ]
+        },
+        "db_memory_percent": {
+          "n": 240,
+          "missing": 0,
+          "mean": 67.40666666666667,
+          "sample_std": 0.024996513006467425,
+          "p50": 67.4,
+          "p95": 67.5,
+          "p99": 67.5,
+          "mean_ci": [
+            67.4,
+            67.42
+          ]
+        }
+      },
+      "server_execution_ms": null,
+      "throughput": {
+        "successful_requests_per_second": 14.94918491749327,
+        "pooled_rate_ci": [
+          14.419007968495468,
+          15.474201020174636
+        ],
+        "including_setup_warmup_cleanup_per_second": 6.967528818398777,
+        "definition": "successful requests / sum of nonoverlapping allocation measurement envelopes; concurrent latency sums are not wall time"
+      }
+    }
+  ],
+  "contrasts": [
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_EMPTY",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "candidate": "E1",
+      "baseline": "E0",
+      "blocks": 30,
+      "mean_delta_ms": -18.6764166125,
+      "paired_mean_ci_ms": [
+        -21.167313507249997,
+        -15.971068971166657
+      ],
+      "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification"
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_WARM",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "candidate": "E1",
+      "baseline": "E0",
+      "blocks": 30,
+      "mean_delta_ms": -28.422242966666666,
+      "paired_mean_ci_ms": [
+        -31.05336595058333,
+        -25.94109975779166
+      ],
+      "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification"
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_EMPTY",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "candidate": "E4",
+      "baseline": "E0",
+      "blocks": 30,
+      "mean_delta_ms": 1.4426329125000001,
+      "paired_mean_ci_ms": [
+        -0.8637484940416659,
+        3.8724536349166705
+      ],
+      "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification"
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_WARM",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "candidate": "E4",
+      "baseline": "E0",
+      "blocks": 30,
+      "mean_delta_ms": -4.463774654166668,
+      "paired_mean_ci_ms": [
+        -7.3375136834166685,
+        -1.445586850145834
+      ],
+      "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification"
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_EMPTY",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "candidate": "E4",
+      "baseline": "E1",
+      "blocks": 30,
+      "mean_delta_ms": 20.119049525,
+      "paired_mean_ci_ms": [
+        18.1072098216875,
+        22.11850441372917
+      ],
+      "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification"
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_WARM",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "candidate": "E4",
+      "baseline": "E1",
+      "blocks": 30,
+      "mean_delta_ms": 23.9584683125,
+      "paired_mean_ci_ms": [
+        21.2117467596875,
+        26.974498899083333
+      ],
+      "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification"
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_EMPTY",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "candidate": "E4",
+      "baseline": "E2",
+      "blocks": 30,
+      "mean_delta_ms": 19.8689686875,
+      "paired_mean_ci_ms": [
+        17.98572783054167,
+        21.849679718666668
+      ],
+      "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification"
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_WARM",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "candidate": "E4",
+      "baseline": "E2",
+      "blocks": 30,
+      "mean_delta_ms": 22.89960914583333,
+      "paired_mean_ci_ms": [
+        19.82024159691667,
+        26.056827233708333
+      ],
+      "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification"
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_EMPTY",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "candidate": "E4",
+      "baseline": "E3",
+      "blocks": 30,
+      "mean_delta_ms": 8.9876918625,
+      "paired_mean_ci_ms": [
+        7.057771445666667,
+        11.196600293604169
+      ],
+      "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification"
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_WARM",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "candidate": "E4",
+      "baseline": "E3",
+      "blocks": 30,
+      "mean_delta_ms": 12.041673962499999,
+      "paired_mean_ci_ms": [
+        9.226161220249999,
+        15.121133454291666
+      ],
+      "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification"
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_EMPTY",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "candidate": "A1",
+      "baseline": "E4",
+      "blocks": 30,
+      "mean_delta_ms": -0.10602163749999913,
+      "paired_mean_ci_ms": [
+        -2.108116602208331,
+        1.6706122231250025
+      ],
+      "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification"
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_WARM",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "candidate": "A1",
+      "baseline": "E4",
+      "blocks": 30,
+      "mean_delta_ms": -0.3108554624999992,
+      "paired_mean_ci_ms": [
+        -3.2337580999999993,
+        2.4486154972500014
+      ],
+      "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification"
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_EMPTY",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "candidate": "A2",
+      "baseline": "E4",
+      "blocks": 30,
+      "mean_delta_ms": -9.170071375,
+      "paired_mean_ci_ms": [
+        -11.416430517812499,
+        -6.566434012729163
+      ],
+      "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification"
+    },
+    {
+      "workload": "small_count",
+      "cache_condition": "APPLICATION_WARM",
+      "target_load": "LOW",
+      "concurrency": 1,
+      "candidate": "A2",
+      "baseline": "E4",
+      "blocks": 30,
+      "mean_delta_ms": -11.370635920833331,
+      "paired_mean_ci_ms": [
+        -14.747509647229164,
+        -8.181440535041665
+      ],
+      "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "scope": "offline historical object-retention probe; NOT causal proof of the live pause; NOT query benefit",
+  "measurements": [
+    {
+      "phase": "retained_training_workflows",
+      "retained_workflows": 240,
+      "retained_experiences": 240,
+      "tracked_objects": 1030816,
+      "gc_full_ms": [
+        221.657502,
+        219.644983,
+        221.312567,
+        219.694316,
+        227.257346,
+        222.368049,
+        222.79238,
+        222.695505
+      ],
+      "median_gc_full_ms": 222.0127755
+    },
+    {
+      "phase": "released_training_workflows",
+      "retained_workflows": 0,
+      "retained_experiences": 240,
+      "tracked_objects": 202097,
+      "gc_full_ms": [
+        47.418451,
+        43.013502,
+        49.576718,
+        42.564499,
+        38.882002,
+        52.058583,
+        48.685244,
+        52.550278
+      ],
+      "median_gc_full_ms": 48.051847499999994
+    }
+  ]
+}

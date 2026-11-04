@@ -1,0 +1,623 @@
+{
+  "scope": "two independent sessions, separate within-session intervals; no pooled CI",
+  "runs": [
+    {
+      "run": "phase8_fairness_20261104_120412_469528511",
+      "journal_sha256": "96ac88add2d8a25f01730a330160ff77342f966766dc5681de3a3ec660352bbb",
+      "counts": {
+        "completed_allocations": 540,
+        "heldout_requests": 3360,
+        "planned_allocations": 540,
+        "raw_requests": 5940,
+        "training_applied": 960
+      },
+      "groups": [
+        {
+          "cache": "APPLICATION_EMPTY",
+          "group": "A1",
+          "e2e_mean_ms": 71.91022079583334,
+          "decision_mean_ms": 23.577078066666665
+        },
+        {
+          "cache": "APPLICATION_EMPTY",
+          "group": "A2",
+          "e2e_mean_ms": 55.3484556375,
+          "decision_mean_ms": 4.6122154625
+        },
+        {
+          "cache": "APPLICATION_EMPTY",
+          "group": "E0",
+          "e2e_mean_ms": 64.4822552625,
+          "decision_mean_ms": 5.2392475916666665
+        },
+        {
+          "cache": "APPLICATION_EMPTY",
+          "group": "E1",
+          "e2e_mean_ms": 45.0121891,
+          "decision_mean_ms": 4.4416095166666665
+        },
+        {
+          "cache": "APPLICATION_EMPTY",
+          "group": "E2",
+          "e2e_mean_ms": 43.972048408333336,
+          "decision_mean_ms": 4.3518404375
+        },
+        {
+          "cache": "APPLICATION_EMPTY",
+          "group": "E3",
+          "e2e_mean_ms": 52.78704537916666,
+          "decision_mean_ms": 4.107300879166667
+        },
+        {
+          "cache": "APPLICATION_EMPTY",
+          "group": "E4",
+          "e2e_mean_ms": 72.15768105416667,
+          "decision_mean_ms": 23.922058170833335
+        },
+        {
+          "cache": "APPLICATION_WARM",
+          "group": "A1",
+          "e2e_mean_ms": 66.9428251375,
+          "decision_mean_ms": 23.4745793875
+        },
+        {
+          "cache": "APPLICATION_WARM",
+          "group": "A2",
+          "e2e_mean_ms": 47.80086974583333,
+          "decision_mean_ms": 4.159011033333333
+        },
+        {
+          "cache": "APPLICATION_WARM",
+          "group": "E0",
+          "e2e_mean_ms": 65.13036526666667,
+          "decision_mean_ms": 5.189913016666667
+        },
+        {
+          "cache": "APPLICATION_WARM",
+          "group": "E1",
+          "e2e_mean_ms": 36.50058097083333,
+          "decision_mean_ms": 3.9538229125
+        },
+        {
+          "cache": "APPLICATION_WARM",
+          "group": "E2",
+          "e2e_mean_ms": 38.44087735833333,
+          "decision_mean_ms": 4.097558158333333
+        },
+        {
+          "cache": "APPLICATION_WARM",
+          "group": "E3",
+          "e2e_mean_ms": 49.77607850416667,
+          "decision_mean_ms": 4.6731629875
+        },
+        {
+          "cache": "APPLICATION_WARM",
+          "group": "E4",
+          "e2e_mean_ms": 66.89180128333334,
+          "decision_mean_ms": 23.252542304166667
+        }
+      ],
+      "contrasts": [
+        {
+          "baseline": "E0",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_EMPTY",
+          "candidate": "E1",
+          "concurrency": 1,
+          "mean_delta_ms": -19.4700661625,
+          "paired_mean_ci_ms": [
+            -21.917029820104165,
+            -16.98953837414583
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E0",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_WARM",
+          "candidate": "E1",
+          "concurrency": 1,
+          "mean_delta_ms": -28.629784295833336,
+          "paired_mean_ci_ms": [
+            -31.594106320354165,
+            -25.7188499058125
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E0",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_EMPTY",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 7.675425791666666,
+          "paired_mean_ci_ms": [
+            5.532927013104166,
+            10.073957305333337
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E0",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_WARM",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 1.761436016666665,
+          "paired_mean_ci_ms": [
+            -1.5949907816041675,
+            5.0996660343125
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E1",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_EMPTY",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 27.145491954166665,
+          "paired_mean_ci_ms": [
+            25.123460611,
+            29.4819004535625
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E1",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_WARM",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 30.3912203125,
+          "paired_mean_ci_ms": [
+            27.011988993979166,
+            33.26179096270833
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E2",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_EMPTY",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 28.185632645833333,
+          "paired_mean_ci_ms": [
+            25.446608034124996,
+            31.221710367874998
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E2",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_WARM",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 28.450923924999998,
+          "paired_mean_ci_ms": [
+            25.18362828195833,
+            31.4877695126875
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E3",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_EMPTY",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 19.370635675,
+          "paired_mean_ci_ms": [
+            16.8155220925625,
+            22.285126286958338
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E3",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_WARM",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 17.115722779166667,
+          "paired_mean_ci_ms": [
+            14.1505609041875,
+            20.075900269958332
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E4",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_EMPTY",
+          "candidate": "A1",
+          "concurrency": 1,
+          "mean_delta_ms": -0.2474602583333322,
+          "paired_mean_ci_ms": [
+            -4.183405809770832,
+            3.478117786062501
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E4",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_WARM",
+          "candidate": "A1",
+          "concurrency": 1,
+          "mean_delta_ms": 0.05102385416666735,
+          "paired_mean_ci_ms": [
+            -3.1666866871666652,
+            3.449434091562507
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E4",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_EMPTY",
+          "candidate": "A2",
+          "concurrency": 1,
+          "mean_delta_ms": -16.809225416666667,
+          "paired_mean_ci_ms": [
+            -19.253658042833333,
+            -14.623318522437499
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E4",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_WARM",
+          "candidate": "A2",
+          "concurrency": 1,
+          "mean_delta_ms": -19.090931537499998,
+          "paired_mean_ci_ms": [
+            -21.582630047104164,
+            -16.162784978854162
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        }
+      ]
+    },
+    {
+      "run": "phase8_fairness_repeat_20261104_124904_168672646",
+      "journal_sha256": "b3b80cc35b5672e2ef55c415047edf40bdfebcb8d6336dafa70ff0d1aca916e2",
+      "counts": {
+        "completed_allocations": 540,
+        "heldout_requests": 3360,
+        "planned_allocations": 540,
+        "raw_requests": 5940,
+        "training_applied": 960
+      },
+      "groups": [
+        {
+          "cache": "APPLICATION_EMPTY",
+          "group": "A1",
+          "e2e_mean_ms": 70.65263459583333,
+          "decision_mean_ms": 23.499234004166667
+        },
+        {
+          "cache": "APPLICATION_EMPTY",
+          "group": "A2",
+          "e2e_mean_ms": 52.84807864166667,
+          "decision_mean_ms": 4.122605191666667
+        },
+        {
+          "cache": "APPLICATION_EMPTY",
+          "group": "E0",
+          "e2e_mean_ms": 62.2181087,
+          "decision_mean_ms": 5.0619606875
+        },
+        {
+          "cache": "APPLICATION_EMPTY",
+          "group": "E1",
+          "e2e_mean_ms": 44.399492425,
+          "decision_mean_ms": 4.3727496
+        },
+        {
+          "cache": "APPLICATION_EMPTY",
+          "group": "E2",
+          "e2e_mean_ms": 44.450965825,
+          "decision_mean_ms": 4.3812347875
+        },
+        {
+          "cache": "APPLICATION_EMPTY",
+          "group": "E3",
+          "e2e_mean_ms": 54.164057120833334,
+          "decision_mean_ms": 4.396491225
+        },
+        {
+          "cache": "APPLICATION_EMPTY",
+          "group": "E4",
+          "e2e_mean_ms": 70.26885498333333,
+          "decision_mean_ms": 23.0229550625
+        },
+        {
+          "cache": "APPLICATION_WARM",
+          "group": "A1",
+          "e2e_mean_ms": 66.81636232916667,
+          "decision_mean_ms": 23.3454540375
+        },
+        {
+          "cache": "APPLICATION_WARM",
+          "group": "A2",
+          "e2e_mean_ms": 48.10339106666667,
+          "decision_mean_ms": 4.1449568291666665
+        },
+        {
+          "cache": "APPLICATION_WARM",
+          "group": "E0",
+          "e2e_mean_ms": 62.95242748333333,
+          "decision_mean_ms": 5.060002866666666
+        },
+        {
+          "cache": "APPLICATION_WARM",
+          "group": "E1",
+          "e2e_mean_ms": 37.47136962916667,
+          "decision_mean_ms": 4.1719251625
+        },
+        {
+          "cache": "APPLICATION_WARM",
+          "group": "E2",
+          "e2e_mean_ms": 36.17271914166667,
+          "decision_mean_ms": 4.0565202625
+        },
+        {
+          "cache": "APPLICATION_WARM",
+          "group": "E3",
+          "e2e_mean_ms": 47.9814960125,
+          "decision_mean_ms": 4.5772839875
+        },
+        {
+          "cache": "APPLICATION_WARM",
+          "group": "E4",
+          "e2e_mean_ms": 65.85154539583333,
+          "decision_mean_ms": 22.886243595833335
+        }
+      ],
+      "contrasts": [
+        {
+          "baseline": "E0",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_EMPTY",
+          "candidate": "E1",
+          "concurrency": 1,
+          "mean_delta_ms": -17.818616275,
+          "paired_mean_ci_ms": [
+            -19.951964026000002,
+            -15.248662163291664
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E0",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_WARM",
+          "candidate": "E1",
+          "concurrency": 1,
+          "mean_delta_ms": -25.481057854166668,
+          "paired_mean_ci_ms": [
+            -27.505989095437503,
+            -23.253708441770833
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E0",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_EMPTY",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 8.050746283333334,
+          "paired_mean_ci_ms": [
+            5.326976687,
+            10.789229411625003
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E0",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_WARM",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 2.899117912499999,
+          "paired_mean_ci_ms": [
+            -0.1377514132500003,
+            5.898812639708342
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E1",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_EMPTY",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 25.869362558333332,
+          "paired_mean_ci_ms": [
+            22.496556849854166,
+            28.583688123333335
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E1",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_WARM",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 28.380175766666667,
+          "paired_mean_ci_ms": [
+            24.881170489145834,
+            31.593784006083336
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E2",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_EMPTY",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 25.817889158333333,
+          "paired_mean_ci_ms": [
+            22.683517158,
+            28.67437509897917
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E2",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_WARM",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 29.678826254166665,
+          "paired_mean_ci_ms": [
+            26.819089160437503,
+            32.49990240466666
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E3",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_EMPTY",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 16.1047978625,
+          "paired_mean_ci_ms": [
+            12.588030274458335,
+            19.158105169958336
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E3",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_WARM",
+          "candidate": "E4",
+          "concurrency": 1,
+          "mean_delta_ms": 17.870049383333335,
+          "paired_mean_ci_ms": [
+            13.997754430208332,
+            21.39905279983334
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E4",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_EMPTY",
+          "candidate": "A1",
+          "concurrency": 1,
+          "mean_delta_ms": 0.383779612499999,
+          "paired_mean_ci_ms": [
+            -3.071536381895834,
+            4.292848447645833
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E4",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_WARM",
+          "candidate": "A1",
+          "concurrency": 1,
+          "mean_delta_ms": 0.9648169333333331,
+          "paired_mean_ci_ms": [
+            -2.0841905315624993,
+            4.0804521931250015
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E4",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_EMPTY",
+          "candidate": "A2",
+          "concurrency": 1,
+          "mean_delta_ms": -17.420776341666667,
+          "paired_mean_ci_ms": [
+            -20.117103800833334,
+            -14.158109231854164
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        },
+        {
+          "baseline": "E4",
+          "blocks": 30,
+          "cache_condition": "APPLICATION_WARM",
+          "candidate": "A2",
+          "concurrency": 1,
+          "mean_delta_ms": -17.748154329166667,
+          "paired_mean_ci_ms": [
+            -21.2080573473125,
+            -14.055568367729167
+          ],
+          "scope": "within-session paired-block exploratory contrast; no multiplicity correction or independent-session certification",
+          "target_load": "LOW",
+          "workload": "small_count"
+        }
+      ]
+    }
+  ]
+}

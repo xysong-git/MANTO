@@ -1,0 +1,1819 @@
+{
+  "fixture_version": "last-edge-cert-summary-v1",
+  "certification_date": "2026-11-01",
+  "server_version": "2.0.6",
+  "server_build": "c6ecbde",
+  "client_version": "2.0.6",
+  "dialect": "tree",
+  "scope": "user-authorized writable dedicated database; DDL/DML; LAST vs Native edge-data differential; cleanup",
+  "database": "root.last_cert_20261101",
+  "authorized_by_user": true,
+  "password_in_output": false,
+  "connect_ok": true,
+  "close_ok": true,
+  "ddl": [
+    {
+      "sql": "CREATE DATABASE root.last_cert_20261101",
+      "ok": true
+    },
+    {
+      "sql": "CREATE ALIGNED TIMESERIES root.last_cert_20261101.d_main(s_float FLOAT, s_double DOUBLE, s_int32 INT32, s_int64 INT64, s_text TEXT, s_bool BOOLEAN)",
+      "ok": true
+    },
+    {
+      "sql": "CREATE ALIGNED TIMESERIES root.last_cert_20261101.d_missing(s_float FLOAT, s_double DOUBLE, s_int32 INT32, s_int64 INT64, s_text TEXT, s_bool BOOLEAN)",
+      "ok": true
+    },
+    {
+      "sql": "CREATE ALIGNED TIMESERIES root.last_cert_20261101.d_api_none(s_float FLOAT, s_double DOUBLE, s_int32 INT32, s_int64 INT64, s_text TEXT, s_bool BOOLEAN)",
+      "ok": true
+    },
+    {
+      "sql": "CREATE ALIGNED TIMESERIES root.last_cert_20261101.d_dup(s_float FLOAT, s_double DOUBLE, s_int32 INT32, s_int64 INT64, s_text TEXT, s_bool BOOLEAN)",
+      "ok": true
+    },
+    {
+      "sql": "CREATE ALIGNED TIMESERIES root.last_cert_20261101.d_ooo(s_float FLOAT, s_double DOUBLE, s_int32 INT32, s_int64 INT64, s_text TEXT, s_bool BOOLEAN)",
+      "ok": true
+    },
+    {
+      "sql": "CREATE ALIGNED TIMESERIES root.last_cert_20261101.d_gap(s_float FLOAT, s_double DOUBLE, s_int32 INT32, s_int64 INT64, s_text TEXT, s_bool BOOLEAN)",
+      "ok": true
+    },
+    {
+      "sql": "CREATE ALIGNED TIMESERIES root.last_cert_20261101.d_absent(s_float FLOAT, s_double DOUBLE, s_int32 INT32, s_int64 INT64, s_text TEXT, s_bool BOOLEAN)",
+      "ok": true
+    },
+    {
+      "sql": "CREATE ALIGNED TIMESERIES root.last_cert_20261101.d_sql_null(s_float FLOAT, s_double DOUBLE, s_int32 INT32, s_int64 INT64, s_text TEXT, s_bool BOOLEAN)",
+      "ok": true
+    }
+  ],
+  "dml": [
+    {
+      "label": "main",
+      "kind": "api_insert_aligned_record",
+      "device": "root.last_cert_20261101.d_main",
+      "timestamp": 1000,
+      "ok": true,
+      "values": [
+        1.5,
+        2.5,
+        3,
+        4,
+        "alpha",
+        true
+      ],
+      "measurements": [
+        "s_float",
+        "s_double",
+        "s_int32",
+        "s_int64",
+        "s_text",
+        "s_bool"
+      ]
+    },
+    {
+      "label": "main",
+      "kind": "api_insert_aligned_record",
+      "device": "root.last_cert_20261101.d_main",
+      "timestamp": 2000,
+      "ok": true,
+      "values": [
+        10.5,
+        20.5,
+        30,
+        40,
+        "beta",
+        false
+      ],
+      "measurements": [
+        "s_float",
+        "s_double",
+        "s_int32",
+        "s_int64",
+        "s_text",
+        "s_bool"
+      ]
+    },
+    {
+      "label": "main",
+      "kind": "api_insert_aligned_record",
+      "device": "root.last_cert_20261101.d_main",
+      "timestamp": 3000,
+      "ok": true,
+      "values": [
+        100.5,
+        200.5,
+        300,
+        400,
+        "gamma",
+        true
+      ],
+      "measurements": [
+        "s_float",
+        "s_double",
+        "s_int32",
+        "s_int64",
+        "s_text",
+        "s_bool"
+      ]
+    },
+    {
+      "label": "missing_full_1000",
+      "kind": "sql",
+      "device": null,
+      "timestamp": null,
+      "ok": true,
+      "sql": "INSERT INTO root.last_cert_20261101.d_missing(timestamp,s_float,s_double,s_int32,s_int64,s_text,s_bool) VALUES(1000,1.0,2.0,3,4,'first',true)"
+    },
+    {
+      "label": "missing_partial_2000",
+      "kind": "sql",
+      "device": null,
+      "timestamp": null,
+      "ok": true,
+      "sql": "INSERT INTO root.last_cert_20261101.d_missing(timestamp,s_float,s_text) VALUES(2000,20.0,'second')"
+    },
+    {
+      "label": "missing_partial_3000",
+      "kind": "sql",
+      "device": null,
+      "timestamp": null,
+      "ok": true,
+      "sql": "INSERT INTO root.last_cert_20261101.d_missing(timestamp,s_double) VALUES(3000,30.0)"
+    },
+    {
+      "label": "api_none_full_1000",
+      "kind": "api_insert_aligned_record",
+      "device": "root.last_cert_20261101.d_api_none",
+      "timestamp": 1000,
+      "ok": true,
+      "values": [
+        1.0,
+        2.0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "measurements": [
+        "s_float",
+        "s_double",
+        "s_int32",
+        "s_int64",
+        "s_text",
+        "s_bool"
+      ]
+    },
+    {
+      "label": "api_none_partial_2000",
+      "kind": "api_insert_aligned_record",
+      "device": "root.last_cert_20261101.d_api_none",
+      "timestamp": 2000,
+      "ok": true,
+      "values": [
+        null,
+        20.0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "measurements": [
+        "s_float",
+        "s_double",
+        "s_int32",
+        "s_int64",
+        "s_text",
+        "s_bool"
+      ]
+    },
+    {
+      "label": "api_none_partial_3000",
+      "kind": "api_insert_aligned_record",
+      "device": "root.last_cert_20261101.d_api_none",
+      "timestamp": 3000,
+      "ok": true,
+      "values": [
+        30.0,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "measurements": [
+        "s_float",
+        "s_double",
+        "s_int32",
+        "s_int64",
+        "s_text",
+        "s_bool"
+      ]
+    },
+    {
+      "label": "api_none_all_none_4000",
+      "kind": "api_insert_aligned_record",
+      "device": "root.last_cert_20261101.d_api_none",
+      "timestamp": 4000,
+      "ok": false,
+      "values": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "measurements": [
+        "s_float",
+        "s_double",
+        "s_int32",
+        "s_int64",
+        "s_text",
+        "s_bool"
+      ],
+      "error_type": "ValueError",
+      "error_message": "not enough values to unpack (expected 3, got 0)"
+    },
+    {
+      "label": "dup_first",
+      "kind": "api_insert_aligned_record",
+      "device": "root.last_cert_20261101.d_dup",
+      "timestamp": 1000,
+      "ok": true,
+      "values": [
+        1.0
+      ],
+      "measurements": [
+        "s_float"
+      ]
+    },
+    {
+      "label": "dup_duplicate",
+      "kind": "api_insert_aligned_record",
+      "device": "root.last_cert_20261101.d_dup",
+      "timestamp": 1000,
+      "ok": true,
+      "values": [
+        2.0
+      ],
+      "measurements": [
+        "s_float"
+      ]
+    },
+    {
+      "label": "ooo_3000",
+      "kind": "api_insert_aligned_record",
+      "device": "root.last_cert_20261101.d_ooo",
+      "timestamp": 3000,
+      "ok": true,
+      "values": [
+        300.0
+      ],
+      "measurements": [
+        "s_float"
+      ]
+    },
+    {
+      "label": "ooo_1000",
+      "kind": "api_insert_aligned_record",
+      "device": "root.last_cert_20261101.d_ooo",
+      "timestamp": 1000,
+      "ok": true,
+      "values": [
+        100.0
+      ],
+      "measurements": [
+        "s_float"
+      ]
+    },
+    {
+      "label": "ooo_2000",
+      "kind": "api_insert_aligned_record",
+      "device": "root.last_cert_20261101.d_ooo",
+      "timestamp": 2000,
+      "ok": true,
+      "values": [
+        200.0
+      ],
+      "measurements": [
+        "s_float"
+      ]
+    },
+    {
+      "label": "gap_1000",
+      "kind": "api_insert_aligned_record",
+      "device": "root.last_cert_20261101.d_gap",
+      "timestamp": 1000,
+      "ok": true,
+      "values": [
+        10.0
+      ],
+      "measurements": [
+        "s_float"
+      ]
+    },
+    {
+      "label": "gap_3000",
+      "kind": "api_insert_aligned_record",
+      "device": "root.last_cert_20261101.d_gap",
+      "timestamp": 3000,
+      "ok": true,
+      "values": [
+        30.0
+      ],
+      "measurements": [
+        "s_float"
+      ]
+    },
+    {
+      "label": "gap_5000",
+      "kind": "api_insert_aligned_record",
+      "device": "root.last_cert_20261101.d_gap",
+      "timestamp": 5000,
+      "ok": true,
+      "values": [
+        50.0
+      ],
+      "measurements": [
+        "s_float"
+      ]
+    },
+    {
+      "label": "sql_null_1000",
+      "kind": "sql",
+      "device": null,
+      "timestamp": null,
+      "ok": true,
+      "sql": "INSERT INTO root.last_cert_20261101.d_sql_null(timestamp,s_float,s_double) VALUES(1000,NULL,2.5)"
+    }
+  ],
+  "observations": {
+    "duplicate_timestamp": {
+      "accepted_count": 2,
+      "behavior": "DUPLICATE_ACCEPTED_SINGLE_STORED_VALUE",
+      "count": 1,
+      "raw_rows": [
+        [
+          1000,
+          2.0
+        ]
+      ]
+    },
+    "out_of_order": {
+      "accepted_count": 3,
+      "count": 3,
+      "stored_timestamps": [
+        1000,
+        2000,
+        3000
+      ],
+      "sorted_after_write": true,
+      "raw_rows": [
+        [
+          1000,
+          100.0
+        ],
+        [
+          2000,
+          200.0
+        ],
+        [
+          3000,
+          300.0
+        ]
+      ]
+    },
+    "gap": {
+      "accepted_count": 3,
+      "count": 3,
+      "raw_rows": [
+        [
+          1000,
+          10.0
+        ],
+        [
+          3000,
+          30.0
+        ],
+        [
+          5000,
+          50.0
+        ]
+      ]
+    },
+    "api_all_none": {
+      "insert_ok": false,
+      "error_type": "ValueError",
+      "error_message": "not enough values to unpack (expected 3, got 0)",
+      "counts_before": {
+        "s_float": 2,
+        "s_double": 2
+      },
+      "counts_after": {
+        "s_float": 2,
+        "s_double": 2
+      },
+      "counts_unchanged": true
+    },
+    "explicit_sql_null": {
+      "accepted": true,
+      "s_float_count": 0,
+      "s_double_count": 1,
+      "s_float_rows": [],
+      "s_double_rows": [
+        [
+          1000,
+          2.5
+        ]
+      ]
+    }
+  },
+  "cases": [
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          100.5
+        ],
+        "native": [
+          3000,
+          100.5
+        ]
+      }
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time <= 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          10.5
+        ],
+        "native": [
+          2000,
+          10.5
+        ]
+      }
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time > 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          100.5
+        ],
+        "native": [
+          3000,
+          100.5
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          20.0
+        ],
+        "native": [
+          2000,
+          20.0
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time <= 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          20.0
+        ],
+        "native": [
+          2000,
+          20.0
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time >= 2500",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          200.5
+        ],
+        "native": [
+          3000,
+          200.5
+        ]
+      }
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "time <= 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          20.5
+        ],
+        "native": [
+          2000,
+          20.5
+        ]
+      }
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "time > 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          200.5
+        ],
+        "native": [
+          3000,
+          200.5
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          30.0
+        ],
+        "native": [
+          3000,
+          30.0
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "time <= 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          2.0
+        ],
+        "native": [
+          1000,
+          2.0
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "time >= 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          30.0
+        ],
+        "native": [
+          3000,
+          30.0
+        ]
+      }
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_int32",
+      "data_type": "INT32",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          300
+        ],
+        "native": [
+          3000,
+          300
+        ]
+      }
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_int32",
+      "data_type": "INT32",
+      "where": "time <= 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          30
+        ],
+        "native": [
+          2000,
+          30
+        ]
+      }
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_int32",
+      "data_type": "INT32",
+      "where": "time > 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          300
+        ],
+        "native": [
+          3000,
+          300
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_int32",
+      "data_type": "INT32",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          3
+        ],
+        "native": [
+          1000,
+          3
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_int32",
+      "data_type": "INT32",
+      "where": "time <= 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          3
+        ],
+        "native": [
+          1000,
+          3
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_int32",
+      "data_type": "INT32",
+      "where": "time >= 2500",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_int64",
+      "data_type": "INT64",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          400
+        ],
+        "native": [
+          3000,
+          400
+        ]
+      }
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_int64",
+      "data_type": "INT64",
+      "where": "time <= 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          40
+        ],
+        "native": [
+          2000,
+          40
+        ]
+      }
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_int64",
+      "data_type": "INT64",
+      "where": "time > 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          400
+        ],
+        "native": [
+          3000,
+          400
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_int64",
+      "data_type": "INT64",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          4
+        ],
+        "native": [
+          1000,
+          4
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_int64",
+      "data_type": "INT64",
+      "where": "time <= 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          4
+        ],
+        "native": [
+          1000,
+          4
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_int64",
+      "data_type": "INT64",
+      "where": "time >= 2500",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_text",
+      "data_type": "TEXT",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          "gamma"
+        ],
+        "native": [
+          3000,
+          "gamma"
+        ]
+      }
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_text",
+      "data_type": "TEXT",
+      "where": "time <= 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          "beta"
+        ],
+        "native": [
+          2000,
+          "beta"
+        ]
+      }
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_text",
+      "data_type": "TEXT",
+      "where": "time > 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          "gamma"
+        ],
+        "native": [
+          3000,
+          "gamma"
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_text",
+      "data_type": "TEXT",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          "second"
+        ],
+        "native": [
+          2000,
+          "second"
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_text",
+      "data_type": "TEXT",
+      "where": "time <= 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          "second"
+        ],
+        "native": [
+          2000,
+          "second"
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_text",
+      "data_type": "TEXT",
+      "where": "time >= 2500",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_bool",
+      "data_type": "BOOLEAN",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          true
+        ],
+        "native": [
+          3000,
+          true
+        ]
+      }
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_bool",
+      "data_type": "BOOLEAN",
+      "where": "time <= 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          false
+        ],
+        "native": [
+          2000,
+          false
+        ]
+      }
+    },
+    {
+      "scenario": "main_clean",
+      "device": "root.last_cert_20261101.d_main",
+      "series": "s_bool",
+      "data_type": "BOOLEAN",
+      "where": "time > 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          true
+        ],
+        "native": [
+          3000,
+          true
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_bool",
+      "data_type": "BOOLEAN",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          true
+        ],
+        "native": [
+          1000,
+          true
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_bool",
+      "data_type": "BOOLEAN",
+      "where": "time <= 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          true
+        ],
+        "native": [
+          1000,
+          true
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_bool",
+      "data_type": "BOOLEAN",
+      "where": "time >= 2500",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time = 2000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          20.0
+        ],
+        "native": [
+          2000,
+          20.0
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time = 3000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time > 3000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time = 4000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "time = 2000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "time = 3000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          30.0
+        ],
+        "native": [
+          3000,
+          30.0
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "time > 3000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "time = 4000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_text",
+      "data_type": "TEXT",
+      "where": "time = 2000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          "second"
+        ],
+        "native": [
+          2000,
+          "second"
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_text",
+      "data_type": "TEXT",
+      "where": "time = 3000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_text",
+      "data_type": "TEXT",
+      "where": "time > 3000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_text",
+      "data_type": "TEXT",
+      "where": "time = 4000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time = 1000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          1.0
+        ],
+        "native": [
+          1000,
+          1.0
+        ]
+      }
+    },
+    {
+      "scenario": "missing_measurement",
+      "device": "root.last_cert_20261101.d_missing",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "time = 1000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          2.0
+        ],
+        "native": [
+          1000,
+          2.0
+        ]
+      }
+    },
+    {
+      "scenario": "duplicate_timestamp",
+      "device": "root.last_cert_20261101.d_dup",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          2.0
+        ],
+        "native": [
+          1000,
+          2.0
+        ]
+      }
+    },
+    {
+      "scenario": "duplicate_timestamp",
+      "device": "root.last_cert_20261101.d_dup",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time = 1000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          2.0
+        ],
+        "native": [
+          1000,
+          2.0
+        ]
+      }
+    },
+    {
+      "scenario": "duplicate_timestamp",
+      "device": "root.last_cert_20261101.d_dup",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time <= 1000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          2.0
+        ],
+        "native": [
+          1000,
+          2.0
+        ]
+      }
+    },
+    {
+      "scenario": "out_of_order",
+      "device": "root.last_cert_20261101.d_ooo",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          300.0
+        ],
+        "native": [
+          3000,
+          300.0
+        ]
+      }
+    },
+    {
+      "scenario": "out_of_order",
+      "device": "root.last_cert_20261101.d_ooo",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time <= 2500",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          200.0
+        ],
+        "native": [
+          2000,
+          200.0
+        ]
+      }
+    },
+    {
+      "scenario": "out_of_order",
+      "device": "root.last_cert_20261101.d_ooo",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time = 2000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          200.0
+        ],
+        "native": [
+          2000,
+          200.0
+        ]
+      }
+    },
+    {
+      "scenario": "out_of_order",
+      "device": "root.last_cert_20261101.d_ooo",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time < 2000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          100.0
+        ],
+        "native": [
+          1000,
+          100.0
+        ]
+      }
+    },
+    {
+      "scenario": "gap",
+      "device": "root.last_cert_20261101.d_gap",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          5000,
+          50.0
+        ],
+        "native": [
+          5000,
+          50.0
+        ]
+      }
+    },
+    {
+      "scenario": "gap",
+      "device": "root.last_cert_20261101.d_gap",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time <= 4000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          30.0
+        ],
+        "native": [
+          3000,
+          30.0
+        ]
+      }
+    },
+    {
+      "scenario": "gap",
+      "device": "root.last_cert_20261101.d_gap",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time < 3000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          10.0
+        ],
+        "native": [
+          1000,
+          10.0
+        ]
+      }
+    },
+    {
+      "scenario": "gap",
+      "device": "root.last_cert_20261101.d_gap",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time > 3000 AND time < 5000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "gap",
+      "device": "root.last_cert_20261101.d_gap",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time = 2000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "gap",
+      "device": "root.last_cert_20261101.d_gap",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time = 3000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          30.0
+        ],
+        "native": [
+          3000,
+          30.0
+        ]
+      }
+    },
+    {
+      "scenario": "gap",
+      "device": "root.last_cert_20261101.d_gap",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time >= 2000 AND time <= 4000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          30.0
+        ],
+        "native": [
+          3000,
+          30.0
+        ]
+      }
+    },
+    {
+      "scenario": "gap",
+      "device": "root.last_cert_20261101.d_gap",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time > 5000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "gap",
+      "device": "root.last_cert_20261101.d_gap",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time < 1000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "empty_series",
+      "device": "root.last_cert_20261101.d_absent",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "empty_series",
+      "device": "root.last_cert_20261101.d_absent",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time = 1000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "empty_series",
+      "device": "root.last_cert_20261101.d_absent",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time <= 1000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "api_none",
+      "device": "root.last_cert_20261101.d_api_none",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          30.0
+        ],
+        "native": [
+          3000,
+          30.0
+        ]
+      }
+    },
+    {
+      "scenario": "api_none",
+      "device": "root.last_cert_20261101.d_api_none",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          20.0
+        ],
+        "native": [
+          2000,
+          20.0
+        ]
+      }
+    },
+    {
+      "scenario": "api_none",
+      "device": "root.last_cert_20261101.d_api_none",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time = 2000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "api_none",
+      "device": "root.last_cert_20261101.d_api_none",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "time = 3000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "api_none",
+      "device": "root.last_cert_20261101.d_api_none",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time = 3000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          3000,
+          30.0
+        ],
+        "native": [
+          3000,
+          30.0
+        ]
+      }
+    },
+    {
+      "scenario": "api_none",
+      "device": "root.last_cert_20261101.d_api_none",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "time = 2000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          2000,
+          20.0
+        ],
+        "native": [
+          2000,
+          20.0
+        ]
+      }
+    },
+    {
+      "scenario": "explicit_sql_null",
+      "device": "root.last_cert_20261101.d_sql_null",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "explicit_sql_null",
+      "device": "root.last_cert_20261101.d_sql_null",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          2.5
+        ],
+        "native": [
+          1000,
+          2.5
+        ]
+      }
+    },
+    {
+      "scenario": "explicit_sql_null",
+      "device": "root.last_cert_20261101.d_sql_null",
+      "series": "s_float",
+      "data_type": "FLOAT",
+      "where": "time = 1000",
+      "pass": true,
+      "reason": "both empty"
+    },
+    {
+      "scenario": "explicit_sql_null",
+      "device": "root.last_cert_20261101.d_sql_null",
+      "series": "s_double",
+      "data_type": "DOUBLE",
+      "where": "time = 1000",
+      "pass": true,
+      "reason": "timestamp and normalized value match",
+      "normalized": {
+        "last": [
+          1000,
+          2.5
+        ],
+        "native": [
+          1000,
+          2.5
+        ]
+      }
+    }
+  ],
+  "case_summary": {
+    "total": 79,
+    "passed": 79,
+    "failed": 0,
+    "by_scenario": {
+      "main_clean": {
+        "total": 18,
+        "passed": 18,
+        "failed": 0
+      },
+      "missing_measurement": {
+        "total": 32,
+        "passed": 32,
+        "failed": 0
+      },
+      "duplicate_timestamp": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "out_of_order": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "gap": {
+        "total": 9,
+        "passed": 9,
+        "failed": 0
+      },
+      "empty_series": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "api_none": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0
+      },
+      "explicit_sql_null": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      }
+    }
+  },
+  "counts": {
+    "main": {
+      "s_float": 3,
+      "s_double": 3,
+      "s_int32": 3,
+      "s_int64": 3,
+      "s_text": 3,
+      "s_bool": 3
+    },
+    "missing": {
+      "s_float": 2,
+      "s_double": 2,
+      "s_int32": 1,
+      "s_int64": 1,
+      "s_text": 2,
+      "s_bool": 1
+    },
+    "api_none": {
+      "s_float": 2,
+      "s_double": 2,
+      "s_int32": 0,
+      "s_int64": 0,
+      "s_text": 0,
+      "s_bool": 0
+    },
+    "gap": {
+      "s_float": 3
+    },
+    "out_of_order": {
+      "s_float": 3
+    },
+    "duplicate": {
+      "s_float": 1
+    },
+    "absent": {
+      "s_float": 0
+    },
+    "sql_null": {
+      "s_float": 0,
+      "s_double": 1
+    }
+  },
+  "count_mismatches": [],
+  "edge_cases_status": "PASS",
+  "conclusion": {
+    "strategy_id": "CAND_LAST_SINGLE_SERIES",
+    "status": "NOT_VERIFIED",
+    "edge_case_coverage": "PASS",
+    "submarkers": [
+      "DEMAND_UNPROVEN",
+      "FALLBACK_CONTRACT_ONLY"
+    ],
+    "summary": "Authorized writable-database edge cases were exercised against IoTDB 2.0.6.  The strategy remains NOT_VERIFIED because a representative workload demand and a production Executor fallback are still unproven."
+  },
+  "limitations": [
+    "single host, single client process; no concurrent or background writes",
+    "no TTL, compaction, restart, crash-recovery, or multi-day test",
+    "no cold-cache or DB-host CPU/memory/IO metrics",
+    "duplicate/out-of-order behavior is observed only on this 2.0.6 server configuration",
+    "explicit SQL NULL behavior is parser/server-specific and recorded as observed only",
+    "no NaN/Infinity, aliases, OFFSET, wildcard, or no-ORDER-BY LIMIT 1 variants",
+    "no production Executor fallback, timeout, or connection-interruption test",
+    "no representative Native ORDER BY time DESC LIMIT 1 workload",
+    "the dedicated database is dropped; raw evidence remains outside the repository"
+  ],
+  "cleanup": {
+    "drop_attempts": [
+      {
+        "sql": "DROP DATABASE root.last_cert_20261101",
+        "ok": true
+      }
+    ],
+    "absent_after_drop": true,
+    "databases_unchanged_except_target": true,
+    "databases_after": [
+      "root.__system",
+      "root.db200.g_0",
+      "root.db800.g_0",
+      "root.dbl.g_0",
+      "root.dbm.g_0",
+      "root.dbs.g_0",
+      "root.test.g_0"
+    ]
+  },
+  "raw_evidence": "external writable-DB certification result; not committed"
+}

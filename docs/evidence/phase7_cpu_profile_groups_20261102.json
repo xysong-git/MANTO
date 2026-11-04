@@ -1,0 +1,1516 @@
+{
+  "protocol": "cpu-activity-v2",
+  "purpose": "NATIVE_SCREENING_NOT_LEARNING",
+  "schedule_complete": true,
+  "journal_sha256": "48fc23c6fd7194c02533d50fb91090b31ba34d05d58feca98489f9562f806f4d",
+  "journal": "data/phase7_cpu_profile_groups_20261102/journal.jsonl",
+  "epoch": "heavy-complete-20261102-v2",
+  "rounds": [
+    {
+      "index": 0,
+      "scale": "medium_scale",
+      "type": "q05_group_by_time",
+      "workers": 1,
+      "repeat": 0,
+      "sql_sha256": "e13aabe39acfa1b6fefab93f656c218a2b22df1eae4889434b51bdc684e07511",
+      "elapsed_s": 0.5853296249406412,
+      "results": [
+        {
+          "execution_id": "be272fb023dd4585b9f304e581f983eb",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 168.978,
+            "result_fetch_ms": 45.633,
+            "client_wall_ms": 216.088
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:04:55.615007+00:00",
+          "finished_at": "2026-11-02T12:04:55.834250+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 5.9,
+      "cpu_max_percent": 39.3,
+      "cpu_mean_percent": 22.599999999999998,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    },
+    {
+      "index": 1,
+      "scale": "medium_scale",
+      "type": "q05_group_by_time",
+      "workers": 1,
+      "repeat": 1,
+      "sql_sha256": "e13aabe39acfa1b6fefab93f656c218a2b22df1eae4889434b51bdc684e07511",
+      "elapsed_s": 0.4930297579849139,
+      "results": [
+        {
+          "execution_id": "85cb9d9b332b4f5baf60921b6777f000",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 163.465,
+            "result_fetch_ms": 50.578,
+            "client_wall_ms": 216.193
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:04:56.086897+00:00",
+          "finished_at": "2026-11-02T12:04:56.306257+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 17.5,
+      "cpu_max_percent": 25.7,
+      "cpu_mean_percent": 21.6,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    },
+    {
+      "index": 2,
+      "scale": "small_scale",
+      "type": "q05_group_by_time",
+      "workers": 1,
+      "repeat": 1,
+      "sql_sha256": "f67c7d40f9e3a2c974052f97160fedeb9bb5a5d078ce841b68495e5e9a81c627",
+      "elapsed_s": 0.26255380490329117,
+      "results": [
+        {
+          "execution_id": "3fdde102f7134fc8beae6718f9e1454b",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 32.126,
+            "result_fetch_ms": 26.977,
+            "client_wall_ms": 59.807
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:04:56.612611+00:00",
+          "finished_at": "2026-11-02T12:04:56.675788+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 1,
+      "cpu_min_percent": 6.2,
+      "cpu_max_percent": 6.2,
+      "cpu_mean_percent": 6.2,
+      "cpu_buckets": {
+        "LOW": 1
+      }
+    },
+    {
+      "index": 3,
+      "scale": "small_scale",
+      "type": "q05_group_by_time",
+      "workers": 1,
+      "repeat": 0,
+      "sql_sha256": "f67c7d40f9e3a2c974052f97160fedeb9bb5a5d078ce841b68495e5e9a81c627",
+      "elapsed_s": 0.24382163595873863,
+      "results": [
+        {
+          "execution_id": "27803e8748e94d2cb6e672a7463e55e5",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 48.005,
+            "result_fetch_ms": 23.015,
+            "client_wall_ms": 71.499
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:04:56.858899+00:00",
+          "finished_at": "2026-11-02T12:04:56.933654+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 1,
+      "cpu_min_percent": 6.8,
+      "cpu_max_percent": 6.8,
+      "cpu_mean_percent": 6.8,
+      "cpu_buckets": {
+        "LOW": 1
+      }
+    },
+    {
+      "index": 4,
+      "scale": "medium_scale",
+      "type": "q06_group_by_time_value_filter",
+      "workers": 1,
+      "repeat": 1,
+      "sql_sha256": "7b54e2e6f702cb194e3a814f3d4fc970dfbf36dfed16d2cfb5d81484c08c7dae",
+      "elapsed_s": 0.7293850920395926,
+      "results": [
+        {
+          "execution_id": "fd428346f1ab47358ef8911cde909f24",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 256.682,
+            "result_fetch_ms": 184.57,
+            "client_wall_ms": 445.317
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:04:57.278969+00:00",
+          "finished_at": "2026-11-02T12:04:57.727229+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 3.0,
+      "cpu_max_percent": 6.3,
+      "cpu_mean_percent": 4.65,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    },
+    {
+      "index": 5,
+      "scale": "small_scale",
+      "type": "q06_group_by_time_value_filter",
+      "workers": 1,
+      "repeat": 1,
+      "sql_sha256": "e165b06baf12e46ff24ab5a4d41db50a55659dffed6925ba353cdcd6b2813bde",
+      "elapsed_s": 0.25967645994387567,
+      "results": [
+        {
+          "execution_id": "205aa2f602724c73b4f5194b658ea30a",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 64.138,
+            "result_fetch_ms": 24.723,
+            "client_wall_ms": 89.341
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:04:57.910247+00:00",
+          "finished_at": "2026-11-02T12:04:58.002628+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 1,
+      "cpu_min_percent": 4.0,
+      "cpu_max_percent": 4.0,
+      "cpu_mean_percent": 4.0,
+      "cpu_buckets": {
+        "LOW": 1
+      }
+    },
+    {
+      "index": 6,
+      "scale": "medium_scale",
+      "type": "q06_group_by_time_value_filter",
+      "workers": 1,
+      "repeat": 0,
+      "sql_sha256": "7b54e2e6f702cb194e3a814f3d4fc970dfbf36dfed16d2cfb5d81484c08c7dae",
+      "elapsed_s": 0.6692725130124018,
+      "results": [
+        {
+          "execution_id": "2c4b9deea6a243f6b14529d12292100e",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 241.111,
+            "result_fetch_ms": 167.164,
+            "client_wall_ms": 409.851
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:04:58.300522+00:00",
+          "finished_at": "2026-11-02T12:04:58.713402+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 4.6,
+      "cpu_max_percent": 4.8,
+      "cpu_mean_percent": 4.699999999999999,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    },
+    {
+      "index": 7,
+      "scale": "small_scale",
+      "type": "q06_group_by_time_value_filter",
+      "workers": 1,
+      "repeat": 0,
+      "sql_sha256": "e165b06baf12e46ff24ab5a4d41db50a55659dffed6925ba353cdcd6b2813bde",
+      "elapsed_s": 0.2778519169660285,
+      "results": [
+        {
+          "execution_id": "e6ea6b90896c4729a882748cebd51bf6",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 62.804,
+            "result_fetch_ms": 28.901,
+            "client_wall_ms": 92.447
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:04:58.933171+00:00",
+          "finished_at": "2026-11-02T12:04:59.028729+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 1,
+      "cpu_min_percent": 4.3,
+      "cpu_max_percent": 4.3,
+      "cpu_mean_percent": 4.3,
+      "cpu_buckets": {
+        "LOW": 1
+      }
+    },
+    {
+      "index": 8,
+      "scale": "small_scale",
+      "type": "q06_group_by_time_value_filter",
+      "workers": 2,
+      "repeat": 0,
+      "sql_sha256": "e165b06baf12e46ff24ab5a4d41db50a55659dffed6925ba353cdcd6b2813bde",
+      "elapsed_s": 0.8045888659544289,
+      "results": [
+        {
+          "execution_id": "7018833e44b34fcab1e62c5131c50b62",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 95.195,
+            "result_fetch_ms": 39.531,
+            "client_wall_ms": 135.593
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:04:59.631038+00:00",
+          "finished_at": "2026-11-02T12:04:59.785910+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "08699c9a30e74fdc90e51d114889322b",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 79.008,
+            "result_fetch_ms": 90.229,
+            "client_wall_ms": 169.971
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:04:59.645744+00:00",
+          "finished_at": "2026-11-02T12:04:59.819202+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 4.6,
+      "cpu_max_percent": 5.2,
+      "cpu_mean_percent": 4.9,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    },
+    {
+      "index": 9,
+      "scale": "medium_scale",
+      "type": "q05_group_by_time",
+      "workers": 2,
+      "repeat": 0,
+      "sql_sha256": "e13aabe39acfa1b6fefab93f656c218a2b22df1eae4889434b51bdc684e07511",
+      "elapsed_s": 1.3751146650174633,
+      "results": [
+        {
+          "execution_id": "812bd14a0efe47d3b70cd2603d76ab48",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 276.656,
+            "result_fetch_ms": 81.423,
+            "client_wall_ms": 362.363
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:00.796542+00:00",
+          "finished_at": "2026-11-02T12:05:01.162917+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "11ffef2e23d14d73910bd142b4b1efe0",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 364.12,
+            "result_fetch_ms": 87.881,
+            "client_wall_ms": 454.081
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:00.791672+00:00",
+          "finished_at": "2026-11-02T12:05:01.255595+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 3,
+      "cpu_min_percent": 3.5,
+      "cpu_max_percent": 50.9,
+      "cpu_mean_percent": 25.400000000000002,
+      "cpu_buckets": {
+        "LOW": 2,
+        "MEDIUM": 1
+      }
+    },
+    {
+      "index": 10,
+      "scale": "small_scale",
+      "type": "q05_group_by_time",
+      "workers": 2,
+      "repeat": 0,
+      "sql_sha256": "f67c7d40f9e3a2c974052f97160fedeb9bb5a5d078ce841b68495e5e9a81c627",
+      "elapsed_s": 0.6438527249265462,
+      "results": [
+        {
+          "execution_id": "fdaaa644683942fcbbf1379a3d6c3fad",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 100.355,
+            "result_fetch_ms": 39.487,
+            "client_wall_ms": 140.942
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:01.739918+00:00",
+          "finished_at": "2026-11-02T12:05:01.894043+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "f16ae5ab43c24479890c62ffcca22cee",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 119.553,
+            "result_fetch_ms": 54.635,
+            "client_wall_ms": 174.879
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:01.752480+00:00",
+          "finished_at": "2026-11-02T12:05:01.930481+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 3.8,
+      "cpu_max_percent": 13.9,
+      "cpu_mean_percent": 8.85,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    },
+    {
+      "index": 11,
+      "scale": "small_scale",
+      "type": "q06_group_by_time_value_filter",
+      "workers": 2,
+      "repeat": 1,
+      "sql_sha256": "e165b06baf12e46ff24ab5a4d41db50a55659dffed6925ba353cdcd6b2813bde",
+      "elapsed_s": 0.6499698580009863,
+      "results": [
+        {
+          "execution_id": "59575350089d4668a5d8ef9a2378ee00",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 103.647,
+            "result_fetch_ms": 63.446,
+            "client_wall_ms": 167.751
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:02.438125+00:00",
+          "finished_at": "2026-11-02T12:05:02.609275+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "7693dbb9a6fd4aaaa3901fefbdaedcb8",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 85.135,
+            "result_fetch_ms": 66.542,
+            "client_wall_ms": 167.982
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:02.426756+00:00",
+          "finished_at": "2026-11-02T12:05:02.607268+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 4.3,
+      "cpu_max_percent": 10.4,
+      "cpu_mean_percent": 7.35,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    },
+    {
+      "index": 12,
+      "scale": "small_scale",
+      "type": "q05_group_by_time",
+      "workers": 2,
+      "repeat": 1,
+      "sql_sha256": "f67c7d40f9e3a2c974052f97160fedeb9bb5a5d078ce841b68495e5e9a81c627",
+      "elapsed_s": 0.6097232800675556,
+      "results": [
+        {
+          "execution_id": "6c336550499140e2912b478edd0c2ef8",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 130.48,
+            "result_fetch_ms": 34.242,
+            "client_wall_ms": 165.524
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:03.075253+00:00",
+          "finished_at": "2026-11-02T12:05:03.256002+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "1b46ad575b9f4043b8e531df00d17ff7",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 108.188,
+            "result_fetch_ms": 22.567,
+            "client_wall_ms": 135.839
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:03.085340+00:00",
+          "finished_at": "2026-11-02T12:05:03.225191+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 3.9,
+      "cpu_max_percent": 13.6,
+      "cpu_mean_percent": 8.75,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    },
+    {
+      "index": 13,
+      "scale": "medium_scale",
+      "type": "q06_group_by_time_value_filter",
+      "workers": 2,
+      "repeat": 1,
+      "sql_sha256": "7b54e2e6f702cb194e3a814f3d4fc970dfbf36dfed16d2cfb5d81484c08c7dae",
+      "elapsed_s": 2.284147005993873,
+      "results": [
+        {
+          "execution_id": "2a73f19a4f524da5a329a6c5f4eece15",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 469.154,
+            "result_fetch_ms": 481.063,
+            "client_wall_ms": 952.504
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:04.691869+00:00",
+          "finished_at": "2026-11-02T12:05:05.648312+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "0ca10707cf434dc4a276e8f8d0eb19b3",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 503.403,
+            "result_fetch_ms": 361.874,
+            "client_wall_ms": 868.616
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:04.684844+00:00",
+          "finished_at": "2026-11-02T12:05:05.565223+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 5,
+      "cpu_min_percent": 2.8,
+      "cpu_max_percent": 9.3,
+      "cpu_mean_percent": 4.54,
+      "cpu_buckets": {
+        "LOW": 5
+      }
+    },
+    {
+      "index": 14,
+      "scale": "medium_scale",
+      "type": "q05_group_by_time",
+      "workers": 2,
+      "repeat": 1,
+      "sql_sha256": "e13aabe39acfa1b6fefab93f656c218a2b22df1eae4889434b51bdc684e07511",
+      "elapsed_s": 1.3330014570383355,
+      "results": [
+        {
+          "execution_id": "e1f3b81b505f45be888a49fbd3cdf017",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 260.293,
+            "result_fetch_ms": 127.164,
+            "client_wall_ms": 393.329
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:06.553757+00:00",
+          "finished_at": "2026-11-02T12:05:06.979337+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "95fac0ed4a2a4295b588a830f390e36c",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 308.821,
+            "result_fetch_ms": 67.68,
+            "client_wall_ms": 415.685
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:06.592907+00:00",
+          "finished_at": "2026-11-02T12:05:07.012175+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 4.5,
+      "cpu_max_percent": 39.6,
+      "cpu_mean_percent": 22.05,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    },
+    {
+      "index": 15,
+      "scale": "medium_scale",
+      "type": "q06_group_by_time_value_filter",
+      "workers": 2,
+      "repeat": 0,
+      "sql_sha256": "7b54e2e6f702cb194e3a814f3d4fc970dfbf36dfed16d2cfb5d81484c08c7dae",
+      "elapsed_s": 1.6967138269683346,
+      "results": [
+        {
+          "execution_id": "ad84c7bb50f64cdfb173a621a952d529",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 314.497,
+            "result_fetch_ms": 519.571,
+            "client_wall_ms": 836.438
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:07.890133+00:00",
+          "finished_at": "2026-11-02T12:05:08.730275+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "52f6a498bd9f4f48875af42c6e03a692",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 321.675,
+            "result_fetch_ms": 457.721,
+            "client_wall_ms": 781.392
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:07.871910+00:00",
+          "finished_at": "2026-11-02T12:05:08.672537+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 3,
+      "cpu_min_percent": 3.7,
+      "cpu_max_percent": 7.2,
+      "cpu_mean_percent": 4.8999999999999995,
+      "cpu_buckets": {
+        "LOW": 3
+      }
+    },
+    {
+      "index": 16,
+      "scale": "small_scale",
+      "type": "q06_group_by_time_value_filter",
+      "workers": 4,
+      "repeat": 0,
+      "sql_sha256": "e165b06baf12e46ff24ab5a4d41db50a55659dffed6925ba353cdcd6b2813bde",
+      "elapsed_s": 1.2093020550673828,
+      "results": [
+        {
+          "execution_id": "c50d133514984536b32152542cf17112",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 167.724,
+            "result_fetch_ms": 75.145,
+            "client_wall_ms": 244.037
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:09.332458+00:00",
+          "finished_at": "2026-11-02T12:05:09.727400+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "f4639f5a93c945b9985606f670b565ab",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 125.465,
+            "result_fetch_ms": 41.463,
+            "client_wall_ms": 172.719
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:09.650235+00:00",
+          "finished_at": "2026-11-02T12:05:09.887542+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "478c4a5ad65f4aec883cc25251994f11",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 156.114,
+            "result_fetch_ms": 92.437,
+            "client_wall_ms": 249.364
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:09.691114+00:00",
+          "finished_at": "2026-11-02T12:05:09.976563+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "cea7d24998e942388bb9683b43fd93ce",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 162.325,
+            "result_fetch_ms": 56.541,
+            "client_wall_ms": 219.891
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:09.671618+00:00",
+          "finished_at": "2026-11-02T12:05:09.946810+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 3.5,
+      "cpu_max_percent": 5.1,
+      "cpu_mean_percent": 4.3,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    },
+    {
+      "index": 17,
+      "scale": "small_scale",
+      "type": "q06_group_by_time_value_filter",
+      "workers": 4,
+      "repeat": 1,
+      "sql_sha256": "e165b06baf12e46ff24ab5a4d41db50a55659dffed6925ba353cdcd6b2813bde",
+      "elapsed_s": 1.2497619690839201,
+      "results": [
+        {
+          "execution_id": "22cdfab61ae945ab8d5430e2cd93c388",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 149.018,
+            "result_fetch_ms": 38.299,
+            "client_wall_ms": 188.169
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:10.872802+00:00",
+          "finished_at": "2026-11-02T12:05:11.131215+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "260805ec1c5c4e39a79cabc82b0fbce0",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 170.821,
+            "result_fetch_ms": 54.093,
+            "client_wall_ms": 275.024
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:10.931637+00:00",
+          "finished_at": "2026-11-02T12:05:11.236596+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "953d3d39db454828a56df43d00d98c79",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 213.072,
+            "result_fetch_ms": 83.299,
+            "client_wall_ms": 299.248
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:10.960525+00:00",
+          "finished_at": "2026-11-02T12:05:11.263737+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "e39e959c1a9b4f6580084aa1a82e99e8",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 195.476,
+            "result_fetch_ms": 106.086,
+            "client_wall_ms": 303.273
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:10.879348+00:00",
+          "finished_at": "2026-11-02T12:05:11.264548+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 6.4,
+      "cpu_max_percent": 6.8,
+      "cpu_mean_percent": 6.6,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    },
+    {
+      "index": 18,
+      "scale": "small_scale",
+      "type": "q05_group_by_time",
+      "workers": 4,
+      "repeat": 0,
+      "sql_sha256": "f67c7d40f9e3a2c974052f97160fedeb9bb5a5d078ce841b68495e5e9a81c627",
+      "elapsed_s": 1.003433367004618,
+      "results": [
+        {
+          "execution_id": "47e1e0699bca452ca2b4a1a731843e3e",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 133.76,
+            "result_fetch_ms": 32.024,
+            "client_wall_ms": 172.521
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:11.959163+00:00",
+          "finished_at": "2026-11-02T12:05:12.205525+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "037c56d71ff34189af51f70291cacbbd",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 146.338,
+            "result_fetch_ms": 66.103,
+            "client_wall_ms": 226.257
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:11.962801+00:00",
+          "finished_at": "2026-11-02T12:05:12.280612+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "214c67b80d0545cca5d56023cd28aecb",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 134.318,
+            "result_fetch_ms": 54.798,
+            "client_wall_ms": 197.727
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:12.067985+00:00",
+          "finished_at": "2026-11-02T12:05:12.269863+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "b8d96120f719433da4fb1c690c8b66b7",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 150.332,
+            "result_fetch_ms": 86.283,
+            "client_wall_ms": 237.684
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:12.059830+00:00",
+          "finished_at": "2026-11-02T12:05:12.308489+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 4.1,
+      "cpu_max_percent": 22.2,
+      "cpu_mean_percent": 13.149999999999999,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    },
+    {
+      "index": 19,
+      "scale": "medium_scale",
+      "type": "q05_group_by_time",
+      "workers": 4,
+      "repeat": 0,
+      "sql_sha256": "e13aabe39acfa1b6fefab93f656c218a2b22df1eae4889434b51bdc684e07511",
+      "elapsed_s": 2.642345850006677,
+      "results": [
+        {
+          "execution_id": "a142898f20634f0ba01bcb372021bef9",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 481.736,
+            "result_fetch_ms": 211.17,
+            "client_wall_ms": 696.127
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:14.154089+00:00",
+          "finished_at": "2026-11-02T12:05:14.856944+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "41202e1d45b34300ac950ec3f6545591",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 464.423,
+            "result_fetch_ms": 98.305,
+            "client_wall_ms": 564.207
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:14.111418+00:00",
+          "finished_at": "2026-11-02T12:05:14.720089+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "9779c7eca50e4afd9c8630b70f62b86e",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 450.078,
+            "result_fetch_ms": 187.508,
+            "client_wall_ms": 640.025
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:14.075867+00:00",
+          "finished_at": "2026-11-02T12:05:14.794783+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "c39c5b817ca34369a7c9ec43c7468725",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 307.884,
+            "result_fetch_ms": 167.348,
+            "client_wall_ms": 514.096
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:14.023468+00:00",
+          "finished_at": "2026-11-02T12:05:14.631533+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 3,
+      "cpu_min_percent": 3.9,
+      "cpu_max_percent": 42.6,
+      "cpu_mean_percent": 21.36666666666667,
+      "cpu_buckets": {
+        "LOW": 3
+      }
+    },
+    {
+      "index": 20,
+      "scale": "medium_scale",
+      "type": "q06_group_by_time_value_filter",
+      "workers": 4,
+      "repeat": 1,
+      "sql_sha256": "7b54e2e6f702cb194e3a814f3d4fc970dfbf36dfed16d2cfb5d81484c08c7dae",
+      "elapsed_s": 3.433393770013936,
+      "results": [
+        {
+          "execution_id": "06cc5378c20a417ebb42fc1211617230",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 759.954,
+            "result_fetch_ms": 740.798,
+            "client_wall_ms": 1503.582
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:16.900647+00:00",
+          "finished_at": "2026-11-02T12:05:18.467877+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "0c4e07b6af0e439891476cfe0d302362",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 745.913,
+            "result_fetch_ms": 783.73,
+            "client_wall_ms": 1532.797
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:16.763820+00:00",
+          "finished_at": "2026-11-02T12:05:18.401574+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "7deb174559a64f1b96ec2cf2b3693d68",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 645.637,
+            "result_fetch_ms": 888.838,
+            "client_wall_ms": 1539.039
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:16.678155+00:00",
+          "finished_at": "2026-11-02T12:05:18.352190+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "1fc63f35a677478099fe435d5b22c510",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 770.869,
+            "result_fetch_ms": 578.668,
+            "client_wall_ms": 1367.141
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:16.980251+00:00",
+          "finished_at": "2026-11-02T12:05:18.350768+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 4,
+      "cpu_min_percent": 4.5,
+      "cpu_max_percent": 11.2,
+      "cpu_mean_percent": 6.5,
+      "cpu_buckets": {
+        "LOW": 4
+      }
+    },
+    {
+      "index": 21,
+      "scale": "medium_scale",
+      "type": "q06_group_by_time_value_filter",
+      "workers": 4,
+      "repeat": 0,
+      "sql_sha256": "7b54e2e6f702cb194e3a814f3d4fc970dfbf36dfed16d2cfb5d81484c08c7dae",
+      "elapsed_s": 3.03659842396155,
+      "results": [
+        {
+          "execution_id": "3bbbcaffc97b4aa983f183707297e06b",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 365.699,
+            "result_fetch_ms": 562.722,
+            "client_wall_ms": 930.487
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:19.577986+00:00",
+          "finished_at": "2026-11-02T12:05:20.615892+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "8afb38b5536c4695af708f91defcc7b7",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 422.432,
+            "result_fetch_ms": 216.287,
+            "client_wall_ms": 640.795
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:20.361052+00:00",
+          "finished_at": "2026-11-02T12:05:21.057576+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "e8bc123da068418faff53d0bb2606e26",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 563.276,
+            "result_fetch_ms": 445.102,
+            "client_wall_ms": 1010.531
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:20.540796+00:00",
+          "finished_at": "2026-11-02T12:05:21.569337+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "6ec36a700bcf45d3b31561a90f89dcfd",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 379,
+          "metrics": {
+            "execute_call_ms": 554.596,
+            "result_fetch_ms": 423.122,
+            "client_wall_ms": 980.866
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:20.379780+00:00",
+          "finished_at": "2026-11-02T12:05:21.502206+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 3,
+      "cpu_min_percent": 4.2,
+      "cpu_max_percent": 7.0,
+      "cpu_mean_percent": 5.6000000000000005,
+      "cpu_buckets": {
+        "LOW": 3
+      }
+    },
+    {
+      "index": 22,
+      "scale": "small_scale",
+      "type": "q05_group_by_time",
+      "workers": 4,
+      "repeat": 1,
+      "sql_sha256": "f67c7d40f9e3a2c974052f97160fedeb9bb5a5d078ce841b68495e5e9a81c627",
+      "elapsed_s": 1.1036145068937913,
+      "results": [
+        {
+          "execution_id": "65643904c05f48d5a757286c94de85db",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 128.98,
+            "result_fetch_ms": 111.509,
+            "client_wall_ms": 241.347
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:22.355489+00:00",
+          "finished_at": "2026-11-02T12:05:22.685415+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "4912e3c8258b4754a3ffbc1379a8fe14",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 127.642,
+            "result_fetch_ms": 74.275,
+            "client_wall_ms": 207.902
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:22.356857+00:00",
+          "finished_at": "2026-11-02T12:05:22.644872+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "e8594f018b1c4251aef2ee69a54c3361",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 130.804,
+            "result_fetch_ms": 102.578,
+            "client_wall_ms": 234.655
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:22.210399+00:00",
+          "finished_at": "2026-11-02T12:05:22.449808+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "7f1661a0bf234105b4549d0eaaaa9b4f",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 141.084,
+            "result_fetch_ms": 57.725,
+            "client_wall_ms": 199.865
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:22.418837+00:00",
+          "finished_at": "2026-11-02T12:05:22.649312+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 5.0,
+      "cpu_max_percent": 21.7,
+      "cpu_mean_percent": 13.35,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    },
+    {
+      "index": 23,
+      "scale": "medium_scale",
+      "type": "q05_group_by_time",
+      "workers": 4,
+      "repeat": 1,
+      "sql_sha256": "e13aabe39acfa1b6fefab93f656c218a2b22df1eae4889434b51bdc684e07511",
+      "elapsed_s": 2.4099402179708704,
+      "results": [
+        {
+          "execution_id": "8364bd15c2b346c3a335a0e5528803fa",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 279.564,
+            "result_fetch_ms": 410.163,
+            "client_wall_ms": 697.561
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:23.910511+00:00",
+          "finished_at": "2026-11-02T12:05:24.697373+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "c2cd5861928b42109865f6460de0ce6e",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 334.749,
+            "result_fetch_ms": 74.287,
+            "client_wall_ms": 411.371
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:24.486198+00:00",
+          "finished_at": "2026-11-02T12:05:24.959638+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "0f462c772b484871856b686c2f8d8e3d",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 417.591,
+            "result_fetch_ms": 102.154,
+            "client_wall_ms": 524.447
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:24.544751+00:00",
+          "finished_at": "2026-11-02T12:05:25.074267+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        },
+        {
+          "execution_id": "45c31062acb54f478c5fcc45424ac0eb",
+          "status": "SUCCESS",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 460,
+          "metrics": {
+            "execute_call_ms": 415.416,
+            "result_fetch_ms": 177.893,
+            "client_wall_ms": 595.385
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:05:24.526068+00:00",
+          "finished_at": "2026-11-02T12:05:25.143372+00:00",
+          "error_type": null,
+          "error_message": null,
+          "request_completed": true,
+          "warnings": [],
+          "fallback": false
+        }
+      ],
+      "sample_count": 2,
+      "cpu_min_percent": 5.1,
+      "cpu_max_percent": 31.2,
+      "cpu_mean_percent": 18.15,
+      "cpu_buckets": {
+        "LOW": 2
+      }
+    }
+  ],
+  "online_ready": false,
+  "limitations": [
+    "whole-host metrics include unrelated processes",
+    "memory pressure and disk saturation UNKNOWN",
+    "short queries can finish between samples",
+    "no strategy benefit or learning claim",
+    "screening cannot establish sufficient per-arm pre-action load coverage",
+    "CPU observations include client decoding and collection overhead on this shared host"
+  ]
+}

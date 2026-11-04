@@ -1,0 +1,23 @@
+[
+  {
+    "journal": "data/phase7_cpu_profile_20261102/journal.jsonl",
+    "journal_sha256": "31259effdabeadfe33aec7ce8cb5165fa2829a444c06112626c5e2cbaf352bb0",
+    "schedule_complete": false,
+    "all_executions_successful": false,
+    "execution_sql_binding_verified": false
+  },
+  {
+    "journal": "data/phase7_cpu_profile_counts_20261102/journal.jsonl",
+    "journal_sha256": "c0b5ab12896ee39f249d3ccc49a95f5b7bb35ac17426e4afa51a05a445b213da",
+    "schedule_complete": true,
+    "all_executions_successful": true,
+    "execution_sql_binding_verified": false
+  },
+  {
+    "journal": "data/phase7_cpu_profile_groups_20261102/journal.jsonl",
+    "journal_sha256": "48fc23c6fd7194c02533d50fb91090b31ba34d05d58feca98489f9562f806f4d",
+    "schedule_complete": true,
+    "all_executions_successful": true,
+    "execution_sql_binding_verified": false
+  }
+]

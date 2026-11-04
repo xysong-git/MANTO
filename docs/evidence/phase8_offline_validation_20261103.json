@@ -1,0 +1,63 @@
+{
+  "compileall_exit_code": 0,
+  "date": "2026-11-03",
+  "iotdb_called": false,
+  "phase7_accepted": false,
+  "phase8_real_acceptance": "PENDING_USER_RUN",
+  "plan": {
+    "allocations": 540,
+    "config_sha256": "410770722a056f2c5462b808625573f214aa10b0759f183c534a2d13598ac8ad",
+    "measured_requests": 4320,
+    "warmup_and_preparation_requests": 1620
+  },
+  "real_performance_claim": false,
+  "reproducibility": {
+    "artifact_files": [
+      "latency.png",
+      "latency.svg",
+      "report.json",
+      "report.md",
+      "requests.csv",
+      "resources.png",
+      "resources.svg",
+      "structure.json",
+      "summary.csv"
+    ],
+    "charts_visually_inspected": true,
+    "domain": "SYNTHETIC_TEST_ONLY",
+    "pagination_visually_inspected": true,
+    "plan_equality": "asserted in passing rerun regression",
+    "structure_equal": true
+  },
+  "scope": "OFFLINE_ONLY",
+  "source_sha256": {
+    "benchmarks/analyze_results.py": "a7c988df5c489d6ebc4415ec2f73046e0f0c171d3e16de015a42c32d2a0ab49a",
+    "benchmarks/requirements.lock": "7250d0f9339920f2e331fac3ebb7d99e01a3cf82fb0bbd4e8f4a9bfb92120f6a",
+    "benchmarks/run_benchmark.py": "b8e95fd05e7a06910a98f0d83216a906b05dc2d6324aa40c347566c0fd30637b",
+    "benchmarks/workloads/small_count.json": "3e7652a7f2ffb9dde9fc38d288c4e65840b7c4220b6154e5815d93fea7224b1a",
+    "pyproject.toml": "713d86ad18cfffec78da92d31e44b9df9b5048b5d0aeeeee0770a1349b7edbc6",
+    "src/tsdb_optimizer/benchmark/__init__.py": "bf637e5e8d4734598e6e2a98c5b0786ca26c7be9f1b761878f031d9de1fe405c",
+    "src/tsdb_optimizer/benchmark/analysis.py": "059e793ddf6eb4e7b3ce571fc2f25666fe633bf5004192ffe1251f6c9c7c5bde",
+    "src/tsdb_optimizer/benchmark/journal.py": "62c1fee46ab555f0a50e5a8d771868a101a4f88332a00998f02a57e1eb8e1600",
+    "src/tsdb_optimizer/benchmark/policy.py": "9199bc506a0c9135c9c1cae0e625238639f0321b7def1ebe36cd8e311223b3b6",
+    "src/tsdb_optimizer/benchmark/protocol.py": "b1150c82dfd6fc578002cac75dcb8004f95665229d5f38efb05d28f1836a1b75",
+    "src/tsdb_optimizer/benchmark/results.py": "2f3b4b66466f9ee6708ae0becdef1aef4586c81961a84f1d23c756c1a911c079",
+    "src/tsdb_optimizer/benchmark/runner.py": "6c88569bc959baac1e37a83773c6ef4bb294093b05ebb14eb66ee702f1f4c1ef",
+    "src/tsdb_optimizer/benchmark/runtime.py": "983e2d84fc5b716886d348bfe39b768b81ba7a498f82426d155bbf960e9fa700",
+    "tests/unit/test_phase8_benchmark.py": "f6f2063fd375c94dc07a28cee72cb3842822d0c2a22952e0ae2bd277b5f5e98a"
+  },
+  "tests": [
+    {
+      "command": "conda run -n MANTO python -m pytest -q tests/unit tests/test_phase0_fixtures.py tests/test_phase2_sql_features.py",
+      "elapsed_seconds": 117.02,
+      "passed": 988,
+      "revision_note": "before final throughput CI and plot pagination changes"
+    },
+    {
+      "command": "conda run -n MANTO python -m pytest -q tests/unit/test_phase8_benchmark.py --disable-warnings --maxfail=1",
+      "elapsed_seconds": 79.49,
+      "passed": 30,
+      "revision_note": "final runtime/analysis code"
+    }
+  ]
+}

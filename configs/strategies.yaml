@@ -1,0 +1,173 @@
+# External strategy certification catalog.
+#
+# The registry refuses to register any implementation that is absent here or
+# whose version, implementation class, enabled flag, model, compatibility tuple
+# or execution-option tuple differs from this file.  A plugin cannot promote
+# itself by declaring VERIFIED in its own StrategySpec.
+#
+# Status is copied from docs/STRATEGY_CATALOG.md, which remains the evidence
+# document.  There is exactly one enabled baseline and one enabled non-Native
+# strategy.  The non-Native strategy is applicable only when the caller
+# explicitly declares an immutable dataset epoch.
+schema_version: 1
+
+strategies:
+  - strategy_id: S0_NATIVE
+    version: "0.1.0"
+    database_model: tree
+    compatible_server_versions: ["2.0.6"]
+    enabled: true
+    verification_status: VERIFIED
+    is_baseline: true
+    selection_policy: lowest_cost
+    implementation_class: tsdb_optimizer.strategies.native.NativeStrategy
+    allowed_execution_options: []
+    proof_entry: docs/STRATEGY_CATALOG.md#31-入口证明
+    proof_correctness: docs/STRATEGY_CATALOG.md#32-正确性定义
+    proof_effect: docs/STRATEGY_CATALOG.md#33-生效与收益
+    proof_benefit: docs/STRATEGY_CATALOG.md#33-生效与收益
+    proof_fallback: docs/STRATEGY_CATALOG.md#34-回退证明
+    reason: "baseline and fallback; no optimization or plan effect is claimed"
+
+  - strategy_id: S1_REPEAT_CACHE
+    version: "1.0.0"
+    database_model: tree
+    compatible_server_versions: ["2.0.6"]
+    enabled: true
+    verification_status: VERIFIED
+    is_baseline: false
+    selection_policy: repeat_cache
+    implementation_class: tsdb_optimizer.strategies.repeat_cache.RepeatCacheStrategy
+    allowed_execution_options: ["cache_epoch"]
+    proof_entry: docs/STRATEGY_CATALOG.md#s1-repeat-cache-入口证明
+    proof_correctness: docs/STRATEGY_CATALOG.md#s1-repeat-cache-正确性
+    proof_effect: docs/STRATEGY_CATALOG.md#s1-repeat-cache-生效证明
+    proof_benefit: docs/STRATEGY_CATALOG.md#s1-repeat-cache-收益证明
+    proof_fallback: docs/STRATEGY_CATALOG.md#s1-repeat-cache-回退证明
+    reason: "process-local exact-SQL cache under a caller-declared immutable epoch; EXACT_SQL_NO_REWRITE needs no parser rewrite; no server-side invalidation is claimed"
+
+  - strategy_id: CAND_LAST_SINGLE_SERIES
+    version: null
+    database_model: tree
+    compatible_server_versions: ["2.0.6"]
+    enabled: false
+    verification_status: NOT_VERIFIED
+    is_baseline: false
+    implementation_class: null
+    allowed_execution_options: []
+    proof_entry: docs/STRATEGY_CATALOG.md#41-入口与适用条件
+    proof_correctness: docs/STRATEGY_CATALOG.md#42-正确性证明干净数据--授权边缘数据
+    proof_effect: docs/STRATEGY_CATALOG.md#43-生效证明通过
+    proof_benefit: docs/STRATEGY_CATALOG.md#44-收益证明受控热缓存已通过
+    proof_fallback: docs/STRATEGY_CATALOG.md#45-回退证明认证脚本契约last-生产插件未实现
+    reason: "DEMAND_UNPROVEN, FALLBACK_CONTRACT_ONLY; no production plugin"
+
+  - strategy_id: CAND_MAXTIME_LASTVALUE
+    version: null
+    database_model: tree
+    compatible_server_versions: ["2.0.6"]
+    enabled: false
+    verification_status: NOT_VERIFIED
+    is_baseline: false
+    implementation_class: null
+    allowed_execution_options: []
+    reason: "result shape differs; only single-observation timing; no implementation"
+
+  - strategy_id: CAND_ALIGN_BY_DEVICE
+    version: null
+    database_model: tree
+    compatible_server_versions: ["2.0.6"]
+    enabled: false
+    verification_status: NOT_VERIFIED
+    is_baseline: false
+    implementation_class: null
+    allowed_execution_options: []
+    reason: "result shape is not equivalent; observed slower; no implementation"
+
+  - strategy_id: CAND_FETCH_SIZE
+    version: null
+    database_model: tree
+    compatible_server_versions: ["2.0.6"]
+    enabled: false
+    verification_status: NOT_VERIFIED
+    is_baseline: false
+    implementation_class: null
+    allowed_execution_options: []
+    reason: "client transport batch option; no stable benefit or verified entry"
+
+  - strategy_id: CAND_PREDICATE_REWRITE
+    version: null
+    database_model: tree
+    compatible_server_versions: ["2.0.6"]
+    enabled: false
+    verification_status: NOT_VERIFIED
+    is_baseline: false
+    implementation_class: null
+    allowed_execution_options: []
+    reason: "plan unchanged and no benefit; not an optimization strategy"
+
+  - strategy_id: CAND_SERIES_PATH
+    version: null
+    database_model: tree
+    compatible_server_versions: ["2.0.6"]
+    enabled: false
+    verification_status: UNSUPPORTED
+    is_baseline: false
+    implementation_class: null
+    allowed_execution_options: []
+    reason: "silent empty result; not equivalent"
+
+  - strategy_id: CAND_UNION_MERGE
+    version: null
+    database_model: tree
+    compatible_server_versions: ["2.0.6"]
+    enabled: false
+    verification_status: UNSUPPORTED
+    is_baseline: false
+    implementation_class: null
+    allowed_execution_options: []
+    reason: "UNION rejected; single-range rewrite is not equivalent"
+
+  - strategy_id: CAND_PARALLEL_SPLIT
+    version: null
+    database_model: tree
+    compatible_server_versions: ["2.0.6"]
+    enabled: false
+    verification_status: NOT_VERIFIED
+    is_baseline: false
+    implementation_class: null
+    allowed_execution_options: []
+    reason: "client-side split observed slower; no implementation or fallback proof"
+
+  - strategy_id: CAND_DB_PARAMETER
+    version: null
+    database_model: tree
+    compatible_server_versions: ["2.0.6"]
+    enabled: false
+    verification_status: NOT_VERIFIED
+    is_baseline: false
+    implementation_class: null
+    allowed_execution_options: []
+    reason: "no verified query-level tuning entry; modification and rollback untested"
+
+  - strategy_id: CAND_TABLE_MODEL
+    version: null
+    database_model: table
+    compatible_server_versions: ["2.0.6"]
+    enabled: false
+    verification_status: UNSUPPORTED
+    is_baseline: false
+    implementation_class: null
+    allowed_execution_options: []
+    reason: "no user table model data in the current deployment"
+
+  - strategy_id: CAND_CLIENT_CACHE
+    version: null
+    database_model: unknown
+    compatible_server_versions: ["2.0.6"]
+    enabled: false
+    verification_status: NOT_VERIFIED
+    is_baseline: false
+    implementation_class: null
+    allowed_execution_options: []
+    reason: "superseded by S1_REPEAT_CACHE; retained as audit history"

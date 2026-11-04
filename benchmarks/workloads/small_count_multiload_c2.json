@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "protocol": "phase8-request-e2e-v1",
+  "name": "phase8_small_count_multiload_c2_v1",
+  "dataset": {
+    "epoch": "heavy-complete-20261102-v2",
+    "manifest": "query/heavy_scale/manifest.json",
+    "manifest_sha256": "9ef84de4dcffd7591018fa7b48e81b9422543b3441381d0632bff221d2cb0ccd",
+    "server_version": "2.0.6",
+    "database_model": "tree",
+    "immutable": true
+  },
+  "workloads": [
+    {
+      "name": "small_count",
+      "train": {
+        "sql": "SELECT count(s_383), count(s_392), count(s_442), count(s_615), count(s_621), count(s_708), count(s_821), count(s_926), count(s_972), count(s_1205), count(s_1277), count(s_1346), count(s_1363), count(s_1605), count(s_1632), count(s_1665) FROM root.small_scale.g_0.d_3, root.small_scale.g_0.d_12, root.small_scale.g_0.d_19, root.small_scale.g_0.d_28, root.small_scale.g_0.d_49, root.small_scale.g_0.d_52, root.small_scale.g_0.d_55, root.small_scale.g_0.d_72, root.small_scale.g_0.d_85, root.small_scale.g_0.d_88 WHERE time >= {start_ms} AND time < {end_ms}",
+        "parameters": {
+          "start_ms": 1640966615000,
+          "end_ms": 1640978815000
+        },
+        "resolved_sha256": "0ceb224d41fce8351179c8fe5cd3c943686c81aad8fbf982865311ddec854378",
+        "expected_rows": 1,
+        "fetch_mode": "FULL",
+        "ordering": "UNORDERED"
+      },
+      "holdout": {
+        "sql": "SELECT count(s_379), count(s_413), count(s_530), count(s_531), count(s_660), count(s_678), count(s_847), count(s_1039), count(s_1058), count(s_1211), count(s_1212), count(s_1265), count(s_1373), count(s_1527), count(s_1603), count(s_1662) FROM root.small_scale.g_0.d_10, root.small_scale.g_0.d_24, root.small_scale.g_0.d_28, root.small_scale.g_0.d_36, root.small_scale.g_0.d_57, root.small_scale.g_0.d_59, root.small_scale.g_0.d_62, root.small_scale.g_0.d_65, root.small_scale.g_0.d_82, root.small_scale.g_0.d_93 WHERE time >= {start_ms} AND time < {end_ms}",
+        "parameters": {
+          "start_ms": 1640967335000,
+          "end_ms": 1640981185000
+        },
+        "resolved_sha256": "6b244180e71b70ab5f8294054178a0786d5ad0aef42f3df37ade09b8aea85127",
+        "expected_rows": 1,
+        "fetch_mode": "FULL",
+        "ordering": "UNORDERED"
+      },
+      "source_scale": "small_scale"
+    }
+  ],
+  "groups": [
+    "E0",
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "A1",
+    "A2"
+  ],
+  "cache_conditions": [
+    "APPLICATION_EMPTY",
+    "APPLICATION_WARM"
+  ],
+  "loads": [
+    "LOW",
+    "MEDIUM"
+  ],
+  "load_driver": "cpu_cotenant",
+  "concurrency": [
+    1,
+    2
+  ],
+  "warmup": 2,
+  "requests_per_lane": 8,
+  "train_blocks": 30,
+  "test_blocks": 30,
+  "order": "random",
+  "seed": 20261110,
+  "min_samples": 30,
+  "timeout_ms": 30000,
+  "round_limit_s": 60,
+  "analysis": {
+    "confidence": 0.99,
+    "bootstrap_replicates": 4000,
+    "seed": 20261110,
+    "minimum_blocks": 30,
+    "float_abs_tolerance": 0.0,
+    "float_rel_tolerance": 0.0
+  },
+  "training_mode": "randomized_then_frozen",
+  "uncontrolled_factors": [
+    "IoTDB/OS/storage caches are UNKNOWN; application reset is not a cold-server reset",
+    "DB_HOST metrics describe the whole host, not exclusive IoTDB process/query usage",
+    "TCP boundary checks cannot rule out short-lived external clients between checks",
+    "Thread scheduling, background services, thermal/frequency drift remain uncontrolled",
+    "Frozen holdout does not measure continuous online updating or dynamic-write freshness",
+    "Request reward does not attribute cache-fill cost to unknown future requests",
+    "Phase 7 is NOT ACCEPTED; this study does not change production readiness"
+  ]
+}

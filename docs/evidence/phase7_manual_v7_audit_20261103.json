@@ -1,0 +1,53 @@
+{
+  "source": "completed v7 artifacts, read-only audit",
+  "events": {
+    "protocol": 1,
+    "instance_occupancy": 2345,
+    "round_start": 184,
+    "pilot": 4,
+    "round_complete": 184,
+    "reference": 2,
+    "initial_model": 1,
+    "batch_assignment": 1080,
+    "batch_selected": 1080,
+    "request": 5400,
+    "batch_closed": 1080,
+    "feedback_enqueued": 360,
+    "feedback_applied": 360,
+    "training_gate": 1,
+    "frozen_model": 1,
+    "complete": 1
+  },
+  "quality": {
+    "VALID": 5400
+  },
+  "checks": {
+    "MATCHED": 5400
+  },
+  "occupancy": {
+    "True": 2345
+  },
+  "journal_sha256": "5699e93c12d34dbd61be1209175b5a7a4cacea8078bd981440f5bafa1f125256",
+  "journal_matches_report": true,
+  "source_hash_count": 89,
+  "changed_sources_before_docs": [],
+  "user_tests": [
+    "179 passed in 14.51s",
+    "966 passed in 44.82s"
+  ],
+  "sqlite": {
+    "executions": "ok",
+    "feedback": "ok"
+  },
+  "head": {
+    "revision": 360,
+    "frozen_at": "2026-11-03T10:41:46.938095+00:00",
+    "checksum_matches": true,
+    "fingerprint_matches": true,
+    "queue": {
+      "APPLIED": 360
+    },
+    "l1_same_evidence": true,
+    "l1_fingerprint_matches": true
+  }
+}

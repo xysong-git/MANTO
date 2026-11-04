@@ -1,0 +1,15 @@
+{
+  "occupancy": {
+    "captured_at": "2026-11-03T04:53:48.574183Z",
+    "server_pid": 3879777,
+    "port": 6667,
+    "observer_pid": 1231409,
+    "connection_count": 20,
+    "foreign_pids": [],
+    "unknown_connections": 20,
+    "passed": false
+  },
+  "foreign_processes": [],
+  "active_query_count": "UNKNOWN",
+  "action": "READ_ONLY_NO_TERMINATION"
+}

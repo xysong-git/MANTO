@@ -1,0 +1,1586 @@
+{
+  "unique_executions": 580,
+  "cells": {
+    "train/EMPTY/background=0": {
+      "counts": {
+        "S0_NATIVE": 83,
+        "S1_REPEAT_CACHE": 106
+      },
+      "quality": {
+        "VALID": 189,
+        "LOW_CONFIDENCE": 1
+      },
+      "measured_load_buckets": {
+        "MEDIUM": 189,
+        "HIGH": 1
+      },
+      "result_sources": {
+        "SERVER": 190
+      },
+      "latencies_ms": {
+        "S0_NATIVE": [
+          96.81190096307546,
+          95.63142410479486,
+          95.32685403246433,
+          113.41671796981245,
+          146.5549690183252,
+          117.4557430204004,
+          98.06948900222778,
+          96.07580897863954,
+          170.00813002232462,
+          131.88267999794334,
+          93.6552690109238,
+          92.27634104900062,
+          114.65461004991084,
+          94.46647705044597,
+          98.21956092491746,
+          97.70405199378729,
+          93.22297899052501,
+          116.09864002093673,
+          90.67243605386466,
+          93.78657105844468,
+          95.13118502218276,
+          94.98659602832049,
+          118.31923900172114,
+          94.43640790414065,
+          92.52193290740252,
+          92.43411594070494,
+          94.08353397157043,
+          130.38378208875656,
+          125.17876201309264,
+          149.49943905230612,
+          99.52812595292926,
+          120.50900794565678,
+          91.45315003115684,
+          93.90872507356107,
+          92.4903309205547,
+          95.14607605524361,
+          95.11074190959334,
+          100.83110490813851,
+          94.27014307584614,
+          98.56608498375863,
+          95.60253901872784,
+          108.00652904435992,
+          120.280746021308,
+          95.4861770151183,
+          93.65142008755356,
+          94.98786099720746,
+          126.36389292310923,
+          95.72369290981442,
+          96.30074806045741,
+          94.94944696780294,
+          124.59851906169206,
+          94.39422306604683,
+          93.57570006977767,
+          95.64414899796247,
+          126.08586996793747,
+          97.59211202617735,
+          96.76977491471916,
+          94.07612693030387,
+          125.8447450818494,
+          128.35878797341138,
+          99.39901100005955,
+          93.20284507703036,
+          90.43724101502448,
+          95.55208298843354,
+          190.444614039734,
+          118.78943699412048,
+          138.2028089137748,
+          96.08361904975027,
+          99.80061498936266,
+          96.34780290070921,
+          122.39313405007124,
+          98.04309892933816,
+          143.27291504014283,
+          99.3786200415343,
+          174.14724500849843,
+          99.21887901145965,
+          99.86344003118575,
+          101.31750896107405,
+          99.73677899688482,
+          101.32506105583161,
+          130.49776304978877,
+          136.00659207440913,
+          139.53306805342436
+        ],
+        "S1_REPEAT_CACHE": [
+          125.38485298864543,
+          104.98909594025463,
+          150.95021796878427,
+          149.3134390329942,
+          109.58174197003245,
+          110.81923707388341,
+          102.4823950137943,
+          101.7883860040456,
+          102.63205005321652,
+          103.73822506517172,
+          104.41488795913756,
+          103.99344307370484,
+          101.01746500004083,
+          99.92937801871449,
+          100.25962290819734,
+          104.42333703394979,
+          103.73781295493245,
+          102.40736999548972,
+          102.0897829439491,
+          102.21128899138421,
+          125.07413898129016,
+          105.82037398125976,
+          149.8834789963439,
+          125.84836594760418,
+          104.75741804111749,
+          150.26779589243233,
+          185.62215007841587,
+          150.95425792969763,
+          132.47214502189308,
+          126.35382905136794,
+          102.06080391071737,
+          126.79109792225063,
+          101.99262702371925,
+          127.0557299721986,
+          102.47709602117538,
+          103.09949598740786,
+          140.8978480612859,
+          107.44319704826921,
+          152.8756560292095,
+          190.31580805312842,
+          150.30319802463055,
+          117.37421900033951,
+          131.74502598121762,
+          116.13875208422542,
+          99.56558200065047,
+          127.69059801939875,
+          97.72595309186727,
+          102.43755101691931,
+          99.92151102051139,
+          103.71014894917607,
+          100.28915607836097,
+          99.47951301001012,
+          103.13203802797943,
+          103.105474030599,
+          101.8964999821037,
+          100.38681898731738,
+          103.81714801769704,
+          129.85314906109124,
+          113.69144800119102,
+          103.8148490479216,
+          106.06852709315717,
+          106.35414300486445,
+          104.21757108997554,
+          103.46365498844534,
+          102.09028702229261,
+          103.27049496117979,
+          99.19117204844952,
+          102.87230496760458,
+          101.8455270677805,
+          106.22203606180847,
+          105.41193897370249,
+          153.99744000751525,
+          102.00633900240064,
+          101.185487001203,
+          101.32747807074338,
+          141.39145996887237,
+          132.5670579681173,
+          103.58668607659638,
+          101.83570196386427,
+          137.17514101881534,
+          142.6175389206037,
+          107.66793496441096,
+          128.68889700621367,
+          123.6662199953571,
+          121.95170298218727,
+          141.9028079835698,
+          109.52664306387305,
+          107.11543099023402,
+          105.59646901674569,
+          152.96274900902063,
+          111.41715198755264,
+          215.7027249922976,
+          114.83720294199884,
+          118.26820904389024,
+          163.99966995231807,
+          113.04683599155396,
+          109.6367659047246,
+          107.8591940458864,
+          104.32871605735272,
+          110.55840307381004,
+          106.0399500420317,
+          103.8965709740296,
+          106.92680499050766,
+          106.50676605291665,
+          104.8321999842301,
+          106.35404696222395
+        ]
+      },
+      "per_arm_sample_gate": true,
+      "mean_service_ms": {
+        "S0_NATIVE": 108.14537807839014,
+        "S1_REPEAT_CACHE": 116.66315125152117
+      },
+      "s1_minus_s0_mean_ms": 8.517773173131033,
+      "confidence_interval": {
+        "method": "independent-arm percentile bootstrap; IID assumption",
+        "replicates": 2000,
+        "level": 0.95,
+        "s1_minus_s0_mean_ms": [
+          2.1167841394226343,
+          14.497734599702937
+        ],
+        "limitations": "serial autocorrelation and single-session drift may invalidate IID assumption"
+      }
+    },
+    "train/READY/background=0": {
+      "counts": {
+        "S0_NATIVE": 76,
+        "S1_REPEAT_CACHE": 69
+      },
+      "quality": {
+        "VALID": 145
+      },
+      "measured_load_buckets": {
+        "MEDIUM": 145
+      },
+      "result_sources": {
+        "SERVER": 76,
+        "CACHE_HIT": 69
+      },
+      "latencies_ms": {
+        "S0_NATIVE": [
+          95.45694093685597,
+          98.16023195162416,
+          144.75584996398538,
+          98.77088700886816,
+          97.09924994967878,
+          99.39632704481483,
+          210.50872700288892,
+          138.71342304628342,
+          144.51725594699383,
+          139.85299807973206,
+          128.92049993388355,
+          146.35855599772185,
+          146.33505197707564,
+          145.39337495807558,
+          142.11836096365005,
+          137.88195804227144,
+          140.0880829896778,
+          185.73094706516713,
+          100.49516800791025,
+          138.20194103755057,
+          142.02713198028505,
+          108.74229297041893,
+          97.5808670045808,
+          138.38405697606504,
+          142.97564304433763,
+          140.3976760338992,
+          140.68231300916523,
+          95.10934900026768,
+          144.12324607837945,
+          101.64176009129733,
+          138.98157107178122,
+          141.5448309853673,
+          99.04690703842789,
+          124.23666601534933,
+          152.93181594461203,
+          147.5657100090757,
+          145.9536710754037,
+          112.98727500252426,
+          178.12434502411634,
+          143.95057293586433,
+          151.21656598057598,
+          143.55704199988395,
+          97.0134399831295,
+          142.92132703121752,
+          145.13997093308717,
+          140.92875202186406,
+          139.41442291252315,
+          97.0623450120911,
+          102.32232499402016,
+          100.97730893176049,
+          101.76408500410616,
+          142.21484505105764,
+          143.80456996150315,
+          100.01120995730162,
+          209.96099105104804,
+          95.0635289773345,
+          96.90069302450866,
+          99.88779400009662,
+          103.90551295131445,
+          100.04289203789085,
+          100.2826449694112,
+          99.91319291293621,
+          100.46965803485364,
+          140.839736093767,
+          141.0060840426013,
+          136.9597000302747,
+          143.63579405471683,
+          163.4027159307152,
+          172.74841398466378,
+          156.4282199833542,
+          187.39020603243262,
+          185.80102699343115,
+          180.91092200484127,
+          158.66381395608187,
+          160.03785305656493,
+          250.25108107365668
+        ],
+        "S1_REPEAT_CACHE": [
+          135.4678359348327,
+          143.13566696364433,
+          134.32872504927218,
+          130.18698897212744,
+          87.91617606766522,
+          128.99969599675387,
+          103.23834198061377,
+          90.90408310294151,
+          136.39904896263033,
+          133.3470270037651,
+          88.65671895910054,
+          138.09588400181383,
+          136.34598592761904,
+          92.12114801630378,
+          154.27587705198675,
+          91.1894750315696,
+          210.5459599988535,
+          94.04376393649727,
+          86.19915007147938,
+          137.85677391570061,
+          131.11913902685046,
+          143.34045897703618,
+          144.2541350843385,
+          139.24767705611885,
+          145.34702606033534,
+          135.3874650085345,
+          104.01983303017914,
+          92.52203197684139,
+          86.22364897746593,
+          85.67165897693485,
+          87.25793997291476,
+          135.5075560277328,
+          133.89178400393575,
+          136.30541902966797,
+          133.80795996636152,
+          89.07872100826353,
+          86.99423901271075,
+          87.12152705993503,
+          89.12016497924924,
+          88.69751100428402,
+          91.8607919011265,
+          142.47092802543193,
+          92.81877696048468,
+          87.33920101076365,
+          141.9913989957422,
+          135.03894198220223,
+          98.63468306139112,
+          132.00404203962535,
+          89.00724200066179,
+          101.10425297170877,
+          137.2321069939062,
+          89.00864399038255,
+          99.94507895316929,
+          92.6835989812389,
+          93.07219600304961,
+          91.50739992037416,
+          89.33820901438594,
+          92.71745395381004,
+          136.76084496546537,
+          120.21948804613203,
+          152.19365409575403,
+          181.05541705153883,
+          167.97071404289454,
+          146.5269880136475,
+          161.1866590101272,
+          160.47045297455043,
+          147.15330000035465,
+          166.87417402863503,
+          162.82542899716645
+        ]
+      },
+      "per_arm_sample_gate": true,
+      "mean_service_ms": {
+        "S0_NATIVE": 134.849923923244,
+        "S1_REPEAT_CACHE": 120.71278682855916
+      },
+      "s1_minus_s0_mean_ms": -14.137137094684846,
+      "confidence_interval": {
+        "method": "independent-arm percentile bootstrap; IID assumption",
+        "replicates": 2000,
+        "level": 0.95,
+        "s1_minus_s0_mean_ms": [
+          -23.68935199152422,
+          -4.265004931713747
+        ],
+        "limitations": "serial autocorrelation and single-session drift may invalidate IID assumption"
+      }
+    },
+    "holdout/EMPTY/background=0": {
+      "counts": {
+        "S0_NATIVE": 51,
+        "S1_REPEAT_CACHE": 62
+      },
+      "quality": {
+        "VALID": 113
+      },
+      "measured_load_buckets": {
+        "MEDIUM": 113
+      },
+      "result_sources": {
+        "SERVER": 113
+      },
+      "latencies_ms": {
+        "S0_NATIVE": [
+          189.53993602190167,
+          111.32536607328802,
+          116.1397120449692,
+          124.37614693772048,
+          155.93802789226174,
+          115.78436708077788,
+          170.3004960436374,
+          173.99833700619638,
+          176.85057397466153,
+          160.29410809278488,
+          196.35435403324664,
+          147.437873063609,
+          97.08909294568002,
+          119.47543895803392,
+          102.59511496406049,
+          92.36543800216168,
+          161.00617090705782,
+          104.05513504520059,
+          94.62808002717793,
+          98.69945398531854,
+          95.53108003456146,
+          93.45321892760694,
+          95.91166907921433,
+          113.70999692007899,
+          96.65717894677073,
+          102.8428099816665,
+          138.06047290563583,
+          142.3263819888234,
+          97.58528601378202,
+          133.48890002816916,
+          96.43058793153614,
+          92.94939902611077,
+          95.70359101053327,
+          94.77632108610123,
+          96.31844004616141,
+          97.70191798452288,
+          95.94272798858583,
+          167.51842002850026,
+          97.84162801224738,
+          96.34118399117142,
+          97.4465849576518,
+          95.83143307827413,
+          138.31990596372634,
+          137.68578600138426,
+          95.60193703509867,
+          115.54502497892827,
+          102.31699491851032,
+          196.3598650181666,
+          238.0027970066294,
+          96.62357496563345,
+          181.37647898402065
+        ],
+        "S1_REPEAT_CACHE": [
+          266.8518479913473,
+          196.69301400426775,
+          185.55382709018886,
+          120.71475200355053,
+          209.5453490037471,
+          194.72806307021528,
+          122.56964109838009,
+          119.7866239817813,
+          208.43730005435646,
+          211.88781003002077,
+          151.0240789502859,
+          109.08875497989357,
+          150.00765200238675,
+          106.62145400419831,
+          105.2597559755668,
+          110.71545304730535,
+          102.92587603908032,
+          116.55822989996523,
+          107.10456094238907,
+          105.46605999115855,
+          104.48575299233198,
+          106.11777298618108,
+          164.78801995981485,
+          106.38737794943154,
+          104.53812894411385,
+          103.13058295287192,
+          102.4216030491516,
+          122.52040300518274,
+          119.03215397614986,
+          105.73445097543299,
+          106.32202005945146,
+          102.82463091425598,
+          101.20600101072341,
+          104.55887706484646,
+          100.94588401261717,
+          138.91233096364886,
+          152.392350952141,
+          104.2790700448677,
+          105.63237802125514,
+          102.24573500454426,
+          171.4759999886155,
+          105.84111895877868,
+          115.25567690841854,
+          174.07537903636694,
+          112.56030504591763,
+          105.97293998580426,
+          105.32260604668409,
+          103.0517719918862,
+          107.57772100623697,
+          107.3892218992114,
+          231.7018109606579,
+          105.37867504172027,
+          106.52450402267277,
+          105.31620099209249,
+          106.37515201233327,
+          105.13918998185545,
+          104.73776201251894,
+          108.69321506470442,
+          101.80106898769736,
+          208.62366200890392,
+          196.21941598597914,
+          115.77545199543238
+        ]
+      },
+      "per_arm_sample_gate": true,
+      "mean_service_ms": {
+        "S0_NATIVE": 124.40107486155979,
+        "S1_REPEAT_CACHE": 130.0778141763482
+      },
+      "s1_minus_s0_mean_ms": 5.676739314788406,
+      "confidence_interval": {
+        "method": "independent-arm percentile bootstrap; IID assumption",
+        "replicates": 2000,
+        "level": 0.95,
+        "s1_minus_s0_mean_ms": [
+          -8.62850129386679,
+          19.41887004248524
+        ],
+        "limitations": "serial autocorrelation and single-session drift may invalidate IID assumption"
+      }
+    },
+    "holdout/READY/background=0": {
+      "counts": {
+        "S0_NATIVE": 67,
+        "S1_REPEAT_CACHE": 65
+      },
+      "quality": {
+        "VALID": 132
+      },
+      "measured_load_buckets": {
+        "MEDIUM": 132
+      },
+      "result_sources": {
+        "SERVER": 67,
+        "CACHE_HIT": 65
+      },
+      "latencies_ms": {
+        "S0_NATIVE": [
+          100.49681190866977,
+          97.07476291805506,
+          141.8331890599802,
+          96.37363406363875,
+          96.8792790081352,
+          100.37869308143854,
+          92.73240994662046,
+          98.6924689495936,
+          102.18034696299583,
+          93.13187398947775,
+          95.88695503771305,
+          96.98889905121177,
+          112.19025705941021,
+          138.04290699772537,
+          146.23237901832908,
+          143.22502701543272,
+          185.29162800405174,
+          99.62516301311553,
+          95.65979894250631,
+          99.6185460826382,
+          118.39095293544233,
+          96.28485993016511,
+          98.39486400596797,
+          95.38010298274457,
+          109.35836296994239,
+          107.81581199262291,
+          95.4947720747441,
+          95.66818398889154,
+          97.15873003005981,
+          97.34321804717183,
+          98.8233060343191,
+          98.3155460562557,
+          97.08635008428246,
+          100.79270601272583,
+          139.6125180181116,
+          142.9569039028138,
+          101.73731297254562,
+          94.40543898381293,
+          97.31684997677803,
+          94.56595894880593,
+          109.0411760378629,
+          103.06772100739181,
+          98.77953305840492,
+          143.2810869300738,
+          95.80819704569876,
+          99.71446800045669,
+          101.09394206665456,
+          159.52732996083796,
+          150.30692995060235,
+          103.51932793855667,
+          96.94793494418263,
+          99.52136501669884,
+          215.09795205201954,
+          257.4693630449474,
+          97.22075297031552,
+          96.87263006344438,
+          148.42458197381347,
+          98.18315098527819,
+          95.29804007615894,
+          154.20117299072444,
+          104.44744501728565,
+          98.2115229126066,
+          104.19542901217937,
+          98.15317194443196,
+          131.9211699301377,
+          142.30259705800563,
+          138.93226999789476
+        ],
+        "S1_REPEAT_CACHE": [
+          130.17827703151852,
+          86.96126798167825,
+          85.6555689824745,
+          97.65297698322684,
+          85.86893498431891,
+          85.8198479982093,
+          121.84851500205696,
+          86.85246505774558,
+          86.96681202854961,
+          134.92330093868077,
+          87.75076898746192,
+          91.54303092509508,
+          133.97010194603354,
+          87.91204006411135,
+          89.49900092557073,
+          133.9526049559936,
+          98.01149903796613,
+          137.94208399485797,
+          87.05899689812213,
+          93.40569307096303,
+          95.3494569985196,
+          105.12554598972201,
+          136.17942901328206,
+          86.09340596012771,
+          85.3465769905597,
+          102.57158894091845,
+          84.89429589826614,
+          87.21109596081078,
+          89.1336799832061,
+          87.65943499747664,
+          107.96639998443425,
+          86.62430697586387,
+          85.15630103647709,
+          85.59784991666675,
+          90.20592202432454,
+          102.26137598510832,
+          96.07729502022266,
+          135.7768930029124,
+          90.24788904935122,
+          89.45069601759315,
+          89.53719993587583,
+          88.31397700123489,
+          92.62812405359,
+          87.95693307183683,
+          96.34081507101655,
+          236.96155997458845,
+          177.51028994098306,
+          97.2131839953363,
+          88.61620293464512,
+          86.0630210954696,
+          135.30057203024626,
+          112.18539299443364,
+          254.13340295199305,
+          87.33523800037801,
+          87.29216596111655,
+          89.38812604174018,
+          87.71186403464526,
+          106.18241201154888,
+          133.2343160174787,
+          86.52562496718019,
+          86.28634503111243,
+          88.15781900193542,
+          133.98456503637135,
+          141.10091200564057,
+          101.55812406446785
+        ]
+      },
+      "per_arm_sample_gate": true,
+      "mean_service_ms": {
+        "S0_NATIVE": 114.1937021200837,
+        "S1_REPEAT_CACHE": 105.29571407331296
+      },
+      "s1_minus_s0_mean_ms": -8.897988046770735,
+      "confidence_interval": {
+        "method": "independent-arm percentile bootstrap; IID assumption",
+        "replicates": 2000,
+        "level": 0.95,
+        "s1_minus_s0_mean_ms": [
+          -19.092641508657962,
+          2.717952396379559
+        ],
+        "limitations": "serial autocorrelation and single-session drift may invalidate IID assumption"
+      }
+    }
+  },
+  "online_ready": false,
+  "limitations": [
+    "background worker count is not DB host CPU or total DB concurrency",
+    "fixed-arm observational summaries are not adaptive policy benefit",
+    "post-action SERVER/CACHE_HIT partitions remain isolated in the legacy model",
+    "no confidence interval or causal adaptive benefit asserted"
+  ],
+  "legacy_model_readiness": {
+    "online_ready": false,
+    "configured_min_samples": 30,
+    "unique_execution_count": 335,
+    "duplicates_excluded": 0,
+    "sample_status_counts": {
+      "VALID": 334,
+      "LOW_CONFIDENCE": 1
+    },
+    "partitions": [
+      {
+        "partition": "1de93dcccc85d60bf9282148a6e211f46a3d1aa81b6b9cf01c62cd504ff6c151",
+        "arms": [
+          "S0_NATIVE@0.1.0",
+          "S1_REPEAT_CACHE@1.0.0"
+        ],
+        "valid_counts": {
+          "S0_NATIVE@0.1.0": 83,
+          "S1_REPEAT_CACHE@1.0.0": 106
+        },
+        "rejected_records": 1,
+        "rejections": [
+          {
+            "execution_id": "e0b3d6cd8e75434a94414d83e6364d9d",
+            "reason": "ValueError",
+            "reason_code": "SAMPLE_NOT_VALID",
+            "detail": "SAMPLE_NOT_VALID"
+          }
+        ],
+        "loads": [
+          "MEDIUM"
+        ],
+        "blockers": [
+          "INSUFFICIENT_LOAD_COVERAGE",
+          "NO_VERIFIED_PROPENSITY_LOG",
+          "INDEPENDENT_POLICY_BENEFIT_NOT_ESTABLISHED"
+        ]
+      },
+      {
+        "partition": "4ab97e834335bdee92d71725a50d85d6fe2ba5d150565ffc0f046642b666065f",
+        "arms": [
+          "S0_NATIVE@0.1.0"
+        ],
+        "valid_counts": {},
+        "rejected_records": 76,
+        "rejections": [
+          {
+            "execution_id": "27d02b5903c94e03b507da32520b1000",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "fc15c80aaa594a8e9129cf77ce9857f0",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "4dd6e3107f5e49c4b163938374a0dab2",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "9f4f61d488414f078a4f1b024f01cdce",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "262316a895d3487ca105840f6b36d4a2",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "ccafd3d7af264e449e7db6f401659314",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "fdd003883a6849979e2c0264d3176317",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "2c36ebc0844e4a868d1c980f61e5c687",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "753a59b745044a6ba4ef4702e0ec6f91",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "cb506ab88af74ddb8ff3f8db9c2d39a2",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "2375798801ea4301a61c317590f18d22",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "85ebd110d2144a169ae044d11a1b190e",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "51372a47d4d4419f9c3e5e9315ddfb44",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "b4a86c98708e48ceba56ff1516b0b5c3",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "41515119dafc4031b2fd266a22fda320",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "180364c76d904b0fbbe04ddd3bd2fe98",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "f6a4449637b342e191a1063eee43e1fd",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "6df398a54d2743419f5423d4c1dfac2c",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "5f9b5f386285433182fce39af14e8ba9",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "7cf1fb18986b4b50b0b3a363aa3cb4f2",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "97fe771b027949a5b7f355a1c3ac1cec",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "fd6c40be7af040ac9d46aab51630c7a9",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "8e00d069bc55441da0879e8a0d7d7524",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "7979cfeaab0c488393fa3a047237816e",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "f03f39ce8dcd43beb2a0f8232578008a",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "9f41e4db7221460f9287c3ea96f77fea",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "8934aeb31f354ec0a9f3aa760ba43b8d",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "7be4b548450a4c178cbd3faec14b4036",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "2f93c7e88684474d8d723b5e383fd8ed",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "0fc1a4bf711e4870acda76c463349cfc",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "8c24c0943de54fc786d5bbe4ca06bf01",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "92058a5d73554d35b7f38edd181585e6",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "d5487b5c31be403eb8f55c7812688d00",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "d0c18e126cfd4f66ae17c1ea901e0de3",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "4a42ab6103af457e819fb993ff143a54",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "8d5adbf435ad40efade2326bdd1ea11d",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "3904f30ac36d4ff4b8ed8aeeb07b0922",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "6f77942a5937494ba54b282edc4034f0",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "6c3554a054bf4fa9a087bc4526cf91d3",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "47004773927a44e4833341e8ad1725ec",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "984556bd7ebe425f801e8c5b0372e450",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "b2d3f646e1074424b67901981dbe1a1e",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "3c0dffb46d2446218a432ad8070b734e",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "65d26bb88e0b4b53a315c5950036be81",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "765ee0ea64ed4f889e9b6a9d3f1b1e49",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "e14cf6081d2a4532be85a23b20927796",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "05d55165cafb4d038be9ce28f1ceeff9",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "77347743be6d446bade13f02b4ed4878",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "335bfbf740ed4bfa985a592283e707dd",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "d901083beae943cab170b6b437c71709",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "a92aaaf0107044af9c107edaee7e1a29",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "6d283aea49084a929c95944f59020842",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "501b1c8df78745c19ac32331b859121d",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "6471b3b3b53949afbb67540832e8c2a2",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "c78713e113ca4534bee04cd8e6b8bd61",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "231e4d9cccfa4c06842ec3a24982e9c4",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "0e62111dcebe4b22a8431146db1c7023",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "284b087d7e174e8a8d1f143d22184b0a",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "9f60cb8e93fa4363a4465ca5b7e71119",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "4279d052bff84d92b58bc70e31e07099",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "2d63754f2b8b4eef950b6bbfa813617f",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "9f5499de997e4f71bf8a7f80c6472a06",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "024b2b5ea76c4deabbbdb2781213b430",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "c3d51111be2441c7a3fcb172edec90f9",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "cc116c182bc1447aa490cfa126e5e1f4",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "48bdeca732fe45fcbfd889154fd1b296",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "eb547c8205e44eee96ad7847d1c4b082",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "5a403db90df242a5a19fb0f1d896c937",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "d69dca3c4bc543ce86ab3b09f954e97d",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "b65e961e8e94434696ce63358ebe0d93",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "404d4c59a6604b82a8b6f08cb952958d",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "9f94db7a7c0842d6b06ac652e70303a9",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "de6012e35bb743ccae7d8700b31b8695",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "6030040e8a5d4081a24a43289d0149e7",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "f1539a252752470a81175bb77efdf5af",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "953933bd0ea24b72b6b83d3c317238b7",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          }
+        ],
+        "loads": [],
+        "blockers": [
+          "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE",
+          "INSUFFICIENT_PER_ARM_SAMPLES",
+          "INSUFFICIENT_LOAD_COVERAGE",
+          "NO_VERIFIED_PROPENSITY_LOG",
+          "INDEPENDENT_POLICY_BENEFIT_NOT_ESTABLISHED"
+        ]
+      },
+      {
+        "partition": "ab19ab21785717bf87462c07f839395aac7914c3f5b7d7948ea843eff001a30c",
+        "arms": [
+          "S1_REPEAT_CACHE@1.0.0"
+        ],
+        "valid_counts": {},
+        "rejected_records": 69,
+        "rejections": [
+          {
+            "execution_id": "bca2c62b29804ee6a9bcdb07d42211e6",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "fec400855800401e9877a7a69fa8e70c",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "95ab7884e8ab43c3a0735549e95c995b",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "8a4c49960a1e46ae9a80ddbbb48cc001",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "4a72f2d2a9eb4cd9b57de425d7d37273",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "cf3b1a3c7527443c831dee43a6d129cc",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "3d7ab96aa7e646f79829efdfab481f2b",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "45e2b068776d4396b506db24829fbb30",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "b5d890250bc64f1e9c1464c4375d4c7f",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "5ea3bd4dc7ca4210bae7600dc56a767c",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "5a22439e4ef54503bc37259f9b60bdd1",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "1d9df88df1474a448f253e5d7a1ac6ce",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "0c2dae5a3f854d0aa3087eb859d7809c",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "6f1e6580f1a44921a11cdf5ed6acad2c",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "0f3d5fc60f7b449a962b0cc906c2b9a0",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "aa5bad34bff04b41b39ac6583504bd38",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "55f2ae2a149c4508a5bf0db2ec480201",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "d0691f5fead5482eb994c15a7ef3fb73",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "ed4fcf5f0c87495fbb59878eec3aed40",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "54f31dff9ed341738b4739b4ff30cb88",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "6d098d355e1843d4bd8162de3c29a440",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "c71471dbc2a44d798a6c54893bb76269",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "969b1ad4a76147468afb6696fbc6af7f",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "65118846bda649acbce5ff46519f4b62",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "75329886950248069c0400eae851f17d",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "72e3222c6f4d46e4b956a2a1975d73a9",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "9ed874b77c154438ad0e5d7c8dc36f00",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "4de5f44f4cf84f7ba773918474af4154",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "6a9ad6f30b104bb785af2001d6a210ff",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "d92bc6984a4c4871beb76230a187a3ce",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "e911ded62cb145168e48fbe5ff52debc",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "1ea1bea6d497486193b08329103610ef",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "4ede911758d44481908aed49aa6b87ff",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "087333dbcc8f4cdf8d2f01d6800bc76d",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "87ceb28889d649ea9cd1f41649a9b9e7",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "50e70f97091d4a269a1c392e07cf01bf",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "55b8c77c14ea445f851588a1259214ac",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "f5792d58d8f0486ebfcbceb5471a294d",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "ff09c66799434570adc34e1614f52552",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "cb95e99e9fa840318814763399e2e103",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "651a92481c4e47ab9c1b5b71a6a92a16",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "a7aa0ac0c0a845e8a0432d97964e96f6",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "30585b06a3844e44a5c119febd5aa028",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "eb6809d07ef24fef80380c28e13585c2",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "3660d0a4dbf348638ae30ffb871db172",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "05e2a658bf8d49f4a101b65c1d293076",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "c30b13ba8c7444aeb344fbd0fde7db19",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "8e5c6342618147faa8ce5667f8d3edf6",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "f427294ef37547dc962b470ec1a9925a",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "d17e71cf0717423e98301d8cb2c8b4bf",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "e7346bb37bbd446b8d70f6db06531738",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "b4085cf457a6445393845e82fcb66a30",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "4723efbda706422ba8acd835ab2119e5",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "5c213589f99a43af836ae1761d439b24",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "62f33416396648ad880dbd24ff47fb87",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "9b02310f64cb4fcbb049418d9dce782f",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "05ef3eca8fc94768a339994cedf2025a",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "5faa5af921b54cf4b5df73dfa0d78f77",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "94e0347c7f5e49fbbbaa7edcc8317a29",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "94bd139e96bd4d9c97da23574ff148c6",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "3ed0f10efc81457b920093f585884554",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "5394f3c41a724e1da39b35a78980ca21",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "e67765faa4144492ae438ac11520fe1d",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "b14a1068a11f43adba32931f60bee3cb",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "192454f5766045acb91f27cc3f96897b",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "c30617ac3526421499ae9deb51a77790",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "1d56211d4b76436890a3990891d1ddad",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "9bdbdbb5858542f797a9053ff9d88ec8",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          },
+          {
+            "execution_id": "70470ac0ec9543268ee93cb5893f3d43",
+            "reason": "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE"
+          }
+        ],
+        "loads": [],
+        "blockers": [
+          "NO_COMPARABLE_BASELINE_AND_ALTERNATIVE",
+          "INSUFFICIENT_PER_ARM_SAMPLES",
+          "INSUFFICIENT_LOAD_COVERAGE",
+          "NO_VERIFIED_PROPENSITY_LOG",
+          "INDEPENDENT_POLICY_BENEFIT_NOT_ESTABLISHED"
+        ]
+      }
+    ],
+    "deployment": "OFFLINE_ONLY",
+    "propensities": "UNKNOWN_NOT_PRESENT_IN_EXPERIENCE_SCHEMA"
+  },
+  "randomization_audit": {
+    "verified": true,
+    "unique_assignments": 580,
+    "conditional_propensity": 0.5,
+    "assignment_precedes_execution": true,
+    "journal_sha256": "d5ec02e74da775dcd16cd57ae7442334f3099adcb9627840a2edf1ca1148bf7e"
+  },
+  "rounds": [
+    {
+      "phase": "train",
+      "cache": "EMPTY",
+      "workers": 0,
+      "round_index": 0,
+      "elapsed_s": 21.32273489702493,
+      "background_counts": [
+        0,
+        0,
+        0
+      ],
+      "background_counts_after_stop": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "train",
+      "cache": "EMPTY",
+      "workers": 0,
+      "round_index": 1,
+      "elapsed_s": 30.142799647990614,
+      "background_counts": [
+        0,
+        0,
+        0
+      ],
+      "background_counts_after_stop": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "train",
+      "cache": "READY",
+      "workers": 0,
+      "round_index": 0,
+      "elapsed_s": 30.049010195070878,
+      "background_counts": [
+        0,
+        0,
+        0
+      ],
+      "background_counts_after_stop": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "train",
+      "cache": "READY",
+      "workers": 0,
+      "round_index": 1,
+      "elapsed_s": 30.141963516944088,
+      "background_counts": [
+        0,
+        0,
+        0
+      ],
+      "background_counts_after_stop": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "holdout",
+      "cache": "EMPTY",
+      "workers": 0,
+      "round_index": 0,
+      "elapsed_s": 30.082404587999918,
+      "background_counts": [
+        0,
+        0,
+        0
+      ],
+      "background_counts_after_stop": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "holdout",
+      "cache": "EMPTY",
+      "workers": 0,
+      "round_index": 1,
+      "elapsed_s": 30.158356465981342,
+      "background_counts": [
+        0,
+        0,
+        0
+      ],
+      "background_counts_after_stop": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "holdout",
+      "cache": "READY",
+      "workers": 0,
+      "round_index": 0,
+      "elapsed_s": 30.170962490024976,
+      "background_counts": [
+        0,
+        0,
+        0
+      ],
+      "background_counts_after_stop": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "phase": "holdout",
+      "cache": "READY",
+      "workers": 0,
+      "round_index": 1,
+      "elapsed_s": 30.21148572699167,
+      "background_counts": [
+        0,
+        0,
+        0
+      ],
+      "background_counts_after_stop": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "measured_load_buckets": {
+    "MEDIUM": 579,
+    "HIGH": 1
+  },
+  "qualified_load_coverage": {
+    "valid_counts": {
+      "MEDIUM": {
+        "train/S0_NATIVE": 159,
+        "train/S1_REPEAT_CACHE": 175,
+        "holdout/S0_NATIVE": 118,
+        "holdout/S1_REPEAT_CACHE": 127
+      }
+    },
+    "qualified_buckets": [
+      "MEDIUM"
+    ],
+    "min_samples_per_phase_arm": 30
+  },
+  "observed_background_inflight": {
+    "0": 580
+  },
+  "all_samples_valid": false,
+  "randomized_model_evaluation": null,
+  "remaining_blockers": [
+    "CONTROLLED_PREACTION_MODEL_NOT_DEPLOYMENT_CERTIFIED",
+    "ADAPTIVE_POLICY_BENEFIT_NOT_ESTABLISHED",
+    "PLANNED_EXPERIMENT_COVERAGE_NOT_ATTESTED",
+    "INVALID_RANDOMIZED_TRIALS_PREVENT_POLICY_EVALUATION",
+    "INSUFFICIENT_MEASURED_LOAD_BUCKET_COVERAGE"
+  ],
+  "planned_cell_coverage_verified": false,
+  "db_host_metrics_verified": true,
+  "dataset_import_certification": {
+    "report": "docs/evidence/heavy_import_repair_20261102.json",
+    "sha256": "c6689fbc91bbd3d1ce110c9d8db7511ea0dc14c4d840593ecb4a87f677b110d1",
+    "endpoint": "127.0.0.1:6667",
+    "data_epoch": "heavy-complete-20261102-v2",
+    "status": "PASS",
+    "scope": "all-series count coverage plus sampled six-type values; immutable epoch required"
+  }
+}

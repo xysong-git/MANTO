@@ -1,0 +1,47 @@
+{
+  "expected_exit_code": 1,
+  "observed_exit_code": 1,
+  "events": [
+    "protocol",
+    "reference",
+    "source_reference_audit",
+    "aborted"
+  ],
+  "assignments": 0,
+  "experiences": 0,
+  "journal_sha256": "ad50f10a158c9350350cab9daa27eb58c5c6760e9aed7b1d3e42c66e5a4e5f18",
+  "source_audit": {
+    "scale": "small_scale",
+    "column": "count(root.small_scale.g_0.d_1.s_355)",
+    "sql_sha256": "69289cd978f4c21b0548a24c7f678bd1d5d9620d82f92943a8a9863e6f7875bc",
+    "reference_execution_id": "d318e985800248588666ee7f9df5b5a3",
+    "source_files": [
+      {
+        "path": "/opt/program-code/iot-benchmark/iotdb-2.0/target/iot-benchmark-iotdb-2.0/iot-benchmark-iotdb-2.0/data/small_scale/d_1/BigBatch_0.csv",
+        "sha256": "360df23a3af31e7841bd54cf462b518130d67889f42535583b4b56228ba5a1c9",
+        "data_rows": 1000,
+        "header_rows": 10
+      },
+      {
+        "path": "/opt/program-code/iot-benchmark/iotdb-2.0/target/iot-benchmark-iotdb-2.0/iot-benchmark-iotdb-2.0/data/small_scale/d_1/BigBatch_1.csv",
+        "sha256": "fc5e0580df4c37cc00d47ca0b84cac351e4b66d8f17d4b4beef3225001a2149b",
+        "data_rows": 1000,
+        "header_rows": 10
+      },
+      {
+        "path": "/opt/program-code/iot-benchmark/iotdb-2.0/target/iot-benchmark-iotdb-2.0/iot-benchmark-iotdb-2.0/data/small_scale/d_1/BigBatch_2.csv",
+        "sha256": "24cd716683f12bd8ef112c6935d8df5b4b422dd0a4afceb045a86f6b2cce809e",
+        "data_rows": 1000,
+        "header_rows": 10
+      }
+    ],
+    "unique_source_timestamps": 3000,
+    "lower_inclusive_ms": 1640968700000,
+    "upper_exclusive_ms": 1640978355000,
+    "source_nonnull_count": 1931,
+    "database_count": 390,
+    "status": "MISMATCH",
+    "scope": "first COUNT column of first query only; other source values/import completeness UNKNOWN"
+  },
+  "guard_result": "PASS_REJECTED_BEFORE_LEARNING"
+}

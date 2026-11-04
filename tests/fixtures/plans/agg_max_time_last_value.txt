@@ -1,0 +1,8 @@
+┌────────────────────────────────┐
+│AlignedSeriesAggregationScan-3  │
+│Series: root.test.g_0.d_0[s_130]│
+│Aggregator-0: LAST_VALUE, SINGLE│
+│Aggregator-1: MAX_TIME, SINGLE  │
+│ScanOrder: DESC                 │
+│Partition: 100                  │
+└────────────────────────────────┘

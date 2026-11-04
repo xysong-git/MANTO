@@ -1,0 +1,2521 @@
+{
+  "protocol": {
+    "protocol": "controlled-e2e-v5",
+    "storage_mode": "WAL_FULL_REQUEST_SESSION",
+    "sampling_schedule": "fixed-rate-db-first-v1",
+    "snapshot_mode": "latest",
+    "test_query_line": 4,
+    "background_interval_s": 0.2,
+    "snapshot_ttl_ms": 500,
+    "epoch": "heavy-complete-20261102-v2",
+    "seed": 20261102,
+    "load_protocol": "cpu-activity-v3",
+    "cpu_measurement": "cpu-times-instance-v1",
+    "cpu_source": "EXPLICIT_CO_TENANT_NOT_DATABASE_QUERIES",
+    "cpu_setpoint_percent": 55.0,
+    "cpu_target_percent": [
+      50,
+      70
+    ],
+    "cpu_stop_percent": 80,
+    "cpu_duration_max_s": 30,
+    "query_timeout_ms": 30000,
+    "round_limit_s": 60,
+    "max_query_connections": 1,
+    "first_occurrence_preparation": "explicit Native Orchestrator request before each phase; excluded from Bandit fitting and E2E comparisons",
+    "process_supervisor": true,
+    "training_rounds_per_cell": 6,
+    "training_trial_cap_per_round": 20,
+    "test_blocks_per_cell": 30,
+    "minimum_per_arm_training": 30,
+    "minimum_test_blocks": 30,
+    "benefit_analysis": {
+      "metric": "Orchestrator e2e_ms",
+      "contrast": "ADAPTIVE minus actual comparator",
+      "bootstrap": "paired blocks, stratified by load/cache",
+      "replicates": 4000,
+      "confidence": 0.99,
+      "seed": 20261104,
+      "required_comparators": [
+        "S0_NATIVE",
+        "S1_REPEAT_CACHE"
+      ],
+      "within_session_repeats": "3 consecutive 10-block batches must each have negative mean difference",
+      "independent_session_reproduction": false
+    },
+    "pilot_repeats": 2,
+    "stability_min_samples": 20,
+    "stability_fraction": 0.8,
+    "file_sha256": "6ba283d167236ca597af4dfcaa5626a811b9df68bb50398e010c3d607ec8dd26",
+    "train_sql": "SELECT count(s_355), count(s_393), count(s_527), count(s_790), count(s_933), count(s_1076), count(s_1129), count(s_1166), count(s_1285), count(s_1309), count(s_1379), count(s_1399), count(s_1430), count(s_1463), count(s_1502), count(s_1631) FROM root.small_scale.g_0.d_1, root.small_scale.g_0.d_9, root.small_scale.g_0.d_26, root.small_scale.g_0.d_34, root.small_scale.g_0.d_40, root.small_scale.g_0.d_41, root.small_scale.g_0.d_54, root.small_scale.g_0.d_63, root.small_scale.g_0.d_78, root.small_scale.g_0.d_86 WHERE time >= 1640968700000 AND time < 1640978355000",
+    "test_sql": "SELECT count(s_340), count(s_491), count(s_606), count(s_613), count(s_615), count(s_744), count(s_965), count(s_986), count(s_1055), count(s_1061), count(s_1083), count(s_1360), count(s_1379), count(s_1428), count(s_1462), count(s_1524) FROM root.small_scale.g_0.d_4, root.small_scale.g_0.d_14, root.small_scale.g_0.d_15, root.small_scale.g_0.d_20, root.small_scale.g_0.d_23, root.small_scale.g_0.d_38, root.small_scale.g_0.d_53, root.small_scale.g_0.d_70, root.small_scale.g_0.d_76, root.small_scale.g_0.d_96 WHERE time >= 1640971285000 AND time < 1640981315000",
+    "load_identity": {
+      "host": "127.0.0.1",
+      "port": 6667,
+      "pid": 3879777,
+      "process_created_at_s": 1793354163.95,
+      "main_class": "org.apache.iotdb.db.service.DataNode",
+      "namespaces": {
+        "net": "net:[4026531833]",
+        "mnt": "mnt:[4026531832]",
+        "pid": "pid:[4026531836]"
+      }
+    },
+    "import_certificate": {
+      "report": "docs/evidence/heavy_import_repair_20261102.json",
+      "sha256": "c6689fbc91bbd3d1ce110c9d8db7511ea0dc14c4d840593ecb4a87f677b110d1",
+      "endpoint": "127.0.0.1:6667",
+      "data_epoch": "heavy-complete-20261102-v2",
+      "status": "PASS",
+      "scope": "all-series count coverage plus sampled six-type values; immutable epoch required"
+    },
+    "end_to_end_definition": "time around Orchestrator.run including parsing, monitoring, decision, full fetch, learning and trace persistence; excludes explicit cache preparation and external audit serialization",
+    "production_online_enabled": false
+  },
+  "journal_sha256": "88778b1e7eb17f8f287f4acbc3032338d6ebd251e838c7ab867f2428bcc0cc88",
+  "pilot_passed": true,
+  "pilot": [
+    {
+      "load": "LOW",
+      "repeat": 0,
+      "passed": true,
+      "samples": [
+        {
+          "snapshot_id": "5d12df7e519845759640ff6c70639185",
+          "captured_at": "2026-11-03T01:39:19.121108Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 3.218,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 4732583.354,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "c6d4e69fbe484fe0abf77a30e35a68f0",
+          "captured_at": "2026-11-03T01:39:19.349494Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.832,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "f0a6977043c04db6a7a85c7af3ceeefb",
+          "captured_at": "2026-11-03T01:39:19.580225Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 3.676,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "d6901c79f27c43c58722f64237972dd6",
+          "captured_at": "2026-11-03T01:39:19.811626Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 3.053,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 3681815.16,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "64fb44b020a2488aad93312ceaa84787",
+          "captured_at": "2026-11-03T01:39:20.044281Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.09,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "969d4d6ae0994b479843a4a16aa4c1aa",
+          "captured_at": "2026-11-03T01:39:20.279285Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.069,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 453178.589,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "ad067a3770fe4147a1b1990c3111054d",
+          "captured_at": "2026-11-03T01:39:20.517671Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.045,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "f36facc54a3342cd82a7e757a1a00193",
+          "captured_at": "2026-11-03T01:39:20.757452Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.814,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "9721059d1cab4c418ba84760eddd0b07",
+          "captured_at": "2026-11-03T01:39:20.996202Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 1.772,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "dca38d018f73425fac2550f827544fbb",
+          "captured_at": "2026-11-03T01:39:21.236898Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 1.893,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "94b5c06cfa664bb0ad88dba487fdeaa0",
+          "captured_at": "2026-11-03T01:39:21.480067Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.776,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "b98cb67cb95644edba63d2b30fe43d46",
+          "captured_at": "2026-11-03T01:39:21.724438Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.312,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "3f086eb1d7c64d1b8c42c23f70c65965",
+          "captured_at": "2026-11-03T01:39:21.966656Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 1.812,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 422740.997,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "3b2bb672eb0e4df681815b04926c2166",
+          "captured_at": "2026-11-03T01:39:22.209805Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 1.551,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "4a856b8b22e440c7a8c08ea361343e51",
+          "captured_at": "2026-11-03T01:39:22.452322Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.202,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "d3d18f67a513499eae1ad72d484d2b1a",
+          "captured_at": "2026-11-03T01:39:22.694549Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.718,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 16909.664,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "98f54faaf5b84b47b8fd844cd668660d",
+          "captured_at": "2026-11-03T01:39:22.937164Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.074,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 4305090.247,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "2da45aceeccb4920a099d642319eceb1",
+          "captured_at": "2026-11-03T01:39:23.179220Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.781,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "11ff80aec7ed413799941ffc5a66f2ef",
+          "captured_at": "2026-11-03T01:39:23.421246Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 3.107,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 3198628.736,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "51160ea4e4984bfcbf5c60c4322116e3",
+          "captured_at": "2026-11-03T01:39:23.663278Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.596,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        }
+      ],
+      "cpu_control": []
+    },
+    {
+      "load": "MEDIUM",
+      "repeat": 0,
+      "passed": true,
+      "samples": [
+        {
+          "snapshot_id": "be9a69a939a542f89726f2401f88d072",
+          "captured_at": "2026-11-03T01:39:27.003801Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 53.034,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 166762.348,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "082e513099b941649a0d246df9404a76",
+          "captured_at": "2026-11-03T01:39:27.226440Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.8,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "b1f5998f9d954341bf5d2e667ea52deb",
+          "captured_at": "2026-11-03T01:39:27.450669Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 55.392,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "76dcbecc55ff41f5933115fc5365b92b",
+          "captured_at": "2026-11-03T01:39:27.672198Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 56.011,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "e15f57e28f38458d88f57b46eab0333e",
+          "captured_at": "2026-11-03T01:39:27.897244Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 55.827,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "5b8dc82095b94d86a999033f0d3c4c05",
+          "captured_at": "2026-11-03T01:39:28.120622Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.755,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "2d94cb5a20544b2c8988cb9c146f3d96",
+          "captured_at": "2026-11-03T01:39:28.342892Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.72,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "535869f580344584ab18d6b0c3f3bf07",
+          "captured_at": "2026-11-03T01:39:28.567701Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 55.71,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 1184238.385,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "45d424fbac584e5d9b4ba233b214053c",
+          "captured_at": "2026-11-03T01:39:28.786967Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.839,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 467024.719,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "c8d7cdadaebd40f8a1a12b295a8f7076",
+          "captured_at": "2026-11-03T01:39:29.009008Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.322,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 2102834.574,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "621cc02518444bbe8aca229472fd5b54",
+          "captured_at": "2026-11-03T01:39:29.229077Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.241,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "37f0c395ffbc499c965c9c17cfd2580c",
+          "captured_at": "2026-11-03T01:39:29.452667Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.864,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "2691b49d45b3432cbd22c034a9609758",
+          "captured_at": "2026-11-03T01:39:29.672760Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 55.374,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "683ce813ae3d45faade0e98e22b8ac0e",
+          "captured_at": "2026-11-03T01:39:29.894463Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.5,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "e9215f8a191a4fdb901fc92b7f0a1d7e",
+          "captured_at": "2026-11-03T01:39:30.119201Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 55.16,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 18226.564,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "56f5ce17563942d7a4bb0dede9a57425",
+          "captured_at": "2026-11-03T01:39:30.342652Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.884,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "fa9b9f6abe844680a2734a525bfdd909",
+          "captured_at": "2026-11-03T01:39:30.567994Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 55.432,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "929683ffc9574fe8bcab655d87414517",
+          "captured_at": "2026-11-03T01:39:30.786752Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.832,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 18724.635,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "090366ab9d4e407b8c660652fc46b980",
+          "captured_at": "2026-11-03T01:39:31.010136Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.762,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 476711.869,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "7f5f74c8888e4d0c9037ecafad28d5dc",
+          "captured_at": "2026-11-03T01:39:31.230339Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.448,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        }
+      ],
+      "cpu_control": [
+        {
+          "elapsed_s": 0.3558930619619787,
+          "cpu_percent": 51.1,
+          "memory_percent": 64.2,
+          "worker_duty": 0.65
+        },
+        {
+          "elapsed_s": 0.6062510209158063,
+          "cpu_percent": 51.4,
+          "memory_percent": 64.2,
+          "worker_duty": 0.6708000000000001
+        },
+        {
+          "elapsed_s": 0.8567038920009509,
+          "cpu_percent": 53.3,
+          "memory_percent": 64.2,
+          "worker_duty": 0.6900000000000001
+        },
+        {
+          "elapsed_s": 1.1071002460084856,
+          "cpu_percent": 54.3,
+          "memory_percent": 64.2,
+          "worker_duty": 0.6990666666666667
+        },
+        {
+          "elapsed_s": 1.3573951999424025,
+          "cpu_percent": 53.6,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7028000000000001
+        },
+        {
+          "elapsed_s": 1.6077262839535251,
+          "cpu_percent": 54.2,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7102666666666667
+        },
+        {
+          "elapsed_s": 1.8583395789610222,
+          "cpu_percent": 54.6,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7145333333333334
+        },
+        {
+          "elapsed_s": 2.10899785393849,
+          "cpu_percent": 55.1,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7166666666666667
+        },
+        {
+          "elapsed_s": 2.3593795829219744,
+          "cpu_percent": 54.5,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7161333333333333
+        },
+        {
+          "elapsed_s": 2.609851129935123,
+          "cpu_percent": 54.9,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7188
+        },
+        {
+          "elapsed_s": 2.860429669963196,
+          "cpu_percent": 55.4,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7193333333333334
+        },
+        {
+          "elapsed_s": 3.110940415994264,
+          "cpu_percent": 55.0,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7172000000000001
+        },
+        {
+          "elapsed_s": 3.3612640609499067,
+          "cpu_percent": 54.9,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7172000000000001
+        },
+        {
+          "elapsed_s": 3.61164244893007,
+          "cpu_percent": 54.9,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7177333333333334
+        },
+        {
+          "elapsed_s": 3.8622334309620783,
+          "cpu_percent": 55.4,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7182666666666668
+        },
+        {
+          "elapsed_s": 4.112635590950958,
+          "cpu_percent": 55.8,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7161333333333335
+        },
+        {
+          "elapsed_s": 4.362974570947699,
+          "cpu_percent": 55.5,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7118666666666669
+        },
+        {
+          "elapsed_s": 4.613391584018245,
+          "cpu_percent": 54.6,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7092000000000002
+        },
+        {
+          "elapsed_s": 4.863852308015339,
+          "cpu_percent": 55.6,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7113333333333335
+        },
+        {
+          "elapsed_s": 5.114198333933018,
+          "cpu_percent": 55.0,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7081333333333335
+        },
+        {
+          "elapsed_s": 5.364551106933504,
+          "cpu_percent": 54.1,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7081333333333335
+        },
+        {
+          "elapsed_s": 5.6149219130165875,
+          "cpu_percent": 54.5,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7129333333333335
+        },
+        {
+          "elapsed_s": 5.865281748003326,
+          "cpu_percent": 54.9,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7156000000000002
+        },
+        {
+          "elapsed_s": 6.115645415964536,
+          "cpu_percent": 55.0,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7161333333333336
+        },
+        {
+          "elapsed_s": 6.365986519958824,
+          "cpu_percent": 54.8,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7161333333333336
+        },
+        {
+          "elapsed_s": 6.616369214956649,
+          "cpu_percent": 55.1,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7172000000000003
+        },
+        {
+          "elapsed_s": 6.866874265950173,
+          "cpu_percent": 55.4,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7166666666666669
+        },
+        {
+          "elapsed_s": 7.1172741840127856,
+          "cpu_percent": 55.0,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7145333333333336
+        },
+        {
+          "elapsed_s": 7.367873803013936,
+          "cpu_percent": 54.5,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7145333333333336
+        }
+      ]
+    },
+    {
+      "load": "LOW",
+      "repeat": 1,
+      "passed": true,
+      "samples": [
+        {
+          "snapshot_id": "2bd5c484b0974b94b6cb8a57eeaaaf27",
+          "captured_at": "2026-11-03T01:39:34.503189Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.585,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 126404.961,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "56a965e76a98459187977f750b0bac9d",
+          "captured_at": "2026-11-03T01:39:34.747491Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.118,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "6323f05274ca47258630f47985ace665",
+          "captured_at": "2026-11-03T01:39:34.991022Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 1.996,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "0301efe1b73c4d7a90f6d82dffe8ef5f",
+          "captured_at": "2026-11-03T01:39:35.234197Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 1.483,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "c62f8365d94141efbacc8d16e9da4927",
+          "captured_at": "2026-11-03T01:39:35.478433Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.059,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "4844816589ec4f6286debd2b2d7470c3",
+          "captured_at": "2026-11-03T01:39:35.722981Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 3.395,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "d471759a903c4a2aa3662c7cbd9fa5dd",
+          "captured_at": "2026-11-03T01:39:35.966682Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.062,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "03a827acfe984ab989070c64410e9b6d",
+          "captured_at": "2026-11-03T01:39:36.210029Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 1.869,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 420804.658,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "85a72165cd4c4eaf8ab8e14ec628b23d",
+          "captured_at": "2026-11-03T01:39:36.454934Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.242,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "53732b6f423d4cb886eff8c0b9282cc1",
+          "captured_at": "2026-11-03T01:39:36.699196Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 3.089,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "247b403fa1724179857773b63788ca00",
+          "captured_at": "2026-11-03T01:39:36.942130Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 1.482,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "448156c010ef49e0b7ada268812aa542",
+          "captured_at": "2026-11-03T01:39:37.185006Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 1.614,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "b97b82f0ca214879bdab04f5b31a303a",
+          "captured_at": "2026-11-03T01:39:37.429026Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 1.866,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "df977a6be14e469896bf531bff3d254c",
+          "captured_at": "2026-11-03T01:39:37.672919Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.251,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 13501630.425,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "44ea481fb19f4b569c40fc9d14dde070",
+          "captured_at": "2026-11-03T01:39:37.915308Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 1.876,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "47ef723039ae48cba12115f2830aa2eb",
+          "captured_at": "2026-11-03T01:39:38.157682Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.977,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "28b28783af63431084908c6cc3896427",
+          "captured_at": "2026-11-03T01:39:38.401511Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.063,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "c58b2ef85520401b87149d378673ebd9",
+          "captured_at": "2026-11-03T01:39:38.644612Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 2.386,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 438055.737,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "512d45aa46734b118af1bb754cdeae37",
+          "captured_at": "2026-11-03T01:39:38.887549Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 1.549,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "a4a8812b6a8c4d3d87a9629cf274b25a",
+          "captured_at": "2026-11-03T01:39:39.130232Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 1.616,
+          "memory_percent": 64.1,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        }
+      ],
+      "cpu_control": []
+    },
+    {
+      "load": "MEDIUM",
+      "repeat": 1,
+      "passed": true,
+      "samples": [
+        {
+          "snapshot_id": "52c39ce0ae6b477d8dd6efb201f1c922",
+          "captured_at": "2026-11-03T01:39:42.481203Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 52.809,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 1243183.551,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "080ba805cdc84cc09e40fb50cba1e327",
+          "captured_at": "2026-11-03T01:39:42.705442Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 55.61,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "f2cef35ff80b4dfaa7cd6b8e5a444fe3",
+          "captured_at": "2026-11-03T01:39:42.923850Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.591,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 14177321.316,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "ebc32f4c6dd94ff8861f327909264f3e",
+          "captured_at": "2026-11-03T01:39:43.147131Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 55.088,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "11805222aa6d47488dc5f7c295993cfc",
+          "captured_at": "2026-11-03T01:39:43.372219Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.944,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "41e0dab1e0c04293a84280a91934e900",
+          "captured_at": "2026-11-03T01:39:43.595278Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 55.938,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "af045c7bd57b46e893ae96205a077546",
+          "captured_at": "2026-11-03T01:39:43.815316Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 55.342,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "6cb427d71a1948b4a490044c62d888f7",
+          "captured_at": "2026-11-03T01:39:44.038881Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 55.345,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "c6a02dda31df4a01872dd9b69597ca91",
+          "captured_at": "2026-11-03T01:39:44.263124Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.881,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 2063889.658,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "7e838296c3824d8796e108261e9ec7d6",
+          "captured_at": "2026-11-03T01:39:44.481570Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 56.434,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "ff9c6bd6c6d44cfcace45297f68b9789",
+          "captured_at": "2026-11-03T01:39:44.699099Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 61.699,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "4f15854be55e44acafea43de9b479840",
+          "captured_at": "2026-11-03T01:39:44.919683Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 52.27,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 74274.768,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "a899d55b4c9040d09e53331d2a112bfd",
+          "captured_at": "2026-11-03T01:39:45.141187Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 52.337,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 462274.131,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "60b78724bb414996b40955aedb386d14",
+          "captured_at": "2026-11-03T01:39:45.359092Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 53.592,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "bed889ef7d0a4dd3bef7dba3a51c80bc",
+          "captured_at": "2026-11-03T01:39:45.579511Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.487,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "b98c067dfd1147b3b9ed21f3566259fb",
+          "captured_at": "2026-11-03T01:39:45.799824Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.513,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "46cc42aa434c4a708c27a766f59ea8d5",
+          "captured_at": "2026-11-03T01:39:46.016781Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.29,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "3b6f5d3e54af4fed901772bd99916cb8",
+          "captured_at": "2026-11-03T01:39:46.238097Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 54.436,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "5d4b42f5a561452687e42f3af42222cd",
+          "captured_at": "2026-11-03T01:39:46.461459Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 55.158,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 0.0,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        },
+        {
+          "snapshot_id": "356292d6711c499ca2a2a3ff0a38b166",
+          "captured_at": "2026-11-03T01:39:46.683402Z",
+          "source_host": "Ubuntu-Server",
+          "source_type": "db_host",
+          "cpu_measurement": "cpu-times-instance-v1",
+          "cpu_percent": 55.375,
+          "memory_percent": 64.2,
+          "disk_usage_percent": 21.5,
+          "disk_read_bytes_per_sec": 0.0,
+          "disk_write_bytes_per_sec": 18456.193,
+          "active_queries": null,
+          "valid": true,
+          "stale_after_ms": 500,
+          "unavailable_fields": {
+            "active_queries": "NO_DB_METRICS_SOURCE"
+          },
+          "warnings": [
+            "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+          ],
+          "error_type": null,
+          "error_message": null
+        }
+      ],
+      "cpu_control": [
+        {
+          "elapsed_s": 0.36333819094579667,
+          "cpu_percent": 50.2,
+          "memory_percent": 64.2,
+          "worker_duty": 0.65
+        },
+        {
+          "elapsed_s": 0.613958214991726,
+          "cpu_percent": 52.8,
+          "memory_percent": 64.2,
+          "worker_duty": 0.6756
+        },
+        {
+          "elapsed_s": 0.8642972350353375,
+          "cpu_percent": 52.6,
+          "memory_percent": 64.2,
+          "worker_duty": 0.6873333333333334
+        },
+        {
+          "elapsed_s": 1.1147828849498183,
+          "cpu_percent": 53.7,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7001333333333334
+        },
+        {
+          "elapsed_s": 1.365327195962891,
+          "cpu_percent": 54.9,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7070666666666667
+        },
+        {
+          "elapsed_s": 1.6158830990316346,
+          "cpu_percent": 54.9,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7076000000000001
+        },
+        {
+          "elapsed_s": 1.8665601660031825,
+          "cpu_percent": 53.9,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7081333333333335
+        },
+        {
+          "elapsed_s": 2.1169957059901208,
+          "cpu_percent": 54.4,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7140000000000002
+        },
+        {
+          "elapsed_s": 2.367499563959427,
+          "cpu_percent": 54.8,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7172000000000002
+        },
+        {
+          "elapsed_s": 2.617963145021349,
+          "cpu_percent": 55.3,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7182666666666668
+        },
+        {
+          "elapsed_s": 2.86831585096661,
+          "cpu_percent": 54.5,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7166666666666669
+        },
+        {
+          "elapsed_s": 3.118688483024016,
+          "cpu_percent": 54.9,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7193333333333336
+        },
+        {
+          "elapsed_s": 3.3693209280027077,
+          "cpu_percent": 55.2,
+          "memory_percent": 64.2,
+          "worker_duty": 0.719866666666667
+        },
+        {
+          "elapsed_s": 3.6197813430335373,
+          "cpu_percent": 55.3,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7188000000000003
+        },
+        {
+          "elapsed_s": 3.8702001579804346,
+          "cpu_percent": 54.7,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7172000000000004
+        },
+        {
+          "elapsed_s": 4.120611220947467,
+          "cpu_percent": 54.9,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7188000000000003
+        },
+        {
+          "elapsed_s": 4.370972692966461,
+          "cpu_percent": 55.4,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7193333333333337
+        },
+        {
+          "elapsed_s": 4.621606147033162,
+          "cpu_percent": 55.8,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7172000000000004
+        },
+        {
+          "elapsed_s": 4.872686238959432,
+          "cpu_percent": 54.9,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7129333333333338
+        },
+        {
+          "elapsed_s": 5.123110943008214,
+          "cpu_percent": 55.4,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7134666666666671
+        },
+        {
+          "elapsed_s": 5.373849194031209,
+          "cpu_percent": 58.7,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7113333333333338
+        },
+        {
+          "elapsed_s": 5.624253729940392,
+          "cpu_percent": 57.7,
+          "memory_percent": 64.2,
+          "worker_duty": 0.6916000000000004
+        },
+        {
+          "elapsed_s": 5.874728234950453,
+          "cpu_percent": 51.8,
+          "memory_percent": 64.2,
+          "worker_duty": 0.6772000000000005
+        },
+        {
+          "elapsed_s": 6.12523757503368,
+          "cpu_percent": 53.0,
+          "memory_percent": 64.2,
+          "worker_duty": 0.6942666666666671
+        },
+        {
+          "elapsed_s": 6.37581684300676,
+          "cpu_percent": 54.1,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7049333333333339
+        },
+        {
+          "elapsed_s": 6.626291555003263,
+          "cpu_percent": 54.9,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7097333333333339
+        },
+        {
+          "elapsed_s": 6.876738006947562,
+          "cpu_percent": 54.4,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7102666666666673
+        },
+        {
+          "elapsed_s": 7.127270087949,
+          "cpu_percent": 54.5,
+          "memory_percent": 64.2,
+          "worker_duty": 0.7134666666666672
+        },
+        {
+          "elapsed_s": 7.377826035954058,
+          "cpu_percent": 55.1,
+          "memory_percent": 64.2,
+          "worker_duty": 0.716133333333334
+        }
+      ]
+    }
+  ],
+  "training_samples": 480,
+  "training_gate": {
+    "passed": true,
+    "counts": {
+      "MEDIUM/EMPTY/S0_NATIVE": 59,
+      "MEDIUM/EMPTY/S1_REPEAT_CACHE": 63,
+      "MEDIUM/READY/S0_NATIVE": 55,
+      "MEDIUM/READY/S1_REPEAT_CACHE": 65,
+      "LOW/READY/S0_NATIVE": 63,
+      "LOW/READY/S1_REPEAT_CACHE": 57,
+      "LOW/EMPTY/S0_NATIVE": 55,
+      "LOW/EMPTY/S1_REPEAT_CACHE": 63
+    }
+  },
+  "test_samples": 360,
+  "test_sample_gate": false,
+  "test_actual_load_counts": {
+    "LOW/READY/S1_REPEAT_CACHE": 30,
+    "LOW/READY/ADAPTIVE": 31,
+    "LOW/READY/S0_NATIVE": 30,
+    "MEDIUM/EMPTY/S1_REPEAT_CACHE": 30,
+    "MEDIUM/EMPTY/S0_NATIVE": 30,
+    "MEDIUM/EMPTY/ADAPTIVE": 30,
+    "MEDIUM/READY/ADAPTIVE": 29,
+    "MEDIUM/READY/S1_REPEAT_CACHE": 30,
+    "MEDIUM/READY/S0_NATIVE": 30,
+    "LOW/EMPTY/S1_REPEAT_CACHE": 30,
+    "LOW/EMPTY/S0_NATIVE": 30,
+    "LOW/EMPTY/ADAPTIVE": 30
+  },
+  "execution_load_stability": {
+    "LOW": {
+      "n": 420,
+      "target_fraction": 0.9952380952380953,
+      "passed": true
+    },
+    "MEDIUM": {
+      "n": 420,
+      "target_fraction": 0.9952380952380953,
+      "passed": true
+    }
+  },
+  "model_reproduced_and_frozen": true,
+  "actual_policy_counts": {
+    "S1_REPEAT_CACHE": 120
+  },
+  "adaptive_choices_by_cell": {
+    "LOW/READY/S1_REPEAT_CACHE": 31,
+    "MEDIUM/EMPTY/S1_REPEAT_CACHE": 30,
+    "MEDIUM/READY/S1_REPEAT_CACHE": 29,
+    "LOW/EMPTY/S1_REPEAT_CACHE": 30
+  },
+  "storage_configuration": {
+    "sqlite_version": "3.53.2",
+    "journal_mode": "wal",
+    "synchronous": 2
+  },
+  "snapshot_age_ms_at_dispatch": {
+    "client_host": {
+      "n": 840,
+      "min_ms": 6.908,
+      "max_ms": 290.493,
+      "p95_ms": 212.818
+    },
+    "db_host": {
+      "n": 840,
+      "min_ms": 26.389,
+      "max_ms": 359.91,
+      "p95_ms": 240.85500000000002
+    }
+  },
+  "policy_metrics": {
+    "S0_NATIVE": {
+      "n": 120,
+      "mean_e2e_ms": 78.0537526414264,
+      "median_e2e_ms": 74.75187146337703,
+      "p95_e2e_ms": 113.78046800382435
+    },
+    "S1_REPEAT_CACHE": {
+      "n": 120,
+      "mean_e2e_ms": 71.14670445929126,
+      "median_e2e_ms": 60.06964296102524,
+      "p95_e2e_ms": 130.23325405083597
+    },
+    "ADAPTIVE": {
+      "n": 120,
+      "mean_e2e_ms": 73.37874147245505,
+      "median_e2e_ms": 61.75963347777724,
+      "p95_e2e_ms": 144.06246889848262
+    }
+  },
+  "trace_interval_means_ms": {
+    "S0_NATIVE": {
+      "adapter_client_wall_ms": 19.130808333333334,
+      "to_RECEIVED": 0.0871,
+      "to_PARSED": 15.246358333333333,
+      "to_SNAPSHOT": 0.30940833333333334,
+      "to_RETRIEVED": 1.3699916666666665,
+      "to_DECIDED": 5.734191666666667,
+      "to_VALIDATED": 0.2873166666666666,
+      "to_EXECUTED": 23.337116666666667,
+      "to_MONITORED": 0.9222416666666667,
+      "to_LEARNED": 24.946241666666666,
+      "to_SUCCEEDED": 0.14709166666666718
+    },
+    "S1_REPEAT_CACHE": {
+      "adapter_client_wall_ms": 10.628508333333333,
+      "to_RECEIVED": 0.08608333333333333,
+      "to_PARSED": 15.442458333333333,
+      "to_SNAPSHOT": 0.29244999999999993,
+      "to_RETRIEVED": 1.3420333333333334,
+      "to_DECIDED": 5.724758333333334,
+      "to_VALIDATED": 0.2829666666666667,
+      "to_EXECUTED": 16.7455,
+      "to_MONITORED": 0.8568249999999998,
+      "to_LEARNED": 24.547233333333335,
+      "to_SUCCEEDED": 0.1408999999999998
+    },
+    "ADAPTIVE": {
+      "adapter_client_wall_ms": 10.402583333333334,
+      "to_RECEIVED": 0.07873333333333334,
+      "to_PARSED": 14.532666666666668,
+      "to_SNAPSHOT": 0.29234166666666656,
+      "to_RETRIEVED": 1.2806000000000002,
+      "to_DECIDED": 6.595008333333333,
+      "to_VALIDATED": 0.27775833333333344,
+      "to_EXECUTED": 16.638708333333334,
+      "to_MONITORED": 0.8384166666666671,
+      "to_LEARNED": 27.228291666666667,
+      "to_SUCCEEDED": 0.14044999999999994
+    }
+  },
+  "cell_policy_metrics": {
+    "LOW/EMPTY/S0_NATIVE": {
+      "n": 30,
+      "mean_e2e_ms": 88.94685816485435,
+      "median_e2e_ms": 86.16851147962734,
+      "p95_e2e_ms": 141.14540605805814
+    },
+    "LOW/EMPTY/S1_REPEAT_CACHE": {
+      "n": 30,
+      "mean_e2e_ms": 102.43367492997398,
+      "median_e2e_ms": 93.66188698913902,
+      "p95_e2e_ms": 143.54662701953202
+    },
+    "LOW/EMPTY/ADAPTIVE": {
+      "n": 30,
+      "mean_e2e_ms": 105.73115533528228,
+      "median_e2e_ms": 93.16449903417379,
+      "p95_e2e_ms": 154.14222597610205
+    },
+    "LOW/READY/S0_NATIVE": {
+      "n": 30,
+      "mean_e2e_ms": 78.0744996232291,
+      "median_e2e_ms": 79.28253547288477,
+      "p95_e2e_ms": 94.63740198407322
+    },
+    "LOW/READY/S1_REPEAT_CACHE": {
+      "n": 30,
+      "mean_e2e_ms": 57.17133140812317,
+      "median_e2e_ms": 52.59302549529821,
+      "p95_e2e_ms": 80.58673900086433
+    },
+    "LOW/READY/ADAPTIVE": {
+      "n": 30,
+      "mean_e2e_ms": 62.79838449166467,
+      "median_e2e_ms": 55.027606489602476,
+      "p95_e2e_ms": 83.2680199528113
+    },
+    "MEDIUM/EMPTY/S0_NATIVE": {
+      "n": 30,
+      "mean_e2e_ms": 82.36967422999442,
+      "median_e2e_ms": 68.19690496195108,
+      "p95_e2e_ms": 116.0328210098669
+    },
+    "MEDIUM/EMPTY/S1_REPEAT_CACHE": {
+      "n": 30,
+      "mean_e2e_ms": 76.36788778472692,
+      "median_e2e_ms": 65.08135248441249,
+      "p95_e2e_ms": 119.17655705474317
+    },
+    "MEDIUM/EMPTY/ADAPTIVE": {
+      "n": 30,
+      "mean_e2e_ms": 68.77605065625782,
+      "median_e2e_ms": 61.337365477811545,
+      "p95_e2e_ms": 115.3263570740819
+    },
+    "MEDIUM/READY/S0_NATIVE": {
+      "n": 30,
+      "mean_e2e_ms": 62.823978547627725,
+      "median_e2e_ms": 64.2110850312747,
+      "p95_e2e_ms": 76.81841007433832
+    },
+    "MEDIUM/READY/S1_REPEAT_CACHE": {
+      "n": 30,
+      "mean_e2e_ms": 48.61392371434098,
+      "median_e2e_ms": 46.041491033975035,
+      "p95_e2e_ms": 72.64072902034968
+    },
+    "MEDIUM/READY/ADAPTIVE": {
+      "n": 30,
+      "mean_e2e_ms": 56.209375406615436,
+      "median_e2e_ms": 48.46265504602343,
+      "p95_e2e_ms": 83.1141680246219
+    }
+  },
+  "contrasts": {},
+  "online_ready": false,
+  "stage_accepted": false,
+  "limitations": [
+    "CPU is authorized co-tenant load, not IoTDB query load",
+    "fixed cache preparation and reference executions excluded from request E2E but separately recorded",
+    "EMPTY/READY describe client result cache only; IoTDB internal cache state is uncontrolled",
+    "single query template, distinct train/test SQL; no generalization to all workloads",
+    "single session; independent-session reproduction not established",
+    "learning reward is adapter client latency; outcome here is whole Orchestrator latency",
+    "assignment precedes execution in flushed journal; no separate assignment UTC field"
+  ],
+  "within_session_benefit_gate": false,
+  "qualification_complete": false
+}

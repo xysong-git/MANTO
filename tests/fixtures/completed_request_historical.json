@@ -1,0 +1,2002 @@
+{
+  "provenance": "Historical 2026-11-03 request; tests alter timing only for validation; NOT new performance evidence",
+  "experience": {
+    "schema_version": 1,
+    "experience_id": "575fd493040b45d2a3d58009171f33c1",
+    "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+    "decision_id": "21933e26a08c404f97c5b4b198c967b4",
+    "execution_id": "f3ebd80963c94b60a738a648ce777346",
+    "query_hash": "69289cd978f4c21b0548a24c7f678bd1d5d9620d82f92943a8a9863e6f7875bc",
+    "normalized_template": "SELECT COUNT(s_355), COUNT(s_393), COUNT(s_527), COUNT(s_790), COUNT(s_933), COUNT(s_1076), COUNT(s_1129), COUNT(s_1166), COUNT(s_1285), COUNT(s_1309), COUNT(s_1379), COUNT(s_1399), COUNT(s_1430), COUNT(s_1463), COUNT(s_1502), COUNT(s_1631) FROM root.small_scale.g_0.d_1, root.small_scale.g_0.d_9, root.small_scale.g_0.d_26, root.small_scale.g_0.d_34, root.small_scale.g_0.d_40, root.small_scale.g_0.d_41, root.small_scale.g_0.d_54, root.small_scale.g_0.d_63, root.small_scale.g_0.d_78, root.small_scale.g_0.d_86 WHERE time >= ? AND time < ?",
+    "template_key": "238f19a1efbd68ff54379ca7f64e339e4cf027ca89dac026f3957c559dd6884b",
+    "features": {
+      "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+      "query_hash": "69289cd978f4c21b0548a24c7f678bd1d5d9620d82f92943a8a9863e6f7875bc",
+      "template_hash": "238f19a1efbd68ff54379ca7f64e339e4cf027ca89dac026f3957c559dd6884b",
+      "normalized_template": "SELECT COUNT(s_355), COUNT(s_393), COUNT(s_527), COUNT(s_790), COUNT(s_933), COUNT(s_1076), COUNT(s_1129), COUNT(s_1166), COUNT(s_1285), COUNT(s_1309), COUNT(s_1379), COUNT(s_1399), COUNT(s_1430), COUNT(s_1463), COUNT(s_1502), COUNT(s_1631) FROM root.small_scale.g_0.d_1, root.small_scale.g_0.d_9, root.small_scale.g_0.d_26, root.small_scale.g_0.d_34, root.small_scale.g_0.d_40, root.small_scale.g_0.d_41, root.small_scale.g_0.d_54, root.small_scale.g_0.d_63, root.small_scale.g_0.d_78, root.small_scale.g_0.d_86 WHERE time >= ? AND time < ?",
+      "query_types": [
+        "PROJECTION",
+        "AGGREGATION",
+        "TIME_FILTER",
+        "TIME_RANGE",
+        "MULTI_DEVICE",
+        "MULTI_SERIES"
+      ],
+      "time_predicates": {
+        "value": [
+          {
+            "operator": ">=",
+            "value_ms": 1640968700000
+          },
+          {
+            "operator": "<",
+            "value_ms": 1640978355000
+          }
+        ],
+        "source": "SQL_AST",
+        "missing_reason": null
+      },
+      "time_range": {
+        "value": {
+          "start_ms": 1640968700000,
+          "end_ms": 1640978355000,
+          "start_inclusive": true,
+          "end_inclusive": false
+        },
+        "source": "SQL_AST",
+        "missing_reason": null
+      },
+      "time_range_ms": {
+        "value": 9655000,
+        "source": "SQL_AST",
+        "missing_reason": null
+      },
+      "value_filters": {
+        "value": null,
+        "source": "SQL_AST",
+        "missing_reason": "NOT_PRESENT_IN_SQL"
+      },
+      "filter_count": {
+        "value": 2,
+        "source": "SQL_AST",
+        "missing_reason": null
+      },
+      "devices": {
+        "value": [
+          {
+            "path": "root.small_scale.g_0.d_1",
+            "parts": [
+              "root",
+              "small_scale",
+              "g_0",
+              "d_1"
+            ]
+          },
+          {
+            "path": "root.small_scale.g_0.d_9",
+            "parts": [
+              "root",
+              "small_scale",
+              "g_0",
+              "d_9"
+            ]
+          },
+          {
+            "path": "root.small_scale.g_0.d_26",
+            "parts": [
+              "root",
+              "small_scale",
+              "g_0",
+              "d_26"
+            ]
+          },
+          {
+            "path": "root.small_scale.g_0.d_34",
+            "parts": [
+              "root",
+              "small_scale",
+              "g_0",
+              "d_34"
+            ]
+          },
+          {
+            "path": "root.small_scale.g_0.d_40",
+            "parts": [
+              "root",
+              "small_scale",
+              "g_0",
+              "d_40"
+            ]
+          },
+          {
+            "path": "root.small_scale.g_0.d_41",
+            "parts": [
+              "root",
+              "small_scale",
+              "g_0",
+              "d_41"
+            ]
+          },
+          {
+            "path": "root.small_scale.g_0.d_54",
+            "parts": [
+              "root",
+              "small_scale",
+              "g_0",
+              "d_54"
+            ]
+          },
+          {
+            "path": "root.small_scale.g_0.d_63",
+            "parts": [
+              "root",
+              "small_scale",
+              "g_0",
+              "d_63"
+            ]
+          },
+          {
+            "path": "root.small_scale.g_0.d_78",
+            "parts": [
+              "root",
+              "small_scale",
+              "g_0",
+              "d_78"
+            ]
+          },
+          {
+            "path": "root.small_scale.g_0.d_86",
+            "parts": [
+              "root",
+              "small_scale",
+              "g_0",
+              "d_86"
+            ]
+          }
+        ],
+        "source": "SQL_AST",
+        "missing_reason": null
+      },
+      "device_count": {
+        "value": 10,
+        "source": "SQL_AST",
+        "missing_reason": null
+      },
+      "device_paths_verified": {
+        "value": null,
+        "source": "NOT_AVAILABLE",
+        "missing_reason": "NEEDS_METADATA"
+      },
+      "selected_series": {
+        "value": [
+          {
+            "name": "s_355",
+            "qualified_path": null,
+            "device": null
+          },
+          {
+            "name": "s_393",
+            "qualified_path": null,
+            "device": null
+          },
+          {
+            "name": "s_527",
+            "qualified_path": null,
+            "device": null
+          },
+          {
+            "name": "s_790",
+            "qualified_path": null,
+            "device": null
+          },
+          {
+            "name": "s_933",
+            "qualified_path": null,
+            "device": null
+          },
+          {
+            "name": "s_1076",
+            "qualified_path": null,
+            "device": null
+          },
+          {
+            "name": "s_1129",
+            "qualified_path": null,
+            "device": null
+          },
+          {
+            "name": "s_1166",
+            "qualified_path": null,
+            "device": null
+          },
+          {
+            "name": "s_1285",
+            "qualified_path": null,
+            "device": null
+          },
+          {
+            "name": "s_1309",
+            "qualified_path": null,
+            "device": null
+          },
+          {
+            "name": "s_1379",
+            "qualified_path": null,
+            "device": null
+          },
+          {
+            "name": "s_1399",
+            "qualified_path": null,
+            "device": null
+          },
+          {
+            "name": "s_1430",
+            "qualified_path": null,
+            "device": null
+          },
+          {
+            "name": "s_1463",
+            "qualified_path": null,
+            "device": null
+          },
+          {
+            "name": "s_1502",
+            "qualified_path": null,
+            "device": null
+          },
+          {
+            "name": "s_1631",
+            "qualified_path": null,
+            "device": null
+          }
+        ],
+        "source": "SQL_AST",
+        "missing_reason": null
+      },
+      "series_count": {
+        "value": 16,
+        "source": "SQL_AST",
+        "missing_reason": null
+      },
+      "aggregations": {
+        "value": [
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_355",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          },
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_393",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          },
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_527",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          },
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_790",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          },
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_933",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          },
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_1076",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          },
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_1129",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          },
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_1166",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          },
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_1285",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          },
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_1309",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          },
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_1379",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          },
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_1399",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          },
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_1430",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          },
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_1463",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          },
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_1502",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          },
+          {
+            "function": "COUNT",
+            "series": {
+              "name": "s_1631",
+              "qualified_path": null,
+              "device": null
+            },
+            "is_star": false
+          }
+        ],
+        "source": "SQL_AST",
+        "missing_reason": null
+      },
+      "aggregation_types": {
+        "value": [
+          "COUNT"
+        ],
+        "source": "SQL_AST",
+        "missing_reason": null
+      },
+      "group_by": {
+        "value": null,
+        "source": "SQL_AST",
+        "missing_reason": "NOT_PRESENT_IN_SQL"
+      },
+      "has_group_by": {
+        "value": false,
+        "source": "SQL_AST",
+        "missing_reason": null
+      },
+      "order_by": {
+        "value": null,
+        "source": "SQL_AST",
+        "missing_reason": "NOT_PRESENT_IN_SQL"
+      },
+      "has_order_by": {
+        "value": false,
+        "source": "SQL_AST",
+        "missing_reason": null
+      },
+      "limit": {
+        "value": null,
+        "source": "SQL_AST",
+        "missing_reason": "NOT_PRESENT_IN_SQL"
+      },
+      "has_limit": {
+        "value": false,
+        "source": "SQL_AST",
+        "missing_reason": null
+      },
+      "estimated_rows": {
+        "value": null,
+        "source": "NOT_AVAILABLE",
+        "missing_reason": "NEEDS_STATISTICS"
+      },
+      "warnings": [
+        "Device paths are parsed from SQL text only; existence is not verified against catalog metadata."
+      ]
+    },
+    "feature_key": "e1e381fd2748f9147a762d82186a139953dff9dc22209cf9df37e044a5649453",
+    "context": {
+      "schema_version": 1,
+      "server_id": "127.0.0.1:6667",
+      "server_version": "2.0.6",
+      "database_model": "tree",
+      "dataset_epoch": "heavy-complete-20261102-v2",
+      "dataset_size": null,
+      "result_rows": 1,
+      "cache_condition": "controlled-empty",
+      "result_source": "SERVER",
+      "fetch_mode": "FULL",
+      "load_source": "db_host",
+      "load_host": "Ubuntu-Server",
+      "load_bucket": "MEDIUM",
+      "load_protocol": "cpu-activity-v3",
+      "feature_version": "agent1-v1"
+    },
+    "strategy_id": "S0_NATIVE",
+    "strategy_version": "0.1.0",
+    "certification_suite": "tests/unit/test_native_strategy.py",
+    "record": {
+      "schema_version": 1,
+      "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+      "decision_id": "21933e26a08c404f97c5b4b198c967b4",
+      "execution_id": "f3ebd80963c94b60a738a648ce777346",
+      "strategy_id": "S0_NATIVE",
+      "created_at": "2026-11-03T01:39:52.592331Z",
+      "started_at": "2026-11-03T01:39:52.573476Z",
+      "finished_at": "2026-11-03T01:39:52.588802Z",
+      "execute_call_ms": 11.444,
+      "result_fetch_ms": 3.251,
+      "client_wall_ms": 15.289,
+      "rows_returned": 1,
+      "success": true,
+      "timed_out": false,
+      "timeout_ms": 30000,
+      "error_type": null,
+      "error_message": null,
+      "plan_status": "UNAVAILABLE",
+      "actual_plan_hash": null,
+      "strategy_certification_status": "PASSED",
+      "runtime_result_check": "MATCHED",
+      "snapshot_ids": [
+        "a64d53428c694fbeb8cb65f60ab2b6f1",
+        "dc67c4a3b12e41dfa5c27050d24b880c"
+      ],
+      "unavailable_fields": {
+        "actual_plan_hash": "PLAN_UNAVAILABLE"
+      },
+      "warnings": [
+        "no EXPLAIN plan was supplied for this execution"
+      ]
+    },
+    "before": {
+      "client_host": {
+        "snapshot_id": "a64d53428c694fbeb8cb65f60ab2b6f1",
+        "captured_at": "2026-11-03T01:39:52.303269Z",
+        "source_host": "Ubuntu-Server",
+        "source_type": "client_host",
+        "cpu_measurement": "cpu-times-instance-v1",
+        "cpu_percent": 54.851,
+        "memory_percent": 64.3,
+        "disk_usage_percent": 21.5,
+        "disk_read_bytes_per_sec": 0.0,
+        "disk_write_bytes_per_sec": 0.0,
+        "active_queries": null,
+        "valid": true,
+        "stale_after_ms": 500,
+        "unavailable_fields": {
+          "active_queries": "NOT_APPLICABLE_TO_CLIENT_HOST"
+        },
+        "warnings": [],
+        "error_type": null,
+        "error_message": null
+      },
+      "db_host": {
+        "snapshot_id": "dc67c4a3b12e41dfa5c27050d24b880c",
+        "captured_at": "2026-11-03T01:39:52.294796Z",
+        "source_host": "Ubuntu-Server",
+        "source_type": "db_host",
+        "cpu_measurement": "cpu-times-instance-v1",
+        "cpu_percent": 54.992,
+        "memory_percent": 64.3,
+        "disk_usage_percent": 21.5,
+        "disk_read_bytes_per_sec": 0.0,
+        "disk_write_bytes_per_sec": 0.0,
+        "active_queries": null,
+        "valid": true,
+        "stale_after_ms": 500,
+        "unavailable_fields": {
+          "active_queries": "NO_DB_METRICS_SOURCE"
+        },
+        "warnings": [
+          "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+        ],
+        "error_type": null,
+        "error_message": null
+      },
+      "db_metrics": null
+    },
+    "during": [],
+    "after": {
+      "client_host": {
+        "snapshot_id": "382f5afcd62f4135975d49542f127e9d",
+        "captured_at": "2026-11-03T01:39:52.584460Z",
+        "source_host": "Ubuntu-Server",
+        "source_type": "client_host",
+        "cpu_measurement": "cpu-times-instance-v1",
+        "cpu_percent": 56.058,
+        "memory_percent": 64.3,
+        "disk_usage_percent": 21.5,
+        "disk_read_bytes_per_sec": 0.0,
+        "disk_write_bytes_per_sec": 757503.534,
+        "active_queries": null,
+        "valid": true,
+        "stale_after_ms": 500,
+        "unavailable_fields": {
+          "active_queries": "NOT_APPLICABLE_TO_CLIENT_HOST"
+        },
+        "warnings": [],
+        "error_type": null,
+        "error_message": null
+      },
+      "db_host": {
+        "snapshot_id": "3f2e3dec25bd4bdaade88b5a7dc74bc6",
+        "captured_at": "2026-11-03T01:39:52.572842Z",
+        "source_host": "Ubuntu-Server",
+        "source_type": "db_host",
+        "cpu_measurement": "cpu-times-instance-v1",
+        "cpu_percent": 55.662,
+        "memory_percent": 64.3,
+        "disk_usage_percent": 21.5,
+        "disk_read_bytes_per_sec": 0.0,
+        "disk_write_bytes_per_sec": 751294.992,
+        "active_queries": null,
+        "valid": true,
+        "stale_after_ms": 500,
+        "unavailable_fields": {
+          "active_queries": "NO_DB_METRICS_SOURCE"
+        },
+        "warnings": [
+          "Verified local DataNode host; whole-host metrics include other processes; active queries UNKNOWN"
+        ],
+        "error_type": null,
+        "error_message": null
+      },
+      "db_metrics": null
+    },
+    "is_fallback": false,
+    "cache_source_execution_id": null,
+    "decision_model_version": "EXPERIMENT_ONLY:randomized",
+    "quality_version": 2,
+    "resource_policy_version": "2026-11-02.1",
+    "resource_policy_hash": "817c0a36f3f45b7006c4c3119b9f8f060668bceff8ed02cadd12ef9d475e148b",
+    "sample_status": "VALID",
+    "quality_reasons": [],
+    "reward": -0.015173301030162857,
+    "reward_version": "negative-log1p-ms-v1",
+    "created_at": "2026-11-03T01:39:52.597681Z"
+  },
+  "workflow": {
+    "trace": {
+      "schema_version": 1,
+      "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+      "sql_sha256": "69289cd978f4c21b0548a24c7f678bd1d5d9620d82f92943a8a9863e6f7875bc",
+      "requested_mode": "adaptive",
+      "effective_mode": "adaptive",
+      "events": [
+        {
+          "index": 0,
+          "state": "RECEIVED",
+          "at": "2026-11-03T01:39:52.488158Z",
+          "elapsed_ms": 0.175,
+          "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+          "decision_id": null,
+          "execution_ids": [],
+          "details": {}
+        },
+        {
+          "index": 1,
+          "state": "PARSED",
+          "at": "2026-11-03T01:39:52.565154Z",
+          "elapsed_ms": 77.18,
+          "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+          "decision_id": null,
+          "execution_ids": [],
+          "details": {
+            "parse_status": "SUCCESS"
+          }
+        },
+        {
+          "index": 2,
+          "state": "SNAPSHOT",
+          "at": "2026-11-03T01:39:52.565451Z",
+          "elapsed_ms": 77.485,
+          "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+          "decision_id": null,
+          "execution_ids": [],
+          "details": {
+            "client_snapshot_id": "a64d53428c694fbeb8cb65f60ab2b6f1",
+            "db_snapshot_id": "dc67c4a3b12e41dfa5c27050d24b880c",
+            "client_source": "client_host",
+            "db_source": "db_host"
+          }
+        },
+        {
+          "index": 3,
+          "state": "RETRIEVED",
+          "at": "2026-11-03T01:39:52.566609Z",
+          "elapsed_ms": 78.64,
+          "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+          "decision_id": null,
+          "execution_ids": [],
+          "details": {
+            "model_version": null,
+            "advice_strategy": null,
+            "context_key": "ad16f5b2163555969164557e8985ab8a02808a61bc998c732873396cc3c810c3",
+            "expected_result_rows": 1
+          }
+        },
+        {
+          "index": 4,
+          "state": "DECIDED",
+          "at": "2026-11-03T01:39:52.572558Z",
+          "elapsed_ms": 84.588,
+          "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+          "decision_id": "21933e26a08c404f97c5b4b198c967b4",
+          "execution_ids": [],
+          "details": {
+            "strategy_id": "S0_NATIVE",
+            "strategy_version": "0.1.0",
+            "model_version": "EXPERIMENT_ONLY:randomized",
+            "effective_mode": "adaptive",
+            "degradation_reasons": [],
+            "decision_warnings": [
+              "COST_UNKNOWN: NO_HISTORICAL_STATISTICS"
+            ]
+          }
+        },
+        {
+          "index": 5,
+          "state": "VALIDATED",
+          "at": "2026-11-03T01:39:52.573056Z",
+          "elapsed_ms": 85.09,
+          "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+          "decision_id": "21933e26a08c404f97c5b4b198c967b4",
+          "execution_ids": [],
+          "details": {
+            "passed": true,
+            "executor_revalidates": true
+          }
+        },
+        {
+          "index": 6,
+          "state": "EXECUTED",
+          "at": "2026-11-03T01:39:52.591890Z",
+          "elapsed_ms": 103.917,
+          "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+          "decision_id": "21933e26a08c404f97c5b4b198c967b4",
+          "execution_ids": [
+            "f3ebd80963c94b60a738a648ce777346"
+          ],
+          "details": {
+            "final_status": "SUCCESS",
+            "database_dispatches": 1,
+            "fallback_used": false,
+            "fallback_trigger": "NONE",
+            "fallback_reason": null,
+            "fallback_blocked_reason": null,
+            "attempts": [
+              {
+                "execution_id": "f3ebd80963c94b60a738a648ce777346",
+                "strategy_id": "S0_NATIVE",
+                "is_fallback": false,
+                "timed_out": false,
+                "request_dispatched": true,
+                "request_completed": true,
+                "served_from_cache": false
+              }
+            ]
+          }
+        },
+        {
+          "index": 7,
+          "state": "MONITORED",
+          "at": "2026-11-03T01:39:52.592780Z",
+          "elapsed_ms": 104.812,
+          "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+          "decision_id": "21933e26a08c404f97c5b4b198c967b4",
+          "execution_ids": [
+            "f3ebd80963c94b60a738a648ce777346"
+          ],
+          "details": {
+            "record_ids": [
+              "f3ebd80963c94b60a738a648ce777346"
+            ],
+            "runtime_result_checks": [
+              "MATCHED"
+            ]
+          }
+        },
+        {
+          "index": 8,
+          "state": "LEARNED",
+          "at": "2026-11-03T01:39:52.602897Z",
+          "elapsed_ms": 114.928,
+          "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+          "decision_id": "21933e26a08c404f97c5b4b198c967b4",
+          "execution_ids": [
+            "f3ebd80963c94b60a738a648ce777346"
+          ],
+          "details": {
+            "feedback": [
+              {
+                "execution_id": "f3ebd80963c94b60a738a648ce777346",
+                "sample_status": "VALID",
+                "model_updated": false,
+                "model_version": null,
+                "quality_reasons": [],
+                "warning_codes": []
+              }
+            ]
+          }
+        },
+        {
+          "index": 9,
+          "state": "SUCCEEDED",
+          "at": "2026-11-03T01:39:52.603000Z",
+          "elapsed_ms": 115.036,
+          "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+          "decision_id": "21933e26a08c404f97c5b4b198c967b4",
+          "execution_ids": [
+            "f3ebd80963c94b60a738a648ce777346"
+          ],
+          "details": {}
+        }
+      ],
+      "warnings": [],
+      "database_dispatches": 1
+    },
+    "run": {
+      "decision": {
+        "schema_version": 1,
+        "decision_id": "21933e26a08c404f97c5b4b198c967b4",
+        "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+        "selected_strategy_id": "S0_NATIVE",
+        "strategy_version": "0.1.0",
+        "original_sql": "SELECT count(s_355), count(s_393), count(s_527), count(s_790), count(s_933), count(s_1076), count(s_1129), count(s_1166), count(s_1285), count(s_1309), count(s_1379), count(s_1399), count(s_1430), count(s_1463), count(s_1502), count(s_1631) FROM root.small_scale.g_0.d_1, root.small_scale.g_0.d_9, root.small_scale.g_0.d_26, root.small_scale.g_0.d_34, root.small_scale.g_0.d_40, root.small_scale.g_0.d_41, root.small_scale.g_0.d_54, root.small_scale.g_0.d_63, root.small_scale.g_0.d_78, root.small_scale.g_0.d_86 WHERE time >= 1640968700000 AND time < 1640978355000",
+        "candidate_sql": "SELECT count(s_355), count(s_393), count(s_527), count(s_790), count(s_933), count(s_1076), count(s_1129), count(s_1166), count(s_1285), count(s_1309), count(s_1379), count(s_1399), count(s_1430), count(s_1463), count(s_1502), count(s_1631) FROM root.small_scale.g_0.d_1, root.small_scale.g_0.d_9, root.small_scale.g_0.d_26, root.small_scale.g_0.d_34, root.small_scale.g_0.d_40, root.small_scale.g_0.d_41, root.small_scale.g_0.d_54, root.small_scale.g_0.d_63, root.small_scale.g_0.d_78, root.small_scale.g_0.d_86 WHERE time >= 1640968700000 AND time < 1640978355000",
+        "execution_options": {},
+        "expected_latency_ms": null,
+        "confidence": null,
+        "decision_mode": "adaptive",
+        "query_occurrence": 2,
+        "model_version": "EXPERIMENT_ONLY:randomized",
+        "fallback_strategy_id": "S0_NATIVE",
+        "reason": "adaptive: selected S0_NATIVE from caller-provided advice (model_version=EXPERIMENT_ONLY:randomized); no Phase-5 learner was invoked",
+        "cost_estimate": {
+          "source": "UNKNOWN",
+          "expected_latency_ms": null,
+          "sample_count": 0,
+          "confidence": null,
+          "unknown_reason": "NO_HISTORICAL_STATISTICS"
+        },
+        "considered": [
+          {
+            "strategy_id": "S0_NATIVE",
+            "strategy_version": "0.1.0",
+            "applicable": true,
+            "applicability": {
+              "strategy_id": "S0_NATIVE",
+              "applicable": true,
+              "reasons": [
+                "single read-only SELECT",
+                "Native pass-through changes no SQL and claims no plan effect"
+              ],
+              "missing_features": [],
+              "warnings": []
+            },
+            "candidate": {
+              "strategy_id": "S0_NATIVE",
+              "strategy_version": "0.1.0",
+              "candidate_sql": "SELECT count(s_355), count(s_393), count(s_527), count(s_790), count(s_933), count(s_1076), count(s_1129), count(s_1166), count(s_1285), count(s_1309), count(s_1379), count(s_1399), count(s_1430), count(s_1463), count(s_1502), count(s_1631) FROM root.small_scale.g_0.d_1, root.small_scale.g_0.d_9, root.small_scale.g_0.d_26, root.small_scale.g_0.d_34, root.small_scale.g_0.d_40, root.small_scale.g_0.d_41, root.small_scale.g_0.d_54, root.small_scale.g_0.d_63, root.small_scale.g_0.d_78, root.small_scale.g_0.d_86 WHERE time >= 1640968700000 AND time < 1640978355000",
+              "execution_options": {},
+              "expected_plan_effect": null,
+              "warnings": []
+            },
+            "validation": {
+              "status": "PASSED",
+              "checks": [
+                {
+                  "name": "original_read_only",
+                  "status": "PASSED",
+                  "detail": "original SQL is a single read-only SELECT"
+                },
+                {
+                  "name": "candidate_read_only",
+                  "status": "PASSED",
+                  "detail": "candidate SQL is a single read-only SELECT"
+                },
+                {
+                  "name": "strategy_identity",
+                  "status": "PASSED",
+                  "detail": "candidate identity and version match the registry spec"
+                },
+                {
+                  "name": "server_version_compatibility",
+                  "status": "PASSED",
+                  "detail": "server version '2.0.6' is verified"
+                },
+                {
+                  "name": "database_model_compatibility",
+                  "status": "PASSED",
+                  "detail": "database model 'tree' matches the strategy"
+                },
+                {
+                  "name": "execution_options",
+                  "status": "PASSED",
+                  "detail": "no execution options; only the verified native execution path is used"
+                },
+                {
+                  "name": "plan_effect_contract",
+                  "status": "PASSED",
+                  "detail": "no plan effect is claimed; no EXPLAIN request is made"
+                },
+                {
+                  "name": "candidate_parser_scope",
+                  "status": "PASSED",
+                  "detail": "native baseline SQL is within the fixture-verified parser subset"
+                },
+                {
+                  "name": "original_read_only",
+                  "status": "PASSED",
+                  "detail": "original SQL is a single read-only SELECT"
+                },
+                {
+                  "name": "candidate_read_only",
+                  "status": "PASSED",
+                  "detail": "candidate SQL is a single read-only SELECT"
+                },
+                {
+                  "name": "strategy_identity",
+                  "status": "PASSED",
+                  "detail": "candidate identity and version match the registry spec"
+                },
+                {
+                  "name": "server_version_compatibility",
+                  "status": "PASSED",
+                  "detail": "server version '2.0.6' is verified"
+                },
+                {
+                  "name": "database_model_compatibility",
+                  "status": "PASSED",
+                  "detail": "database model 'tree' matches the strategy"
+                },
+                {
+                  "name": "execution_options",
+                  "status": "PASSED",
+                  "detail": "no execution options; only the verified native execution path is used"
+                },
+                {
+                  "name": "plan_effect_contract",
+                  "status": "PASSED",
+                  "detail": "no plan effect is claimed; no EXPLAIN request is made"
+                },
+                {
+                  "name": "candidate_parser_scope",
+                  "status": "PASSED",
+                  "detail": "native baseline SQL is within the fixture-verified parser subset"
+                }
+              ]
+            },
+            "cost": {
+              "source": "UNKNOWN",
+              "expected_latency_ms": null,
+              "sample_count": 0,
+              "confidence": null,
+              "unknown_reason": "NO_HISTORICAL_STATISTICS"
+            },
+            "selected": true,
+            "rejection_reason": null
+          },
+          {
+            "strategy_id": "S1_REPEAT_CACHE",
+            "strategy_version": "1.0.0",
+            "applicable": true,
+            "applicability": {
+              "strategy_id": "S1_REPEAT_CACHE",
+              "applicable": true,
+              "reasons": [
+                "dataset epoch declared: 'heavy-complete-20261102-v2'",
+                "single read-only SELECT inside the deterministic token subset; the exact cleaned SQL is the cache identity",
+                "repeat-cache strategies are eligible only from occurrence 2 onward; a later exact repeat may be served without a server request"
+              ],
+              "missing_features": [],
+              "warnings": []
+            },
+            "candidate": {
+              "strategy_id": "S1_REPEAT_CACHE",
+              "strategy_version": "1.0.0",
+              "candidate_sql": "SELECT count(s_355), count(s_393), count(s_527), count(s_790), count(s_933), count(s_1076), count(s_1129), count(s_1166), count(s_1285), count(s_1309), count(s_1379), count(s_1399), count(s_1430), count(s_1463), count(s_1502), count(s_1631) FROM root.small_scale.g_0.d_1, root.small_scale.g_0.d_9, root.small_scale.g_0.d_26, root.small_scale.g_0.d_34, root.small_scale.g_0.d_40, root.small_scale.g_0.d_41, root.small_scale.g_0.d_54, root.small_scale.g_0.d_63, root.small_scale.g_0.d_78, root.small_scale.g_0.d_86 WHERE time >= 1640968700000 AND time < 1640978355000",
+              "execution_options": {
+                "cache_epoch": "heavy-complete-20261102-v2"
+              },
+              "expected_plan_effect": null,
+              "warnings": [
+                "single read-only SELECT inside the deterministic token subset; the exact cleaned SQL is the cache identity"
+              ]
+            },
+            "validation": {
+              "status": "PASSED",
+              "checks": [
+                {
+                  "name": "original_read_only",
+                  "status": "PASSED",
+                  "detail": "original SQL is a single read-only SELECT"
+                },
+                {
+                  "name": "candidate_read_only",
+                  "status": "PASSED",
+                  "detail": "candidate SQL is a single read-only SELECT"
+                },
+                {
+                  "name": "strategy_identity",
+                  "status": "PASSED",
+                  "detail": "candidate identity and version match the registry spec"
+                },
+                {
+                  "name": "server_version_compatibility",
+                  "status": "PASSED",
+                  "detail": "server version '2.0.6' is verified"
+                },
+                {
+                  "name": "database_model_compatibility",
+                  "status": "PASSED",
+                  "detail": "database model 'tree' matches the strategy"
+                },
+                {
+                  "name": "execution_options",
+                  "status": "PASSED",
+                  "detail": "cache_epoch is implemented by the Phase-4 tree adapter as the process-local repeat-cache key and opt-in"
+                },
+                {
+                  "name": "plan_effect_contract",
+                  "status": "PASSED",
+                  "detail": "no plan effect is claimed; no EXPLAIN request is made"
+                },
+                {
+                  "name": "candidate_parser_scope",
+                  "status": "PASSED",
+                  "detail": "EXACT_SQL_NO_REWRITE: non-baseline candidate executes the original cleaned SQL exactly; parser coverage is not required because no rewrite is attempted and the server remains the semantic authority"
+                },
+                {
+                  "name": "cache_epoch_configured",
+                  "status": "PASSED",
+                  "detail": "dataset epoch is configured as 'heavy-complete-20261102-v2'"
+                },
+                {
+                  "name": "cache_option_identity",
+                  "status": "PASSED",
+                  "detail": "candidate carries exactly the configured cache epoch"
+                },
+                {
+                  "name": "cache_sql_identity",
+                  "status": "PASSED",
+                  "detail": "candidate SQL is the exact cleaned original SQL"
+                },
+                {
+                  "name": "cacheable_sql_subset",
+                  "status": "PASSED",
+                  "detail": "single read-only SELECT inside the deterministic token subset; the exact cleaned SQL is the cache identity"
+                },
+                {
+                  "name": "original_read_only",
+                  "status": "PASSED",
+                  "detail": "original SQL is a single read-only SELECT"
+                },
+                {
+                  "name": "candidate_read_only",
+                  "status": "PASSED",
+                  "detail": "candidate SQL is a single read-only SELECT"
+                },
+                {
+                  "name": "strategy_identity",
+                  "status": "PASSED",
+                  "detail": "candidate identity and version match the registry spec"
+                },
+                {
+                  "name": "server_version_compatibility",
+                  "status": "PASSED",
+                  "detail": "server version '2.0.6' is verified"
+                },
+                {
+                  "name": "database_model_compatibility",
+                  "status": "PASSED",
+                  "detail": "database model 'tree' matches the strategy"
+                },
+                {
+                  "name": "execution_options",
+                  "status": "PASSED",
+                  "detail": "cache_epoch is implemented by the Phase-4 tree adapter as the process-local repeat-cache key and opt-in"
+                },
+                {
+                  "name": "plan_effect_contract",
+                  "status": "PASSED",
+                  "detail": "no plan effect is claimed; no EXPLAIN request is made"
+                },
+                {
+                  "name": "candidate_parser_scope",
+                  "status": "PASSED",
+                  "detail": "EXACT_SQL_NO_REWRITE: non-baseline candidate executes the original cleaned SQL exactly; parser coverage is not required because no rewrite is attempted and the server remains the semantic authority"
+                }
+              ]
+            },
+            "cost": {
+              "source": "UNKNOWN",
+              "expected_latency_ms": null,
+              "sample_count": 0,
+              "confidence": null,
+              "unknown_reason": "NO_HISTORICAL_STATISTICS"
+            },
+            "selected": false,
+            "rejection_reason": "not selected by adaptive mode"
+          }
+        ],
+        "decision_overhead_ms": 4.202,
+        "warnings": [
+          "COST_UNKNOWN: NO_HISTORICAL_STATISTICS"
+        ],
+        "created_at": "2026-11-03T01:39:52.571046Z"
+      },
+      "execution": {
+        "decision_id": "21933e26a08c404f97c5b4b198c967b4",
+        "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+        "selected_strategy_id": "S0_NATIVE",
+        "fallback_strategy_id": "S0_NATIVE",
+        "attempts": [
+          {
+            "attempt_index": 1,
+            "is_fallback": false,
+            "requested_strategy_id": "S0_NATIVE",
+            "fallback_reason": null,
+            "execution": {
+              "schema_version": 1,
+              "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+              "execution_id": "f3ebd80963c94b60a738a648ce777346",
+              "status": "SUCCESS",
+              "sql_sha256": "69289cd978f4c21b0548a24c7f678bd1d5d9620d82f92943a8a9863e6f7875bc",
+              "strategy_id": "S0_NATIVE",
+              "adapter": "iotdb-tree",
+              "columns": [
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_355)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_355)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_355)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_355)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_355)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_355)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_355)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_355)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_355)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_355)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_393)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_393)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_393)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_393)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_393)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_393)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_393)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_393)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_393)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_393)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_527)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_527)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_527)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_527)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_527)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_527)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_527)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_527)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_527)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_527)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_790)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_790)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_790)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_790)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_790)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_790)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_790)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_790)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_790)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_790)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_933)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_933)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_933)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_933)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_933)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_933)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_933)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_933)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_933)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_933)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_1076)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_1076)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_1076)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_1076)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_1076)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_1076)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_1076)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_1076)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_1076)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_1076)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_1129)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_1129)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_1129)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_1129)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_1129)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_1129)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_1129)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_1129)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_1129)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_1129)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_1166)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_1166)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_1166)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_1166)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_1166)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_1166)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_1166)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_1166)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_1166)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_1166)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_1285)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_1285)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_1285)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_1285)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_1285)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_1285)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_1285)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_1285)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_1285)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_1285)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_1309)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_1309)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_1309)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_1309)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_1309)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_1309)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_1309)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_1309)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_1309)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_1309)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_1379)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_1379)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_1379)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_1379)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_1379)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_1379)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_1379)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_1379)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_1379)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_1379)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_1399)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_1399)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_1399)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_1399)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_1399)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_1399)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_1399)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_1399)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_1399)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_1399)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_1430)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_1430)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_1430)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_1430)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_1430)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_1430)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_1430)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_1430)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_1430)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_1430)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_1463)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_1463)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_1463)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_1463)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_1463)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_1463)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_1463)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_1463)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_1463)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_1463)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_1502)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_1502)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_1502)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_1502)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_1502)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_1502)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_1502)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_1502)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_1502)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_1502)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_1.s_1631)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_9.s_1631)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_26.s_1631)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_34.s_1631)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_40.s_1631)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_41.s_1631)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_54.s_1631)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_63.s_1631)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_78.s_1631)",
+                  "data_type": "2"
+                },
+                {
+                  "name": "count(root.small_scale.g_0.d_86.s_1631)",
+                  "data_type": "2"
+                }
+              ],
+              "rows_preview": [
+                [
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931,
+                  1931
+                ]
+              ],
+              "preview_truncated": false,
+              "row_count": 1,
+              "fetch_mode": "FULL",
+              "served_from_cache": false,
+              "cache_source_execution_id": null,
+              "cache_epoch": null,
+              "metrics": {
+                "execute_call_ms": 11.444,
+                "result_fetch_ms": 3.251,
+                "client_wall_ms": 15.289
+              },
+              "started_at": "2026-11-03T01:39:52.573476Z",
+              "finished_at": "2026-11-03T01:39:52.588802Z",
+              "error_type": null,
+              "error_message": null,
+              "timeout_ms": 30000,
+              "timed_out": false,
+              "request_dispatched": true,
+              "request_completed": true,
+              "retry_safe": false,
+              "retry_unsafe_reason": null,
+              "warnings": []
+            }
+          }
+        ],
+        "fallback_used": false,
+        "fallback_trigger": "NONE",
+        "fallback_reason": null,
+        "fallback_blocked_reason": null,
+        "final_status": "SUCCESS",
+        "final_execution_id": "f3ebd80963c94b60a738a648ce777346",
+        "total_wall_ms": 15.851,
+        "end_to_end_ms": 102.449,
+        "warnings": []
+      }
+    },
+    "records": [
+      {
+        "schema_version": 1,
+        "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+        "decision_id": "21933e26a08c404f97c5b4b198c967b4",
+        "execution_id": "f3ebd80963c94b60a738a648ce777346",
+        "strategy_id": "S0_NATIVE",
+        "created_at": "2026-11-03T01:39:52.592331Z",
+        "started_at": "2026-11-03T01:39:52.573476Z",
+        "finished_at": "2026-11-03T01:39:52.588802Z",
+        "execute_call_ms": 11.444,
+        "result_fetch_ms": 3.251,
+        "client_wall_ms": 15.289,
+        "rows_returned": 1,
+        "success": true,
+        "timed_out": false,
+        "timeout_ms": 30000,
+        "error_type": null,
+        "error_message": null,
+        "plan_status": "UNAVAILABLE",
+        "actual_plan_hash": null,
+        "strategy_certification_status": "PASSED",
+        "runtime_result_check": "MATCHED",
+        "snapshot_ids": [
+          "a64d53428c694fbeb8cb65f60ab2b6f1",
+          "dc67c4a3b12e41dfa5c27050d24b880c"
+        ],
+        "unavailable_fields": {
+          "actual_plan_hash": "PLAN_UNAVAILABLE"
+        },
+        "warnings": [
+          "no EXPLAIN plan was supplied for this execution"
+        ]
+      }
+    ],
+    "feedback": [
+      {
+        "query_id": "7be2aa7cf13d416593ce8c280a2eec4d",
+        "execution_id": "f3ebd80963c94b60a738a648ce777346",
+        "sample_status": "VALID",
+        "experience_id": "575fd493040b45d2a3d58009171f33c1",
+        "reward": -0.015173301030162857,
+        "model_updated": false,
+        "model_version": null,
+        "quarantine_persistence_pending": false,
+        "duplicate": false,
+        "quality_reasons": [],
+        "warnings": []
+      }
+    ]
+  },
+  "e2e_ms": 121.75555899739265
+}

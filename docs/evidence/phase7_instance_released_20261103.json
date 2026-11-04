@@ -1,0 +1,10 @@
+{
+  "captured_at": "2026-11-03T04:57:52.835647Z",
+  "server_pid": 3879777,
+  "port": 6667,
+  "observer_pid": 1237662,
+  "connection_count": 0,
+  "foreign_pids": [],
+  "unknown_connections": 0,
+  "passed": true
+}

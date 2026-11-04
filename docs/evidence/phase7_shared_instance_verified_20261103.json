@@ -1,0 +1,27 @@
+{
+  "occupancy": {
+    "captured_at": "2026-11-03T04:55:22.413059Z",
+    "server_pid": 3879777,
+    "port": 6667,
+    "observer_pid": 1231903,
+    "connection_count": 20,
+    "foreign_pids": [
+      1202893
+    ],
+    "unknown_connections": 0,
+    "passed": false
+  },
+  "foreign_processes": [
+    {
+      "pid": 1202893,
+      "name": "python",
+      "cwd": "/opt/program-code/MATAOF",
+      "created_at_s": 1793677564.05,
+      "script_paths": [
+        "scripts/bench_configured_e2e.py"
+      ]
+    }
+  ],
+  "active_query_count": "UNKNOWN",
+  "action": "READ_ONLY_NO_TERMINATION"
+}

@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "endpoint": "127.0.0.1:6667",
+  "data_epoch": "heavy-complete-20261102-v2",
+  "server_version": "2.0.6",
+  "python_read_client_version": "2.0.6",
+  "java_import_client_version": "2.0.5-250801-20250801.020248-1 (existing bundled importer)",
+  "per_scale": {
+    "small_scale": {
+      "devices": 100,
+      "series_checked": 200000,
+      "points_per_series": 3000,
+      "failed_devices": 0,
+      "verified_points": 600000000
+    },
+    "medium_scale": {
+      "devices": 500,
+      "series_checked": 1000000,
+      "points_per_series": 3000,
+      "failed_devices": 0,
+      "verified_points": 3000000000
+    },
+    "large_scale": {
+      "devices": 1000,
+      "series_checked": 2000000,
+      "points_per_series": 3000,
+      "failed_devices": 0,
+      "verified_points": 6000000000
+    }
+  },
+  "inserted_points": 6400000000,
+  "total_verified_points": 9600000000,
+  "value_check_status": "PASS",
+  "sampled_value_rows": 9000,
+  "sampled_sensor_values": 54000,
+  "value_check_scope": "six sensor types on one device per scale across all three batches; not all values",
+  "finished_at": "2026-11-02T11:22:05.268850+00:00",
+  "evidence_sha256": {
+    "data/heavy_import_repair_20261102/plan.json": "0ed01e360414e68642103cbddddcbb5b7b1689ddca3ba45115c693619bcaa969",
+    "data/heavy_import_repair_20261102/source_inventory.jsonl": "9884a55e9305e4ce2128a07b3d32aa3b302f113926d29c61d6b6225ad427f75f",
+    "data/heavy_import_repair_20261102/verify_missing.jsonl": "eb0a64b964521c2ca0d198d6fa9aed99a4ac7533f5cd8d723b2a48dcc7d03a6e",
+    "data/heavy_import_repair_20261102/verify_complete.jsonl": "6543fc0194adda8c6c6ef43aa0d8d7a6a9f8916ad882bfc6e5d7dc649ef0756c",
+    "data/heavy_import_repair_20261102/import.jsonl": "d3f611b6bc9a16b4aa46617a3cbdc18e8888f9de0402886c9a7c2a8c3d04e909",
+    "docs/evidence/heavy_import_values_20261102.json": "8501b42de7c31f5cb5d9c05e6089624754b74a636e23935933ada3811f869118",
+    "docs/evidence/heavy_import_live_after_20261102.json": "b435fb0539781782528fe4badd967e794c06d60e2fee9c93ba18b32ede56b1b9"
+  },
+  "phase7_online_ready": false,
+  "limitations": [
+    "maintenance certification is not adaptive performance evidence",
+    "old dataset epochs and their cached results/models cannot be reused with the repaired data"
+  ]
+}

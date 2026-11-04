@@ -1,0 +1,2000 @@
+{
+  "fixture_version": "1",
+  "generated_at": "2026-11-01",
+  "server_version": "2.0.6",
+  "server_build_info": "c6ecbde",
+  "client_version_used_for_probe": "2.0.10",
+  "client_version_reverified": "2.0.6",
+  "dialect": "tree",
+  "authentication": "local test account; credentials not stored",
+  "dataset_snapshot": {
+    "root.db200.g_0": {
+      "devices": 100,
+      "series": 200000,
+      "points_per_series": 3000,
+      "min_time": 1640966405000,
+      "max_time": 1640981400000
+    },
+    "root.db800.g_0": {
+      "devices": 100,
+      "series": 800000,
+      "points_per_series": 3000,
+      "min_time": 1640966405000,
+      "max_time": 1640981400000
+    },
+    "root.dbl.g_0": {
+      "devices": 100,
+      "series": 1000000,
+      "points_per_series": 3000,
+      "min_time": 1640966405000,
+      "max_time": 1640981400000
+    },
+    "root.dbm.g_0": {
+      "devices": 100,
+      "series": 1000000,
+      "points_per_series": 3000,
+      "min_time": 1640966405000,
+      "max_time": 1640981400000
+    },
+    "root.dbs.g_0": {
+      "devices": 100,
+      "series": 100000,
+      "points_per_series": 3000,
+      "min_time": 1640966405000,
+      "max_time": 1640981400000
+    },
+    "root.test.g_0": {
+      "devices": 500,
+      "series": 100000,
+      "points_per_series": 10000,
+      "min_time": 1640966405000,
+      "max_time": 1641016400000
+    }
+  },
+  "cases": [
+    {
+      "case_id": "db800_q1",
+      "source_file": "MAPO/MAPO/sample_queries_iotdb800/q1.sql",
+      "database": "db800",
+      "sql": "SELECT s_1666, s_1766 FROM root.db800.g_0.d_0, root.db800.g_0.d_1 WHERE time = 1640966450000;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.db800.g_0.d_0.s_1666",
+        "root.db800.g_0.d_1.s_1666",
+        "root.db800.g_0.d_0.s_1766",
+        "root.db800.g_0.d_1.s_1766"
+      ],
+      "result_digest_sha256": "8d11d5834ba74334aba1af5ba38290af56cdbeb5a55ffb188748b8cf46da00b3",
+      "rows_preview": [
+        [
+          1640966450000,
+          "-18",
+          "-23",
+          "0",
+          "0"
+        ]
+      ],
+      "elapsed_ms": 19.362,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "db800_q10",
+      "source_file": "MAPO/MAPO/sample_queries_iotdb800/q10.sql",
+      "database": "db800",
+      "sql": "SELECT s_1666, s_1766 FROM root.db800.g_0.d_0, root.db800.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 AND root.db800.g_0.d_0.s_1666 > -5 AND root.db800.g_0.d_0.s_1766 > -5 AND root.db800.g_0.d_1.s_1666 > -5 AND root.db800.g_0.d_1.s_1766 > -5 ORDER BY time DESC;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS_EMPTY",
+      "row_count": 0,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.db800.g_0.d_0.s_1666",
+        "root.db800.g_0.d_1.s_1666",
+        "root.db800.g_0.d_0.s_1766",
+        "root.db800.g_0.d_1.s_1766"
+      ],
+      "result_digest_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows_preview": [],
+      "elapsed_ms": 7.654,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 15,
+      "notes": [
+        "Query executed successfully but returned 0 rows under the observed data/filter."
+      ]
+    },
+    {
+      "case_id": "db800_q11",
+      "source_file": "MAPO/MAPO/sample_queries_iotdb800/q11.sql",
+      "database": "db800",
+      "sql": "SELECT count(s_1666), count(s_1766) FROM root.db800.g_0.d_0, root.db800.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 GROUP BY ([1640966400000, 1640966650000),20000ms) ORDER BY time DESC;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 13,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "count(root.db800.g_0.d_0.s_1666)",
+        "count(root.db800.g_0.d_1.s_1666)",
+        "count(root.db800.g_0.d_0.s_1766)",
+        "count(root.db800.g_0.d_1.s_1766)"
+      ],
+      "result_digest_sha256": "57a7812bcc09e8adf012567cf60f489e0e12ebad1c145c27bb2eca593e8c7164",
+      "rows_preview": [
+        [
+          1640966640000,
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          1640966620000,
+          "4",
+          "4",
+          "4",
+          "4"
+        ]
+      ],
+      "elapsed_ms": 14.98,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "db800_q2",
+      "source_file": "MAPO/MAPO/sample_queries_iotdb800/q2.sql",
+      "database": "db800",
+      "sql": "SELECT s_1666, s_1766 FROM root.db800.g_0.d_0, root.db800.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 50,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.db800.g_0.d_0.s_1666",
+        "root.db800.g_0.d_1.s_1666",
+        "root.db800.g_0.d_0.s_1766",
+        "root.db800.g_0.d_1.s_1766"
+      ],
+      "result_digest_sha256": "a7da55df8fd0c38607281bf42c257b3aace180c0808ab2f19f0966f43585a3a7",
+      "rows_preview": [
+        [
+          1640966405000,
+          "-14",
+          "-14",
+          "0",
+          "0"
+        ],
+        [
+          1640966410000,
+          "-24",
+          "-24",
+          "0",
+          "0"
+        ]
+      ],
+      "elapsed_ms": 13.53,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "db800_q3",
+      "source_file": "MAPO/MAPO/sample_queries_iotdb800/q3.sql",
+      "database": "db800",
+      "sql": "SELECT s_1666, s_1766 FROM root.db800.g_0.d_0, root.db800.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 AND root.db800.g_0.d_0.s_1666 > -5 AND root.db800.g_0.d_0.s_1766 > -5 AND root.db800.g_0.d_1.s_1666 > -5 AND root.db800.g_0.d_1.s_1766 > -5;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS_EMPTY",
+      "row_count": 0,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.db800.g_0.d_0.s_1666",
+        "root.db800.g_0.d_1.s_1666",
+        "root.db800.g_0.d_0.s_1766",
+        "root.db800.g_0.d_1.s_1766"
+      ],
+      "result_digest_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows_preview": [],
+      "elapsed_ms": 6.559,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 15,
+      "notes": [
+        "Query executed successfully but returned 0 rows under the observed data/filter."
+      ]
+    },
+    {
+      "case_id": "db800_q4",
+      "source_file": "MAPO/MAPO/sample_queries_iotdb800/q4.sql",
+      "database": "db800",
+      "sql": "SELECT count(s_1666), count(s_1766) FROM root.db800.g_0.d_0, root.db800.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 4,
+      "columns": [
+        "count(root.db800.g_0.d_0.s_1666)",
+        "count(root.db800.g_0.d_1.s_1666)",
+        "count(root.db800.g_0.d_0.s_1766)",
+        "count(root.db800.g_0.d_1.s_1766)"
+      ],
+      "result_digest_sha256": "883f5ea76c956f4c9b51cd8312e2e86ecbafb58ec856866a2baaf1e396ee90e9",
+      "rows_preview": [
+        [
+          0,
+          "50",
+          "50",
+          "50",
+          "50"
+        ]
+      ],
+      "elapsed_ms": 8.117,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "db800_q5",
+      "source_file": "MAPO/MAPO/sample_queries_iotdb800/q5.sql",
+      "database": "db800",
+      "sql": "SELECT count(s_1666), count(s_1766) FROM root.db800.g_0.d_0, root.db800.g_0.d_1 WHERE root.db800.g_0.d_0.s_1666 > -5 AND root.db800.g_0.d_0.s_1766 > -5 AND root.db800.g_0.d_1.s_1666 > -5 AND root.db800.g_0.d_1.s_1766 > -5;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 4,
+      "columns": [
+        "count(root.db800.g_0.d_0.s_1666)",
+        "count(root.db800.g_0.d_1.s_1666)",
+        "count(root.db800.g_0.d_0.s_1766)",
+        "count(root.db800.g_0.d_1.s_1766)"
+      ],
+      "result_digest_sha256": "43ef0a81f0eef672981c590122660d1066e54198f781575e8f05e3abc1fd43e1",
+      "rows_preview": [
+        [
+          0,
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "elapsed_ms": 8.576,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 24,
+      "notes": []
+    },
+    {
+      "case_id": "db800_q6",
+      "source_file": "MAPO/MAPO/sample_queries_iotdb800/q6.sql",
+      "database": "db800",
+      "sql": "SELECT count(s_1666), count(s_1766) FROM root.db800.g_0.d_0, root.db800.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 AND root.db800.g_0.d_0.s_1666 > -5 AND root.db800.g_0.d_0.s_1766 > -5 AND root.db800.g_0.d_1.s_1666 > -5 AND root.db800.g_0.d_1.s_1766 > -5;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 4,
+      "columns": [
+        "count(root.db800.g_0.d_0.s_1666)",
+        "count(root.db800.g_0.d_1.s_1666)",
+        "count(root.db800.g_0.d_0.s_1766)",
+        "count(root.db800.g_0.d_1.s_1766)"
+      ],
+      "result_digest_sha256": "43ef0a81f0eef672981c590122660d1066e54198f781575e8f05e3abc1fd43e1",
+      "rows_preview": [
+        [
+          0,
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "elapsed_ms": 7.322,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 24,
+      "notes": []
+    },
+    {
+      "case_id": "db800_q7",
+      "source_file": "MAPO/MAPO/sample_queries_iotdb800/q7.sql",
+      "database": "db800",
+      "sql": "SELECT count(s_1666), count(s_1766) FROM root.db800.g_0.d_0, root.db800.g_0.d_1 GROUP BY ([1640966400000, 1640966650000),20000ms);",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 13,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "count(root.db800.g_0.d_0.s_1666)",
+        "count(root.db800.g_0.d_1.s_1666)",
+        "count(root.db800.g_0.d_0.s_1766)",
+        "count(root.db800.g_0.d_1.s_1766)"
+      ],
+      "result_digest_sha256": "cd77e77585c5432904bf3cdb8d447ff16766d1d651cfda9564c852174d3638ac",
+      "rows_preview": [
+        [
+          1640966400000,
+          "3",
+          "3",
+          "3",
+          "3"
+        ],
+        [
+          1640966420000,
+          "4",
+          "4",
+          "4",
+          "4"
+        ]
+      ],
+      "elapsed_ms": 10.116,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "db800_q8",
+      "source_file": "MAPO/MAPO/sample_queries_iotdb800/q8.sql",
+      "database": "db800",
+      "sql": "SELECT last s_1666, s_1766 FROM root.db800.g_0.d_0, root.db800.g_0.d_1;",
+      "dialect": "tree",
+      "classification": "SUPPORTED_WITH_SHAPE_WARNING",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 4,
+      "column_count": 4,
+      "columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "result_digest_sha256": "3983537591ea550698443eeb899d5e8281075a384b6686fed0b4e5045514dd44",
+      "rows_preview": [
+        [
+          1640981400000,
+          "b'root.db800.g_0.d_0.s_1666'",
+          "b'-12'",
+          "b'INT32'"
+        ],
+        [
+          1640981400000,
+          "b'root.db800.g_0.d_0.s_1766'",
+          "b'0'",
+          "b'INT32'"
+        ]
+      ],
+      "elapsed_ms": 9.021,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 11,
+      "notes": [
+        "SELECT last <series...> returns columns Time,Timeseries,Value,DataType; multi-series/multi-device returns one row per series/device, unlike a native SELECT with one aligned row.",
+        "LAST output shape is not equivalent to a native range SELECT."
+      ]
+    },
+    {
+      "case_id": "db800_q9",
+      "source_file": "MAPO/MAPO/sample_queries_iotdb800/q9.sql",
+      "database": "db800",
+      "sql": "SELECT s_1666, s_1766 FROM root.db800.g_0.d_0, root.db800.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 ORDER BY time DESC;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 50,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.db800.g_0.d_0.s_1666",
+        "root.db800.g_0.d_1.s_1666",
+        "root.db800.g_0.d_0.s_1766",
+        "root.db800.g_0.d_1.s_1766"
+      ],
+      "result_digest_sha256": "edef2d4ed6d44464486a6cb9f8fb03496bb6ba7bf3fae5cfb450d5b0888354c0",
+      "rows_preview": [
+        [
+          1640966650000,
+          "-27",
+          "-15",
+          "0",
+          "0"
+        ],
+        [
+          1640966645000,
+          "-27",
+          "-12",
+          "0",
+          "0"
+        ]
+      ],
+      "elapsed_ms": 11.257,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "dbs_q1",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbs/q1.sql",
+      "database": "dbs",
+      "sql": "SELECT s_333, s_433 FROM root.dbs.g_0.d_0, root.dbs.g_0.d_1 WHERE time = 1640966450000;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.dbs.g_0.d_0.s_333",
+        "root.dbs.g_0.d_1.s_333",
+        "root.dbs.g_0.d_0.s_433",
+        "root.dbs.g_0.d_1.s_433"
+      ],
+      "result_digest_sha256": "5ee6e21319aa61f79266b20d93c2a89a590130fc798a6ba1a1601965c85a7fa0",
+      "rows_preview": [
+        [
+          1640966450000,
+          "222",
+          "344",
+          "3",
+          "3"
+        ]
+      ],
+      "elapsed_ms": 7.068,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "dbs_q10",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbs/q10.sql",
+      "database": "dbs",
+      "sql": "SELECT s_333, s_433 FROM root.dbs.g_0.d_0, root.dbs.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 AND root.dbs.g_0.d_0.s_333 > -5 AND root.dbs.g_0.d_0.s_433 > -5 AND root.dbs.g_0.d_1.s_333 > -5 AND root.dbs.g_0.d_1.s_433 > -5 ORDER BY time DESC;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 50,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.dbs.g_0.d_0.s_333",
+        "root.dbs.g_0.d_1.s_333",
+        "root.dbs.g_0.d_0.s_433",
+        "root.dbs.g_0.d_1.s_433"
+      ],
+      "result_digest_sha256": "e4d31ee23467f04ab3b5b60920f2db619a57bdc97330293598996422ff23f59f",
+      "rows_preview": [
+        [
+          1640966650000,
+          "297",
+          "116",
+          "3",
+          "4"
+        ],
+        [
+          1640966645000,
+          "79",
+          "121",
+          "3",
+          "4"
+        ]
+      ],
+      "elapsed_ms": 11.537,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 15,
+      "notes": []
+    },
+    {
+      "case_id": "dbs_q11",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbs/q11.sql",
+      "database": "dbs",
+      "sql": "SELECT count(s_333), count(s_433) FROM root.dbs.g_0.d_0, root.dbs.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 GROUP BY ([1640966400000, 1640966650000),20000ms) ORDER BY time DESC;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 13,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "count(root.dbs.g_0.d_0.s_333)",
+        "count(root.dbs.g_0.d_1.s_333)",
+        "count(root.dbs.g_0.d_0.s_433)",
+        "count(root.dbs.g_0.d_1.s_433)"
+      ],
+      "result_digest_sha256": "57a7812bcc09e8adf012567cf60f489e0e12ebad1c145c27bb2eca593e8c7164",
+      "rows_preview": [
+        [
+          1640966640000,
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          1640966620000,
+          "4",
+          "4",
+          "4",
+          "4"
+        ]
+      ],
+      "elapsed_ms": 11.703,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "dbs_q2",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbs/q2.sql",
+      "database": "dbs",
+      "sql": "SELECT s_333, s_433 FROM root.dbs.g_0.d_0, root.dbs.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 50,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.dbs.g_0.d_0.s_333",
+        "root.dbs.g_0.d_1.s_333",
+        "root.dbs.g_0.d_0.s_433",
+        "root.dbs.g_0.d_1.s_433"
+      ],
+      "result_digest_sha256": "7ddf26e95ec43e3ce82248e6f465fb057e28efa77705e3105644bd5f0ca81631",
+      "rows_preview": [
+        [
+          1640966405000,
+          "72",
+          "72",
+          "3",
+          "3"
+        ],
+        [
+          1640966410000,
+          "105",
+          "311",
+          "3",
+          "3"
+        ]
+      ],
+      "elapsed_ms": 10.642,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "dbs_q3",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbs/q3.sql",
+      "database": "dbs",
+      "sql": "SELECT s_333, s_433 FROM root.dbs.g_0.d_0, root.dbs.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 AND root.dbs.g_0.d_0.s_333 > -5 AND root.dbs.g_0.d_0.s_433 > -5 AND root.dbs.g_0.d_1.s_333 > -5 AND root.dbs.g_0.d_1.s_433 > -5;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 50,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.dbs.g_0.d_0.s_333",
+        "root.dbs.g_0.d_1.s_333",
+        "root.dbs.g_0.d_0.s_433",
+        "root.dbs.g_0.d_1.s_433"
+      ],
+      "result_digest_sha256": "7ddf26e95ec43e3ce82248e6f465fb057e28efa77705e3105644bd5f0ca81631",
+      "rows_preview": [
+        [
+          1640966405000,
+          "72",
+          "72",
+          "3",
+          "3"
+        ],
+        [
+          1640966410000,
+          "105",
+          "311",
+          "3",
+          "3"
+        ]
+      ],
+      "elapsed_ms": 11.356,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 15,
+      "notes": []
+    },
+    {
+      "case_id": "dbs_q4",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbs/q4.sql",
+      "database": "dbs",
+      "sql": "SELECT count(s_333), count(s_433) FROM root.dbs.g_0.d_0, root.dbs.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 4,
+      "columns": [
+        "count(root.dbs.g_0.d_0.s_333)",
+        "count(root.dbs.g_0.d_1.s_333)",
+        "count(root.dbs.g_0.d_0.s_433)",
+        "count(root.dbs.g_0.d_1.s_433)"
+      ],
+      "result_digest_sha256": "883f5ea76c956f4c9b51cd8312e2e86ecbafb58ec856866a2baaf1e396ee90e9",
+      "rows_preview": [
+        [
+          0,
+          "50",
+          "50",
+          "50",
+          "50"
+        ]
+      ],
+      "elapsed_ms": 8.956,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "dbs_q5",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbs/q5.sql",
+      "database": "dbs",
+      "sql": "SELECT count(s_333), count(s_433) FROM root.dbs.g_0.d_0, root.dbs.g_0.d_1 WHERE root.dbs.g_0.d_0.s_333 > -5 AND root.dbs.g_0.d_0.s_433 > -5 AND root.dbs.g_0.d_1.s_333 > -5 AND root.dbs.g_0.d_1.s_433 > -5;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 4,
+      "columns": [
+        "count(root.dbs.g_0.d_0.s_333)",
+        "count(root.dbs.g_0.d_1.s_333)",
+        "count(root.dbs.g_0.d_0.s_433)",
+        "count(root.dbs.g_0.d_1.s_433)"
+      ],
+      "result_digest_sha256": "a31fc1ce95e31b5bace25a6af8405f12e5de4aa9defe8fcaa51025d2c90a8423",
+      "rows_preview": [
+        [
+          0,
+          "3000",
+          "3000",
+          "3000",
+          "3000"
+        ]
+      ],
+      "elapsed_ms": 11.531,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 24,
+      "notes": []
+    },
+    {
+      "case_id": "dbs_q6",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbs/q6.sql",
+      "database": "dbs",
+      "sql": "SELECT count(s_333), count(s_433) FROM root.dbs.g_0.d_0, root.dbs.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 AND root.dbs.g_0.d_0.s_333 > -5 AND root.dbs.g_0.d_0.s_433 > -5 AND root.dbs.g_0.d_1.s_333 > -5 AND root.dbs.g_0.d_1.s_433 > -5;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 4,
+      "columns": [
+        "count(root.dbs.g_0.d_0.s_333)",
+        "count(root.dbs.g_0.d_1.s_333)",
+        "count(root.dbs.g_0.d_0.s_433)",
+        "count(root.dbs.g_0.d_1.s_433)"
+      ],
+      "result_digest_sha256": "883f5ea76c956f4c9b51cd8312e2e86ecbafb58ec856866a2baaf1e396ee90e9",
+      "rows_preview": [
+        [
+          0,
+          "50",
+          "50",
+          "50",
+          "50"
+        ]
+      ],
+      "elapsed_ms": 9.097,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 24,
+      "notes": []
+    },
+    {
+      "case_id": "dbs_q7",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbs/q7.sql",
+      "database": "dbs",
+      "sql": "SELECT count(s_333), count(s_433) FROM root.dbs.g_0.d_0, root.dbs.g_0.d_1 GROUP BY ([1640966400000, 1640966650000),20000ms);",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 13,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "count(root.dbs.g_0.d_0.s_333)",
+        "count(root.dbs.g_0.d_1.s_333)",
+        "count(root.dbs.g_0.d_0.s_433)",
+        "count(root.dbs.g_0.d_1.s_433)"
+      ],
+      "result_digest_sha256": "cd77e77585c5432904bf3cdb8d447ff16766d1d651cfda9564c852174d3638ac",
+      "rows_preview": [
+        [
+          1640966400000,
+          "3",
+          "3",
+          "3",
+          "3"
+        ],
+        [
+          1640966420000,
+          "4",
+          "4",
+          "4",
+          "4"
+        ]
+      ],
+      "elapsed_ms": 11.245,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "dbs_q8",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbs/q8.sql",
+      "database": "dbs",
+      "sql": "SELECT last s_333, s_433 FROM root.dbs.g_0.d_0, root.dbs.g_0.d_1;",
+      "dialect": "tree",
+      "classification": "SUPPORTED_WITH_SHAPE_WARNING",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 4,
+      "column_count": 4,
+      "columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "result_digest_sha256": "254d7032940512df6f4970d546c834ddcd3f3968f5a8411e7c5477476c5e061e",
+      "rows_preview": [
+        [
+          1640981400000,
+          "b'root.dbs.g_0.d_0.s_333'",
+          "b'212'",
+          "b'INT64'"
+        ],
+        [
+          1640981400000,
+          "b'root.dbs.g_0.d_0.s_433'",
+          "b'4'",
+          "b'INT64'"
+        ]
+      ],
+      "elapsed_ms": 6.268,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 11,
+      "notes": [
+        "SELECT last <series...> returns columns Time,Timeseries,Value,DataType; multi-series/multi-device returns one row per series/device, unlike a native SELECT with one aligned row.",
+        "LAST output shape is not equivalent to a native range SELECT."
+      ]
+    },
+    {
+      "case_id": "dbs_q9",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbs/q9.sql",
+      "database": "dbs",
+      "sql": "SELECT s_333, s_433 FROM root.dbs.g_0.d_0, root.dbs.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 ORDER BY time DESC;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 50,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.dbs.g_0.d_0.s_333",
+        "root.dbs.g_0.d_1.s_333",
+        "root.dbs.g_0.d_0.s_433",
+        "root.dbs.g_0.d_1.s_433"
+      ],
+      "result_digest_sha256": "e4d31ee23467f04ab3b5b60920f2db619a57bdc97330293598996422ff23f59f",
+      "rows_preview": [
+        [
+          1640966650000,
+          "297",
+          "116",
+          "3",
+          "4"
+        ],
+        [
+          1640966645000,
+          "79",
+          "121",
+          "3",
+          "4"
+        ]
+      ],
+      "elapsed_ms": 10.605,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "dbl_q1",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbl/q1.sql",
+      "database": "dbl",
+      "sql": "SELECT s_1200, s_2200 FROM root.dbl.g_0.d_0, root.dbl.g_0.d_1 WHERE time = 1640966450000;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.dbl.g_0.d_0.s_1200",
+        "root.dbl.g_0.d_1.s_1200",
+        "root.dbl.g_0.d_0.s_2200",
+        "root.dbl.g_0.d_1.s_2200"
+      ],
+      "result_digest_sha256": "71d0b9e6c9509224139f8d825f5d540a418e1d39af859c3dc385b2ce55c5fc39",
+      "rows_preview": [
+        [
+          1640966450000,
+          "False",
+          "False",
+          "-19",
+          "-25"
+        ]
+      ],
+      "elapsed_ms": 15.809,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "dbl_q10",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbl/q10.sql",
+      "database": "dbl",
+      "sql": "SELECT s_1666, s_1716 FROM root.dbl.g_0.d_0, root.dbl.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 AND root.dbl.g_0.d_0.s_1666 > -5 AND root.dbl.g_0.d_0.s_1716 > -5 AND root.dbl.g_0.d_1.s_1666 > -5 AND root.dbl.g_0.d_1.s_1716 > -5 ORDER BY time DESC;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS_EMPTY",
+      "row_count": 0,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.dbl.g_0.d_0.s_1666",
+        "root.dbl.g_0.d_1.s_1666",
+        "root.dbl.g_0.d_0.s_1716",
+        "root.dbl.g_0.d_1.s_1716"
+      ],
+      "result_digest_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows_preview": [],
+      "elapsed_ms": 11.846,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 15,
+      "notes": [
+        "Query executed successfully but returned 0 rows under the observed data/filter."
+      ]
+    },
+    {
+      "case_id": "dbl_q11",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbl/q11.sql",
+      "database": "dbl",
+      "sql": "SELECT count(s_1666), count(s_1716) FROM root.dbl.g_0.d_0, root.dbl.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 GROUP BY ([1640966400000, 1640966650000),20000ms) ORDER BY time DESC;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 13,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "count(root.dbl.g_0.d_0.s_1666)",
+        "count(root.dbl.g_0.d_1.s_1666)",
+        "count(root.dbl.g_0.d_0.s_1716)",
+        "count(root.dbl.g_0.d_1.s_1716)"
+      ],
+      "result_digest_sha256": "57a7812bcc09e8adf012567cf60f489e0e12ebad1c145c27bb2eca593e8c7164",
+      "rows_preview": [
+        [
+          1640966640000,
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          1640966620000,
+          "4",
+          "4",
+          "4",
+          "4"
+        ]
+      ],
+      "elapsed_ms": 14.072,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "dbl_q2",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbl/q2.sql",
+      "database": "dbl",
+      "sql": "SELECT s_1200, s_2200 FROM root.dbl.g_0.d_0, root.dbl.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 50,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.dbl.g_0.d_0.s_1200",
+        "root.dbl.g_0.d_1.s_1200",
+        "root.dbl.g_0.d_0.s_2200",
+        "root.dbl.g_0.d_1.s_2200"
+      ],
+      "result_digest_sha256": "1de3ff0f3e67a34eebe624cbd4c27523d2fac3378d7a699eb912befcb17406b0",
+      "rows_preview": [
+        [
+          1640966405000,
+          "False",
+          "False",
+          "-21",
+          "-21"
+        ],
+        [
+          1640966410000,
+          "False",
+          "False",
+          "-10",
+          "-25"
+        ]
+      ],
+      "elapsed_ms": 11.132,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "dbl_q3",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbl/q3.sql",
+      "database": "dbl",
+      "sql": "SELECT s_1666, s_1716 FROM root.dbl.g_0.d_0, root.dbl.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 AND root.dbl.g_0.d_0.s_1666 > -5 AND root.dbl.g_0.d_0.s_1716 > -5 AND root.dbl.g_0.d_1.s_1666 > -5 AND root.dbl.g_0.d_1.s_1716 > -5;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS_EMPTY",
+      "row_count": 0,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.dbl.g_0.d_0.s_1666",
+        "root.dbl.g_0.d_1.s_1666",
+        "root.dbl.g_0.d_0.s_1716",
+        "root.dbl.g_0.d_1.s_1716"
+      ],
+      "result_digest_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows_preview": [],
+      "elapsed_ms": 6.543,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 15,
+      "notes": [
+        "Query executed successfully but returned 0 rows under the observed data/filter."
+      ]
+    },
+    {
+      "case_id": "dbl_q4",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbl/q4.sql",
+      "database": "dbl",
+      "sql": "SELECT count(s_1666), count(s_1716) FROM root.dbl.g_0.d_0, root.dbl.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 4,
+      "columns": [
+        "count(root.dbl.g_0.d_0.s_1666)",
+        "count(root.dbl.g_0.d_1.s_1666)",
+        "count(root.dbl.g_0.d_0.s_1716)",
+        "count(root.dbl.g_0.d_1.s_1716)"
+      ],
+      "result_digest_sha256": "883f5ea76c956f4c9b51cd8312e2e86ecbafb58ec856866a2baaf1e396ee90e9",
+      "rows_preview": [
+        [
+          0,
+          "50",
+          "50",
+          "50",
+          "50"
+        ]
+      ],
+      "elapsed_ms": 8.563,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "dbl_q5",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbl/q5.sql",
+      "database": "dbl",
+      "sql": "SELECT count(s_1666), count(s_1716) FROM root.dbl.g_0.d_0, root.dbl.g_0.d_1 WHERE root.dbl.g_0.d_0.s_1666 > -5 AND root.dbl.g_0.d_0.s_1716 > -5 AND root.dbl.g_0.d_1.s_1666 > -5 AND root.dbl.g_0.d_1.s_1716 > -5;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 4,
+      "columns": [
+        "count(root.dbl.g_0.d_0.s_1666)",
+        "count(root.dbl.g_0.d_1.s_1666)",
+        "count(root.dbl.g_0.d_0.s_1716)",
+        "count(root.dbl.g_0.d_1.s_1716)"
+      ],
+      "result_digest_sha256": "43ef0a81f0eef672981c590122660d1066e54198f781575e8f05e3abc1fd43e1",
+      "rows_preview": [
+        [
+          0,
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "elapsed_ms": 7.945,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 24,
+      "notes": []
+    },
+    {
+      "case_id": "dbl_q6",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbl/q6.sql",
+      "database": "dbl",
+      "sql": "SELECT count(s_1666), count(s_1716) FROM root.dbl.g_0.d_0, root.dbl.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 AND root.dbl.g_0.d_0.s_1666 > -5 AND root.dbl.g_0.d_0.s_1716 > -5 AND root.dbl.g_0.d_1.s_1666 > -5 AND root.dbl.g_0.d_1.s_1716 > -5;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 4,
+      "columns": [
+        "count(root.dbl.g_0.d_0.s_1666)",
+        "count(root.dbl.g_0.d_1.s_1666)",
+        "count(root.dbl.g_0.d_0.s_1716)",
+        "count(root.dbl.g_0.d_1.s_1716)"
+      ],
+      "result_digest_sha256": "43ef0a81f0eef672981c590122660d1066e54198f781575e8f05e3abc1fd43e1",
+      "rows_preview": [
+        [
+          0,
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "elapsed_ms": 7.116,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 24,
+      "notes": []
+    },
+    {
+      "case_id": "dbl_q7",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbl/q7.sql",
+      "database": "dbl",
+      "sql": "SELECT count(s_1200), count(s_2200) FROM root.dbl.g_0.d_0, root.dbl.g_0.d_1 GROUP BY ([1640966400000, 1640966650000),20000ms);",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 13,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "count(root.dbl.g_0.d_0.s_1200)",
+        "count(root.dbl.g_0.d_1.s_1200)",
+        "count(root.dbl.g_0.d_0.s_2200)",
+        "count(root.dbl.g_0.d_1.s_2200)"
+      ],
+      "result_digest_sha256": "cd77e77585c5432904bf3cdb8d447ff16766d1d651cfda9564c852174d3638ac",
+      "rows_preview": [
+        [
+          1640966400000,
+          "3",
+          "3",
+          "3",
+          "3"
+        ],
+        [
+          1640966420000,
+          "4",
+          "4",
+          "4",
+          "4"
+        ]
+      ],
+      "elapsed_ms": 11.21,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "dbl_q8",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbl/q8.sql",
+      "database": "dbl",
+      "sql": "SELECT last s_1200, s_2200 FROM root.dbl.g_0.d_0, root.dbl.g_0.d_1;",
+      "dialect": "tree",
+      "classification": "SUPPORTED_WITH_SHAPE_WARNING",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 4,
+      "column_count": 4,
+      "columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "result_digest_sha256": "3c82d2ad1ed92691bcdb7b3e98204475e715b857e86b7d034f159cbac8a088de",
+      "rows_preview": [
+        [
+          1640981400000,
+          "b'root.dbl.g_0.d_0.s_1200'",
+          "b'false'",
+          "b'BOOLEAN'"
+        ],
+        [
+          1640981400000,
+          "b'root.dbl.g_0.d_0.s_2200'",
+          "b'-12'",
+          "b'INT32'"
+        ]
+      ],
+      "elapsed_ms": 8.251,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 11,
+      "notes": [
+        "SELECT last <series...> returns columns Time,Timeseries,Value,DataType; multi-series/multi-device returns one row per series/device, unlike a native SELECT with one aligned row.",
+        "LAST output shape is not equivalent to a native range SELECT."
+      ]
+    },
+    {
+      "case_id": "dbl_q9",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbl/q9.sql",
+      "database": "dbl",
+      "sql": "SELECT s_1200, s_2200 FROM root.dbl.g_0.d_0, root.dbl.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 ORDER BY time DESC;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 50,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.dbl.g_0.d_0.s_1200",
+        "root.dbl.g_0.d_1.s_1200",
+        "root.dbl.g_0.d_0.s_2200",
+        "root.dbl.g_0.d_1.s_2200"
+      ],
+      "result_digest_sha256": "c6bc4f50a95744e7d52459fc08949c95c9cf82590836e214db8b2be42dd7982b",
+      "rows_preview": [
+        [
+          1640966650000,
+          "False",
+          "False",
+          "-21",
+          "-19"
+        ],
+        [
+          1640966645000,
+          "False",
+          "False",
+          "-21",
+          "-23"
+        ]
+      ],
+      "elapsed_ms": 11.02,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 13,
+      "notes": []
+    },
+    {
+      "case_id": "dbm_q1",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbm/q1.sql",
+      "database": "dbm",
+      "sql": "SELECT s_1666, s_1766 FROM root.dbm.g_0.d_0, root.dbm.g_0.d_1 WHERE time = 1640966450000;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.dbm.g_0.d_0.s_1666",
+        "root.dbm.g_0.d_1.s_1666",
+        "root.dbm.g_0.d_0.s_1766",
+        "root.dbm.g_0.d_1.s_1766"
+      ],
+      "result_digest_sha256": "8d11d5834ba74334aba1af5ba38290af56cdbeb5a55ffb188748b8cf46da00b3",
+      "rows_preview": [
+        [
+          1640966450000,
+          "-18",
+          "-23",
+          "0",
+          "0"
+        ]
+      ],
+      "elapsed_ms": 20.234,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 23,
+      "notes": []
+    },
+    {
+      "case_id": "dbm_q10",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbm/q10.sql",
+      "database": "dbm",
+      "sql": "SELECT s_1666, s_1766 FROM root.dbm.g_0.d_0, root.dbm.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 AND root.dbm.g_0.d_0.s_1666 > -5 AND root.dbm.g_0.d_0.s_1766 > -5 AND root.dbm.g_0.d_1.s_1666 > -5 AND root.dbm.g_0.d_1.s_1766 > -5 ORDER BY time DESC;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS_EMPTY",
+      "row_count": 0,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.dbm.g_0.d_0.s_1666",
+        "root.dbm.g_0.d_1.s_1666",
+        "root.dbm.g_0.d_0.s_1766",
+        "root.dbm.g_0.d_1.s_1766"
+      ],
+      "result_digest_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows_preview": [],
+      "elapsed_ms": 6.94,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 25,
+      "notes": [
+        "Query executed successfully but returned 0 rows under the observed data/filter."
+      ]
+    },
+    {
+      "case_id": "dbm_q11",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbm/q11.sql",
+      "database": "dbm",
+      "sql": "SELECT count(s_1666), count(s_1766) FROM root.dbm.g_0.d_0, root.dbm.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 GROUP BY ([1640966400000, 1640966650000),20000ms) ORDER BY time DESC;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 13,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "count(root.dbm.g_0.d_0.s_1666)",
+        "count(root.dbm.g_0.d_1.s_1666)",
+        "count(root.dbm.g_0.d_0.s_1766)",
+        "count(root.dbm.g_0.d_1.s_1766)"
+      ],
+      "result_digest_sha256": "57a7812bcc09e8adf012567cf60f489e0e12ebad1c145c27bb2eca593e8c7164",
+      "rows_preview": [
+        [
+          1640966640000,
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        [
+          1640966620000,
+          "4",
+          "4",
+          "4",
+          "4"
+        ]
+      ],
+      "elapsed_ms": 10.326,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 23,
+      "notes": []
+    },
+    {
+      "case_id": "dbm_q2",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbm/q2.sql",
+      "database": "dbm",
+      "sql": "SELECT s_1666, s_1766 FROM root.dbm.g_0.d_0, root.dbm.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 50,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.dbm.g_0.d_0.s_1666",
+        "root.dbm.g_0.d_1.s_1666",
+        "root.dbm.g_0.d_0.s_1766",
+        "root.dbm.g_0.d_1.s_1766"
+      ],
+      "result_digest_sha256": "a7da55df8fd0c38607281bf42c257b3aace180c0808ab2f19f0966f43585a3a7",
+      "rows_preview": [
+        [
+          1640966405000,
+          "-14",
+          "-14",
+          "0",
+          "0"
+        ],
+        [
+          1640966410000,
+          "-24",
+          "-24",
+          "0",
+          "0"
+        ]
+      ],
+      "elapsed_ms": 10.799,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 23,
+      "notes": []
+    },
+    {
+      "case_id": "dbm_q3",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbm/q3.sql",
+      "database": "dbm",
+      "sql": "SELECT s_1666, s_1766 FROM root.dbm.g_0.d_0, root.dbm.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 AND root.dbm.g_0.d_0.s_1666 > -5 AND root.dbm.g_0.d_0.s_1766 > -5 AND root.dbm.g_0.d_1.s_1666 > -5 AND root.dbm.g_0.d_1.s_1766 > -5;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS_EMPTY",
+      "row_count": 0,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.dbm.g_0.d_0.s_1666",
+        "root.dbm.g_0.d_1.s_1666",
+        "root.dbm.g_0.d_0.s_1766",
+        "root.dbm.g_0.d_1.s_1766"
+      ],
+      "result_digest_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows_preview": [],
+      "elapsed_ms": 7.009,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 25,
+      "notes": [
+        "Query executed successfully but returned 0 rows under the observed data/filter."
+      ]
+    },
+    {
+      "case_id": "dbm_q4",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbm/q4.sql",
+      "database": "dbm",
+      "sql": "SELECT count(s_1666), count(s_1766) FROM root.dbm.g_0.d_0, root.dbm.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 4,
+      "columns": [
+        "count(root.dbm.g_0.d_0.s_1666)",
+        "count(root.dbm.g_0.d_1.s_1666)",
+        "count(root.dbm.g_0.d_0.s_1766)",
+        "count(root.dbm.g_0.d_1.s_1766)"
+      ],
+      "result_digest_sha256": "883f5ea76c956f4c9b51cd8312e2e86ecbafb58ec856866a2baaf1e396ee90e9",
+      "rows_preview": [
+        [
+          0,
+          "50",
+          "50",
+          "50",
+          "50"
+        ]
+      ],
+      "elapsed_ms": 8.71,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 23,
+      "notes": []
+    },
+    {
+      "case_id": "dbm_q5",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbm/q5.sql",
+      "database": "dbm",
+      "sql": "SELECT count(s_1666), count(s_1766) FROM root.dbm.g_0.d_0, root.dbm.g_0.d_1 WHERE root.dbm.g_0.d_0.s_1666 > -5 AND root.dbm.g_0.d_0.s_1766 > -5 AND root.dbm.g_0.d_1.s_1666 > -5 AND root.dbm.g_0.d_1.s_1766 > -5;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 4,
+      "columns": [
+        "count(root.dbm.g_0.d_0.s_1666)",
+        "count(root.dbm.g_0.d_1.s_1666)",
+        "count(root.dbm.g_0.d_0.s_1766)",
+        "count(root.dbm.g_0.d_1.s_1766)"
+      ],
+      "result_digest_sha256": "43ef0a81f0eef672981c590122660d1066e54198f781575e8f05e3abc1fd43e1",
+      "rows_preview": [
+        [
+          0,
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "elapsed_ms": 8.332,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 34,
+      "notes": []
+    },
+    {
+      "case_id": "dbm_q6",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbm/q6.sql",
+      "database": "dbm",
+      "sql": "SELECT count(s_1666), count(s_1766) FROM root.dbm.g_0.d_0, root.dbm.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 AND root.dbm.g_0.d_0.s_1666 > -5 AND root.dbm.g_0.d_0.s_1766 > -5 AND root.dbm.g_0.d_1.s_1666 > -5 AND root.dbm.g_0.d_1.s_1766 > -5;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 1,
+      "column_count": 4,
+      "columns": [
+        "count(root.dbm.g_0.d_0.s_1666)",
+        "count(root.dbm.g_0.d_1.s_1666)",
+        "count(root.dbm.g_0.d_0.s_1766)",
+        "count(root.dbm.g_0.d_1.s_1766)"
+      ],
+      "result_digest_sha256": "43ef0a81f0eef672981c590122660d1066e54198f781575e8f05e3abc1fd43e1",
+      "rows_preview": [
+        [
+          0,
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "elapsed_ms": 8.519,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 34,
+      "notes": []
+    },
+    {
+      "case_id": "dbm_q7",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbm/q7.sql",
+      "database": "dbm",
+      "sql": "SELECT count(s_1666), count(s_1766) FROM root.dbm.g_0.d_0, root.dbm.g_0.d_1 GROUP BY ([1640966400000, 1640966650000),20000ms);",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 13,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "count(root.dbm.g_0.d_0.s_1666)",
+        "count(root.dbm.g_0.d_1.s_1666)",
+        "count(root.dbm.g_0.d_0.s_1766)",
+        "count(root.dbm.g_0.d_1.s_1766)"
+      ],
+      "result_digest_sha256": "cd77e77585c5432904bf3cdb8d447ff16766d1d651cfda9564c852174d3638ac",
+      "rows_preview": [
+        [
+          1640966400000,
+          "3",
+          "3",
+          "3",
+          "3"
+        ],
+        [
+          1640966420000,
+          "4",
+          "4",
+          "4",
+          "4"
+        ]
+      ],
+      "elapsed_ms": 10.586,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 23,
+      "notes": []
+    },
+    {
+      "case_id": "dbm_q8",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbm/q8.sql",
+      "database": "dbm",
+      "sql": "SELECT last s_1666, s_1766 FROM root.dbm.g_0.d_0, root.dbm.g_0.d_1;",
+      "dialect": "tree",
+      "classification": "SUPPORTED_WITH_SHAPE_WARNING",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 4,
+      "column_count": 4,
+      "columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "result_digest_sha256": "1517124e4e9e643d115a69b61c60cc8fe4aefff20114b785e67795f499de4fb0",
+      "rows_preview": [
+        [
+          1640981400000,
+          "b'root.dbm.g_0.d_0.s_1666'",
+          "b'-12'",
+          "b'INT32'"
+        ],
+        [
+          1640981400000,
+          "b'root.dbm.g_0.d_0.s_1766'",
+          "b'0'",
+          "b'INT32'"
+        ]
+      ],
+      "elapsed_ms": 9.968,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 26,
+      "notes": [
+        "SELECT last <series...> returns columns Time,Timeseries,Value,DataType; multi-series/multi-device returns one row per series/device, unlike a native SELECT with one aligned row.",
+        "LAST output shape is not equivalent to a native range SELECT."
+      ]
+    },
+    {
+      "case_id": "dbm_q9",
+      "source_file": "MAPO/MAPO/sample_queries_iotdbm/q9.sql",
+      "database": "dbm",
+      "sql": "SELECT s_1666, s_1766 FROM root.dbm.g_0.d_0, root.dbm.g_0.d_1 WHERE time >= 1640966400000 AND time <= 1640966650000 ORDER BY time DESC;",
+      "dialect": "tree",
+      "classification": "SUPPORTED",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 50,
+      "column_count": 5,
+      "columns": [
+        "Time",
+        "root.dbm.g_0.d_0.s_1666",
+        "root.dbm.g_0.d_1.s_1666",
+        "root.dbm.g_0.d_0.s_1766",
+        "root.dbm.g_0.d_1.s_1766"
+      ],
+      "result_digest_sha256": "edef2d4ed6d44464486a6cb9f8fb03496bb6ba7bf3fae5cfb450d5b0888354c0",
+      "rows_preview": [
+        [
+          1640966650000,
+          "-27",
+          "-15",
+          "0",
+          "0"
+        ],
+        [
+          1640966645000,
+          "-27",
+          "-12",
+          "0",
+          "0"
+        ]
+      ],
+      "elapsed_ms": 10.481,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 23,
+      "notes": []
+    },
+    {
+      "case_id": "dbm_q12_union",
+      "source_file": "MATAOF/query/queries_dbm/q12.sql",
+      "database": "dbm",
+      "sql": "SELECT s_1666 FROM root.dbm.g_0.* WHERE time >= 1640966441905 AND time <= 1640972441704;",
+      "dialect": "tree",
+      "classification": "SUPPORTED_HEAVY_WILDCARD",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS_LARGE",
+      "row_count": 1200,
+      "column_count": 101,
+      "columns": [
+        "Time",
+        "root.dbm.g_0.d_38.s_1666",
+        "root.dbm.g_0.d_39.s_1666",
+        "root.dbm.g_0.d_47.s_1666",
+        "root.dbm.g_0.d_48.s_1666",
+        "root.dbm.g_0.d_45.s_1666",
+        "root.dbm.g_0.d_46.s_1666",
+        "root.dbm.g_0.d_43.s_1666",
+        "root.dbm.g_0.d_0.s_1666",
+        "root.dbm.g_0.d_44.s_1666",
+        "root.dbm.g_0.d_2.s_1666",
+        "root.dbm.g_0.d_41.s_1666",
+        "root.dbm.g_0.d_1.s_1666",
+        "root.dbm.g_0.d_42.s_1666",
+        "root.dbm.g_0.d_4.s_1666",
+        "root.dbm.g_0.d_3.s_1666",
+        "root.dbm.g_0.d_40.s_1666",
+        "root.dbm.g_0.d_6.s_1666",
+        "root.dbm.g_0.d_5.s_1666",
+        "root.dbm.g_0.d_8.s_1666",
+        "root.dbm.g_0.d_7.s_1666",
+        "root.dbm.g_0.d_9.s_1666",
+        "root.dbm.g_0.d_29.s_1666",
+        "root.dbm.g_0.d_27.s_1666",
+        "root.dbm.g_0.d_28.s_1666",
+        "root.dbm.g_0.d_36.s_1666",
+        "root.dbm.g_0.d_37.s_1666",
+        "root.dbm.g_0.d_34.s_1666",
+        "root.dbm.g_0.d_35.s_1666",
+        "root.dbm.g_0.d_32.s_1666",
+        "root.dbm.g_0.d_33.s_1666",
+        "root.dbm.g_0.d_30.s_1666",
+        "root.dbm.g_0.d_31.s_1666",
+        "root.dbm.g_0.d_69.s_1666",
+        "root.dbm.g_0.d_67.s_1666",
+        "root.dbm.g_0.d_68.s_1666",
+        "root.dbm.g_0.d_65.s_1666",
+        "root.dbm.g_0.d_66.s_1666",
+        "root.dbm.g_0.d_63.s_1666",
+        "root.dbm.g_0.d_64.s_1666",
+        "root.dbm.g_0.d_61.s_1666",
+        "root.dbm.g_0.d_62.s_1666",
+        "root.dbm.g_0.d_60.s_1666",
+        "root.dbm.g_0.d_49.s_1666",
+        "root.dbm.g_0.d_58.s_1666",
+        "root.dbm.g_0.d_59.s_1666",
+        "root.dbm.g_0.d_56.s_1666",
+        "root.dbm.g_0.d_57.s_1666",
+        "root.dbm.g_0.d_54.s_1666",
+        "root.dbm.g_0.d_55.s_1666",
+        "root.dbm.g_0.d_52.s_1666",
+        "root.dbm.g_0.d_53.s_1666",
+        "root.dbm.g_0.d_50.s_1666",
+        "root.dbm.g_0.d_51.s_1666",
+        "root.dbm.g_0.d_89.s_1666",
+        "root.dbm.g_0.d_87.s_1666",
+        "root.dbm.g_0.d_88.s_1666",
+        "root.dbm.g_0.d_85.s_1666",
+        "root.dbm.g_0.d_86.s_1666",
+        "root.dbm.g_0.d_83.s_1666",
+        "root.dbm.g_0.d_84.s_1666",
+        "root.dbm.g_0.d_81.s_1666",
+        "root.dbm.g_0.d_82.s_1666",
+        "root.dbm.g_0.d_80.s_1666",
+        "root.dbm.g_0.d_78.s_1666",
+        "root.dbm.g_0.d_79.s_1666",
+        "root.dbm.g_0.d_76.s_1666",
+        "root.dbm.g_0.d_77.s_1666",
+        "root.dbm.g_0.d_74.s_1666",
+        "root.dbm.g_0.d_75.s_1666",
+        "root.dbm.g_0.d_72.s_1666",
+        "root.dbm.g_0.d_73.s_1666",
+        "root.dbm.g_0.d_70.s_1666",
+        "root.dbm.g_0.d_71.s_1666",
+        "root.dbm.g_0.d_18.s_1666",
+        "root.dbm.g_0.d_19.s_1666",
+        "root.dbm.g_0.d_16.s_1666",
+        "root.dbm.g_0.d_17.s_1666",
+        "root.dbm.g_0.d_25.s_1666",
+        "root.dbm.g_0.d_26.s_1666",
+        "root.dbm.g_0.d_23.s_1666",
+        "root.dbm.g_0.d_24.s_1666",
+        "root.dbm.g_0.d_21.s_1666",
+        "root.dbm.g_0.d_22.s_1666",
+        "root.dbm.g_0.d_20.s_1666",
+        "root.dbm.g_0.d_14.s_1666",
+        "root.dbm.g_0.d_15.s_1666",
+        "root.dbm.g_0.d_12.s_1666",
+        "root.dbm.g_0.d_13.s_1666",
+        "root.dbm.g_0.d_98.s_1666",
+        "root.dbm.g_0.d_10.s_1666",
+        "root.dbm.g_0.d_99.s_1666",
+        "root.dbm.g_0.d_11.s_1666",
+        "root.dbm.g_0.d_96.s_1666",
+        "root.dbm.g_0.d_97.s_1666",
+        "root.dbm.g_0.d_94.s_1666",
+        "root.dbm.g_0.d_95.s_1666",
+        "root.dbm.g_0.d_92.s_1666",
+        "root.dbm.g_0.d_93.s_1666",
+        "root.dbm.g_0.d_90.s_1666",
+        "root.dbm.g_0.d_91.s_1666"
+      ],
+      "result_digest_sha256": "0e646a19f1a52c86ab0ffa35c90309cf1d2a5f5a84039b8a299ad7d373388d0c",
+      "rows_preview": [
+        [
+          1640966445000,
+          "-9",
+          "-13",
+          "-13",
+          "-15",
+          "-20",
+          "-24",
+          "-14",
+          "-27",
+          "-27",
+          "-13",
+          "-17",
+          "-11",
+          "-20",
+          "-26",
+          "-26",
+          "-12",
+          "-19",
+          "-27",
+          "-24",
+          "-21",
+          "-16",
+          "-26",
+          "-13",
+          "-26",
+          "-12",
+          "-21",
+          "-16",
+          "-21",
+          "-21",
+          "-24",
+          "-27",
+          "-19",
+          "-27",
+          "-20",
+          "-14",
+          "-12",
+          "-17",
+          "-9",
+          "-13",
+          "-12",
+          "-21",
+          "-21",
+          "-14",
+          "-24",
+          "-16",
+          "-19",
+          "-21",
+          "-26",
+          "-27",
+          "-13",
+          "-26",
+          "-27",
+          "-11",
+          "-13",
+          "-21",
+          "-9",
+          "-21",
+          "-12",
+          "-24",
+          "-16",
+          "-19",
+          "-21",
+          "-27",
+          "-26",
+          "-26",
+          "-11",
+          "-13",
+          "-14",
+          "-27",
+          "-13",
+          "-15",
+          "-20",
+          "-24",
+          "-14",
+          "-27",
+          "-17",
+          "-20",
+          "-27",
+          "-11",
+          "-15",
+          "-14",
+          "-24",
+          "-13",
+          "-20",
+          "-13",
+          "-12",
+          "-21",
+          "-9",
+          "-15",
+          "-21",
+          "-14",
+          "-12",
+          "-24",
+          "-13",
+          "-27",
+          "-20",
+          "-20",
+          "-14",
+          "-12",
+          "-17"
+        ],
+        [
+          1640966450000,
+          "-20",
+          "-27",
+          "-26",
+          "-26",
+          "-13",
+          "-21",
+          "-12",
+          "-18",
+          "-26",
+          "-20",
+          "-26",
+          "-23",
+          "-27",
+          "-21",
+          "-17",
+          "-14",
+          "-12",
+          "-16",
+          "-21",
+          "-24",
+          "-19",
+          "-19",
+          "-14",
+          "-11",
+          "-19",
+          "-13",
+          "-23",
+          "-13",
+          "-11",
+          "-22",
+          "-27",
+          "-21",
+          "-13",
+          "-9",
+          "-20",
+          "-24",
+          "-11",
+          "-24",
+          "-26",
+          "-23",
+          "-9",
+          "-27",
+          "-20",
+          "-27",
+          "-26",
+          "-19",
+          "-17",
+          "-12",
+          "-21",
+          "-11",
+          "-17",
+          "-15",
+          "-20",
+          "-27",
+          "-15",
+          "-24",
+          "-18",
+          "-25",
+          "-19",
+          "-13",
+          "-15",
+          "-11",
+          "-22",
+          "-17",
+          "-13",
+          "-22",
+          "-24",
+          "-18",
+          "-13",
+          "-18",
+          "-13",
+          "-26",
+          "-27",
+          "-21",
+          "-16",
+          "-23",
+          "-14",
+          "-10",
+          "-12",
+          "-11",
+          "-11",
+          "-15",
+          "-20",
+          "-9",
+          "-17",
+          "-20",
+          "-16",
+          "-17",
+          "-22",
+          "-12",
+          "-14",
+          "-27",
+          "-17",
+          "-19",
+          "-25",
+          "-21",
+          "-9",
+          "-26",
+          "-10",
+          "-12"
+        ]
+      ],
+      "elapsed_ms": 272.218,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 29,
+      "notes": [
+        "Source file is a MATAOF wildcard query, not the MAPO q12 UNION query. The wildcard expands to many series; this case returned 1200 rows x 100 value columns."
+      ]
+    },
+    {
+      "case_id": "test_benchmark_path_original",
+      "source_file": "MAPO/MAPO/sample_queries_iotdb/q07_benchmark.sql",
+      "database": "test",
+      "sql": "SELECT s_0 FROM root.test.d_0 LIMIT 100",
+      "dialect": "tree",
+      "classification": "SUPPORTED_SILENT_EMPTY_WARNING",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS_EMPTY",
+      "row_count": 0,
+      "column_count": 1,
+      "columns": [
+        "Time"
+      ],
+      "result_digest_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows_preview": [],
+      "elapsed_ms": 4.503,
+      "explain_status": "EMPTY_PLAN",
+      "explain_line_count": 0,
+      "notes": [
+        "The source path root.test.d_0 does not match the observed schema. The server accepted it, returned 0 rows, and EXPLAIN returned 0 plan lines. Empty output must not be treated as proof that the path or SQL is valid."
+      ]
+    },
+    {
+      "case_id": "test_benchmark_path_corrected",
+      "source_file": "MAPO/MAPO/sample_queries_iotdb/q07_benchmark.sql",
+      "database": "test",
+      "sql": "SELECT s_130 FROM root.test.g_0.d_0 LIMIT 100",
+      "dialect": "tree",
+      "classification": "SUPPORTED_CORRECTED_VARIANT",
+      "server_acceptance": "ACCEPTED",
+      "execution_status": "SUCCESS",
+      "row_count": 100,
+      "column_count": 2,
+      "columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130"
+      ],
+      "result_digest_sha256": "a4a51ac8785b2395c5e7335c375e7420cc27069e173440ba8917600f82ddaf80",
+      "rows_preview": [
+        [
+          1640966405000,
+          "34523.62890625"
+        ],
+        [
+          1640966410000,
+          "34524.19921875"
+        ]
+      ],
+      "elapsed_ms": 12.086,
+      "explain_status": "AVAILABLE",
+      "explain_line_count": 8,
+      "notes": [
+        "Constructed path-corrected variant; not the original source SQL."
+      ]
+    }
+  ]
+}

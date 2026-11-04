@@ -1,0 +1,114 @@
+{
+  "protocol": "cpu-activity-v2",
+  "purpose": "NATIVE_SCREENING_NOT_LEARNING",
+  "schedule_complete": false,
+  "journal_sha256": "31259effdabeadfe33aec7ce8cb5165fa2829a444c06112626c5e2cbaf352bb0",
+  "journal": "data/phase7_cpu_profile_20261102/journal.jsonl",
+  "epoch": "heavy-complete-20261102-v2",
+  "rounds": [
+    {
+      "index": 0,
+      "scale": "large_scale",
+      "type": "q05_group_by_time",
+      "workers": 4,
+      "repeat": 1,
+      "sql_sha256": "9689fc7ccbf8f7b2b51ffeedb24a1a9193df0d8f4c838dfb66f1cd0e7672b9a9",
+      "elapsed_s": 3.6522130940575153,
+      "results": [
+        {
+          "execution_id": "2f0b950535eb421399e1887db83804e9",
+          "status": "ERROR",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 0,
+          "metrics": {
+            "execute_call_ms": 411.948,
+            "result_fetch_ms": 0.0,
+            "client_wall_ms": 411.969
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:02:08.789902+00:00",
+          "finished_at": "2026-11-02T12:02:09.290418+00:00",
+          "error_type": "StatementExecutionException",
+          "warnings": [
+            "NATIVE_FALLBACK_BLOCKED: selected strategy is the Native baseline; retrying it would duplicate the same request"
+          ],
+          "fallback": false
+        },
+        {
+          "execution_id": "3285c18b73c14c36990be9353ebece1a",
+          "status": "ERROR",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 0,
+          "metrics": {
+            "execute_call_ms": 479.535,
+            "result_fetch_ms": 0.0,
+            "client_wall_ms": 479.55
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:02:08.877329+00:00",
+          "finished_at": "2026-11-02T12:02:09.359863+00:00",
+          "error_type": "StatementExecutionException",
+          "warnings": [
+            "NATIVE_FALLBACK_BLOCKED: selected strategy is the Native baseline; retrying it would duplicate the same request"
+          ],
+          "fallback": false
+        },
+        {
+          "execution_id": "15d3eb2629ba4185826e7db4b819cd8f",
+          "status": "ERROR",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 0,
+          "metrics": {
+            "execute_call_ms": 542.468,
+            "result_fetch_ms": 0.0,
+            "client_wall_ms": 542.49
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:02:08.276484+00:00",
+          "finished_at": "2026-11-02T12:02:08.886949+00:00",
+          "error_type": "StatementExecutionException",
+          "warnings": [
+            "NATIVE_FALLBACK_BLOCKED: selected strategy is the Native baseline; retrying it would duplicate the same request"
+          ],
+          "fallback": false
+        },
+        {
+          "execution_id": "2546b94fd21748c09a435b14bd06f64f",
+          "status": "ERROR",
+          "strategy_id": "S0_NATIVE",
+          "row_count": 0,
+          "metrics": {
+            "execute_call_ms": 456.068,
+            "result_fetch_ms": 0.0,
+            "client_wall_ms": 456.09
+          },
+          "fetch_mode": "FULL",
+          "started_at": "2026-11-02T12:02:08.226692+00:00",
+          "finished_at": "2026-11-02T12:02:08.886246+00:00",
+          "error_type": "StatementExecutionException",
+          "warnings": [
+            "NATIVE_FALLBACK_BLOCKED: selected strategy is the Native baseline; retrying it would duplicate the same request"
+          ],
+          "fallback": false
+        }
+      ],
+      "sample_count": 3,
+      "cpu_min_percent": 5.6,
+      "cpu_max_percent": 81.6,
+      "cpu_mean_percent": 38.199999999999996,
+      "cpu_buckets": {
+        "LOW": 2,
+        "MEDIUM": 1
+      }
+    }
+  ],
+  "online_ready": false,
+  "limitations": [
+    "whole-host metrics include unrelated processes",
+    "memory pressure and disk saturation UNKNOWN",
+    "short queries can finish between samples",
+    "no strategy benefit or learning claim",
+    "screening cannot establish sufficient per-arm pre-action load coverage",
+    "CPU observations include client decoding and collection overhead on this shared host"
+  ]
+}

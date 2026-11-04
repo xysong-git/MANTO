@@ -1,0 +1,20 @@
+{
+  "data/phase7_sequence_fresh_20261103": {
+    "integrity_check": "ok",
+    "changed_code_since_start": [
+      "src/tsdb_optimizer/learning/repository.py",
+      "scripts/phase7_sequence_e2e.py"
+    ],
+    "journal_sha256": "7f2c1c60778aeeaf796f8016fa10099c5452d0af734f21bc35174a4e287ac7b3"
+  },
+  "data/phase7_sequence_compact_20261103": {
+    "integrity_check": "ok",
+    "changed_code_since_start": [],
+    "journal_sha256": "0c56af6065ce515db77da3e4f8c4a078af906e9b564196b07f871dfb907689ec"
+  },
+  "failed_v1": {
+    "path": "data/phase7_sequence_20261103/journal.jsonl",
+    "terminal": "aborted",
+    "requests": 613
+  }
+}

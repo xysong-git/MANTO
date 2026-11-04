@@ -1,0 +1,834 @@
+[
+  {
+    "path": "data/phase7_overhead_before_20261103/journal.jsonl",
+    "sha256": "0eed3db39143c1da2619f8469c567070a0b6b2a3f0dfd54c910c232b749b6de8",
+    "terminal": {
+      "kind": "aborted",
+      "body": {
+        "error_type": "RuntimeError",
+        "cpu_control": [
+          {
+            "elapsed_s": 0.38219495001249015,
+            "cpu_percent": 50.2,
+            "memory_percent": 64.4,
+            "worker_duty": 0.65
+          },
+          {
+            "elapsed_s": 0.6328621540451422,
+            "cpu_percent": 53.5,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7022666666666667
+          },
+          {
+            "elapsed_s": 0.8834834230365232,
+            "cpu_percent": 55.9,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7369333333333333
+          },
+          {
+            "elapsed_s": 1.1340255460236222,
+            "cpu_percent": 58.3,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7588
+          },
+          {
+            "elapsed_s": 1.3846551360329613,
+            "cpu_percent": 61.1,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7678666666666667
+          },
+          {
+            "elapsed_s": 1.6352641410194337,
+            "cpu_percent": 60.0,
+            "memory_percent": 64.3,
+            "worker_duty": 0.762
+          },
+          {
+            "elapsed_s": 1.8859454389894381,
+            "cpu_percent": 60.2,
+            "memory_percent": 64.4,
+            "worker_duty": 0.762
+          },
+          {
+            "elapsed_s": 2.136608029017225,
+            "cpu_percent": 58.9,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7609333333333334
+          },
+          {
+            "elapsed_s": 2.3875610820250586,
+            "cpu_percent": 59.4,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7668
+          },
+          {
+            "elapsed_s": 2.6381466119783,
+            "cpu_percent": 60.5,
+            "memory_percent": 64.3,
+            "worker_duty": 0.77
+          },
+          {
+            "elapsed_s": 2.888721380964853,
+            "cpu_percent": 59.6,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7673333333333333
+          },
+          {
+            "elapsed_s": 3.1417194349924102,
+            "cpu_percent": 61.0,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7694666666666666
+          },
+          {
+            "elapsed_s": 3.4334323869552463,
+            "cpu_percent": 66.4,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7641333333333333
+          },
+          {
+            "elapsed_s": 3.68411336094141,
+            "cpu_percent": 58.4,
+            "memory_percent": 64.4,
+            "worker_duty": 0.73
+          },
+          {
+            "elapsed_s": 3.934797837981023,
+            "cpu_percent": 58.3,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7385333333333334
+          },
+          {
+            "elapsed_s": 4.185549368034117,
+            "cpu_percent": 59.0,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7476
+          },
+          {
+            "elapsed_s": 4.4871336539508775,
+            "cpu_percent": 59.3,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7529333333333333
+          },
+          {
+            "elapsed_s": 4.737945139990188,
+            "cpu_percent": 59.0,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7566666666666667
+          },
+          {
+            "elapsed_s": 5.024358400027268,
+            "cpu_percent": 60.6,
+            "memory_percent": 64.4,
+            "worker_duty": 0.762
+          },
+          {
+            "elapsed_s": 5.2750895109493285,
+            "cpu_percent": 60.1,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7588
+          },
+          {
+            "elapsed_s": 5.526578817982227,
+            "cpu_percent": 59.3,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7582666666666666
+          },
+          {
+            "elapsed_s": 5.8141426120419055,
+            "cpu_percent": 59.9,
+            "memory_percent": 64.3,
+            "worker_duty": 0.762
+          },
+          {
+            "elapsed_s": 6.064814370009117,
+            "cpu_percent": 59.4,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7625333333333334
+          },
+          {
+            "elapsed_s": 6.3206333259586245,
+            "cpu_percent": 59.9,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7657333333333334
+          },
+          {
+            "elapsed_s": 6.571118533029221,
+            "cpu_percent": 60.4,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7662666666666668
+          },
+          {
+            "elapsed_s": 6.867667268030345,
+            "cpu_percent": 60.0,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7641333333333334
+          },
+          {
+            "elapsed_s": 7.1186928959796205,
+            "cpu_percent": 60.3,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7641333333333334
+          },
+          {
+            "elapsed_s": 7.370615702937357,
+            "cpu_percent": 58.9,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7625333333333335
+          },
+          {
+            "elapsed_s": 7.660593583015725,
+            "cpu_percent": 60.4,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7684000000000002
+          },
+          {
+            "elapsed_s": 7.911217376939021,
+            "cpu_percent": 59.0,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7662666666666669
+          },
+          {
+            "elapsed_s": 8.181280761025846,
+            "cpu_percent": 60.8,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7716000000000002
+          },
+          {
+            "elapsed_s": 8.432022833963856,
+            "cpu_percent": 60.1,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7673333333333335
+          },
+          {
+            "elapsed_s": 8.682633250951767,
+            "cpu_percent": 58.8,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7668000000000001
+          },
+          {
+            "elapsed_s": 8.9738804459339,
+            "cpu_percent": 60.2,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7732000000000001
+          },
+          {
+            "elapsed_s": 9.224545157980174,
+            "cpu_percent": 60.9,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7721333333333334
+          },
+          {
+            "elapsed_s": 9.510880275978707,
+            "cpu_percent": 60.1,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7673333333333334
+          },
+          {
+            "elapsed_s": 9.76151787803974,
+            "cpu_percent": 60.3,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7668
+          },
+          {
+            "elapsed_s": 10.019861003034748,
+            "cpu_percent": 59.2,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7652000000000001
+          },
+          {
+            "elapsed_s": 10.289044664008543,
+            "cpu_percent": 61.4,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7694666666666667
+          },
+          {
+            "elapsed_s": 10.53971611300949,
+            "cpu_percent": 59.5,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7620000000000001
+          },
+          {
+            "elapsed_s": 10.821856476948597,
+            "cpu_percent": 60.1,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7646666666666668
+          },
+          {
+            "elapsed_s": 11.072596048936248,
+            "cpu_percent": 60.3,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7641333333333334
+          },
+          {
+            "elapsed_s": 11.323333346983418,
+            "cpu_percent": 59.0,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7625333333333335
+          },
+          {
+            "elapsed_s": 11.60956662998069,
+            "cpu_percent": 60.6,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7678666666666668
+          },
+          {
+            "elapsed_s": 11.860879960935563,
+            "cpu_percent": 58.6,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7646666666666668
+          },
+          {
+            "elapsed_s": 12.147613968001679,
+            "cpu_percent": 60.6,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7721333333333334
+          },
+          {
+            "elapsed_s": 12.398126790998504,
+            "cpu_percent": 60.2,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7689333333333335
+          },
+          {
+            "elapsed_s": 12.689856842975132,
+            "cpu_percent": 60.3,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7678666666666668
+          },
+          {
+            "elapsed_s": 12.940626665018499,
+            "cpu_percent": 61.2,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7662666666666669
+          },
+          {
+            "elapsed_s": 13.192551788990386,
+            "cpu_percent": 58.8,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7598666666666669
+          },
+          {
+            "elapsed_s": 13.483993389992975,
+            "cpu_percent": 60.4,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7662666666666669
+          },
+          {
+            "elapsed_s": 13.734563812962733,
+            "cpu_percent": 59.9,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7641333333333336
+          },
+          {
+            "elapsed_s": 14.025875960942358,
+            "cpu_percent": 59.8,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7646666666666669
+          },
+          {
+            "elapsed_s": 14.276781472028233,
+            "cpu_percent": 60.1,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7657333333333336
+          },
+          {
+            "elapsed_s": 14.5451037309831,
+            "cpu_percent": 60.0,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7652000000000002
+          },
+          {
+            "elapsed_s": 14.797722738003358,
+            "cpu_percent": 60.0,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7652000000000002
+          },
+          {
+            "elapsed_s": 15.048345324001275,
+            "cpu_percent": 59.3,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7652000000000002
+          },
+          {
+            "elapsed_s": 15.313312873942778,
+            "cpu_percent": 61.5,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7689333333333336
+          },
+          {
+            "elapsed_s": 15.564190211938694,
+            "cpu_percent": 59.9,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7609333333333336
+          },
+          {
+            "elapsed_s": 15.847491543041542,
+            "cpu_percent": 59.8,
+            "memory_percent": 64.4,
+            "worker_duty": 0.761466666666667
+          },
+          {
+            "elapsed_s": 16.105678239953704,
+            "cpu_percent": 66.6,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7625333333333336
+          },
+          {
+            "elapsed_s": 16.35622462700121,
+            "cpu_percent": 81.0,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7273333333333336
+          }
+        ],
+        "cpu_error": "CO_TENANT_SAFETY_STOP"
+      }
+    },
+    "trials": 30,
+    "excluded_from_qualification": true,
+    "last_trial": {
+      "phase": "train",
+      "assignment": {
+        "phase": "train",
+        "load": "MEDIUM",
+        "cache": "READY",
+        "index": 10,
+        "policy": "S0_NATIVE",
+        "propensity": 0.5
+      },
+      "warnings": [],
+      "sample_status": "VALID",
+      "quality_reasons": []
+    }
+  },
+  {
+    "path": "data/phase7_e2e_background_20261103/journal.jsonl",
+    "sha256": "2867af137ecf7b209eac8cb8798902a6007815707cdeace44a0ce92e13dbcb9d",
+    "terminal": {
+      "kind": "aborted",
+      "body": {
+        "error_type": "KeyboardInterrupt",
+        "cpu_control": [
+          {
+            "elapsed_s": 0.39472563099116087,
+            "cpu_percent": 51.0,
+            "memory_percent": 64.4,
+            "worker_duty": 0.65
+          },
+          {
+            "elapsed_s": 0.6451184999896213,
+            "cpu_percent": 53.2,
+            "memory_percent": 64.4,
+            "worker_duty": 0.6980000000000001
+          },
+          {
+            "elapsed_s": 0.8957177819684148,
+            "cpu_percent": 55.8,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7342666666666667
+          },
+          {
+            "elapsed_s": 1.1461065040202811,
+            "cpu_percent": 58.3,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7566666666666667
+          },
+          {
+            "elapsed_s": 1.396569058066234,
+            "cpu_percent": 60.2,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7657333333333334
+          },
+          {
+            "elapsed_s": 1.6470354420598596,
+            "cpu_percent": 59.6,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7646666666666667
+          },
+          {
+            "elapsed_s": 1.89746629295405,
+            "cpu_percent": 59.0,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7668
+          },
+          {
+            "elapsed_s": 2.147819124045782,
+            "cpu_percent": 59.6,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7721333333333333
+          },
+          {
+            "elapsed_s": 2.3982672600541264,
+            "cpu_percent": 62.3,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7742666666666667
+          },
+          {
+            "elapsed_s": 2.6488191219978034,
+            "cpu_percent": 63.7,
+            "memory_percent": 64.5,
+            "worker_duty": 0.762
+          },
+          {
+            "elapsed_s": 2.8991950190393254,
+            "cpu_percent": 59.7,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7422666666666666
+          },
+          {
+            "elapsed_s": 3.1497736129676923,
+            "cpu_percent": 59.4,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7438666666666666
+          },
+          {
+            "elapsed_s": 3.401150419958867,
+            "cpu_percent": 60.3,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7470666666666665
+          },
+          {
+            "elapsed_s": 3.6663849990582094,
+            "cpu_percent": 59.8,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7454666666666666
+          },
+          {
+            "elapsed_s": 3.9538137989584357,
+            "cpu_percent": 65.2,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7465333333333333
+          },
+          {
+            "elapsed_s": 4.204509382019751,
+            "cpu_percent": 58.3,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7187999999999999
+          },
+          {
+            "elapsed_s": 4.455582375987433,
+            "cpu_percent": 57.9,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7278666666666666
+          },
+          {
+            "elapsed_s": 4.719556604977697,
+            "cpu_percent": 58.6,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7390666666666665
+          },
+          {
+            "elapsed_s": 4.970110725029372,
+            "cpu_percent": 60.8,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7465333333333332
+          },
+          {
+            "elapsed_s": 5.238281599013135,
+            "cpu_percent": 59.5,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7422666666666665
+          },
+          {
+            "elapsed_s": 5.488718695007265,
+            "cpu_percent": 58.8,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7449333333333332
+          },
+          {
+            "elapsed_s": 5.745318921050057,
+            "cpu_percent": 60.2,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7513333333333332
+          },
+          {
+            "elapsed_s": 6.006402908009477,
+            "cpu_percent": 59.6,
+            "memory_percent": 64.5,
+            "worker_duty": 0.7502666666666665
+          }
+        ],
+        "cpu_error": null
+      }
+    },
+    "trials": 214,
+    "excluded_from_qualification": true,
+    "last_trial": {
+      "phase": "train",
+      "assignment": {
+        "phase": "train",
+        "load": "MEDIUM",
+        "cache": "READY",
+        "index": 53,
+        "policy": "S1_REPEAT_CACHE",
+        "propensity": 0.5
+      },
+      "warnings": [],
+      "sample_status": "VALID",
+      "quality_reasons": []
+    }
+  },
+  {
+    "path": "data/phase7_e2e_overhead_fixed_20261103/journal.jsonl",
+    "sha256": "427ca5137f00b952196befae65ba2502569fde235d71640157461d3ff7ea26be",
+    "terminal": {
+      "kind": "aborted",
+      "body": {
+        "error_type": "RuntimeError",
+        "cpu_control": [
+          {
+            "elapsed_s": 0.4728004300268367,
+            "cpu_percent": 50.0,
+            "memory_percent": 64.4,
+            "worker_duty": 0.65
+          },
+          {
+            "elapsed_s": 0.7233506849734113,
+            "cpu_percent": 53.7,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7033333333333334
+          },
+          {
+            "elapsed_s": 0.9740090389968827,
+            "cpu_percent": 56.1,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7369333333333333
+          },
+          {
+            "elapsed_s": 1.2245524260215461,
+            "cpu_percent": 58.4,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7577333333333334
+          },
+          {
+            "elapsed_s": 1.4750133299967274,
+            "cpu_percent": 61.9,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7662666666666668
+          },
+          {
+            "elapsed_s": 1.7254640940809622,
+            "cpu_percent": 59.0,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7561333333333334
+          },
+          {
+            "elapsed_s": 1.9760713790310547,
+            "cpu_percent": 58.3,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7614666666666667
+          },
+          {
+            "elapsed_s": 2.2265753430547193,
+            "cpu_percent": 58.8,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7705333333333334
+          },
+          {
+            "elapsed_s": 2.4773502360330895,
+            "cpu_percent": 59.2,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7769333333333334
+          },
+          {
+            "elapsed_s": 2.728008827078156,
+            "cpu_percent": 60.1,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7812
+          },
+          {
+            "elapsed_s": 2.9784619089914486,
+            "cpu_percent": 59.8,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7806666666666666
+          },
+          {
+            "elapsed_s": 3.2291031810455024,
+            "cpu_percent": 60.1,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7817333333333333
+          },
+          {
+            "elapsed_s": 3.4809586490737274,
+            "cpu_percent": 61.8,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7811999999999999
+          },
+          {
+            "elapsed_s": 3.731671729008667,
+            "cpu_percent": 63.6,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7716
+          },
+          {
+            "elapsed_s": 3.9824648440117016,
+            "cpu_percent": 63.3,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7524
+          },
+          {
+            "elapsed_s": 4.233438136056066,
+            "cpu_percent": 59.0,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7348
+          },
+          {
+            "elapsed_s": 4.487756793037988,
+            "cpu_percent": 59.0,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7401333333333333
+          },
+          {
+            "elapsed_s": 4.738190946052782,
+            "cpu_percent": 59.2,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7454666666666666
+          },
+          {
+            "elapsed_s": 4.990629596984945,
+            "cpu_percent": 58.9,
+            "memory_percent": 64.4,
+            "worker_duty": 0.7497333333333333
+          }
+        ],
+        "cpu_error": null
+      }
+    },
+    "trials": 480,
+    "excluded_from_qualification": true,
+    "last_trial": {
+      "phase": "train",
+      "assignment": {
+        "phase": "train",
+        "load": "MEDIUM",
+        "cache": "EMPTY",
+        "index": 119,
+        "policy": "S1_REPEAT_CACHE",
+        "propensity": 0.5
+      },
+      "warnings": [],
+      "sample_status": "VALID",
+      "quality_reasons": []
+    }
+  },
+  {
+    "path": "data/phase7_e2e_overhead_ready_20261103/journal.jsonl",
+    "sha256": "123818156f5414702a7f13d5211e3642210ee24e8cf9b42b226ca62fa41ccbf0",
+    "terminal": {
+      "kind": "aborted",
+      "body": {
+        "error_type": "RuntimeError",
+        "cpu_control": [],
+        "cpu_error": null
+      }
+    },
+    "trials": 770,
+    "excluded_from_qualification": true,
+    "last_trial": {
+      "phase": "test",
+      "assignment": {
+        "phase": "test",
+        "load": "LOW",
+        "cache": "READY",
+        "block": 24,
+        "position": 1,
+        "policy": "ADAPTIVE"
+      },
+      "warnings": [
+        "CLIENT_STATE_UNAVAILABLE_OR_STALE_NATIVE"
+      ],
+      "sample_status": "VALID",
+      "quality_reasons": []
+    }
+  },
+  {
+    "path": "data/phase7_e2e_periodic_20261103/journal.jsonl",
+    "sha256": "b17ec88ab9ec36d1224a28bf6ac5e8602d64cd0cc6d825f1b8e06e885c36cd46",
+    "terminal": {
+      "kind": "aborted",
+      "body": {
+        "error_type": "RuntimeError",
+        "cpu_control": [],
+        "cpu_error": null
+      }
+    },
+    "trials": 71,
+    "excluded_from_qualification": true,
+    "last_trial": {
+      "phase": "train",
+      "assignment": {
+        "phase": "train",
+        "load": "LOW",
+        "cache": "EMPTY",
+        "index": 10,
+        "policy": "S0_NATIVE",
+        "propensity": 0.5
+      },
+      "warnings": [],
+      "sample_status": "LOW_CONFIDENCE",
+      "quality_reasons": [
+        "LOAD_CONTEXT_UNAVAILABLE_OR_MISMATCHED"
+      ]
+    }
+  },
+  {
+    "path": "data/phase7_e2e_wal_20261103/journal.jsonl",
+    "sha256": "1bdb3e4c2625b5c16c73f168d09eef8c9224a866100f817fae0b03812c6783b7",
+    "terminal": {
+      "kind": "aborted",
+      "body": {
+        "error_type": "RuntimeError",
+        "cpu_control": [
+          {
+            "elapsed_s": 0.3860071270028129,
+            "cpu_percent": 50.4,
+            "memory_percent": 64.3,
+            "worker_duty": 0.65
+          },
+          {
+            "elapsed_s": 0.6366139190504327,
+            "cpu_percent": 53.3,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7012
+          },
+          {
+            "elapsed_s": 0.8871651591034606,
+            "cpu_percent": 57.0,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7369333333333334
+          },
+          {
+            "elapsed_s": 1.1378306890837848,
+            "cpu_percent": 57.4,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7529333333333335
+          },
+          {
+            "elapsed_s": 1.3883054360048845,
+            "cpu_percent": 58.5,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7668000000000001
+          },
+          {
+            "elapsed_s": 1.6390584030887112,
+            "cpu_percent": 59.9,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7748000000000002
+          },
+          {
+            "elapsed_s": 1.8897083610063419,
+            "cpu_percent": 63.0,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7753333333333335
+          },
+          {
+            "elapsed_s": 2.1402599290013313,
+            "cpu_percent": 81.8,
+            "memory_percent": 64.3,
+            "worker_duty": 0.7593333333333335
+          }
+        ],
+        "cpu_error": "CO_TENANT_SAFETY_STOP"
+      }
+    }
+  }
+]

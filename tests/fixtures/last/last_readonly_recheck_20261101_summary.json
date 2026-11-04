@@ -1,0 +1,1258 @@
+{
+  "fixture_version": "last-readonly-recheck-summary-v1",
+  "generated_at": "2026-11-01",
+  "scope": "Read-only recheck of CAND_LAST_SINGLE_SERIES: workload demand scan, variant boundaries, result contract, expanded timing, fallback contract. No DDL/DML and no production strategy change.",
+  "server_version": "2.0.6",
+  "server_build": "c6ecbde",
+  "client_version": "2.0.6",
+  "dialect": "tree",
+  "read_only": true,
+  "ddl_dml": false,
+  "password_in_output": false,
+  "status": "NOT_VERIFIED",
+  "submarkers": [
+    "DEMAND_UNPROVEN",
+    "FALLBACK_CONTRACT_ONLY"
+  ],
+  "workload_demand_scan": {
+    "files": 12,
+    "statements": 24000,
+    "parse_supported": 12000,
+    "parse_unsupported": 12000,
+    "native_order_by_time_desc_limit_1": 0,
+    "eligible_single_series_single_device_latest_value": 0,
+    "eligible_examples": [],
+    "select_last_statements": 2000,
+    "select_last_examples": [
+      {
+        "file": "q8.sql",
+        "line": 2,
+        "sql": "SELECT LAST s_333, s_433 FROM root.dbs.g_0.*"
+      },
+      {
+        "file": "q8.sql",
+        "line": 3,
+        "sql": "SELECT LAST s_333, s_433 FROM root.dbs.g_0.*"
+      },
+      {
+        "file": "q8.sql",
+        "line": 4,
+        "sql": "SELECT LAST s_333, s_433 FROM root.dbs.g_0.*"
+      }
+    ],
+    "select_last_note": "All observed SELECT LAST statements are q8 multi-series/all-device queries; they already use LAST and are outside the single-series candidate shape.",
+    "conclusion": "DEMAND_UNPROVEN: no eligible Native latest-value workload found"
+  },
+  "variant_certification": {
+    "baseline": {
+      "native_accepted": true,
+      "last_accepted": true,
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130"
+      ],
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "native_row_count": 1,
+      "last_row_count": 1,
+      "native_error": null,
+      "last_error": null,
+      "native_row": [
+        1641016400000,
+        34579.859375
+      ],
+      "last_row": [
+        1641016400000,
+        "root.test.g_0.d_0.s_130",
+        "34579.86",
+        "FLOAT"
+      ],
+      "normalized_equal": true,
+      "same_result_shape": false,
+      "normalized_equivalent": true
+    },
+    "select_alias": {
+      "native_accepted": true,
+      "last_accepted": true,
+      "native_columns": [
+        "Time",
+        "v"
+      ],
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "native_row_count": 1,
+      "last_row_count": 1,
+      "native_error": null,
+      "last_error": null,
+      "native_row": [
+        1641016400000,
+        34579.859375
+      ],
+      "last_row": [
+        1641016400000,
+        "root.test.g_0.d_0.s_130",
+        "34579.86",
+        "FLOAT"
+      ],
+      "normalized_equal": true,
+      "same_result_shape": false,
+      "normalized_equivalent": true
+    },
+    "last_with_limit": {
+      "native_accepted": true,
+      "last_accepted": true,
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130"
+      ],
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "native_row_count": 1,
+      "last_row_count": 1,
+      "native_error": null,
+      "last_error": null,
+      "native_row": [
+        1641016400000,
+        34579.859375
+      ],
+      "last_row": [
+        1641016400000,
+        "root.test.g_0.d_0.s_130",
+        "34579.86",
+        "FLOAT"
+      ],
+      "normalized_equal": true,
+      "same_result_shape": false,
+      "normalized_equivalent": true
+    },
+    "last_with_order_by": {
+      "native_accepted": true,
+      "last_accepted": true,
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130"
+      ],
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "native_row_count": 1,
+      "last_row_count": 1,
+      "native_error": null,
+      "last_error": null,
+      "native_row": [
+        1641016400000,
+        34579.859375
+      ],
+      "last_row": [
+        1641016400000,
+        "root.test.g_0.d_0.s_130",
+        "34579.86",
+        "FLOAT"
+      ],
+      "normalized_equal": true,
+      "same_result_shape": false,
+      "normalized_equivalent": true
+    },
+    "last_with_time_range": {
+      "native_accepted": true,
+      "last_accepted": true,
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130"
+      ],
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "native_row_count": 1,
+      "last_row_count": 1,
+      "native_error": null,
+      "last_error": null,
+      "native_row": [
+        1640991000000,
+        34534.421875
+      ],
+      "last_row": [
+        1640991000000,
+        "root.test.g_0.d_0.s_130",
+        "34534.42",
+        "FLOAT"
+      ],
+      "normalized_equal": true,
+      "same_result_shape": false,
+      "normalized_equivalent": true
+    },
+    "last_with_time_eq": {
+      "native_accepted": true,
+      "last_accepted": true,
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130"
+      ],
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "native_row_count": 1,
+      "last_row_count": 1,
+      "native_error": null,
+      "last_error": null,
+      "native_row": [
+        1640966405000,
+        34523.62890625
+      ],
+      "last_row": [
+        1640966405000,
+        "root.test.g_0.d_0.s_130",
+        "34523.63",
+        "FLOAT"
+      ],
+      "normalized_equal": true,
+      "same_result_shape": false,
+      "normalized_equivalent": true
+    },
+    "last_with_empty_range": {
+      "native_accepted": true,
+      "last_accepted": true,
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130"
+      ],
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "native_row_count": 0,
+      "last_row_count": 0,
+      "native_error": null,
+      "last_error": null,
+      "normalized_equivalent": true,
+      "both_empty": true
+    },
+    "last_wildcard": {
+      "native_accepted": true,
+      "last_accepted": true,
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130",
+        "root.test.g_0.d_0.s_131",
+        "root.test.g_0.d_0.s_132",
+        "root.test.g_0.d_0.s_133",
+        "root.test.g_0.d_0.s_134",
+        "root.test.g_0.d_0.s_135",
+        "root.test.g_0.d_0.s_136",
+        "root.test.g_0.d_0.s_137",
+        "root.test.g_0.d_0.s_138",
+        "root.test.g_0.d_0.s_139",
+        "root.test.g_0.d_0.s_70",
+        "root.test.g_0.d_0.s_72",
+        "root.test.g_0.d_0.s_71",
+        "root.test.g_0.d_0.s_78",
+        "root.test.g_0.d_0.s_77",
+        "root.test.g_0.d_0.s_79",
+        "root.test.g_0.d_0.s_74",
+        "root.test.g_0.d_0.s_73",
+        "root.test.g_0.d_0.s_76",
+        "root.test.g_0.d_0.s_75",
+        "root.test.g_0.d_0.s_140",
+        "root.test.g_0.d_0.s_141",
+        "root.test.g_0.d_0.s_142",
+        "root.test.g_0.d_0.s_143",
+        "root.test.g_0.d_0.s_144",
+        "root.test.g_0.d_0.s_145",
+        "root.test.g_0.d_0.s_146",
+        "root.test.g_0.d_0.s_147",
+        "root.test.g_0.d_0.s_148",
+        "root.test.g_0.d_0.s_149",
+        "root.test.g_0.d_0.s_61",
+        "root.test.g_0.d_0.s_60",
+        "root.test.g_0.d_0.s_67",
+        "root.test.g_0.d_0.s_66",
+        "root.test.g_0.d_0.s_69",
+        "root.test.g_0.d_0.s_68",
+        "root.test.g_0.d_0.s_63",
+        "root.test.g_0.d_0.s_62",
+        "root.test.g_0.d_0.s_65",
+        "root.test.g_0.d_0.s_64",
+        "root.test.g_0.d_0.s_150",
+        "root.test.g_0.d_0.s_151",
+        "root.test.g_0.d_0.s_152",
+        "root.test.g_0.d_0.s_153",
+        "root.test.g_0.d_0.s_154",
+        "root.test.g_0.d_0.s_155",
+        "root.test.g_0.d_0.s_156",
+        "root.test.g_0.d_0.s_157",
+        "root.test.g_0.d_0.s_158",
+        "root.test.g_0.d_0.s_159",
+        "root.test.g_0.d_0.s_92",
+        "root.test.g_0.d_0.s_91",
+        "root.test.g_0.d_0.s_94",
+        "root.test.g_0.d_0.s_93",
+        "root.test.g_0.d_0.s_90",
+        "root.test.g_0.d_0.s_99",
+        "root.test.g_0.d_0.s_96",
+        "root.test.g_0.d_0.s_95",
+        "root.test.g_0.d_0.s_98",
+        "root.test.g_0.d_0.s_160",
+        "root.test.g_0.d_0.s_97",
+        "root.test.g_0.d_0.s_161",
+        "root.test.g_0.d_0.s_162",
+        "root.test.g_0.d_0.s_163",
+        "root.test.g_0.d_0.s_164",
+        "root.test.g_0.d_0.s_165",
+        "root.test.g_0.d_0.s_166",
+        "root.test.g_0.d_0.s_167",
+        "root.test.g_0.d_0.s_168",
+        "root.test.g_0.d_0.s_169",
+        "root.test.g_0.d_0.s_81",
+        "root.test.g_0.d_0.s_80",
+        "root.test.g_0.d_0.s_83",
+        "root.test.g_0.d_0.s_82",
+        "root.test.g_0.d_0.s_89",
+        "root.test.g_0.d_0.s_88",
+        "root.test.g_0.d_0.s_85",
+        "root.test.g_0.d_0.s_84",
+        "root.test.g_0.d_0.s_170",
+        "root.test.g_0.d_0.s_87",
+        "root.test.g_0.d_0.s_171",
+        "root.test.g_0.d_0.s_86",
+        "root.test.g_0.d_0.s_100",
+        "root.test.g_0.d_0.s_101",
+        "root.test.g_0.d_0.s_102",
+        "root.test.g_0.d_0.s_103",
+        "root.test.g_0.d_0.s_104",
+        "root.test.g_0.d_0.s_105",
+        "root.test.g_0.d_0.s_106",
+        "root.test.g_0.d_0.s_107",
+        "root.test.g_0.d_0.s_108",
+        "root.test.g_0.d_0.s_109",
+        "root.test.g_0.d_0.s_110",
+        "root.test.g_0.d_0.s_111",
+        "root.test.g_0.d_0.s_112",
+        "root.test.g_0.d_0.s_113",
+        "root.test.g_0.d_0.s_114",
+        "root.test.g_0.d_0.s_115",
+        "root.test.g_0.d_0.s_116",
+        "root.test.g_0.d_0.s_117",
+        "root.test.g_0.d_0.s_118",
+        "root.test.g_0.d_0.s_119",
+        "root.test.g_0.d_0.s_120",
+        "root.test.g_0.d_0.s_121",
+        "root.test.g_0.d_0.s_122",
+        "root.test.g_0.d_0.s_123",
+        "root.test.g_0.d_0.s_124",
+        "root.test.g_0.d_0.s_125",
+        "root.test.g_0.d_0.s_126",
+        "root.test.g_0.d_0.s_127",
+        "root.test.g_0.d_0.s_128",
+        "root.test.g_0.d_0.s_129",
+        "root.test.g_0.d_0.s_19",
+        "root.test.g_0.d_0.s_16",
+        "root.test.g_0.d_0.s_15",
+        "root.test.g_0.d_0.s_18",
+        "root.test.g_0.d_0.s_17",
+        "root.test.g_0.d_0.s_12",
+        "root.test.g_0.d_0.s_11",
+        "root.test.g_0.d_0.s_14",
+        "root.test.g_0.d_0.s_13",
+        "root.test.g_0.d_0.s_10",
+        "root.test.g_0.d_0.s_1",
+        "root.test.g_0.d_0.s_0",
+        "root.test.g_0.d_0.s_3",
+        "root.test.g_0.d_0.s_2",
+        "root.test.g_0.d_0.s_5",
+        "root.test.g_0.d_0.s_4",
+        "root.test.g_0.d_0.s_7",
+        "root.test.g_0.d_0.s_6",
+        "root.test.g_0.d_0.s_9",
+        "root.test.g_0.d_0.s_8",
+        "root.test.g_0.d_0.s_172",
+        "root.test.g_0.d_0.s_173",
+        "root.test.g_0.d_0.s_174",
+        "root.test.g_0.d_0.s_175",
+        "root.test.g_0.d_0.s_176",
+        "root.test.g_0.d_0.s_38",
+        "root.test.g_0.d_0.s_177",
+        "root.test.g_0.d_0.s_37",
+        "root.test.g_0.d_0.s_178",
+        "root.test.g_0.d_0.s_179",
+        "root.test.g_0.d_0.s_39",
+        "root.test.g_0.d_0.s_34",
+        "root.test.g_0.d_0.s_33",
+        "root.test.g_0.d_0.s_36",
+        "root.test.g_0.d_0.s_35",
+        "root.test.g_0.d_0.s_30",
+        "root.test.g_0.d_0.s_180",
+        "root.test.g_0.d_0.s_181",
+        "root.test.g_0.d_0.s_32",
+        "root.test.g_0.d_0.s_182",
+        "root.test.g_0.d_0.s_31",
+        "root.test.g_0.d_0.s_183",
+        "root.test.g_0.d_0.s_184",
+        "root.test.g_0.d_0.s_185",
+        "root.test.g_0.d_0.s_186",
+        "root.test.g_0.d_0.s_187",
+        "root.test.g_0.d_0.s_27",
+        "root.test.g_0.d_0.s_188",
+        "root.test.g_0.d_0.s_26",
+        "root.test.g_0.d_0.s_189",
+        "root.test.g_0.d_0.s_29",
+        "root.test.g_0.d_0.s_28",
+        "root.test.g_0.d_0.s_23",
+        "root.test.g_0.d_0.s_22",
+        "root.test.g_0.d_0.s_25",
+        "root.test.g_0.d_0.s_24",
+        "root.test.g_0.d_0.s_190",
+        "root.test.g_0.d_0.s_191",
+        "root.test.g_0.d_0.s_192",
+        "root.test.g_0.d_0.s_21",
+        "root.test.g_0.d_0.s_193",
+        "root.test.g_0.d_0.s_20",
+        "root.test.g_0.d_0.s_194",
+        "root.test.g_0.d_0.s_195",
+        "root.test.g_0.d_0.s_196",
+        "root.test.g_0.d_0.s_197",
+        "root.test.g_0.d_0.s_198",
+        "root.test.g_0.d_0.s_199",
+        "root.test.g_0.d_0.s_59",
+        "root.test.g_0.d_0.s_50",
+        "root.test.g_0.d_0.s_56",
+        "root.test.g_0.d_0.s_55",
+        "root.test.g_0.d_0.s_58",
+        "root.test.g_0.d_0.s_57",
+        "root.test.g_0.d_0.s_52",
+        "root.test.g_0.d_0.s_51",
+        "root.test.g_0.d_0.s_54",
+        "root.test.g_0.d_0.s_53",
+        "root.test.g_0.d_0.s_49",
+        "root.test.g_0.d_0.s_48",
+        "root.test.g_0.d_0.s_45",
+        "root.test.g_0.d_0.s_44",
+        "root.test.g_0.d_0.s_47",
+        "root.test.g_0.d_0.s_46",
+        "root.test.g_0.d_0.s_41",
+        "root.test.g_0.d_0.s_40",
+        "root.test.g_0.d_0.s_43",
+        "root.test.g_0.d_0.s_42"
+      ],
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "native_row_count": 1,
+      "last_row_count": 200,
+      "native_error": null,
+      "last_error": null,
+      "normalized_equivalent": false,
+      "multiple_rows": true
+    },
+    "native_offset_zero": {
+      "native_accepted": true,
+      "last_accepted": true,
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130"
+      ],
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "native_row_count": 1,
+      "last_row_count": 1,
+      "native_error": null,
+      "last_error": null,
+      "native_row": [
+        1641016400000,
+        34579.859375
+      ],
+      "last_row": [
+        1641016400000,
+        "root.test.g_0.d_0.s_130",
+        "34579.86",
+        "FLOAT"
+      ],
+      "normalized_equal": true,
+      "same_result_shape": false,
+      "normalized_equivalent": true
+    },
+    "native_offset_one": {
+      "native_accepted": true,
+      "last_accepted": true,
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130"
+      ],
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "native_row_count": 1,
+      "last_row_count": 1,
+      "native_error": null,
+      "last_error": null,
+      "native_row": [
+        1641016395000,
+        34579.2890625
+      ],
+      "last_row": [
+        1641016400000,
+        "root.test.g_0.d_0.s_130",
+        "34579.86",
+        "FLOAT"
+      ],
+      "normalized_equal": false,
+      "same_result_shape": false,
+      "normalized_equivalent": false
+    },
+    "native_no_order_limit_one": {
+      "native_accepted": true,
+      "last_accepted": true,
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130"
+      ],
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "native_row_count": 1,
+      "last_row_count": 1,
+      "native_error": null,
+      "last_error": null,
+      "native_row": [
+        1640966405000,
+        34523.62890625
+      ],
+      "last_row": [
+        1641016400000,
+        "root.test.g_0.d_0.s_130",
+        "34579.86",
+        "FLOAT"
+      ],
+      "normalized_equal": false,
+      "same_result_shape": false,
+      "normalized_equivalent": false
+    },
+    "native_order_no_limit": {
+      "native_accepted": true,
+      "last_accepted": true,
+      "native_columns": [
+        "Time",
+        "root.test.g_0.d_0.s_130"
+      ],
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "native_row_count": 10000,
+      "last_row_count": 1,
+      "native_error": null,
+      "last_error": null,
+      "normalized_equivalent": false,
+      "multiple_rows": true
+    },
+    "last_value_filter": {
+      "last_accepted": false,
+      "last_columns": null,
+      "last_row_count": null,
+      "last_error": "701: Only time filters are supported in LAST query",
+      "normalized_equivalent": false
+    },
+    "last_multi_series": {
+      "last_accepted": true,
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "last_row_count": 2,
+      "last_error": null,
+      "normalized_equivalent": false
+    },
+    "last_multi_device": {
+      "last_accepted": true,
+      "last_columns": [
+        "Time",
+        "Timeseries",
+        "Value",
+        "DataType"
+      ],
+      "last_row_count": 2,
+      "last_error": null,
+      "normalized_equivalent": false
+    },
+    "last_alias_without_as": {
+      "last_accepted": false,
+      "last_columns": null,
+      "last_row_count": null,
+      "last_error": "700: Error occurred while parsing SQL to physical plan: line 1:18 no viable alternative at input 'SELECT LAST s_130 v'",
+      "normalized_equivalent": false
+    },
+    "last_quoted_series": {
+      "last_accepted": false,
+      "last_columns": null,
+      "last_row_count": null,
+      "last_error": "701: Constant operand is not allowed: \"s_130\"",
+      "normalized_equivalent": false
+    }
+  },
+  "result_contract": {
+    "native_columns": [
+      "Time",
+      "root.test.g_0.d_0.s_130"
+    ],
+    "last_columns": [
+      "Time",
+      "Timeseries",
+      "Value",
+      "DataType"
+    ],
+    "native_row": [
+      1641016400000,
+      34579.859375
+    ],
+    "last_row": [
+      1641016400000,
+      "root.test.g_0.d_0.s_130",
+      "34579.86",
+      "FLOAT"
+    ],
+    "last_qualified_series_error": "701: Path can not start with root in select clause.",
+    "last_qualified_series_root_error": "701: Path can not start with root in select clause.",
+    "last_value_columns": [
+      "LAST_VALUE(root.test.g_0.d_0.s_130)"
+    ],
+    "last_value_row": [
+      0,
+      34579.859375
+    ],
+    "max_time_last_value_columns": [
+      "MAX_TIME(root.test.g_0.d_0.s_130)",
+      "LAST_VALUE(root.test.g_0.d_0.s_130)"
+    ],
+    "max_time_last_value_row": [
+      0,
+      1641016400000,
+      34579.859375
+    ],
+    "last_or_filter_accepted": true,
+    "last_or_filter_note": "server accepts OR, but the fixture parser rejects OR; no rewrite",
+    "last_three_time_predicates_accepted": true
+  },
+  "parser_boundaries": {
+    "native_baseline": {
+      "sql": "SELECT s_130 FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 1",
+      "parse_status": "SUCCESS",
+      "failure_reason": null,
+      "unsupported_constructs": [],
+      "features": {
+        "device_count": 1,
+        "series_count": 1,
+        "order_by": [
+          {
+            "column": "time",
+            "direction": "DESC"
+          }
+        ],
+        "limit": 1,
+        "query_types": [
+          "PROJECTION",
+          "ORDER_BY",
+          "DESCENDING_ORDER",
+          "LIMIT"
+        ]
+      }
+    },
+    "select_alias": {
+      "sql": "SELECT s_130 AS v FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 1",
+      "parse_status": "UNSUPPORTED",
+      "failure_reason": "UNSUPPORTED_SYNTAX",
+      "unsupported_constructs": [
+        "SELECT_ALIAS"
+      ]
+    },
+    "last_baseline": {
+      "sql": "SELECT LAST s_130 FROM root.test.g_0.d_0",
+      "parse_status": "UNSUPPORTED",
+      "failure_reason": "UNSUPPORTED_SYNTAX",
+      "unsupported_constructs": [
+        "LAST_SYNTAX"
+      ]
+    },
+    "last_with_limit": {
+      "sql": "SELECT LAST s_130 FROM root.test.g_0.d_0 LIMIT 1",
+      "parse_status": "UNSUPPORTED",
+      "failure_reason": "UNSUPPORTED_SYNTAX",
+      "unsupported_constructs": [
+        "LAST_SYNTAX"
+      ]
+    },
+    "last_with_order": {
+      "sql": "SELECT LAST s_130 FROM root.test.g_0.d_0 ORDER BY time DESC",
+      "parse_status": "UNSUPPORTED",
+      "failure_reason": "UNSUPPORTED_SYNTAX",
+      "unsupported_constructs": [
+        "LAST_SYNTAX"
+      ]
+    },
+    "offset_zero": {
+      "sql": "SELECT s_130 FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 1 OFFSET 0",
+      "parse_status": "UNSUPPORTED",
+      "failure_reason": "UNSUPPORTED_SYNTAX",
+      "unsupported_constructs": [
+        "OFFSET"
+      ]
+    },
+    "offset_one": {
+      "sql": "SELECT s_130 FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 1 OFFSET 1",
+      "parse_status": "UNSUPPORTED",
+      "failure_reason": "UNSUPPORTED_SYNTAX",
+      "unsupported_constructs": [
+        "OFFSET"
+      ]
+    },
+    "no_order_limit": {
+      "sql": "SELECT s_130 FROM root.test.g_0.d_0 LIMIT 1",
+      "parse_status": "SUCCESS",
+      "failure_reason": null,
+      "unsupported_constructs": [],
+      "features": {
+        "device_count": 1,
+        "series_count": 1,
+        "order_by": [],
+        "limit": 1,
+        "query_types": [
+          "PROJECTION",
+          "LIMIT"
+        ]
+      }
+    },
+    "order_no_limit": {
+      "sql": "SELECT s_130 FROM root.test.g_0.d_0 ORDER BY time DESC",
+      "parse_status": "SUCCESS",
+      "failure_reason": null,
+      "unsupported_constructs": [],
+      "features": {
+        "device_count": 1,
+        "series_count": 1,
+        "order_by": [
+          {
+            "column": "time",
+            "direction": "DESC"
+          }
+        ],
+        "limit": null,
+        "query_types": [
+          "PROJECTION",
+          "ORDER_BY",
+          "DESCENDING_ORDER"
+        ]
+      }
+    },
+    "time_range": {
+      "sql": "SELECT s_130 FROM root.test.g_0.d_0 WHERE time >= 1640990000000 AND time <= 1640991000000 ORDER BY time DESC LIMIT 1",
+      "parse_status": "SUCCESS",
+      "failure_reason": null,
+      "unsupported_constructs": [],
+      "features": {
+        "device_count": 1,
+        "series_count": 1,
+        "order_by": [
+          {
+            "column": "time",
+            "direction": "DESC"
+          }
+        ],
+        "limit": 1,
+        "query_types": [
+          "PROJECTION",
+          "TIME_FILTER",
+          "TIME_RANGE",
+          "ORDER_BY",
+          "DESCENDING_ORDER",
+          "LIMIT"
+        ]
+      }
+    },
+    "wildcard": {
+      "sql": "SELECT * FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 1",
+      "parse_status": "SUCCESS",
+      "failure_reason": null,
+      "unsupported_constructs": [],
+      "features": {
+        "device_count": 1,
+        "series_count": null,
+        "order_by": [
+          {
+            "column": "time",
+            "direction": "DESC"
+          }
+        ],
+        "limit": 1,
+        "query_types": [
+          "PROJECTION",
+          "ORDER_BY",
+          "DESCENDING_ORDER",
+          "LIMIT",
+          "WILDCARD_PROJECTION"
+        ]
+      }
+    },
+    "multi_series": {
+      "sql": "SELECT s_130, s_131 FROM root.test.g_0.d_0 ORDER BY time DESC LIMIT 1",
+      "parse_status": "SUCCESS",
+      "failure_reason": null,
+      "unsupported_constructs": [],
+      "features": {
+        "device_count": 1,
+        "series_count": 2,
+        "order_by": [
+          {
+            "column": "time",
+            "direction": "DESC"
+          }
+        ],
+        "limit": 1,
+        "query_types": [
+          "PROJECTION",
+          "MULTI_SERIES",
+          "ORDER_BY",
+          "DESCENDING_ORDER",
+          "LIMIT"
+        ]
+      }
+    },
+    "multi_device": {
+      "sql": "SELECT s_130 FROM root.test.g_0.d_0, root.test.g_0.d_1 ORDER BY time DESC LIMIT 1",
+      "parse_status": "SUCCESS",
+      "failure_reason": null,
+      "unsupported_constructs": [],
+      "features": {
+        "device_count": 2,
+        "series_count": 1,
+        "order_by": [
+          {
+            "column": "time",
+            "direction": "DESC"
+          }
+        ],
+        "limit": 1,
+        "query_types": [
+          "PROJECTION",
+          "MULTI_DEVICE",
+          "ORDER_BY",
+          "DESCENDING_ORDER",
+          "LIMIT"
+        ]
+      }
+    },
+    "value_filter": {
+      "sql": "SELECT s_130 FROM root.test.g_0.d_0 WHERE s_130 > 0 ORDER BY time DESC LIMIT 1",
+      "parse_status": "UNSUPPORTED",
+      "failure_reason": "UNSUPPORTED_SYNTAX",
+      "unsupported_constructs": [
+        "UNKNOWN_WHERE_EXPRESSION"
+      ]
+    }
+  },
+  "benchmark": {
+    "fresh_30_block": {
+      "float": {
+        "paired_n": 30,
+        "errors": 0,
+        "native_mean_ms": 3.842,
+        "last_mean_ms": 2.301,
+        "diff_mean_ms": 1.542,
+        "diff_median_ms": 1.422,
+        "diff_ci95_mean_ms": [
+          1.432,
+          1.658
+        ],
+        "win_rate": 1.0,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 39.787,
+        "median_relative_pct": 39.026
+      },
+      "double": {
+        "paired_n": 30,
+        "errors": 0,
+        "native_mean_ms": 4.523,
+        "last_mean_ms": 2.323,
+        "diff_mean_ms": 2.2,
+        "diff_median_ms": 2.202,
+        "diff_ci95_mean_ms": [
+          2.055,
+          2.349
+        ],
+        "win_rate": 1.0,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 48.257,
+        "median_relative_pct": 48.062
+      },
+      "int64": {
+        "paired_n": 30,
+        "errors": 0,
+        "native_mean_ms": 3.747,
+        "last_mean_ms": 2.303,
+        "diff_mean_ms": 1.443,
+        "diff_median_ms": 1.248,
+        "diff_ci95_mean_ms": [
+          1.316,
+          1.579
+        ],
+        "win_rate": 1.0,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 38.041,
+        "median_relative_pct": 36.494
+      },
+      "int32": {
+        "paired_n": 30,
+        "errors": 0,
+        "native_mean_ms": 2.828,
+        "last_mean_ms": 2.364,
+        "diff_mean_ms": 0.464,
+        "diff_median_ms": 0.424,
+        "diff_ci95_mean_ms": [
+          0.384,
+          0.55
+        ],
+        "win_rate": 0.967,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 16.116,
+        "median_relative_pct": 15.2
+      },
+      "text": {
+        "paired_n": 30,
+        "errors": 0,
+        "native_mean_ms": 3.011,
+        "last_mean_ms": 2.66,
+        "diff_mean_ms": 0.35,
+        "diff_median_ms": 0.653,
+        "diff_ci95_mean_ms": [
+          -0.351,
+          0.733
+        ],
+        "win_rate": 0.967,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 12.971,
+        "median_relative_pct": 22.222
+      },
+      "boolean": {
+        "paired_n": 30,
+        "errors": 0,
+        "native_mean_ms": 2.686,
+        "last_mean_ms": 2.355,
+        "diff_mean_ms": 0.331,
+        "diff_median_ms": 0.387,
+        "diff_ci95_mean_ms": [
+          0.182,
+          0.438
+        ],
+        "win_rate": 0.933,
+        "sign_test_p": 1e-06,
+        "mean_relative_pct": 12.011,
+        "median_relative_pct": 14.122
+      }
+    },
+    "expanded_120_block_seed_20261101": {
+      "float": {
+        "paired_n": 120,
+        "errors": 0,
+        "native_mean_ms": 3.841,
+        "last_mean_ms": 2.475,
+        "diff_mean_ms": 1.365,
+        "diff_median_ms": 1.337,
+        "diff_ci95_mean_ms": [
+          1.332,
+          1.402
+        ],
+        "win_rate": 1.0,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 35.456,
+        "median_relative_pct": 35.136
+      },
+      "double": {
+        "paired_n": 120,
+        "errors": 0,
+        "native_mean_ms": 4.363,
+        "last_mean_ms": 2.533,
+        "diff_mean_ms": 1.83,
+        "diff_median_ms": 1.849,
+        "diff_ci95_mean_ms": [
+          1.734,
+          1.897
+        ],
+        "win_rate": 0.992,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 41.922,
+        "median_relative_pct": 42.796
+      },
+      "int64": {
+        "paired_n": 120,
+        "errors": 0,
+        "native_mean_ms": 3.704,
+        "last_mean_ms": 2.478,
+        "diff_mean_ms": 1.226,
+        "diff_median_ms": 1.226,
+        "diff_ci95_mean_ms": [
+          1.2,
+          1.253
+        ],
+        "win_rate": 1.0,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 33.049,
+        "median_relative_pct": 33.289
+      },
+      "int32": {
+        "paired_n": 120,
+        "errors": 0,
+        "native_mean_ms": 2.865,
+        "last_mean_ms": 2.477,
+        "diff_mean_ms": 0.388,
+        "diff_median_ms": 0.397,
+        "diff_ci95_mean_ms": [
+          0.353,
+          0.416
+        ],
+        "win_rate": 0.992,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 13.463,
+        "median_relative_pct": 14.048
+      },
+      "text": {
+        "paired_n": 120,
+        "errors": 0,
+        "native_mean_ms": 3.032,
+        "last_mean_ms": 2.512,
+        "diff_mean_ms": 0.52,
+        "diff_median_ms": 0.554,
+        "diff_ci95_mean_ms": [
+          0.427,
+          0.576
+        ],
+        "win_rate": 0.992,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 17.105,
+        "median_relative_pct": 18.408
+      },
+      "boolean": {
+        "paired_n": 120,
+        "errors": 0,
+        "native_mean_ms": 2.825,
+        "last_mean_ms": 2.491,
+        "diff_mean_ms": 0.334,
+        "diff_median_ms": 0.344,
+        "diff_ci95_mean_ms": [
+          0.305,
+          0.362
+        ],
+        "win_rate": 0.975,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 11.72,
+        "median_relative_pct": 12.116
+      }
+    },
+    "replication_120_block_seed_20261102": {
+      "float": {
+        "paired_n": 120,
+        "errors": 0,
+        "native_mean_ms": 3.742,
+        "last_mean_ms": 2.434,
+        "diff_mean_ms": 1.308,
+        "diff_median_ms": 1.323,
+        "diff_ci95_mean_ms": [
+          1.256,
+          1.352
+        ],
+        "win_rate": 0.992,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 34.955,
+        "median_relative_pct": 35.699
+      },
+      "double": {
+        "paired_n": 120,
+        "errors": 0,
+        "native_mean_ms": 4.266,
+        "last_mean_ms": 2.453,
+        "diff_mean_ms": 1.814,
+        "diff_median_ms": 1.833,
+        "diff_ci95_mean_ms": [
+          1.728,
+          1.874
+        ],
+        "win_rate": 0.992,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 42.565,
+        "median_relative_pct": 43.435
+      },
+      "int64": {
+        "paired_n": 120,
+        "errors": 0,
+        "native_mean_ms": 3.689,
+        "last_mean_ms": 2.435,
+        "diff_mean_ms": 1.254,
+        "diff_median_ms": 1.235,
+        "diff_ci95_mean_ms": [
+          1.154,
+          1.36
+        ],
+        "win_rate": 0.992,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 33.618,
+        "median_relative_pct": 34.199
+      },
+      "int32": {
+        "paired_n": 120,
+        "errors": 0,
+        "native_mean_ms": 2.823,
+        "last_mean_ms": 2.409,
+        "diff_mean_ms": 0.414,
+        "diff_median_ms": 0.425,
+        "diff_ci95_mean_ms": [
+          0.38,
+          0.449
+        ],
+        "win_rate": 0.975,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 14.499,
+        "median_relative_pct": 15.515
+      },
+      "text": {
+        "paired_n": 120,
+        "errors": 0,
+        "native_mean_ms": 3.029,
+        "last_mean_ms": 2.533,
+        "diff_mean_ms": 0.496,
+        "diff_median_ms": 0.562,
+        "diff_ci95_mean_ms": [
+          0.244,
+          0.691
+        ],
+        "win_rate": 0.983,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 15.065,
+        "median_relative_pct": 19.118
+      },
+      "boolean": {
+        "paired_n": 120,
+        "errors": 0,
+        "native_mean_ms": 2.77,
+        "last_mean_ms": 2.407,
+        "diff_mean_ms": 0.363,
+        "diff_median_ms": 0.373,
+        "diff_ci95_mean_ms": [
+          0.332,
+          0.392
+        ],
+        "win_rate": 0.967,
+        "sign_test_p": 0.0,
+        "mean_relative_pct": 12.986,
+        "median_relative_pct": 13.876
+      }
+    }
+  },
+  "benchmark_notes": [
+    "All runs are controlled hot-cache experiments on one host; they are not production gains.",
+    "The fresh 30-block run had a TEXT CI crossing zero; the 120-block runs separate the mean difference from zero.",
+    "Two independent 120-block runs agree on direction and approximate effect size; TEXT remains the smallest and noisiest effect.",
+    "The benchmark compares client_wall_ms; it does not include decision, normalization or production end-to-end overhead."
+  ],
+  "fallback_contract": {
+    "connect_ok": true,
+    "close_ok": true,
+    "cases": {
+      "valid": {
+        "selected": "LAST",
+        "fallback": false,
+        "fallback_error": null,
+        "native_run_count": 0
+      },
+      "wrong_timestamp": {
+        "selected": "NATIVE_FALLBACK",
+        "fallback": true,
+        "fallback_error": "LAST_MISMATCH",
+        "native_run_count": 1
+      },
+      "wrong_timeseries": {
+        "selected": "NATIVE_FALLBACK",
+        "fallback": true,
+        "fallback_error": "LAST_WRONG_TIMESERIES",
+        "native_run_count": 1
+      },
+      "wrong_datatype": {
+        "selected": "NATIVE_FALLBACK",
+        "fallback": true,
+        "fallback_error": "LAST_WRONG_DATATYPE",
+        "native_run_count": 1
+      },
+      "wrong_value": {
+        "selected": "NATIVE_FALLBACK",
+        "fallback": true,
+        "fallback_error": "LAST_MISMATCH",
+        "native_run_count": 1
+      },
+      "empty": {
+        "selected": "NATIVE_FALLBACK",
+        "fallback": true,
+        "fallback_error": "LAST_NOT_ONE_ROW",
+        "native_run_count": 1
+      },
+      "exception": {
+        "selected": "NATIVE_FALLBACK",
+        "fallback": true,
+        "fallback_error": "LAST_ERROR",
+        "native_run_count": 1
+      }
+    },
+    "note": "Injected LAST outcomes only; Native side is real and read-only. Not production Executor integration."
+  },
+  "remaining_gaps": [
+    "No eligible real Native single-series ORDER BY time DESC LIMIT 1 workload in the authorized query corpus.",
+    "No TTL, restart/crash recovery, concurrent-write or NaN/Infinity certification.",
+    "No production LAST plugin, result normalization layer or production Executor fallback integration.",
+    "No multi-process, multi-day, cold-cache, background-load or DB-host metric certification.",
+    "The fixture parser rejects SELECT LAST; a production candidate still needs a reviewed parser/validator path."
+  ],
+  "conclusion": {
+    "strategy_id": "CAND_LAST_SINGLE_SERIES",
+    "status": "NOT_VERIFIED",
+    "submarkers": [
+      "DEMAND_UNPROVEN",
+      "FALLBACK_CONTRACT_ONLY"
+    ],
+    "reason": "Read-only correctness, effect, timing and contract evidence improved, but demand, production result normalization/fallback, and lifecycle edge cases remain unproven.",
+    "not_enabled": true
+  }
+}

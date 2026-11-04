@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-02",
+  "scope": "phase7 heavy workload fixes",
+  "overall": "NOT_ACCEPTED",
+  "online_ready": false,
+  "tests": [
+    {
+      "command": "PYTHONPATH=src /opt/anaconda3/envs/MANTO/bin/python -m pytest -q tests/unit/test_heavy_workload_audit.py tests/unit/test_local_db_sampler.py tests/unit/test_exploration.py tests/unit/test_exploration_model.py tests/unit/test_system_monitor.py tests/unit/test_monitoring_schema.py",
+      "passed": 54,
+      "failed": 0,
+      "seconds": 0.73
+    },
+    {
+      "command": "IOTDB_INTEGRATION=1 /opt/anaconda3/envs/MANTO/bin/python -m pytest -q",
+      "passed": 772,
+      "failed": 4,
+      "seconds": 32.74,
+      "cause": "old root.db800 default fixture returned zero rows"
+    },
+    {
+      "command": "IOTDB_INTEGRATION=1 IOTDB_TEST_SQL='SELECT s_355 FROM root.small_scale.g_0.d_1 WHERE time >= 1640968700000 AND time < 1640978355000 LIMIT 5' /opt/anaconda3/envs/MANTO/bin/python -m pytest -q",
+      "passed": 776,
+      "failed": 0,
+      "skipped": 0,
+      "seconds": 34.37
+    }
+  ],
+  "evidence_files": {
+    "docs/evidence/phase7_heavy_small_dbhost_20261102.json": "06478f96e807ae57db8fd510e5bfafd5f392f5d870e69270c576d15049814090",
+    "docs/evidence/phase7_heavy_import_audit_20261102.json": "f67341c3f2410ab13edcd344c4a31e4a20ed58106fbf397435da17ea1ecdc97d",
+    "docs/evidence/phase7_heavy_source_guard_20261102.json": "7cfb97cc2fd13dce0da69d29fb1fb308d19cd9eaffe45d5f1024d9758d6a25d5"
+  }
+}

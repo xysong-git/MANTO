@@ -1,0 +1,47 @@
+[
+  {
+    "variant": "E1_existing",
+    "evidence_domain": "SYNTHETIC_TEST_ONLY",
+    "guard_parse_calls": 28,
+    "feature_sqlglot_parse_calls": 2,
+    "sqlite_connections_opened": 8,
+    "dispatches": 0,
+    "correctness": "MATCHED"
+  },
+  {
+    "variant": "E1_memo_only_SYNTHETIC",
+    "evidence_domain": "SYNTHETIC_TEST_ONLY",
+    "guard_parse_calls": 2,
+    "feature_sqlglot_parse_calls": 1,
+    "sqlite_connections_opened": 8,
+    "dispatches": 0,
+    "correctness": "MATCHED"
+  },
+  {
+    "variant": "E1_memo_session_SYNTHETIC",
+    "evidence_domain": "SYNTHETIC_TEST_ONLY",
+    "guard_parse_calls": 2,
+    "feature_sqlglot_parse_calls": 1,
+    "sqlite_connections_opened": 1,
+    "dispatches": 0,
+    "correctness": "MATCHED"
+  },
+  {
+    "variant": "E2_existing",
+    "evidence_domain": "SYNTHETIC_TEST_ONLY",
+    "guard_parse_calls": 28,
+    "feature_sqlglot_parse_calls": 2,
+    "sqlite_connections_opened": 8,
+    "dispatches": 0,
+    "correctness": "MATCHED"
+  },
+  {
+    "variant": "E3_existing",
+    "evidence_domain": "SYNTHETIC_TEST_ONLY",
+    "guard_parse_calls": 2,
+    "feature_sqlglot_parse_calls": 1,
+    "sqlite_connections_opened": 2,
+    "dispatches": 0,
+    "correctness": "MATCHED"
+  }
+]

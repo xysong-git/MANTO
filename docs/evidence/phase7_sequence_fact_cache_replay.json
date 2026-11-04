@@ -1,0 +1,33 @@
+{
+  "scope": "component replay only; not query speedup",
+  "rows": 810,
+  "group_key": "f0b5d4255a05c3e57b8cae655a7938b5f1094e39099fd0faa407fa06378fd6a0",
+  "legacy_128_body_lru": {
+    "passes_ms": [
+      175.00329099129885,
+      173.7685629632324,
+      177.33557196334004
+    ],
+    "cache_info": {
+      "hits": 0,
+      "misses": 2430,
+      "maxsize": 128,
+      "currsize": 128
+    }
+  },
+  "compact_content_facts": {
+    "passes_ms": [
+      212.03203697223216,
+      22.552305948920548,
+      22.527572000399232
+    ],
+    "cache_info": {
+      "hits": 1620,
+      "misses": 810,
+      "maxsize": 4096,
+      "currsize": 810
+    },
+    "retained_bytes": 739896
+  },
+  "exact_facts_equal": true
+}

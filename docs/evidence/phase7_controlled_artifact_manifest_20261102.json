@@ -1,0 +1,39 @@
+{
+  "artifacts": {
+    "data/phase7_e2e_v3_repeat_qualified_20261102/journal.jsonl": {
+      "sha256": "3d0819fe726b16a6639cd0cd0de3de14d910af91cbd4c20107468d52fbd52569",
+      "bytes": 40564479
+    },
+    "data/phase7_e2e_v3_repeat_qualified_20261102/study.sqlite": {
+      "sha256": "496a955d194968b8a7b3d11f9fcfd0284d43b646ea5f3034cc597e357624b0f2",
+      "bytes": 51245056
+    },
+    "scripts/phase7_controlled_e2e.py": {
+      "sha256": "3812f5351a507877342f9bd85bb3c76f5745164bf5e003552eaab2358c8e0a2a",
+      "bytes": 16839
+    },
+    "scripts/phase7_analyze_controlled_e2e.py": {
+      "sha256": "4fa300838f69f84f30e109fbc1a22daf30c23f26c7630b5afe524496aebfaf94",
+      "bytes": 18792
+    },
+    "src/tsdb_optimizer/monitoring/system.py": {
+      "sha256": "49d98ed88c59d5f0284aa7ea2a1d1a43db29ee2e49a8ff5ccd1146dac5995dff",
+      "bytes": 20227
+    },
+    "src/tsdb_optimizer/experiments/cpu_load.py": {
+      "sha256": "7be4211aa63a97ac69975a3e1d02ba3a06098229d1272e46a3546faf8ceab8d3",
+      "bytes": 3108
+    },
+    "src/tsdb_optimizer/experiments/controlled_policy.py": {
+      "sha256": "9544e68401af7ae0ef58c6e259ab99f7fc48dcf4e1e24f40cee6c708247be37d",
+      "bytes": 2053
+    }
+  },
+  "full_tests": "841 passed in 39.03s",
+  "integration_tests": 13,
+  "targeted_tests": "19 passed in 1.57s",
+  "journal_tamper_probes": "5 passed in 19.61s",
+  "compileall_exit": 0,
+  "stage_accepted": false,
+  "production_online_enabled": false
+}
